@@ -1,0 +1,11 @@
+[class*="embed-"],
+[class^="embed-"] {
+    @extend %mb-l;
+
+    iframe {
+        max-width: 100%;
+        height: auto;
+        min-height: 350px;
+    }
+
+}

@@ -1,0 +1,165 @@
+.c-card {
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.c-card__media {
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    + .c-card__meta {
+        @extend %mt-s;
+    }
+}
+
+.c-card__content > :not(:first-child) {
+    @extend %mt-s;
+}
+
+.c-card__title,
+.c-card__meta {
+
+    &:after {
+        padding-bottom: 0 !important;
+    }
+}
+
+.c-card__meta {
+    color: $accent;
+}
+
+.c-card__content {
+    @extend %pt-s;
+    position: relative;
+
+    &:empty {
+        display: none;
+    }
+
+    .c-gallery--title-above & {
+        @extend %pb-s;
+        padding-top: 0;
+    }
+
+    .c-gallery--title-overlay & {
+        @extend %p-s;
+    }
+
+    @include below(pad) {
+        .c-gallery--packed & {
+            margin-left: 0 !important;
+        }
+    }
+}
+
+.c-card__content-link:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.c-card__media + .c-card__content {
+    @extend %mt-s;
+}
+
+.c-card__title:after {
+    @extend %pb-s;
+}
+
+.c-card__meta,
+.c-card__footer {
+
+    a {
+        // raise above .c-card__content-link:before
+        position: relative;
+        z-index: 20;
+    }
+}
+
+.c-card__footer {
+    @extend %mt-s;
+    color: $gray;
+
+    &:after {
+        display: none;
+    }
+}
+
+.c-card__frame {
+    background-color: currentColor;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        display: block;
+        transition: opacity $transition--macro $easeInOutCirc;
+        will-change: transform, opacity;
+    }
+}
+
+.c-card__frame-hover {
+    opacity: 0;
+    transition: opacity $transition--macro $easeOutSine;
+
+    @include below(pad) {
+        display: none;
+    }
+}
+
+.c-card__link:hover .c-card__frame-hover {
+    opacity: 1;
+}
+
+.c-gallery:not(.c-gallery--title-overlay) .c-card__link:hover .c-card__frame {
+    opacity: 1;
+}
+
+.c-card__badge {
+    @extend %mr-s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    color: $accent;
+    background: currentColor;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        display: block;
+        width: 0;
+        height: 0;
+        border-right: 10px solid transparent;
+        border-top: 10px solid currentColor;
+    }
+
+    &:before,
+    &:after {
+        border-top-color: currentColor;
+    }
+
+    &:after {
+        left: auto;
+        right: 0;
+        border-left: 10px solid transparent;
+        border-right: none;
+    }
+}

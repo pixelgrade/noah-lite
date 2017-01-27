@@ -1,0 +1,13 @@
+.c-separator {
+    position: relative;
+    margin: -1rem 0;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 7.5rem;
+        margin: 0 auto;
+        background: currentColor;
+    }
+}

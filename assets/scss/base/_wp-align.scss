@@ -1,0 +1,104 @@
+// Image Inside Paragraphs with Text
+// <p>
+//      some text
+//      <img>
+//      some text
+// </p>
+p {
+    .alignleft {
+        padding-left: 0 !important;
+    }
+
+    .alignright {
+        padding-right: 0 !important;
+    }
+
+    .aligncenter,
+    .alignnone {
+
+    }
+
+    .alignleft,
+    .alignright,
+    .aligncenter,
+    .alignnone {
+        clear: none;
+    }
+
+    .alignnone {
+        display: inline-block;
+    }
+}
+
+
+
+// Images at the same level with paragraphs
+// <p>..</p>
+// <img>
+// <p>..</p>
+.alignleft,
+.alignright,
+.aligncenter,
+.alignnone {
+    @extend %mt-l;
+    @extend %mb-l;
+    //width: auto !important;
+
+    &, img {
+        display: block;
+    }
+}
+
+figure {
+    &.alignleft,
+    &.alignright,
+    &.aligncenter,
+    &.alignnone {
+        @extend %mt-s;
+    }
+
+    .entry-content & + p {
+        @extend %mt-l;
+    }
+}
+
+.alignleft.alignleft,
+.alignright.alignright {
+    max-width: 50%;
+}
+
+.alignleft {
+    @extend %pr-l;
+    float: left;
+    clear: left;
+}
+
+.alignright {
+    @extend %pl-l;
+    float: right;
+    clear: right;
+ }
+
+.aligncenter,
+.alignnone {
+}
+
+.aligncenter {
+    &, img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.wp-caption-text {
+    @extend %mt-xs;
+    @include baseline();
+}
+
+
+// Image Only Child Inside Paragraphs (no text)
+// <p>
+//      <img>
+// </p>
+// ...
+// will be moved to the same level through JavaScript

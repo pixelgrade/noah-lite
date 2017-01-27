@@ -1,0 +1,212 @@
+// layout settings
+$page-width:            1080px;
+$content-width:         600px;
+
+$baseline-unit:         12px;
+
+$nav-mobile-width:      calc(100% - 75px);
+
+$header-height:         90px;
+
+$btn-background:        #000000;
+$btn-color:             #FFFFFF;
+
+$accent:          #BF493D;
+$gray:            #757575;
+
+// gutters definition
+$gutter--small:         2rem;
+$gutter:                3rem;
+$gutter--large:         5rem;
+$gutter--huge:          7.5rem;
+
+// https://css-tricks.com/handling-z-index/
+$zindex: (
+    modal:      9000,
+    dropdown:   8000,
+    header:     7000,
+    overlay:    6000,
+    footer:     5000
+);
+
+// mobile first means we need min-width media queries
+// 30em ~ 480px,
+// 48em ~ 768px,
+// 64em ~ 1024px,
+// 80em ~ 1280px
+$breakpoints: (
+    small:      30em,
+    pad:        48em,
+    lap:        64em,
+    desk:       80em
+);
+
+
+// typography settings
+$content-class:         ".entry-content, .comment-content"    !default;
+
+$font-size:             14px;
+$line-height:           1.71429;
+
+$font-headings: (
+    font-family: '"Arca Majora", sans-serif',
+    cap-height: 0.7733
+);
+
+$font-body: (
+    font-family: '"Georgia", serif',
+    cap-height: 0.7
+);
+
+$font-intro: (
+    font-family: '"EK Mukta", sans-serif',
+    cap-height: 0.67
+);
+
+$font-blockquote: (
+    font-family: '"Times", serif',
+    cap-height: 0.7
+);
+
+// Spacings
+$gutter-xs:     1 * $baseline-unit;
+$gutter-s:      2 * $baseline-unit;
+$gutter-m:      3 * $baseline-unit;
+$gutter-l:      5 * $baseline-unit;
+$gutter-xl:     7.5 * $baseline-unit;
+
+$typeline-config-sets: (
+    typography: (
+        rules: (
+            font-size: (
+                '.fs-10': 10px,
+                '.fs-11': 11px,
+                '.fs-12': 12px,
+                '.fs-13': 13px,
+                '.fs-15': 15px,
+                '.fs-16': 16px,
+                '.fs-18': 18px,
+                '.fs-23': 23px,
+                '.fs-24': 24px,
+                '.fs-25': 25px,
+                '.fs-36': 36px,
+                '.fs-60': 60px,
+                '.fs-90': 90px,
+            )
+        )
+    ),
+    spacings: (
+        rules: (
+            padding: (
+                '%p-xs': $gutter-xs,
+                '%p-s': $gutter-s,
+                '%p-m': $gutter-m,
+                '%p-l': $gutter-l,
+                '%p-xl': $gutter-xl
+            ),
+            padding-top: (
+                '%pt-xs': $gutter-xs,
+                '%pt-s': $gutter-s,
+                '%pt-m': $gutter-m,
+                '%pt-l': $gutter-l,
+                '%pt-xl': $gutter-xl
+            ),
+            padding-right: (
+                '%pr-xs': $gutter-xs,
+                '%pr-s': $gutter-s,
+                '%pr-m': $gutter-m,
+                '%pr-l': $gutter-l,
+                '%pr-xl': $gutter-xl
+            ),
+            padding-bottom: (
+                '%pb-xs': $gutter-xs,
+                '%pb-s': $gutter-s,
+                '%pb-m': $gutter-m,
+                '%pb-l': $gutter-l,
+                '%pb-xl': $gutter-xl
+            ),
+            padding-left: (
+                '%pl-xs':   $gutter-xs,
+                '%pl-s':    $gutter-s,
+                '%pl-m':    $gutter-m,
+                '%pl-l':    $gutter-l,
+                '%pl-xl':   $gutter-xl
+            ),
+            margin-top: (
+                '%mt-xs':   $gutter-xs,
+                '%mt-s':    $gutter-s,
+                '%mt-m':    $gutter-m,
+                '%mt-l':    $gutter-l,
+                '%mt-xl':   $gutter-xl,
+                '%mt--xs':  -$gutter-xs,
+                '%mt--s':   -$gutter-s,
+                '%mt--m':   -$gutter-m,
+                '%mt--l':   -$gutter-l,
+                '%mt--xl':  -$gutter-xl,
+            ),
+            margin-bottom: (
+                '%mb-xs':   $gutter-xs,
+                '%mb-s':    $gutter-s,
+                '%mb-m':    $gutter-m,
+                '%mb-l':    $gutter-l,
+                '%mb-xl':   $gutter-xl,
+                '%mb--xs':  -$gutter-xs,
+                '%mb--s':   -$gutter-s,
+                '%mb--m':   -$gutter-m,
+                '%mb--l':   -$gutter-l,
+                '%mb--xl':  -$gutter-xl,
+            ),
+            margin-left: (
+                '%ml-xs':   $gutter-xs,
+                '%ml-s':    $gutter-s,
+                '%ml-m':    $gutter-m,
+                '%ml-l':    $gutter-l,
+                '%ml-xl':   $gutter-xl,
+                '%ml--xs':  -$gutter-xs,
+                '%ml--s':   -$gutter-s,
+                '%ml--m':   -$gutter-m,
+                '%ml--l':   -$gutter-l,
+                '%ml--xl':  -$gutter-xl,
+            ),
+            margin-right: (
+                '%mr-xs':   $gutter-xs,
+                '%mr-s':    $gutter-s,
+                '%mr-m':    $gutter-m,
+                '%mr-l':    $gutter-l,
+                '%mr-xl':   $gutter-xl,
+                '%mr--xs':  -$gutter-xs,
+                '%mr--s':   -$gutter-s,
+                '%mr--m':   -$gutter-m,
+                '%mr--l':   -$gutter-l,
+                '%mr--xl':  -$gutter-xl,
+            ),
+            border-top-width: (
+                '%bt-s':   $gutter-s
+            ),
+            border-left-width: (
+                '%bl-xs':   $gutter-xs
+            ),
+        )
+    )
+);
+
+$typeline-config-result: ();
+
+@each $key, $config in $typeline-config-sets {
+    $set: map-merge(map-get($typeline-config, $key), $config);
+    $typeline-config-result: map-merge($typeline-config-result, ($key: $set));
+}
+
+$typeline-config-sets: $typeline-config-result;
+
+// colors
+$dark:                  #252525;
+$light:                 #EBEBEB;
+
+// misc
+$transition--micro:     .15s;
+$transition--macro:     .3s;
+
+$debug: false;
+
+$baseline-debug: $debug;

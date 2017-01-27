@@ -1,0 +1,29 @@
+.c-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+    transition: transform .6s $easeInOutQuad;
+    will-change: transform;
+
+    background-color: white;
+
+    z-index: 100;
+}
+
+@keyframes fill {
+    0% { transform: translateZ(0); }
+    100% { transform: scale(1, 0); }
+}
+
+.c-mask--project {
+    position: absolute;
+    z-index: 200;
+
+    height: 100vh;
+}

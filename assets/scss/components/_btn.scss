@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+/**
+ * A simple button object.
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$btn-padding:         10px                   !default;
+$btn-background:      #DDD                  !default;
+$btn-color:           #111                  !default;
+$btn-border-width:    1px                   !default;
+$btn-border-style:    solid                 !default;
+$btn-border-color:    $btn-background       !default;
+$btn-radius:          0                     !default;
+
+
+
+
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ * 6. Fixes odd inner spacing in IE7.
+ * 7. Subtract the border size from the padding value so that buttons do not
+ *    grow larger as we add borders.
+ */
+.c-btn {
+    @extend %font-headings;
+    @extend .fs-13;
+    letter-spacing: .154em;
+
+    display: inline-block; /* [1] */
+    vertical-align: middle; /* [2] */
+    // font: inherit; /* [3] */
+    text-align: center; /* [4] */
+    // margin: 0; /* [4] */
+    cursor: pointer; /* [5] */
+    overflow: visible; /* [6] */
+    // padding: $btn-padding - $btn-border-width  2*$btn-padding - $btn-border-width; /* [7] */
+    background-color: $btn-background;
+
+    // custom styling
+    // font-size: 12px;
+    text-transform: uppercase;
+    padding: 0.9em 2em 0.8em 2.1em;
+
+
+    @if ($btn-border-width != 0) {
+        border: $btn-border-width $btn-border-style $btn-border-color;
+    } @else {
+        border: none; /* [4] */
+    }
+
+    @if ($btn-radius != 0) {
+        border-radius: $btn-radius;
+    }
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none; /* [4] */
+        color: $btn-color;
+    }
+
+}
+
+.c-btn--inverse {
+    color: $btn-background;
+    background-color: $btn-color;
+}

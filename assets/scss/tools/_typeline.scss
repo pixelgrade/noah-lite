@@ -1,0 +1,87 @@
+$baseline-unit:         1rem        !default;
+
+// default configration for reType
+$typeline-config-sets: (
+    typography: (
+        points: 0 1.2 50 1.6 200 1.8,
+        breakpoints: 1200px 760px 560px,
+        rules: (
+            font-size: (
+                'body': 16px,
+                'h1': 81px,
+                'h2': 54px,
+                'h3': 36px,
+                'h4': 24px
+            )
+        )
+    )
+) !default;
+
+// returns Y value for a given property value for the
+// first breakpoint according to the given variable values
+@function getY($A, $B, $C, $computedValue) {
+    $computedValue: strip-unit($computedValue);
+    @if $computedValue < nth($B, 1) {
+        // if given computedValue is smaller then B.x
+        // use an exponential function to determine Y value [ ie. y = ab^(x^3) ]
+        $a: nth($A, 2);
+        $b: (nth($B, 2) - nth($A, 2)) / pow(nth($B, 1), 3);
+        @return $a + $b * pow($computedValue, 3);
+    } @else {
+        // otherwise use a basic linear equation solving method
+        @return nth($B, 2) + (nth($C, 2) - nth($B, 2)) * ($computedValue - nth($B, 1)) / (nth($C, 1) - nth($B, 1));
+    }
+}
+
+// used to get the actual property value for a given breakpoint
+@function getComputedValue($typeline-points, $typeline-breakpoints, $computedValue, $breakpoint: false) {
+
+    $A: nth($typeline-points, 1);
+    $B: nth($typeline-points, 2);
+    $C: nth($typeline-points, 3);
+    $sign: 1;
+
+    @if $computedValue < 0 {
+        $computedValue: -$computedValue;
+        $sign: -1;
+    }
+
+    $index: index($typeline-breakpoints, $breakpoint);
+    @if $index == null {
+        @return $computedValue;
+    }
+
+    // we need to find values that are equally spread across the interval [1, getY($computedValue)] for each breakpoint we have
+    $y: getY($A, $B, $C, $computedValue);
+    $ratio: ($y - 1) * $index / length($typeline-breakpoints) + 1;
+    @return round($computedValue / $ratio) * $sign;
+}
+
+@each $typeline-config-name, $typeline-config in $typeline-config-sets {
+
+    $typeline-points:         map-get($typeline-config, points);
+    $typeline-breakpoints:    map-get($typeline-config, breakpoints);
+    $typeline-rules:          map-get($typeline-config, rules);
+
+    @each $property, $rulesets in $typeline-rules {
+        @each $selector, $value in $rulesets {
+            #{$selector} {
+                //#{$property}: $value * 1rem / $baseline-unit;
+                #{$property}: $value;
+            }
+        }
+    }
+
+    @each $breakpoint in $typeline-breakpoints {
+        @media only screen and (max-width: $breakpoint) {
+            @each $property, $rulesets in $typeline-rules {
+                @each $selector, $value in $rulesets {
+                    //@debug $breakpoint, $selector, $property, getComputedValue($typeline-points, map-get($typeline-config, breakpoints), $value, $breakpoint);
+                    #{$selector} {
+                        #{$property}: getComputedValue($typeline-points, map-get($typeline-config, breakpoints), $value, $breakpoint);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.c-border {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+
+    display: block;
+    border: 0 solid transparent;
+    pointer-events: none;
+
+    @include wp-offset();
+}
+
+
+
+@include below(lap) {
+    .c-navbar {
+        margin-top: 0 !important;
+        top: 0 !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .admin-bar {
+
+        .c-border {
+            display: none;
+        }
+
+        .c-navbar__label {
+            margin: 0 !important;
+            top: 0 !important;
+        }
+
+        .c-navbar__content {
+            border: 0 !important;
+            top: 0 !important;
+        }
+
+        .c-overlay__close {
+            margin-top: 0 !important;
+            margin-right: 0 !important;
+        }
+
+    }
+
+    $border-width: 5px;
+
+    body {
+        margin: 0 !important;
+    }
+
+    .has-border:not(.admin-bar) {
+        margin: $border-width;
+
+        .c-border {
+            border-width: $border-width;
+        }
+
+        .c-navbar,
+        .c-navbar__label {
+            margin: $border-width !important;
+            top: $border-width !important;
+        }
+
+        .c-navbar__content {
+            border: $border-width !important;
+            top: $border-width !important;
+        }
+
+        .c-overlay__close {
+            margin-top: $border-width !important;
+            margin-right: $border-width !important;
+        }
+
+    }
+
+}

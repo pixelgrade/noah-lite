@@ -1,0 +1,23 @@
+body.search {
+
+    .site-main {
+        text-align: center;
+    }
+
+    .c-page-header__title span {
+        @extend %mt-xs;
+        display: block;
+        color: $accent;
+    }
+
+    .search-form {
+        @extend %mt-xl;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        label {
+            @extend %mb-m;
+            width: 100%;
+        }
+    }
+}

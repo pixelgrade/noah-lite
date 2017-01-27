@@ -1,0 +1,44 @@
+.c-project__header {
+    @include above(lap) {
+        padding-top: 147px;
+        padding-bottom: 87px;
+    }
+}
+
+.c-project__more {
+
+    .js-header-height-padding-top {
+        @include below(small) {
+            padding-top: 0 !important;
+        }
+    }
+
+    .c-gallery {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
+
+.has-media-and-content {
+
+    .c-project__content {
+        margin-bottom: 4rem;
+    }
+}
+
+body[class*="has-media"] {
+    .c-slideshow {
+        margin: 0;
+    }
+
+    .c-slider {
+        border-bottom-width: 0;
+    }
+}
+
+$project-content-width: 250px;
+
+@include above(pad) {
+    @import "has-media-and-content";
+    @import "has-mixed-content";
+}

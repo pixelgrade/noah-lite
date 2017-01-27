@@ -1,0 +1,29 @@
+$dropdown-background:   #000000     !default;
+$dropdown-color:        #FFFFFF     !default;
+
+.c-navbar--dropdown {
+
+    [class*="children"] {
+
+        padding-right: 15px;
+
+        // Dropdown arrow
+        &:after {
+            border-top: 5px solid $dropdown-background;
+        }
+
+        &:hover:after {
+            border-top-color: $accent;
+        }
+    }
+
+    .sub-menu,
+    .children {
+        background: $dropdown-background;
+        color: $dropdown-color;
+
+        transition: all .3s $easeOutCirc;
+    }
+}
+
+//Theme UX requirements: changed menu labels, menu IDs and added arrows for submenus

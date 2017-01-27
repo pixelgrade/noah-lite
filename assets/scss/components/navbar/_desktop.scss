@@ -1,0 +1,39 @@
+.c-navbar {
+
+
+    ul ul {
+        padding-right: 0;
+    }
+
+    li {
+
+        li {
+            padding-left: 0;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    &:before,
+    &:after {
+        content: none;
+    }
+}
+
+.c-navbar__content {
+    height: $header-height;
+    transition: top 1s $easeInOutCirc;
+    border: 0 solid transparent;
+    border-top-width: 0 !important;
+    padding-top: 0 !important;
+}
+
+.c-navbar--inverse {
+    color: #FFFFFF;
+
+    .c-branding img {
+        filter: invert(1);
+    }
+}

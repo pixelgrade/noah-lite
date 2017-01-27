@@ -1,0 +1,187 @@
+/**
+ *
+ * Style WordPress Comments
+ * No naming conventions applied in order to keep the comments template as simple as possible
+ */
+
+.comment-list {
+    @extend %mt-xl;
+    @extend %mb-xl;
+}
+
+.comment {
+    @extend %mt-l;
+    @extend %mb-l;
+    position: relative;
+
+    .avatar {
+        @extend %mr-m;
+        float: left;
+
+        @include below(small) {
+            max-width: 48px;
+        }
+    }
+}
+
+.pingback,
+.trackback {
+    position: relative;
+
+    a {
+        color: $gray;
+    }
+
+    & + & {
+        @extend %mt-m;
+    }
+}
+
+.pingback .edit-link,
+.trackback .edit-link,
+.comment-links {
+    @extend %ml--xs;
+    @extend .fs-12;
+    color: $gray;
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    @include above(pad) {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.comment-links {
+    display: flex;
+
+    > * {
+        @extend %ml-xs;
+    }
+}
+
+.bypostauthor .avatar {
+    border: 2px solid currentColor;
+}
+
+.children {
+    .comment {
+        @extend %ml-m;
+
+        &.depth-1,
+        &.depth-2,
+        &.depth-3,
+        &.depth-4 {
+            @extend %ml-m;
+        }
+    }
+}
+
+.comment-author {
+
+    .fn {
+        display: block;
+        @include baseline();
+        @extend %heading;
+        @extend .fs-13;
+        letter-spacing: .154em;
+
+        &:after {
+            @extend %pb-xs;
+        }
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .says {
+        display: none;
+    }
+}
+
+.comment-content {
+    @include baseline();
+    @extend %pt-m;
+    @extend %pb-xs;
+    overflow: hidden;
+
+    @include below(pad) {
+        clear: left;
+    }
+}
+
+.comment-metadata {
+    @include baseline();
+    color: $gray;
+
+    a {
+        color: inherit;
+    }
+}
+
+.comment-form {
+    @extend %ml--m;
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+        @extend %mb-m;
+        @extend %pl-m;
+        flex-basis: 100%;
+        max-width: 100%;
+        order: 1;
+    }
+
+    > :last-child,
+    .form-submit {
+        margin-bottom: 0;
+    }
+}
+
+.comment-form-author,
+.comment-form-email {
+    order: -1;
+    flex-basis: 50%;
+}
+
+.comment-form-url {
+    order: 0;
+}
+
+.logged-in-as {
+    @include baseline();
+    @extend %mt--xs;
+    @extend .fs-12;
+    color: $gray;
+    margin-bottom: 0;
+
+    &:after {
+        @extend %pb-m;
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+// Override Jetpack's style (it also has !important)
+.comment-subscription-form .subscribe-label.subscribe-label {
+    display: inline-block !important;
+    margin-left: 5px !important;
+}
+
+.comment-body + .comment-respond {
+    @extend %mt-l;
+}
+
+.comment-reply-title {
+    small {
+        float: right;
+        font-style: normal;
+    }
+}

@@ -1,0 +1,22 @@
+.tags {
+    @extend %mt-m;
+    @extend %mb-xl;
+    @include baseline(2);
+    color: $gray;
+
+    > * {
+        display: inline-block;
+    }
+
+    a:before {
+        content: "#";
+    }
+
+    &:after {
+        content: none;
+    }
+}
+
+.tags__title:after {
+    content: ": "
+}

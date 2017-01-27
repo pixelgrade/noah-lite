@@ -1,0 +1,17 @@
+.c-footer {
+    @extend %pb-xl;
+
+    .c-widget__title:after {
+        @extend %pb-s;
+    }
+}
+
+.c-footer__content {
+    @extend %heading;
+    @extend .fs-10;
+    color: $gray;
+
+    .c-gallery--footer + & {
+        @extend %mt-l;
+    }
+}

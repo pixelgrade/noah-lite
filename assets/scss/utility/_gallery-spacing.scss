@@ -1,0 +1,90 @@
+.c-gallery--portfolio.c-gallery--packed .c-gallery__item {
+    padding-top: calc(38.57575% - 138.8727px);
+}
+@media only screen and (min-width: 48em) {
+    .c-gallery--portfolio.c-gallery--packed .c-gallery__item {
+        padding-top: calc(51.434333333333% - 138.8727px);
+    }
+}
+@media only screen and (min-width: 64em) {
+    .c-gallery--portfolio.c-gallery--packed .c-gallery__item {
+        padding-top: calc(38.57575% - 138.8727px);
+    }
+    .c-gallery--portfolio.c-gallery--packed .c-gallery__item.jetpack-portfolio-tag-featured {
+        padding-top: calc(77.1515% - 187.7454px);
+    }
+}
+@media only screen and (min-width: 80em) {
+    .c-gallery--portfolio.c-gallery--packed .c-gallery__item {
+        padding-top: calc(38.57575% - 138.8727px);
+    }
+    .c-gallery--portfolio.c-gallery--packed .c-gallery__item.jetpack-portfolio-tag-featured {
+        padding-top: calc(77.1515% - 187.7454px);
+    }
+}
+.c-gallery--portfolio {
+    margin-top: -90px;
+    margin-left: -90px;
+    padding-top: 90px;
+}
+.c-gallery--portfolio .c-gallery__item {
+    padding-left: 90px;
+    margin-top: 90px;
+}
+.c-gallery--portfolio.c-gallery--packed .c-card__frame {
+    left: 90px;
+}
+.c-gallery--portfolio.c-gallery--packed .c-card__content {
+    margin-left: 90px;
+}
+@media only screen and (max-width: 760px) {
+    .c-gallery--portfolio {
+        margin-top: -64px;
+        margin-left: -64px;
+        padding-top: 64px;
+    }
+    .c-gallery--portfolio .c-gallery__item {
+        padding-left: 64px;
+        margin-top: 64px;
+    }
+    .c-gallery--portfolio.c-gallery--packed .c-card__frame {
+        left: 64px;
+    }
+    .c-gallery--portfolio.c-gallery--packed .c-card__content {
+        margin-left: 64px;
+    }
+}
+@media only screen and (max-width: 560px) {
+    .c-gallery--portfolio {
+        margin-top: -49px;
+        margin-left: -49px;
+        padding-top: 49px;
+    }
+    .c-gallery--portfolio .c-gallery__item {
+        padding-left: 49px;
+        margin-top: 49px;
+    }
+    .c-gallery--portfolio.c-gallery--packed .c-card__frame {
+        left: 49px;
+    }
+    .c-gallery--portfolio.c-gallery--packed .c-card__content {
+        margin-left: 49px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .c-gallery--portfolio {
+        margin-top: -40px;
+        margin-left: -40px;
+        padding-top: 40px;
+    }
+    .c-gallery--portfolio .c-gallery__item {
+        padding-left: 40px;
+        margin-top: 40px;
+    }
+    .c-gallery--portfolio.c-gallery--packed .c-card__frame {
+        left: 40px;
+    }
+    .c-gallery--portfolio.c-gallery--packed .c-card__content {
+        margin-left: 40px;
+    }
+}

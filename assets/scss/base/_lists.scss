@@ -1,0 +1,42 @@
+/* Definition Lists */
+%dl {
+    display: flex;
+    flex-wrap: wrap;
+
+    dt,
+    dd {
+        // padding: 0.5em 0;
+        // border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+
+        &:last-of-type {
+            border-bottom: 0;
+        }
+    }
+
+    dt {
+        font-weight: bold;
+        flex-basis: 33%;
+    }
+
+    dd {
+        flex-basis: 66%;
+
+        :first-child {
+            margin-top: 0;
+        }
+
+        :last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* Unordered Lists */
+%ul {
+
+}
+
+/* Ordered Lists */
+%ol {
+
+}

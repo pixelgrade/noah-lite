@@ -1,0 +1,117 @@
+ul.instagram-pics {
+    @extend %ml--xs;
+    display: flex;
+    flex-wrap: wrap;
+
+    > li {
+        @extend %pl-xs;
+        @extend %mb-xs;
+        flex-shrink: 1;
+        flex-basis: percentage(1/3);
+
+        &:nth-last-child(3-n) {
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        display: block;
+    }
+
+    .u-footer-layout-stacked .c-footer & {
+        @extend %pr-xs;
+        flex-wrap: nowrap;
+        max-width: none;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+
+        > li {
+            @extend %ml-xs;
+            padding-left: 0;
+            margin-bottom: 0;
+            flex-basis: 100%;
+        }
+    }
+}
+
+.widget_rss {
+
+    .rssSummary,
+    .rss-date {
+        @include baseline(1.5);
+    }
+
+    li .rsswidget {
+        @extend %mb-xs;
+        @extend %heading;
+        display: block;
+        color: inherit;
+        @include baseline();
+    }
+
+    .rss-date {
+        @extend %mb-xs;
+        display: block;
+        color: $gray;
+    }
+
+    ul li:before {
+        content: none;
+    }
+
+    li + li {
+        @extend %mt-m;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.tagcloud {
+    @extend %heading;
+    @extend .o-inline;
+    @extend .o-inline-xs;
+    @extend .fs-11;
+
+    > *:before {
+        content: "#";
+    }
+
+    a {
+        font-size: inherit !important;
+
+        &:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
+.calendar_wrap {
+
+    table {
+
+        caption {
+            @extend %heading;
+            @extend .fs-12;
+            @include baseline();
+
+            &:after {
+                @extend %pb-xs;
+            }
+        }
+
+        th {
+            @extend %heading;
+        }
+
+        td, th {
+            text-align: center;
+        }
+
+        tfoot {
+            border-bottom: 0;
+        }
+    }
+}

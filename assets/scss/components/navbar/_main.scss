@@ -1,0 +1,52 @@
+/*
+
+*/
+
+.c-navbar__label {
+    @include wp-offset(top, 0, true);
+}
+
+
+
+.c-navbar {
+
+
+    backface-visibility: hidden;
+
+    transition: all $transition--micro ease-out;
+    transition-property: color, opacity;
+
+    a {
+        display: block;
+
+        text-decoration: none;
+    }
+}
+
+.c-navbar__content {
+    @include wp-offset(top, 0, true);
+}
+
+.c-navbar__zone--left, .c-navbar__zone--right {
+
+    &:after {
+        content: none !important;
+    }
+}
+
+.c-navbar__zone--middle {
+    text-align: center;
+}
+
+.jetpack-social-navigation.jetpack-social-navigation {
+  @include below(lap) {
+    padding-left: 25px;
+  }
+
+  ul {
+    a {
+      @extend .fs-18;
+      padding: rem(6px);
+    }
+  }
+}

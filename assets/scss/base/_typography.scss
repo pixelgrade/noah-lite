@@ -1,0 +1,161 @@
+$font-size:         16px                !default;
+$line-height:       1.5                 !default;
+$editor-style:      false               !default;
+$content-class:     ".entry-content"    !default;
+
+//@include font-face("Arca Majora", "assets/fonts/ArcaMajora3-Bold", 400);
+// @include font-face("Arca Majora", "assets/fonts/ArcaMajora3-Heavy", 700);
+
+%font-body {
+    font-family: unquote(map-get($font-body, font-family));
+}
+
+%font-headings {
+    font-family: unquote(map-get($font-headings, font-family));
+}
+
+%font-intro {
+    font-family: unquote(map-get($font-intro, font-family));
+}
+
+%font-blockquote {
+    font-family: unquote(map-get($font-blockquote, font-family));
+}
+
+// just set the desired baseline unit here
+// so we can use rem units to multiply it
+html {
+    font-size: percentage($baseline-unit/16px);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    // apply default font properties on the body element
+    @extend %font-body;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $dark;
+
+    // Wrapping text
+    // These are technically the same, but use both
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    // This is the dangerous one in WebKit, as it breaks things wherever
+    word-break: break-all;
+    // Instead use this non-standard one:
+    word-break: break-word;
+
+    // Adds a hyphen where the word breaks, if supported (No Blink)
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+%p,
+%address{
+    @include baseline(24/14, map-get($font-body, cap-height));
+
+    &:not(:last-child) {
+        @extend %mb-m;
+    }
+}
+
+%ul,
+%ol,
+%dl {
+    @include baseline(28/14, map-get($font-body, cap-height));
+
+    &:not(:last-child) {
+        @extend %mb-m;
+    }
+}
+
+%ul,
+%ol,
+%dl {
+    ul, ol, dl {
+        @extend %pl-m;
+
+        &:before,
+        &:after {
+            content: none;
+        }
+    }
+}
+
+%ul {
+    li:before {
+        @extend %mr-xs;
+        content: "\2022";
+    }
+}
+
+%ol {
+    counter-reset: list-counter;
+
+    li {
+        counter-increment: list-counter;
+
+        &:before {
+            @extend %mr-xs;
+            content: counter(list-counter) ".";
+        }
+    }
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+em,
+i,
+small {
+    font-style: italic;
+}
+
+a           { @extend %hyperlink    !optional; }
+
+@mixin render-typography-styles() {
+    .h0         { @extend %h0; }
+    h1          { @extend %h1; }
+    h2          { @extend %h2; }
+    h3          { @extend %h3; }
+    h4          { @extend %h4; }
+    h5          { @extend %h5; }
+    h6          { @extend %h6; }
+
+    address     { @extend %address      !optional; }
+    blockquote  { @extend %blockquote   !optional; }
+    cite        { @extend %cite         !optional; }
+    pre         { @extend %pre          !optional; }
+    table       { @extend %table        !optional; }
+
+    p           { @extend %p            !optional; }
+    dl          { @extend %dl           !optional; }
+    ul          { @extend %ul           !optional; }
+    ol          { @extend %ol           !optional; }
+
+    .intro {
+        @include baseline(20/14, map-get($font-body, cap-height));
+        font-family: unquote(map-get($font-intro, font-family));
+        letter-spacing: 1.08/14 * 1em;
+        text-transform: uppercase;
+    }
+
+    .dropcap {
+        float: left;
+        font-family: unquote(map-get($font-body, font-family));
+        font-size: 43px * 1rem / $baseline-unit;
+        line-height: 0.9;
+        padding-right: 0.1em;
+    }
+}
+
+#{$content-class} {
+    @include render-typography-styles();
+}

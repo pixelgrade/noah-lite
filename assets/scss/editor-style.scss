@@ -1,0 +1,35 @@
+@import "tools/typeline-config";
+@import "settings";
+
+$content-class: ".mce-content-body";
+
+@import "tools/all";
+
+.mce-content-body {
+    max-width: $content-width;
+    margin: $gutter auto;
+    border: 0;
+}
+
+._hero_content_description {
+    @extend %p-m;
+    color: white;
+    margin-top: 38px;
+}
+
+@import "generic/normalize";
+@import "generic/reset";
+
+@import "tools/typeline";
+
+@import "base/blockquote";
+@import "base/forms";
+// @import "base/lists";
+@import "base/links";
+@import "base/pre";
+@import "base/titles";
+@import "base/typography";
+
+@import "base/wp-align";
+
+@import "components/btn";

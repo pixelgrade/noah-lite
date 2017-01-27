@@ -1,0 +1,13 @@
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+%pre {
+	padding: 1rem 2rem;
+	border: 1px solid #c7c7c7;
+
+	@extend %mb-m;
+}

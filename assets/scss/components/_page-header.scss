@@ -1,0 +1,89 @@
+.c-page-header {
+    @extend %pt-l;
+    @extend %mb-l;
+
+    position: relative;
+    z-index: 1;
+
+    .c-page-header__title {
+        @include baseline(27/23, map-get($font-headings, cap-height));
+        @extend %mb-xs;
+
+        &:after {
+            @extend %pb-xs;
+        }
+    }
+
+
+}
+
+.c-page-header__meta {
+
+    &:empty {
+        display: none;
+    }
+
+    &:after {
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        + a:before {
+            content: ", ";
+        }
+    }
+
+    ~ p {
+        @extend %pt-m;
+        @include baseline();
+    }
+}
+
+.c-page-header__taxonomy {
+
+    &:not(:first-child) {
+        @extend %cite--dash;
+        margin-left: 0.5rem;
+    }
+
+    select {
+        height: auto;
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: inherit;
+    }
+
+    &:before {
+        width: 3rem;
+    }
+
+    &:empty {
+        display: none;
+    }
+}
+
+@include below(small) {
+    .c-page-header__title.c-page-header__title {
+        margin-bottom: 0;
+    }
+}
+
+@include above(small) {
+
+    .c-page-header__title {
+        font-size: 23px;
+        letter-spacing: .174em;
+    }
+
+    .c-page-header {
+        text-align: center;
+    }
+
+    .c-page-header__meta {
+        > :first-child { margin-top: 0; }
+        > :last-child { margin-bottom: 0; }
+    }
+}

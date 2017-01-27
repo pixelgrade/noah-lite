@@ -1,0 +1,93 @@
+/**
+ *
+ * GRID (layout)
+ *
+ * 1 - used to ensure grid items cover the desired width as children may overflow - use with caution
+ *
+ */
+
+.o-grid {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    // justify-content: space-between;
+
+    > * {
+        // overflow: hidden; /* 1 */
+        width: 100%;
+        flex: 0 0 auto;
+    }
+}
+
+.o-grid--center {
+    justify-content: center;
+}
+
+@for $i from 1 through 9 {
+    .o-grid--#{$i}col > * {
+        width: percentage(1/$i);
+    }
+}
+
+
+$breakpoints: () !default;
+
+@each $breakpoint, $value in $breakpoints {
+    @media only screen and (min-width: $value) {
+        @for $i from 1 through 9 {
+            .o-grid--#{$i}col-\@#{$breakpoint} > * {
+                width: percentage(1/$i);
+            }
+
+            @if $i > 1 {
+                .c-gallery--packed.o-grid--#{$i}col-\@#{$breakpoint} > .u-span-landscape {
+                    width: percentage(2/$i);
+                }
+            }
+        }
+    }
+}
+
+
+$mybreakpoints: (lap, desk);
+
+@each $breakpoint in $mybreakpoints {
+    @include above($breakpoint) {
+
+        .o-grid--1col-\@#{$breakpoint} {
+
+            .c-gallery__item {
+                position: relative !important;
+                top: 0 !important;
+                left: 0 !important;
+            }
+
+            &.c-gallery--packed {
+                display: block;
+
+                // Wooo
+                .c-gallery__item {
+                    padding-top: 0 !important;
+                }
+
+                .c-card__frame,
+                .c-card__frame img {
+                    position: static;
+                    height: auto;
+                }
+            }
+        }
+
+        @for $i from 2 through 9 {
+            .c-gallery--packed.o-grid--#{$i}col-\@#{$breakpoint} > .u-span2,
+            .c-gallery--packed.o-grid--#{$i}col-\@#{$breakpoint} > .c-gallery__item--portrait.jetpack-portfolio-tag-featured {
+                width: percentage(2/$i);
+            }
+
+            .c-gallery--packed.o-grid--#{$i}col-\@#{$breakpoint} > .u-span-full {
+                width: 100%;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,32 @@
+//*------------------------------------*\
+//   $SOCIAL ICONS
+//*------------------------------------*/
+
+%nav--social-icons {
+  display: flex;
+
+  li {
+    display: flex;
+    white-space: nowrap;
+  }
+
+  a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+  }
+
+  @include below(lap) {
+    text-align: center;
+    width: 100%;
+  }
+} // %nav--social-icons
+
+.jetpack-social-navigation.jetpack-social-navigation {
+
+  ul {
+    @extend %nav--social-icons;
+
+    margin: 0;
+  }
+}

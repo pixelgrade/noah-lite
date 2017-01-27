@@ -1,0 +1,14 @@
+.has-mixed-content {
+
+    .c-project__title {
+        text-transform: none;
+
+        + .c-meta {
+            margin-top: 12px;
+        }
+    }
+
+    .c-project__header {
+        text-align: center;
+    }
+}

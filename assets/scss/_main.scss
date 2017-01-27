@@ -1,0 +1,265 @@
+/**
+ *
+ * Table of Contents
+ *
+ * 1.0 - Reset
+ *   1.1 - Normalize.css
+ *   1.2 - Reset
+ * 2.0 - Base Styles
+ *   2.1 - Typography
+ *   2.2 - Image Alignment
+ * 3.0 - Abstractions
+ *   3.1 - Grid
+ *   3.2 - Wrapper
+ * 4.0 - Components
+ *   4.1 - Branding
+ *   4.2 - Buttons
+ *   4.3 - Cards
+ *   4.4 - Hero Area
+ *   4.5 - Gallery Grid
+ *   4.6 - Page Mask
+ *   4.7 - Page Overlay
+ *   4.8 - Page Header
+ *   4.9 - Post Navigation
+ *   4.10 - Scroll Arrow
+ *   4.11 - Separator
+ *   4.12 - Site Title
+ *   4.13 - Navigation Bar
+ *   4.14 - Slider
+ *   4.15 - Slideshow
+ * 5.0 - Page Specific Styles
+ *   5.1 - Jetpack Portfolio Page
+ *   5.2 - Portfolio Page Template
+ *   5.3 - Split Page Template
+ * 6.0 - Vendor
+ *   6.1 - Gridable WP Plugin
+ *   6.2 - jQuery.rellax.js
+ *   6.3 - jQuery.slick.js
+ * 7.0 - Utility
+ *   7.1 - Transitions
+ *   7.2 - Customify
+ *   7.3 - Misc
+ * 8.0 - Overwrites
+ */
+
+@import "tools/typeline-config";
+
+@import "settings";
+@import "tools/all";
+
+/**
+ * 1.0 - Reset Styles
+ *   1.1 - Normalize.css
+ */
+@import "generic/normalize";
+
+/**
+ *   1.2 - Reset
+ */
+@import "generic/reset";
+
+/**
+ * 2.0 - Base Styles
+ *   2.1 - Typography
+ */
+@import "tools/typeline";
+
+@import "base/titles";
+@import "base/blockquote";
+@import "base/embed";
+@import "base/links";
+@import "base/lists";
+@import "base/pre";
+@import "base/tables";
+@import "base/forms";
+@import "base/typography";
+
+/**
+ *   2.2 - Image Alignment
+ */
+@import "base/wp-align";
+
+/**
+ * 3.0 - Abstractions
+ *   3.1 - Grid
+ */
+@import "objects/grid";
+
+/**
+ *   3.2 - Wrapper
+ */
+@import "objects/wrapper";
+
+/**
+ *   3.3 - Inline
+ */
+@import "objects/inline";
+
+/**
+ * 4.0 - Components
+ *   4.1 - Branding
+ */
+@import "../../components/header/scss/main";
+@import "components/branding";
+
+/**
+ *   4.2 - Buttons
+ */
+@import "components/btn";
+
+/**
+ *   4.3 - Cards
+ */
+@import "components/card";
+
+/**
+ *   4.4 - Hero Area
+ */
+@import "../../components/hero/scss/main";
+@import "components/hero";
+
+/**
+ *   4.5 - Gallery Grid
+ */
+@import "components/gallery";
+
+/**
+ *   4.6 - Page Mask
+ */
+@import "components/mask";
+
+/**
+ *   4.7 - Page Overlay
+ */
+@import "components/overlay";
+
+/**
+ *   4.8 - Page Header
+ */
+@import "components/page-header";
+
+/**
+ *   4.9 - Post Navigation
+ */
+@import "components/post-navigation";
+
+/**
+ *   4.10 - Scroll Arrow
+ */
+@import "components/scroll-arrow";
+
+/**
+ *   4.11 - Separator
+ */
+@import "components/separator";
+
+/**
+ *   4.12 - Site Title
+ */
+@import "components/site-title";
+
+/**
+ *   4.13 - Navigation Bar
+ */
+@import "components/navbar";
+
+/**
+ *   4.14 - Slider
+ */
+@import "components/slider";
+
+/**
+ *   4.15 - Slideshow
+ */
+@import "components/slideshow";
+
+/**
+ *   4.16 - Author Box
+ */
+@import "components/author";
+
+/**
+ *   4.17 - Comments
+ */
+@import "components/comments";
+
+/**
+ *   4.18 - Tags
+ */
+@import "components/tags";
+
+/**
+ *   4.19 - Footer
+ */
+@import "../../components/footer/scss/main";
+@import "components/footer";
+
+/**
+ *   4.20 - Border
+ */
+@import "components/border";
+
+/**
+ *   4.21 - Widgets
+ */
+@import "components/widgets";
+
+/**
+ * 5.0 - Page Specific Styles
+ *   5.1 - Jetpack Portfolio Page
+ */
+@import "pages/project/main";
+
+/**
+ *   5.2 - Portfolio Page Template
+ */
+@import "pages/portfolio";
+
+/**
+ *   5.3 - Split Page Template
+ */
+@import "pages/split";
+
+/**
+ *   5.4 - Search Results Page
+ */
+@import "pages/search";
+
+/**
+ * 6.0 - Vendor
+ *   6.1 - Gridable WP Plugin
+ */
+@import "vendor/gridable";
+
+/**
+ *   6.2 - jQuery.rellax.js
+ */
+@import "vendor/rellax";
+
+/**
+ *   6.3 - jQuery.slick.js
+ */
+@import "vendor/slick";
+
+/**
+ * 7.0 - Utility
+ *   7.1 - Transitions
+ */
+@import "utility/transitions";
+
+/**
+ *   7.2 - Customify
+ */
+@import "utility/customify";
+
+/**
+ *   7.3 - Misc
+ */
+@import "utility/misc";
+@import "utility/widths";
+@import "utility/mq";
+
+/**
+ * 8.0 - Overwrites
+ */
+@import "shame";

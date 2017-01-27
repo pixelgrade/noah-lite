@@ -1,0 +1,43 @@
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+    th {
+        text-align: left;
+    }
+
+    th,
+    td {
+        vertical-align: middle;
+    }
+}
+
+%table {
+
+    @extend %mb-m;
+
+    tr,
+    thead,
+    tbody,
+    tfoot {
+        border-bottom: 1px solid #c7c7c7;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    th,
+    td {
+        padding: .5em;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}

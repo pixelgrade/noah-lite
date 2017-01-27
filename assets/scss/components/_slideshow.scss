@@ -1,0 +1,51 @@
+.c-slideshow {
+    @extend %mt-l;
+    @extend %mb-l;
+    clear: both;
+
+    .gallery {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .has-media-and-content & {
+        width: 100%;
+    }
+
+    [class*="has-media"] & {
+        margin-bottom: 0;
+    }
+}
+
+@include above(small) {
+    .c-slideshow {
+        position: relative;
+        transition: height .8s $easeInOutCubic;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50vw;
+            right: -50vw;
+            display: block;
+            height: 100%;
+            background-color: inherit;
+        }
+
+        .gallery,
+        .c-slider {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+        }
+
+        .gallery {
+            right: 0;
+        }
+
+        .gallery-item {
+            will-change: opacity;
+        }
+    }
+}

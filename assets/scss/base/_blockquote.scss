@@ -1,0 +1,48 @@
+%blockquote {
+    @extend .fs-23;
+    @include baseline(30/23, 0.68);
+    font-family: unquote(map-get($font-blockquote, font-family));
+    font-style: italic;
+
+    &:not(:last-child) {
+        @extend %mb-m;
+    }
+
+    p {
+        font: inherit;
+
+        &:not(:last-child) {
+            @extend %mb-s;
+        }
+
+        @if $debug {
+            &:after {
+                content: none;
+            }
+        }
+    }
+}
+
+%cite {
+    display: block;
+    @extend .h7;
+    color: $accent;
+    font-style: normal;
+
+    @extend %mt-s;
+    @extend %cite--dash;
+}
+
+%cite--dash {
+
+    &:before {
+        position: relative;
+        top: -0.5em;
+        content: "";
+        display: inline-block;
+        width: 2rem;
+        height: 2px;
+        margin-right: 1rem;
+        background-color: currentColor;
+    }
+}

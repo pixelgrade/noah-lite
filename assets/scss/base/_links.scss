@@ -1,0 +1,21 @@
+%hyperlink {
+    color: $gray;
+    text-decoration: none;
+
+    &:active {
+
+    }
+
+    &:hover {
+        color: $accent;
+        text-decoration: underline;
+    }
+
+    &:visited {
+
+    }
+
+    body.u-underline-links & {
+        text-decoration: underline;
+    }
+}

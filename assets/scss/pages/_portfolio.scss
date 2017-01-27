@@ -1,0 +1,28 @@
+.has-hero {
+
+    //@include below('lap') {
+    //
+    //    .c-navbar {
+    //        top: 0;
+    //        margin-top: 0;
+    //    }
+    //
+    //}
+    //
+    //@include above('lap') {
+    //
+    //    &:not(.is-scrolled),
+    //    &.u-static-header{
+    //
+    //        .c-navbar {
+    //            position: absolute;
+    //            transform: translate3d(0, 100vh, 0);
+    //        }
+    //    }
+    //}
+    //
+    //&:not(.is-scrolled) .c-navbar {
+    //    margin-top: 0 !important;
+    //    top: 0;
+    //}
+}

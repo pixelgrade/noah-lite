@@ -1,0 +1,19 @@
+.o-inline {
+    display: block;
+
+    > * {
+        display: inline-block;
+    }
+}
+
+.o-inline-xs {
+    > * {
+        @extend %mr-xs;
+    }
+}
+
+.o-inline-s {
+    > * {
+        @extend %mr-s;
+    }
+}

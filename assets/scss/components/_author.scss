@@ -1,0 +1,78 @@
+/**
+ * Style Author Box displayed below post
+ */
+
+.c-author {
+    @extend %mt-xl;
+    @extend %mb-xl;
+    display: flex;
+
+    .c-author__name:after,
+    .c-author__description {
+        @extend %pb-s;
+    }
+
+    &:not(.has-description) {
+        align-items: center;
+    }
+
+    &.has-description {
+
+        @include below(small) {
+            flex-wrap: wrap;
+
+            .c-author__avatar + .c-author__details {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+.c-author__avatar + .c-author__details {
+    @extend %pl-m;
+}
+
+.c-author__avatar {
+    flex-shrink: 0;
+    max-width: 22%;
+    @extend %mb-s;
+
+    @include above(small) {
+        margin-bottom: 0;
+    }
+
+    @include below(small) {
+        flex-basis: 100%;
+    }
+
+    img {
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+}
+
+.c-author__label {
+    display: block;
+    color: $gray;
+
+    .c-author &:after {
+        @extend %pb-xs;
+    }
+}
+
+.c-author__links {
+    @extend %cite;
+    margin-top: 0;
+    margin-right: 0;
+
+    &:after {
+        padding-bottom: 0;
+    }
+}
+
+// Hide weird gravatar image on hover on author avatar
+[class*="grav-clone"] {
+    display: none !important;
+}

@@ -1,0 +1,41 @@
+.gridable--row {
+    flex-wrap: nowrap;
+
+    p:empty {
+        display: none;
+    }
+
+    img {
+        @extend %mt-xs;
+        @extend %mb-xs;
+    }
+}
+
+.gridable--col {
+    @extend %ml-m;
+    padding: 0;
+    background: none;
+    overflow: visible;
+    flex-shrink: 1;
+
+    figure {
+        @extend %mb-s;
+        margin-top: 0;
+    }
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+@include below(small) {
+    .gridable--row {
+        flex-wrap: wrap;
+    }
+
+    .gridable--col {
+        flex-basis: 100%;
+        width: 100%;
+        margin-left: 0;
+    }
+}

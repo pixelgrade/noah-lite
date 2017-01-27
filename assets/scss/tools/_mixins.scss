@@ -1,0 +1,55 @@
+// shorthand media queries for defined breakpoints
+@mixin above($bpname) {
+    @media only screen and ( min-width: map-get($breakpoints, $bpname) ) {
+        @content;
+    }
+}
+
+@mixin below($bpname) {
+    @media not screen and ( min-width: map-get($breakpoints, $bpname) ) {
+        @content;
+    }
+}
+
+@mixin wp-offset($property: top, $value: 0px, $fixed: false, $sign: 1, $bodyclass: null) {
+
+    #{$bodyclass}.admin-bar &            { #{$property}: $value + 32px * $sign; }
+    #{$bodyclass}.demo-site &            { #{$property}: $value + 80px * $sign; }
+    #{$bodyclass}.admin-bar.demo-site &  { #{$property}: $value + 112px * $sign; }
+
+    @media (max-width: 782px) {
+        #{$bodyclass}.admin-bar &            { #{$property}: $value + 46px * $sign; }
+        #{$bodyclass}.admin-bar.demo-site &  { #{$property}: $value + 126px * $sign; }
+    }
+
+    // the .demosite-activate bar extends to 100px at 620px
+    // but it was probably intended at 700px when it changes its layout
+    // this may be changed accordingly when deployed to WP.com
+    @media (max-width: 700px) {
+        #{$bodyclass}.admin-bar.demo-site & { #{$property}: $value + 146px * $sign; }
+    }
+
+    @if $fixed != false {
+        @media screen and (max-width: 600px) {
+            #{$bodyclass}.admin-bar & { position: absolute; }
+        }
+    }
+}
+
+@mixin font-face($name, $filename, $weight: null) {
+    @font-face {
+        font-family: $name;
+        @if $weight != null {
+            font-weight: $weight;
+        }
+        src: url(unquote($filename) + '.woff2') format('woff2'), /* Super Modern Browsers */
+            url(unquote($filename) + '.woff') format('woff'); /* Pretty Modern Browsers */
+    }
+}
+
+@mixin placeholder() {
+    ::-webkit-input-placeholder { @content; }
+    ::-moz-placeholder { @content; }
+    :-ms-input-placeholder { @content; }
+    :-moz-placeholder { @content; }
+}

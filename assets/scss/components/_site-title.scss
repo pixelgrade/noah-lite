@@ -1,0 +1,15 @@
+.site-title {
+    padding: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    &:before,
+    &:after {
+        display: none !important;
+    }
+}
+
+.site-title,
+.site-description {
+    margin: 0;
+}

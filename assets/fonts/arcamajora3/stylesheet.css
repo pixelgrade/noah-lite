@@ -1,0 +1,21 @@
+/* Bold Normal */
+@font-face {
+    font-family: 'Arca Majora';
+    src: url('//pxgcdn.com/fonts/arcamajora3ext/ArcaMajora3-Bold.eot');
+    src: url('//pxgcdn.com/fonts/arcamajora3ext/ArcaMajora3-Bold.eot?#iefix') format('embedded-opentype'),
+         url('//pxgcdn.com/fonts/arcamajora3ext/ArcaMajora3-Bold.woff2') format('woff2'),
+         url('//pxgcdn.com/fonts/arcamajora3ext/ArcaMajora3-Bold.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Heavy Normal */
+@font-face {
+    font-family: 'Arca Majora';
+    src: url('//pxgcdn.com/fonts/arcamajora3ext/ArcaMajora3-Heavy.eot');
+    src: url('//pxgcdn.com/fonts/arcamajora3ext/ArcaMajora3-Heavy.eot?#iefix') format('embedded-opentype'),
+         url('//pxgcdn.com/fonts/arcamajora3ext/ArcaMajora3-Heavy.woff2') format('woff2'),
+         url('//pxgcdn.com/fonts/arcamajora3ext/ArcaMajora3-Heavy.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
