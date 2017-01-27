@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<input class="c-navbar__checkbox" id="menu-toggle" type="checkbox" aria-controls="primary-menu" aria-expanded="false">
 				<label class="c-navbar__label" for="menu-toggle">
 					<span class="c-navbar__label-icon"><?php pxg_load_component_file( 'header', 'templates/burger', '', false ); ?></span>
-					<span class="c-navbar__label-text screen-reader-text"><?php esc_html_e( 'Primary Menu', 'components' ); ?></span>
+					<span class="c-navbar__label-text screen-reader-text"><?php esc_html_e( 'Primary Menu', 'noah' ); ?></span>
 				</label><!-- .c-navbar__label -->
 
 				<div class="c-navbar__content">

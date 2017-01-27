@@ -62,8 +62,8 @@ class Pixelgrade_Header {
 	 */
 	public function header_setup() {
 		$menus = array(
-			'primary-left'  => esc_html__( 'Header Left', 'components' ),
-			'primary-right' => esc_html__( 'Header Right', 'components' ),
+			'primary-left'  => esc_html__( 'Header Left', 'noah' ),
+			'primary-right' => esc_html__( 'Header Right', 'noah' ),
 		);
 
 		//allow others to make changes to the menus that we register
@@ -124,25 +124,25 @@ class Pixelgrade_Header {
 		$header_section = array(
 			// Header
 			'header_section' => array(
-				'title'   => __( 'Header', 'components' ),
+				'title'   => __( 'Header', 'noah' ),
 				'options' => array(
 					'header_options_customizer_tabs'        => array(
 						'type' => 'html',
 						'html' => '<nav class="section-navigation  js-section-navigation">
-							<a href="#section-title-header-layout">' . esc_html__( 'Layout', 'components' ) . '</a>
-							<a href="#section-title-header-colors">' . esc_html__( 'Colors', 'components' ) . '</a>
-							<a href="#section-title-header-fonts">' . esc_html__( 'Fonts', 'components' ) . '</a>
+							<a href="#section-title-header-layout">' . esc_html__( 'Layout', 'noah' ) . '</a>
+							<a href="#section-title-header-colors">' . esc_html__( 'Colors', 'noah' ) . '</a>
+							<a href="#section-title-header-fonts">' . esc_html__( 'Fonts', 'noah' ) . '</a>
 							</nav>',
 					),
 					// [Section] Layout
 					'header_title_layout_section'    => array(
 						'type' => 'html',
-						'html' => '<span id="section-title-header-layout" class="separator section label large">&#x1f4d0; ' . esc_html__( 'Layout', 'components' ) . '</span>',
+						'html' => '<span id="section-title-header-layout" class="separator section label large">&#x1f4d0; ' . esc_html__( 'Layout', 'noah' ) . '</span>',
 					),
 					'header_logo_height'              => array(
 						'type'        => 'range',
-						'label'       => esc_html__( 'Logo Height', 'components' ),
-						'desc'        => esc_html__( 'Adjust the max height of your logo container.', 'components' ),
+						'label'       => esc_html__( 'Logo Height', 'noah' ),
+						'desc'        => esc_html__( 'Adjust the max height of your logo container.', 'noah' ),
 						'live'        => true,
 						'default'     => 23,
 						'input_attrs' => array(
@@ -166,8 +166,8 @@ class Pixelgrade_Header {
 					),
 					'header_height' => array(
 						'type'        => 'range',
-						'label'       => esc_html__( 'Header Height', 'components' ),
-						'desc'        => esc_html__( 'Adjust the header and navigation bar height.', 'components' ),
+						'label'       => esc_html__( 'Header Height', 'noah' ),
+						'desc'        => esc_html__( 'Adjust the header and navigation bar height.', 'noah' ),
 						'live'        => true,
 						'default'     => 100,
 						'input_attrs' => array(
@@ -191,8 +191,8 @@ class Pixelgrade_Header {
 					),
 					'header_navigation_links_spacing' => array(
 						'type'        => 'range',
-						'label'       => esc_html__( 'Navigation Link Spacing', 'components' ),
-						'desc'        => esc_html__( 'Adjust the spacing between individual items in your navigation.', 'components' ),
+						'label'       => esc_html__( 'Navigation Link Spacing', 'noah' ),
+						'desc'        => esc_html__( 'Adjust the spacing between individual items in your navigation.', 'noah' ),
 						'live'        => true,
 						'default'     => 40,
 						'input_attrs' => array(
@@ -219,29 +219,29 @@ class Pixelgrade_Header {
 
 					'header_position' => array(
 						'type'    => 'select',
-						'label'   => esc_html__( 'Header Position', 'components' ),
-						'desc'    => esc_html__( 'Choose if you want a static menu or a fixed (sticky) one that stays visible no matter how much you scroll the page.', 'components' ),
+						'label'   => esc_html__( 'Header Position', 'noah' ),
+						'desc'    => esc_html__( 'Choose if you want a static menu or a fixed (sticky) one that stays visible no matter how much you scroll the page.', 'noah' ),
 						'default' => 'sticky',
 						'choices' => array(
-							'static' => esc_html__( 'Static', 'components' ),
-							'sticky' => esc_html__( 'Sticky (fixed)', 'components' ),
+							'static' => esc_html__( 'Static', 'noah' ),
+							'sticky' => esc_html__( 'Sticky (fixed)', 'noah' ),
 						),
 					),
 					'header_width'    => array(
 						'type'    => 'select',
-						'label'   => esc_html__( 'Header Width', 'components' ),
-						'desc'    => esc_html__( 'Choose if you want the header span to the full-browser or stay aligned with the site container width.', 'components' ),
+						'label'   => esc_html__( 'Header Width', 'noah' ),
+						'desc'    => esc_html__( 'Choose if you want the header span to the full-browser or stay aligned with the site container width.', 'noah' ),
 						'default' => 'full',
 						'choices' => array(
-							'full'      => esc_html__( 'Full Browser Width', 'components' ),
-							'container' => esc_html__( 'Container Width', 'components' ),
+							'full'      => esc_html__( 'Full Browser Width', 'noah' ),
+							'container' => esc_html__( 'Container Width', 'noah' ),
 						),
 					),
 
 					'header_sides_spacing'          => array(
 						'type'        => 'range',
-						'label'       => esc_html__( 'Header Sides Spacing', 'components' ),
-						'desc'        => esc_html__( 'Adjust the space separating the header and the sides of the browser.', 'components' ),
+						'label'       => esc_html__( 'Header Sides Spacing', 'noah' ),
+						'desc'        => esc_html__( 'Adjust the space separating the header and the sides of the browser.', 'noah' ),
 						'live'        => true,
 						'default'     => 50,
 						'input_attrs' => array(
@@ -269,11 +269,11 @@ class Pixelgrade_Header {
 					// [Section] COLORS
 					'header_title_colors_section'    => array(
 						'type' => 'html',
-						'html' => '<span id="section-title-header-colors" class="separator section label large">&#x1f3a8; ' . esc_html__( 'Colors', 'components' ) . '</span>',
+						'html' => '<span id="section-title-header-colors" class="separator section label large">&#x1f3a8; ' . esc_html__( 'Colors', 'noah' ) . '</span>',
 					),
 					'header_navigation_links_color' => array(
 						'type'    => 'color',
-						'label'   => esc_html__( 'Navigation Links Color', 'components' ),
+						'label'   => esc_html__( 'Navigation Links Color', 'noah' ),
 						'live'    => true,
 						'default' => '#252525',
 						'css'     => array(
@@ -285,7 +285,7 @@ class Pixelgrade_Header {
 					),
 					'header_links_active_color'     => array(
 						'type'    => 'color',
-						'label'   => esc_html__( 'Links Active Color', 'components' ),
+						'label'   => esc_html__( 'Links Active Color', 'noah' ),
 						'live'    => true,
 						'default' => '#bf493d',
 						'css'     => array(
@@ -303,17 +303,17 @@ class Pixelgrade_Header {
 					),
 					'header_links_active_style'     => array(
 						'type'    => 'select',
-						'label'   => esc_html__( 'Links Active Style', 'components' ),
-						'desc'    => esc_html__( '', 'components' ),
+						'label'   => esc_html__( 'Links Active Style', 'noah' ),
+						'desc'    => esc_html__( '', 'noah' ),
 						'default' => 'active',
 						'choices' => array(
-							'active'    => esc_html__( 'Active', 'components' ),
-							'underline' => esc_html__( 'Underline', 'components' ),
+							'active'    => esc_html__( 'Active', 'noah' ),
+							'underline' => esc_html__( 'Underline', 'noah' ),
 						),
 					),
 					'header_background'             => array(
 						'type'    => 'color',
-						'label'   => esc_html__( 'Header Background', 'components' ),
+						'label'   => esc_html__( 'Header Background', 'noah' ),
 						'live'    => true,
 						'default' => '#FFFFFF',
 						'css'     => array(
@@ -327,13 +327,13 @@ class Pixelgrade_Header {
 					// [Section] FONTS
 					'header_title_fonts_section'    => array(
 						'type' => 'html',
-						'html' => '<span id="section-title-header-fonts" class="separator section label large">&#x1f4dd;  ' . esc_html__( 'Fonts', 'components' ) . '</span>',
+						'html' => '<span id="section-title-header-fonts" class="separator section label large">&#x1f4dd;  ' . esc_html__( 'Fonts', 'noah' ) . '</span>',
 					),
 
 					'header_page_title_font2' => array(
 						'type'     			=> 'font',
-						'label'            => esc_html__( 'Navigation Text', 'components' ),
-						'desc'             => esc_html__( '', 'components' ),
+						'label'            => esc_html__( 'Navigation Text', 'noah' ),
+						'desc'             => esc_html__( '', 'noah' ),
 						'selector'         => '.c-navbar.c-navbar',
 						'callback' => 'typeline_font_cb',
 
@@ -408,7 +408,7 @@ class Pixelgrade_Header {
 	 */
 	public function __clone() {
 
-		_doing_it_wrong( __FUNCTION__,esc_html( __( 'Cheatin&#8217; huh?', 'components' ) ), esc_html( $this->_version ) );
+		_doing_it_wrong( __FUNCTION__,esc_html( __( 'Cheatin&#8217; huh?', 'noah' ) ), esc_html( $this->_version ) );
 	} // End __clone ()
 
 	/**
@@ -418,6 +418,6 @@ class Pixelgrade_Header {
 	 */
 	public function __wakeup() {
 
-		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Cheatin&#8217; huh?', 'components' ) ),  esc_html( $this->_version ) );
+		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Cheatin&#8217; huh?', 'noah' ) ),  esc_html( $this->_version ) );
 	} // End __wakeup ()
 }

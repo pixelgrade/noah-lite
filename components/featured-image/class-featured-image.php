@@ -196,7 +196,7 @@ class Pixelgrade_Feature_Image {
 	 * @since 1.0.0
 	 */
 	public function __clone() {
-		_doing_it_wrong( __FUNCTION__,esc_html( __( 'Cheatin&#8217; huh?', 'components' ) ), esc_html( $this->_version ) );
+		_doing_it_wrong( __FUNCTION__,esc_html( __( 'Cheatin&#8217; huh?', 'noah' ) ), esc_html( $this->_version ) );
 	} // End __clone ()
 
 	/**
@@ -205,6 +205,6 @@ class Pixelgrade_Feature_Image {
 	 * @since 1.0.0
 	 */
 	public function __wakeup() {
-		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Cheatin&#8217; huh?', 'components' ) ),  esc_html( $this->_version ) );
+		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Cheatin&#8217; huh?', 'noah' ) ),  esc_html( $this->_version ) );
 	} // End __wakeup ()
 }

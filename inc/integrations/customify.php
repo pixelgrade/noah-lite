@@ -71,7 +71,7 @@
 //            // just add some option at the end
 //            $options['header_section']['options']['header_transparent_header'] = array(
 //                'type'    => 'checkbox',
-//                'label'   => esc_html__( 'Transparent Header while on Hero', 'components' ),
+//                'label'   => esc_html__( 'Transparent Header while on Hero', 'noah' ),
 //                'default' => 1,
 //            );
 //
@@ -79,7 +79,7 @@
 //            $header_transparent_option = array(
 //                'header_transparent' => array(
 //                    'type'    => 'checkbox',
-//                    'label'   => esc_html__( 'Transparent Header while on Hero', 'components' ),
+//                    'label'   => esc_html__( 'Transparent Header while on Hero', 'noah' ),
 //                    'default' => 1,
 //                )
 //            );
@@ -98,7 +98,7 @@
 //
 //            // or just replace the whole array
 //            $options['header_section'] = array(
-//                'title'   => __( 'Header', 'components' ),
+//                'title'   => __( 'Header', 'noah' ),
 //                'options' => array(
 //                        //put your options here
 //                )

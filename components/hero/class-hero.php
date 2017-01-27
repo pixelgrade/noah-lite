@@ -84,7 +84,7 @@ class Pixelgrade_Hero {
 			//The Hero Background controls - For pages
 			'hero_area_background__page'       => array(
 				'id'         => 'hero_area_background__page',
-				'title'      => esc_html__( 'Hero Area » Background', 'components' ),
+				'title'      => esc_html__( 'Hero Area » Background', 'noah' ),
 				'pages'      => array( 'page' ), // Post type
 				'context'    => 'side',
 				'priority'   => 'low',
@@ -97,18 +97,18 @@ class Pixelgrade_Hero {
 				'show_on_page_for_posts' => true, //this is a special entry of our's to force things
 				'fields'     => array(
 					array(
-						'name' => esc_html__( 'Gallery Image', 'components' ),
+						'name' => esc_html__( 'Gallery Image', 'noah' ),
 						'id'   => '_hero_background_gallery',
 						'type' => 'gallery',
 					),
 					array(
-						'name' => esc_html__( 'Playlist', 'components' ),
+						'name' => esc_html__( 'Playlist', 'noah' ),
 						'id'   => '_hero_background_videos',
 						'type' => 'playlist',
 					),
 					array(
-						'name'      => esc_html__( 'Image Opacity', 'components' ),
-						'desc'	 	=> '<strong>' . esc_html__( 'Image Opacity', 'components' ) . '</strong>',
+						'name'      => esc_html__( 'Image Opacity', 'noah' ),
+						'desc'	 	=> '<strong>' . esc_html__( 'Image Opacity', 'noah' ) . '</strong>',
 						'id'        => '_hero_image_opacity',
 						'type'      => 'text_range',
 						'std'   => '100',
@@ -118,8 +118,8 @@ class Pixelgrade_Hero {
 						)
 					),
 					array(
-						'name' => esc_html__( 'Background Color', 'components' ),
-						'desc' => '<strong>' . esc_html__( 'Background Color', 'components' ) . '</strong> <span class="tooltip" title="<p>' . esc_html__( 'Used as a background color during page transitions.', 'components' ) . '</p><p>' . esc_html__( 'Tip: It helps if the color matches the background color of the Hero image.', 'components' ) . '</p>"></span>',
+						'name' => esc_html__( 'Background Color', 'noah' ),
+						'desc' => '<strong>' . esc_html__( 'Background Color', 'noah' ) . '</strong> <span class="tooltip" title="<p>' . esc_html__( 'Used as a background color during page transitions.', 'noah' ) . '</p><p>' . esc_html__( 'Tip: It helps if the color matches the background color of the Hero image.', 'noah' ) . '</p>"></span>',
 						'id'   => '_hero_background_color',
 						'type' => 'colorpicker',
 						'std' => '#333333'
@@ -130,17 +130,17 @@ class Pixelgrade_Hero {
 			// The Hero Content controls - For pages
 			'hero_area_content__page'     => array(
 				'id'         => 'hero_area_content__page',
-				'title'      => '&#x1f535; ' . esc_html__( 'Hero Area » Content', 'components' )
+				'title'      => '&#x1f535; ' . esc_html__( 'Hero Area » Content', 'noah' )
 				                . ' <span class="tooltip" title="<' . 'title>'
-				                . __( 'Hero Area » Content', 'components' )
+				                . __( 'Hero Area » Content', 'noah' )
 				                . '</title><p>'
-				                . __( 'Use this section to add a <strong>Title</strong> or a summary for this page. Get creative and add different elements like buttons, logos or other headings.', 'components')
+				                . __( 'Use this section to add a <strong>Title</strong> or a summary for this page. Get creative and add different elements like buttons, logos or other headings.', 'noah')
 				                . '</p><p>'
-				                . __( 'You can insert a title using a <strong>Heading 1</strong> element, either on the Hero Area or using a <b>Text Block</b> within the above content area.', 'components')
+				                . __( 'You can insert a title using a <strong>Heading 1</strong> element, either on the Hero Area or using a <b>Text Block</b> within the above content area.', 'noah')
 				                . '</p><p>'
-				                . __('* Note that the <strong>Page Title</strong> written above will <u>not</u> be included automatically on the page, so you have complete freedom in choosing where you place or how it looks.', 'components')
+				                . __('* Note that the <strong>Page Title</strong> written above will <u>not</u> be included automatically on the page, so you have complete freedom in choosing where you place or how it looks.', 'noah')
 				                . "</p><p><a href='#'>"
-				                . __('Learn more about Managing the Hero Area', 'components')
+				                . __('Learn more about Managing the Hero Area', 'noah')
 				                . '</a></p>"></span>',
 				'pages'      => array( 'page' ), // Post type
 				'context'    => 'normal',
@@ -154,7 +154,7 @@ class Pixelgrade_Hero {
 				'show_on_page_for_posts' => true, //this is a special entry of our's to force things
 				'fields'     => array(
 					array(
-						'name'       => esc_html__( 'Description', 'components' ),
+						'name'       => esc_html__( 'Description', 'noah' ),
 						'id'         => '_hero_content_description',
 						'type'       => 'wysiwyg',
 						'show_names' => false,
@@ -163,11 +163,11 @@ class Pixelgrade_Hero {
 						'desc' => '<span class="hero-editor-visibility-status">
 								<span class="dashicons  dashicons-visibility"></span>
 								<span class="dashicons  dashicons-hidden"></span>
-								<span class="hero-visibility-text">' . esc_html__( 'Visible Hero Area', 'components' ) . '</span>
-								<span class="hero-hidden-text">' . esc_html__( 'Hidden Hero Area', 'components' ) . '</span>
+								<span class="hero-visibility-text">' . esc_html__( 'Visible Hero Area', 'noah' ) . '</span>
+								<span class="hero-hidden-text">' . esc_html__( 'Hidden Hero Area', 'noah' ) . '</span>
 								</span>
-								<span class="hero-visibility-description">' . esc_html__( 'To hide the Hero Area section, remove the content above and any item from the Hero Area » Background.', 'components' ) . '</span>
-								<span class="hero-hidden-description">' . esc_html__( 'Add some content above or an image to the Hero Area » Background to make the Hero Area visible.', 'components' ) . '</span>',
+								<span class="hero-visibility-description">' . esc_html__( 'To hide the Hero Area section, remove the content above and any item from the Hero Area » Background.', 'noah' ) . '</span>
+								<span class="hero-hidden-description">' . esc_html__( 'Add some content above or an image to the Hero Area » Background to make the Hero Area visible.', 'noah' ) . '</span>',
 
 						'options'    => array(
 							'media_buttons' => true,
@@ -180,28 +180,28 @@ class Pixelgrade_Hero {
 					),
 
 					array(
-						'name'    => esc_html__( 'Hero Area Height', 'components' ),
-						'desc'    => '<p>' . esc_html__( 'Set the height of the Hero Area relative to the browser window.', 'components' ) . '</p>',
+						'name'    => esc_html__( 'Hero Area Height', 'noah' ),
+						'desc'    => '<p>' . esc_html__( 'Set the height of the Hero Area relative to the browser window.', 'noah' ) . '</p>',
 						'id'      => '_hero_height',
 						'type'    => 'select',
 						'options' => array(
 							array(
-								'name'  => '&#9673;&#9673;&#9673; ' . esc_html__( 'Full Height', 'components' ),
+								'name'  => '&#9673;&#9673;&#9673; ' . esc_html__( 'Full Height', 'noah' ),
 								'value' => 'c-hero--full',
 							),
 							array(
-								'name'  => '&#9673;&#9673;&#9711; ' . esc_html__( 'Two Thirds', 'components' ),
+								'name'  => '&#9673;&#9673;&#9711; ' . esc_html__( 'Two Thirds', 'noah' ),
 								'value' => 'c-hero--two-thirds',
 							),
 							array(
-								'name'  => '&nbsp; &#9673;&#9711; ' . esc_html__( '&nbsp;Half', 'components' ),
+								'name'  => '&nbsp; &#9673;&#9711; ' . esc_html__( '&nbsp;Half', 'noah' ),
 								'value' => 'c-hero--half',
 							)
 						),
 						'std'     => 'c-hero--full',
 					),
 					array(
-						'name'    => esc_html__( 'Hero Content Alignment', 'components' ),
+						'name'    => esc_html__( 'Hero Content Alignment', 'noah' ),
 						'desc'    => '<p>Considering the background image focal point, you can align the content to make them both more visible.</p>
 							<ul>
 								<li>Mix it with a background color overlay to make it pop</li>
@@ -259,31 +259,31 @@ class Pixelgrade_Hero {
 					),
 					// PAGE (Regular) Slideshow Options
 					array(
-						'name'    => '&#x1F307; &nbsp; ' . esc_html__( 'Slideshow Options', 'components' ),
+						'name'    => '&#x1F307; &nbsp; ' . esc_html__( 'Slideshow Options', 'noah' ),
 						'id'      => '_hero_slideshow_options__title',
-						'value' => __( 'Add more than one image to the <strong>Hero Area » Background</strong> to enable this section. ', 'components' ),
+						'value' => __( 'Add more than one image to the <strong>Hero Area » Background</strong> to enable this section. ', 'noah' ),
 						'type'    => 'title',
 					),
 					array(
-						'name'    => esc_html__( 'Auto Play', 'components' ),
-						'desc'	  => esc_html__( 'The slideshow will automatically move to the next slide, after a period of time.', 'components' ),
+						'name'    => esc_html__( 'Auto Play', 'noah' ),
+						'desc'	  => esc_html__( 'The slideshow will automatically move to the next slide, after a period of time.', 'noah' ),
 						'id'      => '_hero_slideshow_options__autoplay',
 						'type'    => 'select',
 						'options' => array(
 							array(
-								'name'  => esc_html__( 'Enabled', 'components' ),
+								'name'  => esc_html__( 'Enabled', 'noah' ),
 								'value' => true
 							),
 							array(
-								'name'  => esc_html__( 'Disabled', 'components' ),
+								'name'  => esc_html__( 'Disabled', 'noah' ),
 								'value' => false
 							)
 						),
 						'std'     => false
 					),
 					array(
-						'name'       => esc_html__( 'Auto Play Delay (s)', 'components' ),
-						'desc'		=> esc_html__( 'Set the number of seconds to wait before moving to the next slide.', 'components' ),
+						'name'       => esc_html__( 'Auto Play Delay (s)', 'noah' ),
+						'desc'		=> esc_html__( 'Set the number of seconds to wait before moving to the next slide.', 'noah' ),
 						'id'         => '_hero_slideshow_options__delay',
 						'type'       => 'text_small',
 						'std'        => '5',
@@ -301,7 +301,7 @@ class Pixelgrade_Hero {
 			//for the Contact/Location Page template
 			'hero_area_map__page' => array(
 				'id'         => 'hero_area_map__page',
-				'title'      => esc_html__( 'Map Coordinates & Display Options', 'components' ),
+				'title'      => esc_html__( 'Map Coordinates & Display Options', 'noah' ),
 				'pages'      => array( 'page' ), // Post type
 				'context'    => 'normal',
 				'priority'   => 'high',
@@ -314,43 +314,43 @@ class Pixelgrade_Hero {
 				'show_names' => true, // Show field names on the left
 				'fields'     => array(
 					array(
-						'name'    => esc_html__( 'Map Height', 'components' ),
-						'desc'    => '<p>' . esc_html__( 'Select the height of the Google Map area in relation to the browser window.', 'components' ) . '</p>',
+						'name'    => esc_html__( 'Map Height', 'noah' ),
+						'desc'    => '<p>' . esc_html__( 'Select the height of the Google Map area in relation to the browser window.', 'noah' ) . '</p>',
 						'id'      => '_hero_map_height',
 						'type'    => 'select',
 						'options' => array(
 							array(
-								'name'  => '&nbsp; &#9673;&#9711; ' . esc_html__( '&nbsp;Half', 'components' ),
+								'name'  => '&nbsp; &#9673;&#9711; ' . esc_html__( '&nbsp;Half', 'noah' ),
 								'value' => 'half-height',
 							),
 							array(
-								'name'  => '&#9673;&#9673;&#9711; ' . esc_html__( 'Two Thirds', 'components' ),
+								'name'  => '&#9673;&#9673;&#9711; ' . esc_html__( 'Two Thirds', 'noah' ),
 								'value' => 'two-thirds-height',
 							),
 							array(
-								'name'  => '&#9673;&#9673;&#9673; ' . esc_html__( 'Full Height', 'components' ),
+								'name'  => '&#9673;&#9673;&#9673; ' . esc_html__( 'Full Height', 'noah' ),
 								'value' => 'full-height',
 							)
 						),
 						'std'     => 'full-height',
 					),
 					array(
-						'name' => esc_html__( 'Google Maps URL', 'components' ),
-						'desc' => __( 'Paste here the Share URL you have copied from <a href="http://www.google.com/maps" target="_blank">Google Maps</a>.', 'components' ),
+						'name' => esc_html__( 'Google Maps URL', 'noah' ),
+						'desc' => __( 'Paste here the Share URL you have copied from <a href="http://www.google.com/maps" target="_blank">Google Maps</a>.', 'noah' ),
 						'id'   => '_hero_map_url',
 						'type' => 'textarea_small',
 						'std'  => '',
 					),
 					array(
-						'name' => esc_html__( 'Custom Colors', 'components' ),
-						'desc' => esc_html__( 'Allow us to change the map colors to better match your website.', 'components' ),
+						'name' => esc_html__( 'Custom Colors', 'noah' ),
+						'desc' => esc_html__( 'Allow us to change the map colors to better match your website.', 'noah' ),
 						'id'   => '_hero_map_custom_style',
 						'type' => 'checkbox',
 						'std'  => 'on',
 					),
 					array(
-						'name'    => esc_html__( 'Pin Content', 'components' ),
-						'desc'    => esc_html__( 'Insert here the content of the location marker - leave empty for no custom marker.', 'components' ),
+						'name'    => esc_html__( 'Pin Content', 'noah' ),
+						'desc'    => esc_html__( 'Insert here the content of the location marker - leave empty for no custom marker.', 'noah' ),
 						'id'      => '_hero_map_marker_content',
 						'type'    => 'wysiwyg',
 						'std'     => '',
@@ -543,11 +543,11 @@ class Pixelgrade_Hero {
 		if ( ! isset( $form_fields["link_media_to"] ) ) {
 
 			$select_options = array(
-				'none'             => esc_html__( 'None', 'components' ),
-				'media_file'       => esc_html__( 'Media File', 'components' ),
-				'custom_image_url' => esc_html__( 'Custom Image URL', 'components' ),
-				'custom_video_url' => esc_html__( 'Custom Video URL', 'components' ),
-				'external'         => esc_html__( 'External URL', 'components' )
+				'none'             => esc_html__( 'None', 'noah' ),
+				'media_file'       => esc_html__( 'Media File', 'noah' ),
+				'custom_image_url' => esc_html__( 'Custom Image URL', 'noah' ),
+				'custom_video_url' => esc_html__( 'Custom Video URL', 'noah' ),
+				'external'         => esc_html__( 'External URL', 'noah' )
 			);
 
 			$select_html = '<select name="attachments[' . $post->ID . '][link_media_to]" id="attachments[' . $post->ID . '][link_media_to]">';
@@ -566,7 +566,7 @@ class Pixelgrade_Hero {
 			$select_html .= '</select>';
 
 			$form_fields["link_media_to"] = array(
-				'label' => esc_html__( 'Linked To', 'components' ),
+				'label' => esc_html__( 'Linked To', 'noah' ),
 				'input' => 'html',
 				'html'  => $select_html
 			);
@@ -574,19 +574,19 @@ class Pixelgrade_Hero {
 
 		if ( ! isset( $form_fields["video_url"] ) && ! empty( $link_media_to_value ) && $link_media_to_value == 'custom_video_url' ) {
 			$form_fields["video_url"] = array(
-				"label" => esc_html__( "Custom Video URL", 'components' ),
+				"label" => esc_html__( "Custom Video URL", 'noah' ),
 				"input" => "text", // this is default if "input" is omitted
 				"value" => esc_url( get_post_meta( $post->ID, "_video_url", true ) ),
-				"helps" => __( "<p class='desc'>Attach a video to this image <span class='small'>(YouTube or Vimeo)</span>.</p>", 'components' ),
+				"helps" => __( "<p class='desc'>Attach a video to this image <span class='small'>(YouTube or Vimeo)</span>.</p>", 'noah' ),
 			);
 		}
 
 		if ( ! isset( $form_fields["custom_image_url"] ) && ! empty( $link_media_to_value ) && $link_media_to_value == 'custom_image_url' ) {
 			$form_fields["custom_image_url"] = array(
-				"label" => esc_html__( "Custom Image URL", 'components' ),
+				"label" => esc_html__( "Custom Image URL", 'noah' ),
 				"input" => "text", // this is default if "input" is omitted
 				"value" => esc_url( get_post_meta( $post->ID, "_custom_image_url", true ) ),
-				"helps" => __( "<p class='desc'>Link this image to a custom url.</p>", 'components' ),
+				"helps" => __( "<p class='desc'>Link this image to a custom url.</p>", 'noah' ),
 			);
 		}
 
@@ -601,18 +601,18 @@ class Pixelgrade_Hero {
 			}
 
 			$form_fields["video_autoplay"] = array(
-				"label" => esc_html__( "Video Autoplay", 'components' ),
+				"label" => esc_html__( "Video Autoplay", 'noah' ),
 				"input" => "html",
-				"html"  => '<input' . $checked . ' type="checkbox" name="attachments[' . $post->ID . '][video_autoplay]" id="attachments[' . $post->ID . '][video_autoplay]" /><label for="attachments[' . $post->ID . '][video_autoplay]">' . __( 'Enable Video Autoplay?', 'components' ) . '</label>'
+				"html"  => '<input' . $checked . ' type="checkbox" name="attachments[' . $post->ID . '][video_autoplay]" id="attachments[' . $post->ID . '][video_autoplay]" /><label for="attachments[' . $post->ID . '][video_autoplay]">' . __( 'Enable Video Autoplay?', 'noah' ) . '</label>'
 			);
 		}
 
 		if ( ! isset( $form_fields["external_url"] ) && ! empty( $link_media_to_value ) && $link_media_to_value == 'external' ) {
 			$form_fields["external_url"] = array(
-				"label" => esc_html__( "External URL", 'components' ),
+				"label" => esc_html__( "External URL", 'noah' ),
 				"input" => "text",
 				"value" => esc_url( get_post_meta( $post->ID, "_external_url", true ) ),
-				"helps" => __( "<p class='desc'>Set this image to link to an external website.</p>", 'components' ),
+				"helps" => __( "<p class='desc'>Set this image to link to an external website.</p>", 'noah' ),
 			);
 		}
 
@@ -681,7 +681,7 @@ class Pixelgrade_Hero {
 	 * @since 1.0.0
 	 */
 	public function __clone() {
-		_doing_it_wrong( __FUNCTION__,esc_html( __( 'Cheatin&#8217; huh?', 'components' ) ), esc_html( $this->_version ) );
+		_doing_it_wrong( __FUNCTION__,esc_html( __( 'Cheatin&#8217; huh?', 'noah' ) ), esc_html( $this->_version ) );
 	} // End __clone ()
 
 	/**
@@ -690,6 +690,6 @@ class Pixelgrade_Hero {
 	 * @since 1.0.0
 	 */
 	public function __wakeup() {
-		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Cheatin&#8217; huh?', 'components' ) ),  esc_html( $this->_version ) );
+		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Cheatin&#8217; huh?', 'noah' ) ),  esc_html( $this->_version ) );
 	} // End __wakeup ()
 }

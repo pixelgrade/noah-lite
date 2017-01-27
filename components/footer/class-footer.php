@@ -55,7 +55,7 @@ class Pixelgrade_Footer {
 		register_sidebar( array(
 			'name'          => esc_html__( 'Footer Area', 'noah' ),
 			'id'            => 'sidebar-footer',
-			'description'   => esc_html__( 'Widgets displayed in the Footer Area of the website.', 'components' ),
+			'description'   => esc_html__( 'Widgets displayed in the Footer Area of the website.', 'noah' ),
 			'before_widget' => '<div id="%1$s" class="c-gallery__item  c-widget  %2$s"><div class="o-wrapper u-container-width">',
 			'after_widget'  => '</div></div>',
 			'before_title'  => '<h3 class="c-widget__title h3">',
@@ -67,7 +67,7 @@ class Pixelgrade_Footer {
 		$footer_section = array(
 			// Footer
 			'footer_section' => array(
-				'title'   => esc_html__( 'Footer', 'components' ),
+				'title'   => esc_html__( 'Footer', 'noah' ),
 				'options' => array(
 					'footer_options_customizer_tabs'    => array(
 						'type' => 'html',
@@ -83,9 +83,9 @@ class Pixelgrade_Footer {
 					),
 					'copyright_text'               => array(
 						'type'              => 'textarea',
-						'label'             => esc_html__( 'Copyright Text', 'components' ),
-						'desc'              => esc_html__( 'Set the text that will appear in the footer area. Use %year% to display the current year.', 'components' ),
-						'default'           => __( '%year% &copy; Handcrafted with love by <a href="#">Pixelgrade</a> Team', 'components' ),
+						'label'             => esc_html__( 'Copyright Text', 'noah' ),
+						'desc'              => esc_html__( 'Set the text that will appear in the footer area. Use %year% to display the current year.', 'noah' ),
+						'default'           => __( '%year% &copy; Handcrafted with love by <a href="#">Pixelgrade</a> Team', 'noah' ),
 						'sanitize_callback' => 'wp_kses_post',
 						'live'              => array( '.copyright-text' ),
 					),
@@ -231,7 +231,7 @@ class Pixelgrade_Footer {
 	 * @since 1.0.0
 	 */
 	public function __clone() {
-		_doing_it_wrong( __FUNCTION__,esc_html( __( 'Cheatin&#8217; huh?', 'components' ) ), esc_html( $this->_version ) );
+		_doing_it_wrong( __FUNCTION__,esc_html( __( 'Cheatin&#8217; huh?', 'noah' ) ), esc_html( $this->_version ) );
 	} // End __clone ()
 
 	/**
@@ -240,6 +240,6 @@ class Pixelgrade_Footer {
 	 * @since 1.0.0
 	 */
 	public function __wakeup() {
-		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Cheatin&#8217; huh?', 'components' ) ),  esc_html( $this->_version ) );
+		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Cheatin&#8217; huh?', 'noah' ) ),  esc_html( $this->_version ) );
 	} // End __wakeup ()
 }

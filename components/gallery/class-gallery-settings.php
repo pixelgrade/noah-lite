@@ -35,11 +35,11 @@ class Pixelgrade_Gallery_Settings {
 	function __construct() {
 		// Define the spacing select options
 		$this->gallery_spacing_options = array(
-			'none'   => __( 'None', 'components' ),
-			'small'  => __( 'Small', 'components' ),
-			'medium' => __( 'Medium', 'components' ),
-			'large'  => __( 'Large', 'components' ),
-			'xlarge' => __( 'X-Large', 'components' ),
+			'none'   => __( 'None', 'noah' ),
+			'small'  => __( 'Small', 'noah' ),
+			'medium' => __( 'Medium', 'noah' ),
+			'large'  => __( 'Large', 'noah' ),
+			'xlarge' => __( 'X-Large', 'noah' ),
 		);
 
 		// Register our actions and filters
@@ -127,7 +127,7 @@ class Pixelgrade_Gallery_Settings {
 	 * @return array
 	 */
 	function add_masonry_gallery_type( $types ) {
-		$setting = array( 'masonry' => esc_html__( 'Masonry', 'components' ) );
+		$setting = array( 'masonry' => esc_html__( 'Masonry', 'noah' ) );
 
 		//we want to insert after the default Thumbnail Grid
 		$key = array_search( 'default', array_keys( $types ) );
@@ -154,7 +154,7 @@ class Pixelgrade_Gallery_Settings {
 	 */
 	function maybe_add_slideshow_gallery_type( $types ) {
 		if ( ! isset( $types['slideshow'] ) ) {
-			$types['slideshow'] = esc_html__( 'Slideshow', 'components' );
+			$types['slideshow'] = esc_html__( 'Slideshow', 'noah' );
 		}
 
 		return $types;
@@ -240,7 +240,7 @@ class Pixelgrade_Gallery_Settings {
 		?>
 			<script type="text/html" id="tmpl-pixelgrade-gallery-settings">
 				<label class="setting">
-					<span><?php esc_html_e( 'Spacing', 'components' ); ?></span>
+					<span><?php esc_html_e( 'Spacing', 'noah' ); ?></span>
 					<select class="spacing" name="spacing" data-setting="spacing">
 
 					<?php foreach ( $this->gallery_spacing_options as $value => $caption ) {
@@ -278,7 +278,7 @@ class Pixelgrade_Gallery_Settings {
 	 * @since 1.0.0
 	 */
 	public function __clone() {
-		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Cheatin&#8217; huh?', 'components' ) ), esc_html( $this->_version ) );
+		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Cheatin&#8217; huh?', 'noah' ) ), esc_html( $this->_version ) );
 	} // End __clone ()
 
 	/**
@@ -287,6 +287,6 @@ class Pixelgrade_Gallery_Settings {
 	 * @since 1.0.0
 	 */
 	public function __wakeup() {
-		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Cheatin&#8217; huh?', 'components' ) ), esc_html( $this->_version ) );
+		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Cheatin&#8217; huh?', 'noah' ) ), esc_html( $this->_version ) );
 	} // End __wakeup ()
 }
