@@ -732,33 +732,6 @@ function noah_ek_mukta_font_url() {
 	return '';
 }
 
-// Add Page Shortcode
-function noah_create_page_shortcode( $atts ) {
-	$output = '';
-
-	// Attributes
-	extract( shortcode_atts(
-			array(
-				'id' => '',
-			), $atts )
-	);
-
-	$post = get_the_ID();
-
-	if ( ! empty( $id ) && intval( $id ) ) {
-		$post = intval( $id );
-	}
-
-	if ( in_array( 'title', $atts ) || in_array( 'Title', $atts ) ) {
-		$output .= get_the_title( $post );
-	}
-
-	return $output;
-}
-// we will register the shortcode with both lovercase and uppercase
-add_shortcode( 'page', 'noah_create_page_shortcode' );
-add_shortcode( 'Page', 'noah_create_page_shortcode' );
-
 /**
  * Prints HTML with meta information for the tags.
  */
