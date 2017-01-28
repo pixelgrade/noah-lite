@@ -3,9 +3,9 @@
  * The template for the branding of the header area (logo, site title, etc).
  *
  * @see        https://pixelgrade.com
- * @author        Pixelgrade
+ * @author     Pixelgrade
  * @package    Noah
- * @version     1.0.1
+ * @version    1.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

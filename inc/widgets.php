@@ -1,6 +1,8 @@
 <?php
 /**
  * This file is responsible for registering sidebar areas and call widgets files
+ *
+ * @package Noah
  */
 
 /**

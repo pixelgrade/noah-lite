@@ -59,7 +59,7 @@ function noah_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'noah_body_classes' );
+add_filter( 'body_class', 'noah_body_classes', 10, 1 );
 
 /**
  * Display the classes for the portfolio wrapper.

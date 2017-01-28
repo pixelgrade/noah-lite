@@ -174,16 +174,6 @@ function noah_is_blog() {
 	return ( ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag() ) && ( $posttype == 'post' ) ) ? true : false;
 }
 
-/**
- * Custom template tags for Twenty Fifteen
- *
- * Eventually, some of the functionality here could be replaced by core features.
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
-
 if ( ! function_exists( 'noah_the_comments_navigation' ) ) :
 	/**
 	 * Display navigation to next/previous comments when applicable.
