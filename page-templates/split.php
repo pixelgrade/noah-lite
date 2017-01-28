@@ -10,26 +10,8 @@ $location = pixelgrade_set_location( 'page split' );
 
 get_header(); ?>
 
-<?php
-	/**
-	 * pixelgrade_before_main_content hook.
-	 *
-	 * @hooked nothing() - 10 (outputs nothing)
-	 */
-	do_action( 'pixelgrade_before_main_content', $location );
-?>
-
     <div id="primary" class="content-area  u-side-padding  u-content-background">
-				<main id="main" class="site-main" role="main">
-
-	        <?php
-		        /**
-		         * pixelgrade_before_loop hook.
-		         *
-		         * @hooked noah_custom_page_css - 10 (outputs the page's custom css)
-		         */
-		        do_action( 'pixelgrade_before_loop', $location );
-	        ?>
+		<main id="main" class="site-main" role="main">
 
 	        <?php while ( have_posts() ) : the_post(); ?>
 
@@ -46,38 +28,19 @@ get_header(); ?>
 
 							<header class="c-page-header  entry-header">
 
-								<?php
-								/**
-								 * pixelgrade_before_entry_title hook.
-								 *
-								 * @hooked pixelgrade_the_hero() - 10 (outputs the hero markup)
-								 */
-								do_action( 'pixelgrade_before_entry_title', $location );
-								?>
-
-								<?php
-								//allow others to prevent this from displaying
-								if ( apply_filters( 'pixelgrade_display_entry_header', true, $location ) ) {
-									the_title( '<h1 class="c-page-header__title  entry-title">', '</h1>' );
-								} ?>
-
-								<?php
-								/**
-								 * pixelgrade_after_entry_title hook.
-								 *
-								 * @hooked nothing() - 10 (outputs nothing)
-								 */
-								do_action( 'pixelgrade_after_entry_title', $location );
-								?>
+								<?php the_title( '<h1 class="c-page-header__title  entry-title">', '</h1>' ); ?>
 
 							</header><!-- .entry-header -->
 
 							<div class="u-content-bottom-spacing  entry-content">
+
 								<?php the_content();
+
 								wp_link_pages( array(
 									'before' => '<div class="c-article__page-links  page-links">' . esc_html__( 'Pages:', 'noah' ),
 									'after'  => '</div>',
 								) ); ?>
+
 							</div><!-- .entry-content -->
 
 						</div>
@@ -89,26 +52,8 @@ get_header(); ?>
 
 	        <?php endwhile; // End of the loop. ?>
 
-	        <?php
-		        /**
-		         * pixelgrade_after_loop hook.
-		         *
-		         * @hooked nothing - 10 (outputs nothing)
-		         */
-		        do_action( 'pixelgrade_after_loop', $location );
-	        ?>
-
         </main><!-- #main -->
     </div><!-- #primary -->
-
-<?php
-	/**
-	 * pixelgrade_after_main_content hook.
-	 *
-	 * @hooked nothing - 10 (outputs nothing)
-	 */
-	do_action( 'pixelgrade_after_main_content', $location );
-?>
 
 <?php
 get_footer();

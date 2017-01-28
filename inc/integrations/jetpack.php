@@ -8,6 +8,8 @@
  */
 
 function noah_load_jetpack_compatibility() {
+	// Add support for the Jetpack Portfolio Custom Post Type
+	add_theme_support( 'jetpack-portfolio' );
 
 	if ( 'jetpack-portfolio' === get_post_type() ) {
 		add_filter( 'jp_carousel_force_enable' , 'noah_force_enable_jetpack_carousel' );
@@ -61,27 +63,6 @@ function noah_disable_jetpack_carousel() {
 }
 
 /**
- * Set our own default activated modules
- * See jetpack/modules/modules-heading.php for module names
- *
- * @param array $default_modules
- *
- * @return array
- */
-function noah_default_jetpack_active_modules( $default_modules ) {
-	return  array(
-		'carousel',
-		'custom-content-types',
-		'infinite-scroll',
-		'shortcodes',
-		'widget-visibility',
-		'widgets',
-		'tiled-gallery',
-	);
-}
-add_filter ( 'customify_filter_jetpack_default_modules', 'noah_default_jetpack_active_modules', 10, 1 );
-
-/**
  * Setup the default sharing services
  * See Sharing_Service->get_all_services() for the complete list.
  *
@@ -102,24 +83,6 @@ function noah_default_jetpack_sharing_services( $enabled ) {
 	);
 }
 add_filter( 'sharing_default_services', 'noah_default_jetpack_sharing_services', 10, 1 );
-
-function noah_default_jetpack_sharing_options( $default ) {
-	$default = array(
-		'global' => array(
-			'button_style' => 'text',
-			'sharing_label' => false,
-			'open_links' => 'same',
-			'show' => array (
-				'post',
-				'jetpack-portfolio',
-			),
-			'custom' => array (
-			),
-		),
-	);
-	return $default;
-}
-add_filter( 'customify_filter_jetpack_sharing_default_options', 'noah_default_jetpack_sharing_options', 10, 1 );
 
 /**
  * Class NoahGalleryCustomSlideshow
@@ -348,5 +311,4 @@ class NoahGalleryCustomSlideshow {
 		return ( 1 == $value ) ? 1 : 0;
 	}
 }
-
 new NoahGalleryCustomSlideshow;

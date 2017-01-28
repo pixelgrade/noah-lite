@@ -2329,7 +2329,7 @@ and the top and bottom ones rotate to form an X
     -ms-flex-negative: 0;
         flex-shrink: 0; }
   .c-navbar__zone:first-child:not(:last-child), .c-navbar__zone:last-child:not(:first-child) {
-    -ms-flex: 1 1 0;
+    -ms-flex: 1 1 0px;
         flex: 1 1 0; }
   .c-navbar__zone--push-left {
     -ms-flex-pack: start;
@@ -3393,7 +3393,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     .c-slider__header .c-meta__share-link:after {
       display: none; }
   .c-slider__header .c-page-header {
-    -ms-flex: auto 0 0;
+    -ms-flex: auto 0 0px;
         flex: auto 0 0;
     height: 90px;
     margin: 0;
@@ -3424,7 +3424,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
       .c-slider__header .c-page-header .c-page-header__title:after {
         padding-bottom: 0; }
   .c-slider__header .c-page-header__side {
-    -ms-flex: 1 1 0;
+    -ms-flex: 1 1 0px;
         flex: 1 1 0; }
     .c-slider__header .c-page-header__side:first-child {
       -ms-flex-pack: start;

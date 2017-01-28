@@ -18,16 +18,7 @@ function noah_widgets_areas() {
 		'after_title'   => '</h2>',
 	) );
 
-	// register widgets
-//	register_widget( 'Sidebar_Map_Widget' );
-}
 
+}
 add_action( 'widgets_init', 'noah_widgets_areas' );
 
-/**
- * Any widget registration should follow this pattern
- * https://codex.wordpress.org/Function_Reference/register_widget
- *
- * We split every widget in its own file. A child theme should be able to overwrite individual widgets
- */
-//get_template_part( 'widgets/widget-sidebar_map_widget' );

@@ -11,32 +11,22 @@
  */
 ?>
 
-<?php
-/**
- * pixelgrade_before_footer hook.
- *
- * @hooked nothing() - 10 (outputs nothing)
- */
-do_action( 'pixelgrade_before_footer', 'main' );
-?>
+<footer <?php pixelgrade_footer_class(); ?>>
+	<div class="o-wrapper u-container-width content-area">
 
-<?php
-/**
- * pixelgrade_footer hook.
- *
- * @hooked pixelgrade_the_footer() - 10 (outputs the footer markup)
- */
-do_action( 'pixelgrade_footer', 'main' );
-?>
+		<?php if ( is_active_sidebar( 'sidebar-footer' ) ): ?>
+			<div class="c-gallery c-gallery--footer o-grid o-grid--4col-@lap">
+				<?php dynamic_sidebar( 'sidebar-footer' ); ?>
+			</div><!-- .c-gallery--footer -->
+		<?php endif; ?>
 
-<?php
-/**
- * pixelgrade_after_footer hook.
- *
- * @hooked nothing() - 10 (outputs nothing)
- */
-do_action( 'pixelgrade_after_footer', 'main' );
-?>
+		<div class="c-footer__content">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'noah' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'noah' ), 'WordPress' ); ?></a>
+			<span class="sep"> | </span>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'noah' ), 'Noah', '<a href="https://pixelgrade.com/" rel="designer">PixelGrade</a>' ); ?>
+		</div><!-- .c-footer__content -->
+	</div><!-- .o-wrapper.u-container-width.content-area -->
+</footer>
 
 </div><!-- #content -->
 </div><!-- #page -->

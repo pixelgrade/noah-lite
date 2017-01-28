@@ -53,6 +53,10 @@ function noah_body_classes( $classes ) {
 		$classes[] = 'customizer-preview';
 	}
 
+	if ( pixelgrade_hero_is_hero_needed() ) {
+		$classes[] = 'has-hero';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'noah_body_classes' );
@@ -276,11 +280,13 @@ add_filter( 'pixelgrade_body_attributes', 'noah_body_attributes' );
  *
  * @since Noah 1.0
  *
- * @param array $classes
+ * @param array $classes An array of post classes.
+ * @param array $class   An array of additional classes added to the post.
+ * @param int   $post_id The post ID.
  *
  * @return array
  */
-function noah_post_classes( $classes ) {
+function noah_post_classes( $classes, $class, $post_id ) {
 	//we first need to know the bigger picture - the location this template part was loaded from
 	$location = pixelgrade_get_location();
 
@@ -324,7 +330,7 @@ function noah_post_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'post_class', 'noah_post_classes' );
+add_filter( 'post_class', 'noah_post_classes', 10, 3 );
 
 /**=== HELPERS ===**/
 
@@ -580,11 +586,16 @@ add_filter( 'get_default_comment_status', 'noah_close_comments_for_projects', 10
  *
  * @return string The full link URL for the given page number.
  */
-function noah_paginate_url( $url, $pagenum = 1, $escape = true ) {
-	global $wp_rewrite, $wp_query;
+function noah_paginate_url( $url, $pagenum = 1, $escape = true, $query = null ) {
+	global $wp_rewrite;
+
+	if ( empty( $query ) ) {
+		global $wp_query;
+		$query = $wp_query;
+	}
 
 	//first make sure that we can have that page
-	if ( $pagenum > $wp_query->max_num_pages ) {
+	if ( $pagenum > $query->max_num_pages ) {
 		return false;
 	}
 
@@ -721,20 +732,6 @@ function noah_ek_mukta_font_url() {
 	return '';
 }
 
-/**
- * Load custom styles set by the page
- */
-function noah_custom_page_css() {
-	$output     = '';
-	$custom_css = get_post_meta( get_the_ID(), 'custom_css_style', true );
-	if ( ! empty( $custom_css ) ) {
-		$output .= '<div class="custom-css" data-css="' . esc_attr( $custom_css ) . '"></div>' . PHP_EOL;
-	}
-
-	echo $output;
-}
-add_action( 'pixelgrade_before_loop', 'noah_custom_page_css' );
-
 // Add Page Shortcode
 function noah_create_page_shortcode( $atts ) {
 	$output = '';
@@ -798,7 +795,7 @@ function noah_custom_archive_title( $title ) {
 		} else {
 			$title = esc_html__( 'News', 'noah' );
 		}
-	} elseif ( $title == __( 'Archives' ) ) {
+	} elseif ( $title == esc_html__( 'Archives', 'noah' ) ) {
 		$title = esc_html__( 'All Projects', 'noah' );
 	}
 
@@ -806,3 +803,26 @@ function noah_custom_archive_title( $title ) {
 }
 add_filter( 'get_the_archive_title', 'noah_custom_archive_title', 11 );
 
+/**
+ * Add a data attribute to the menu items depending on the background color
+ *
+ * @param array $atts {
+ *     The HTML attributes applied to the menu item's `<a>` element, empty strings are ignored.
+ *
+ *     @type string $title  Title attribute.
+ *     @type string $target Target attribute.
+ *     @type string $rel    The rel attribute.
+ *     @type string $href   The href attribute.
+ * }
+ * @param WP_Post  $item  The current menu item.
+ * @param stdClass $args  An object of wp_nav_menu() arguments.
+ * @param int      $depth Depth of menu item. Used for padding.
+ *
+ * @return array
+ */
+function noah_menu_item_color($atts, $item, $args, $depth) {
+	$atts['data-color'] = trim( pixelgrade_hero_get_background_color( $item->object_id ) );
+
+	return $atts;
+}
+add_filter('nav_menu_link_attributes', 'noah_menu_item_color', 10, 4);

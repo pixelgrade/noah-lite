@@ -52,8 +52,6 @@ class Pixelgrade_Gallery_Settings {
 	 * @return null
 	 */
 	public function register_hooks() {
-		// Load the Jetpack fallback functionality
-		add_action( 'wp_loaded', array( $this, 'jetpack_fallback' ) );
 
 		// Initialize everything when in admin area
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
@@ -75,11 +73,6 @@ class Pixelgrade_Gallery_Settings {
 		do_action( 'pixelgrade_gallery_registered_hooks' );
 	}
 
-	function jetpack_fallback() {
-		//Make sure that the Jetpack fallback functionality is loaded
-		require_once( 'jetpack-fallback/functions.gallery.php' );
-	}
-
 	function admin_init() {
 		/**
 		 * Filter the available gallery types
@@ -94,17 +87,12 @@ class Pixelgrade_Gallery_Settings {
 			add_action( 'wp_enqueue_media', array( $this, 'wp_enqueue_media' ) );
 			add_action( 'print_media_templates', array( $this, 'print_media_templates' ) );
 		}
-
-		// Register the styles and scripts specific to this component
-		wp_register_style( 'pixelgrade_gallery-admin-style', trailingslashit( get_template_directory_uri() ) . 'components/gallery/css/admin.css', array(), $this->_assets_version );
 	}
 
 	/**
 	 * Registers/enqueues the gallery settings admin js and CSS.
 	 */
 	function wp_enqueue_media() {
-		wp_enqueue_style( 'pixelgrade_gallery-admin-style' );
-
 		$dependecies = array( 'media-views' );
 		// Make sure our script comes after Jetpack's so we can overwrite it
 		if ( wp_script_is( 'jetpack-gallery-settings', 'registered' ) ) {

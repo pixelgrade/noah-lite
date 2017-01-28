@@ -14,15 +14,6 @@ pixelgrade_set_location( $location );
 
 get_header(); ?>
 
-<?php
-	/**
-	 * pixelgrade_before_main_content hook.
-	 *
-	 * @hooked nothing() - 10 (outputs nothing)
-	 */
-	do_action( 'pixelgrade_before_main_content', $location );
-?>
-
 	<header class="c-page-header content-area">
 		<h1 class="c-page-header__title h1">
 			<?php _e( 'Projects', 'noah' ); ?>
@@ -36,17 +27,31 @@ get_header(); ?>
 		} ?>
 	</header><!-- .archive-header -->
 
-	<?php get_template_part( 'template-parts/jetpack-portfolio-loop' ); ?>
-    <?php the_posts_navigation(); ?>
+	<?php if ( have_posts() ) : ?>
 
-<?php
-	/**
-	 * pixelgrade_after_main_content hook.
-	 *
-	 * @hooked nothing - 10 (outputs nothing)
-	 */
-	do_action( 'pixelgrade_after_main_content', $location );
-?>
+		<div class="u-content-background">
+			<section class="c-archive-loop  u-full-width  u-portfolio_sides_spacing  u-content-bottom-spacing">
+				<div class="o-wrapper u-portfolio_grid_width">
+					<div <?php noah_portfolio_class( '', $location ); ?>>
+
+						<?php while ( have_posts() ) : the_post();
+							get_template_part( 'template-parts/content', 'jetpack-portfolio' );
+						endwhile; ?>
+
+					</div>
+				</div>
+			</section>
+		</div>
+
+	<?php else : ?>
+
+		<div class="u-content-width">
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+		</div>
+
+	<?php endif; ?>
+
+    <?php the_posts_navigation(); ?>
 
 <?php
 get_sidebar();

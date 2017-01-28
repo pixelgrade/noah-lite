@@ -4,7 +4,7 @@
  *
  * @see        https://pixelgrade.com
  * @author        Pixelgrade
- * @package    Components/Header
+ * @package    Noah
  * @version     1.0.1
  */
 

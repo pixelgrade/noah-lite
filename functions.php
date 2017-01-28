@@ -53,10 +53,35 @@ if ( ! function_exists( 'noah_setup' ) ) {
 		// Used for hero image
 		add_image_size( 'noah-hero-image', 2700, 9999, false );
 
-		// This theme uses wp_nav_menu() in one location.
+
+		// Register the navigation menus
 		register_nav_menus( array(
+			'primary-left'  => esc_html__( 'Header Left', 'noah' ),
+			'primary-right' => esc_html__( 'Header Right', 'noah' ),
 			'footer_menu' => esc_html__( 'Footer', 'noah' ),
 		) );
+
+		/**
+		 * Add theme support for site logo
+		 *
+		 * First, it's the image size we want to use for the logo thumbnails
+		 * Second, the 2 classes we want to use for the "Display Header Text" Customizer logic
+		 */
+		add_theme_support( 'custom-logo', apply_filters( 'pixelgrade_header_site_logo', array(
+			'height'      => 600,
+			'width'       => 1360,
+			'flex-height' => true,
+			'flex-width'  => true,
+			'header-text' => array(
+				'site-title',
+				'site-description-text',
+			)
+		) ) );
+
+		// Add theme support for Jetpack Social Menu, if that is the case
+		if ( apply_filters( 'pixelgrade_header_use_jetpack_social_menu', true ) ) {
+			add_theme_support( 'jetpack-social-menu' );
+		}
 
 		/**
 		 * Switch default core markup for search form, comment form, and comments
@@ -95,27 +120,30 @@ if ( ! function_exists( 'noah_setup' ) ) {
 		add_editor_style( noah_ek_mukta_font_url() );
 
 		/**
-		 * Pixcare Helper Plugin
-		 */
-		add_theme_support( 'pixelgrade_care', array(
-				'support_url'   => 'https://pixelgrade.com/docs/noah/',
-				'changelog_url' => 'https://wupdates.com/noah-changelog',
-				'theme_id'      => 'JyzqR',
-				'ock'           => 'Lm12n034gL19',
-				'ocs'           => '6AU8WKBK1yZRDerL57ObzDPM7SGWRp21Csi5Ti5LdVNG9MbP'
-			)
-		);
-
-		// Add support for the Jetpack Portfolio Custom Post Type
-		add_theme_support( 'jetpack-portfolio' );
-
-		/**
 		 * Remove themes' post formats support
 		 */
 		remove_theme_support( 'post-formats' );
 	}
 } // noah_setup
 add_action( 'after_setup_theme', 'noah_setup' );
+
+/**
+ * Register widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function noah_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Area', 'noah' ),
+		'id'            => 'sidebar-footer',
+		'description'   => esc_html__( 'Widgets displayed in the Footer Area of the website.', 'noah' ),
+		'before_widget' => '<div id="%1$s" class="c-gallery__item  c-widget  %2$s"><div class="o-wrapper u-container-width">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<h3 class="c-widget__title h3">',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'noah_widgets_init' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -162,7 +190,7 @@ function noah_load_assets() {
 	/*
 	 * NOW THE SCRIPTS
 	 */
-	$main_script_deps = array( 'jquery', 'imagesloaded', 'jquery-masonry' );
+	$main_script_deps = array( 'jquery', 'imagesloaded', 'masonry' );
 
 	wp_register_script( 'noah-tweenmax', '//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js', array(), '1.19.0' );
 	$main_script_deps[] = 'noah-tweenmax';
@@ -184,20 +212,7 @@ function noah_load_assets() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-
 add_action( 'wp_enqueue_scripts', 'noah_load_assets' );
-
-function noah_customize_preview_js() {
-	/**
-	 * Get theme details inside `$theme` object and later use it for cache busting
-	 * with `$theme->get( 'Version' )` method
-	 */
-	$theme = wp_get_theme();
-
-	wp_enqueue_script( 'noah-customize-preview', get_template_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), $theme->get( 'Version' ), true );
-}
-
-add_action( 'customize_preview_init', 'noah_customize_preview_js' );
 
 /**
  * Custom template tags for this theme.

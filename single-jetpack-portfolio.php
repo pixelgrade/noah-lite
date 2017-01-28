@@ -13,15 +13,6 @@ $location = pixelgrade_set_location( 'single project jetpack' );
 
 get_header(); ?>
 
-<?php
-    /**
-     * pixelgrade_before_main_content hook.
-     *
-     * @hooked nothing() - 10 (outputs nothing)
-     */
-    do_action( 'pixelgrade_before_main_content', $location );
-?>
-
 <div id="primary" data-section-name="<?php echo get_post_field( 'post_name', get_post() ); ?>" class="content-area  u-container-sides-spacings  u-content_container_padding_top">
     <div class="o-wrapper  u-container-width">
         <main id="main" class="o-wrapper  u-content-width  site-main" role="main">
@@ -42,16 +33,6 @@ get_header(); ?>
         </main><!-- #main -->
     </div>
 </div><!-- #primary -->
-
-<?php
-// Display the projects archive partial
-query_posts( array(
-    'post_type' => 'jetpack-portfolio',
-//    'post__not_in' => array( get_the_ID() ),
-) );
-?>
-
-
 
 <div id="projectsArchive" data-section-name="archive" class="c-project__more  js-project-more-content">
 
@@ -75,11 +56,44 @@ query_posts( array(
 
             <div class="u-content-bottom-spacing">
                 <?php
-                if ( have_posts() ) {
-                    get_template_part('template-parts/jetpack-portfolio-loop');
-                }
-                ?>
-            </div>
+                //We are displaying the loop so we need the proper location
+                $location = pixelgrade_set_location( 'portfolio jetpack' );
+
+                $projects = new WP_Query( array(
+	                'post_type' => 'jetpack-portfolio',
+	                'posts_per_page' => -1, //we want all the projects here
+                ) );
+
+                if ( $projects->have_posts() ) : ?>
+
+	                <div class="u-content-background">
+		                <section class="c-archive-loop  u-full-width  u-portfolio_sides_spacing  u-content-bottom-spacing">
+			                <div class="o-wrapper u-portfolio_grid_width">
+				                <div <?php noah_portfolio_class( '', $location ); ?>>
+
+					                <?php while ( $projects->have_posts() ) : $projects->the_post();
+						                get_template_part( 'template-parts/content', 'jetpack-portfolio' );
+					                endwhile; ?>
+
+				                </div>
+			                </div><!-- .o-wrapper -->
+		                </section><!-- .c-archive-loop -->
+	                </div><!-- .u-content-background -->
+
+                <?php else : ?>
+
+	                <div class="u-content-width">
+		                <?php get_template_part( 'template-parts/content', 'none' ); ?>
+	                </div>
+
+                <?php endif;
+
+                wp_reset_postdata();
+
+                //Set the previous location back
+                $location = pixelgrade_set_location( 'single project jetpack' ); ?>
+
+            </div><!-- .u-content-bottom-spacing -->
 
         </div><!-- .content-area -->
 
@@ -89,15 +103,6 @@ query_posts( array(
 
 <?php
 wp_reset_query();
-?>
-
-<?php
-    /**
-     * pixelgrade_after_main_content hook.
-     *
-     * @hooked noah_callback_load_custom_page_css - 10 outputs page Custom CSS
-     */
-    do_action( 'pixelgrade_after_main_content', $location );
 ?>
 
 <?php

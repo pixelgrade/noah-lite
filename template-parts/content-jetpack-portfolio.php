@@ -10,26 +10,13 @@
 $location = pixelgrade_get_location( 'portfolio jetpack' );
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class() ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class( '', get_the_ID() ) ?>>
 	<div class="c-card">
 		<div class="c-card__link">
-			<a href="<?php the_permalink(); ?>" class="c-card__content-link c-card__frame">
+			<a href="<?php the_permalink( get_the_ID() ); ?>" class="c-card__content-link c-card__frame">
 				<?php
 				// Output the featured image
-				the_post_thumbnail();
-
-				// Also output the markup for the hover image if we have it
-                // Make sure that we have the Featured Image component loaded
-                if ( function_exists( 'pixelgrade_featured_image_get_hover_id' ) ) {
-	                $hover_image_id = pixelgrade_featured_image_get_hover_id();
-	                if ( ! empty( $hover_image_id ) ) { ?>
-
-		                <div class="c-card__frame-hover">
-			                <?php echo wp_get_attachment_image( $hover_image_id, 'full' ); ?>
-		                </div>
-
-	                <?php }
-                } ?>
+				echo get_the_post_thumbnail( get_the_ID() ); ?>
 			</a>
 			<div class="c-card__content">
 				<?php

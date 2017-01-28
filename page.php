@@ -18,32 +18,12 @@ $location = pixelgrade_set_location( 'page' );
 
 get_header(); ?>
 
-<?php
-	/**
-	 * pixelgrade_before_main_content hook.
-	 *
-	 * @hooked nothing() - 10 (outputs nothing)
-	 */
-	do_action( 'pixelgrade_before_main_content', $location );
-?>
-
 	<div id="primary" class="content-area  u-container-sides-spacings  u-content-bottom-spacing">
 		<div class="o-wrapper  u-container-width">
 			<main id="main" class="o-wrapper  site-main" role="main">
 
-			<?php
-				/**
-				 * pixelgrade_before_loop hook.
-				 *
-				 * @hooked noah_custom_page_css - 10 (outputs the page's custom css)
-				 */
-				do_action( 'pixelgrade_before_loop', $location );
-			?>
-
 			<?php while ( have_posts() ) : the_post();
-
 				get_template_part( 'template-parts/content', 'page' );
-
 			?>
 
 				<div class="u-content-width">
@@ -56,26 +36,8 @@ get_header(); ?>
 
 			<?php endwhile; // End of the loop. ?>
 
-			<?php
-				/**
-				 * pixelgrade_after_loop hook.
-				 *
-				 * @hooked nothing - 10 (outputs nothing)
-				 */
-				do_action( 'pixelgrade_after_loop', $location );
-			?>
-
 			</main><!-- #main -->
 		</div>
 	</div><!-- #primary -->
-
-<?php
-	/**
-	 * pixelgrade_after_main_content hook.
-	 *
-	 * @hooked nothing - 10 (outputs nothing)
-	 */
-	do_action( 'pixelgrade_after_main_content', $location );
-?>
 
 <?php get_footer(); ?>

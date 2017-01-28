@@ -13,15 +13,6 @@ $location = pixelgrade_set_location( 'search' );
 
 get_header(); ?>
 
-<?php
-	/**
-	 * pixelgrade_before_main_content hook.
-	 *
-	 * @hooked nothing() - 10 (outputs nothing)
-	 */
-	do_action( 'pixelgrade_before_main_content', $location );
-?>
-
 	<div id="primary" class="content-area  u-blog_sides_spacing">
 		<main id="main" class="o-wrapper  u-blog_grid_width  site-main  u-content-bottom-spacing" role="main">
 
@@ -53,14 +44,5 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php
-	/**
-	 * pixelgrade_after_main_content hook.
-	 *
-	 * @hooked nothing - 10 (outputs nothing)
-	 */
-	do_action( 'pixelgrade_after_main_content', $location );
-?>
 
 <?php get_footer(); ?>
