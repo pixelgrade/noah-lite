@@ -20,33 +20,20 @@ function noah_body_classes( $classes ) {
 	$classes[] = 'body';
 	$classes[] = 'u-content-background';
 
-	if ( pixelgrade_option( 'header_position', 'static' ) == 'static' ) {
+	if ( get_theme_mod( 'noah_header_position', 'static' ) == 'static' ) {
 		$classes[] = 'u-static-header';
 	}
 
-	$border = pixelgrade_option( 'main_content_border_width' );
-	if ( ! empty( $border ) && intval( $border ) > 0 ) {
-		$classes[] = 'has-border';
-	}
-
-	if ( pixelgrade_option( 'footer_layout' ) == 'stacked' ) {
+	if ( get_theme_mod( 'noah_footer_layout' ) == 'stacked' ) {
 		$classes[] = 'u-footer-layout-stacked';
 	}
 
-	if ( pixelgrade_option( 'header_width' ) == 'full' ) {
+	if ( get_theme_mod( 'noah_header_width' ) == 'full' ) {
 		$classes[] = 'u-full-width-header';
-	}
-
-	if ( pixelgrade_option( 'header_links_active_style' ) == 'underline' ) {
-		$classes[] = 'u-underline-header-links';
 	}
 
 	if ( is_singular( 'jetpack-portfolio' ) ) {
 		$classes[] = noah_get_single_project_class();
-	}
-
-	if ( pixelgrade_option( 'main_content_underlined_body_links' ) ) {
-		$classes[] = 'u-underline-links';
 	}
 
 	if ( is_customize_preview() ) {
@@ -87,7 +74,7 @@ function noah_get_portfolio_class( $class = '', $location = '' ) {
 	$classes[] = 'o-grid';
 	$classes[] = 'c-gallery c-gallery--portfolio';
 	// layout
-	$grid_layout       = pixelgrade_option( 'portfolio_grid_layout', 'packed' );
+	$grid_layout       = get_theme_mod( 'noah_portfolio_grid_layout', 'packed' );
 	$grid_layout_class = 'c-gallery--' . $grid_layout;
 	$classes[]         = $grid_layout_class;
 
@@ -96,19 +83,19 @@ function noah_get_portfolio_class( $class = '', $location = '' ) {
 	}
 
 	// items per row
-	$columns        = intval( pixelgrade_option( 'portfolio_items_per_row', 4 ) );
+	$columns        = 4;
 	$columns_at_lap = $columns >= 5 ? $columns - 1 : $columns;
 	$columns_at_pad = $columns_at_lap >= 4 ? $columns_at_lap - 1 : $columns_at_lap;
 
 	$columns_class = 'o-grid--' . $columns . 'col-@desk o-grid--' . $columns_at_lap . 'col-@lap o-grid--' . $columns_at_pad . 'col-@pad';
 	// title position
-	$title_position       = pixelgrade_option( 'portfolio_items_title_position', 'below' );
+	$title_position       = get_theme_mod( 'noah_portfolio_items_title_position', 'below' );
 	$title_position_class = 'c-gallery--title-' . $title_position;
 
 	if ( $title_position == 'overlay' ) {
-		$title_alignment_class = 'c-gallery--title-' . pixelgrade_option( 'portfolio_items_title_alignment_overlay', 'middle-center' );
+		$title_alignment_class = 'c-gallery--title-' . get_theme_mod( 'noah_portfolio_items_title_alignment_overlay', 'middle-center' );
 	} else {
-		$title_alignment_class = 'c-gallery--title-' . pixelgrade_option( 'portfolio_items_title_alignment_nearby', 'left' );
+		$title_alignment_class = 'c-gallery--title-' . get_theme_mod( 'noah_portfolio_items_title_alignment_nearby', 'left' );
 	}
 
 	$classes[] = $title_position_class;
@@ -165,7 +152,7 @@ function noah_get_blog_class( $class = '', $location = '' ) {
 	$classes[] = 'o-grid';
 	$classes[] = 'c-gallery  c-gallery--blog';
 	// layout
-	$grid_layout       = pixelgrade_option( 'blog_grid_layout', 'masonry' );
+	$grid_layout       = get_theme_mod( 'noah_blog_grid_layout', 'masonry' );
 	$grid_layout_class = 'c-gallery--' . $grid_layout;
 	$classes[]         = $grid_layout_class;
 
@@ -174,7 +161,7 @@ function noah_get_blog_class( $class = '', $location = '' ) {
 	}
 
 	// items per row
-	$columns        = intval( pixelgrade_option( 'blog_items_per_row', 3 ) );
+	$columns        = 3;
 	$columns_at_lap = $columns >= 5 ? $columns - 1 : $columns;
 	$columns_at_pad = $columns_at_lap >= 4 ? $columns_at_lap - 1 : $columns_at_lap;
 
@@ -184,9 +171,9 @@ function noah_get_blog_class( $class = '', $location = '' ) {
 	$title_position_class = 'c-gallery--title-' . $title_position;
 
 	if ( $title_position == 'overlay' ) {
-		$title_alignment_class = 'c-gallery--title-' . pixelgrade_option( 'blog_items_title_alignment_overlay', 'middle-center' );
+		$title_alignment_class = 'c-gallery--title-' . get_theme_mod( 'noah_blog_items_title_alignment_overlay', 'middle-center' );
 	} else {
-		$title_alignment_class = 'c-gallery--title-' . pixelgrade_option( 'blog_items_title_alignment_nearby', 'left' );
+		$title_alignment_class = 'c-gallery--title-' . get_theme_mod( 'noah_blog_items_title_alignment_nearby', 'left' );
 	}
 
 	$classes[] = $title_position_class;
@@ -225,7 +212,7 @@ function noah_get_blog_class( $class = '', $location = '' ) {
  * @return array
  */
 function noah_body_attributes( $attributes ) {
-	if ( pixelgrade_option( 'use_ajax_loading', false ) ) {
+	if ( get_theme_mod( 'noah_use_ajax_loading', false ) ) {
 		$attributes['data-ajaxloading'] = '';
 	}
 
@@ -237,7 +224,7 @@ function noah_body_attributes( $attributes ) {
 
 	//we use this so we can generate links with post id
 	//right now we use it to change the Edit Post link in the admin bar
-	if ( ( pixelgrade_option( 'use_ajax_loading', true ) == 1 ) ) {
+	if ( ( get_theme_mod( 'noah_use_ajax_loading', true ) == 1 ) ) {
 		global $wp_the_query;
 		$current_object = $wp_the_query->get_queried_object();
 

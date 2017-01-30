@@ -6,24 +6,6 @@
  * @since Noah 1.0
  */
 
-function noah_hero_metaboxes_config( $config ) {
-	//we only want the hero on the Portfolio page, not on all pages
-	$config['hero_area_background__page']['show_on'] = array(
-		'key'   => 'page-template',
-		'value' => array( 'page-templates/portfolio-page.php', ), //the page templates to show on ie. 'page-templates/page-builder.php'
-	);
-	$config['hero_area_content__page']['show_on'] = array(
-		'key'   => 'page-template',
-		'value' => array( 'page-templates/portfolio-page.php', ), //the page templates to show on ie. 'page-templates/page-builder.php'
-	);
-
-	//for now we don't want any metaboxes related to maps
-	unset( $config['hero_area_map__page'] );
-
-	return $config;
-}
-add_filter( 'pixelgrade_hero_metaboxes_config', 'noah_hero_metaboxes_config', 10, 1 );
-
 function noah_prevent_hero( $is_needed, $location ) {
 	//we only have a hero on the portfolio page
 	if ( ! pixelgrade_in_location( 'portfolio-page', $location ) ) {
@@ -61,10 +43,3 @@ function noah_prevent_hero_description( $has_desc, $post ) {
 }
 add_filter( 'pixelgrade_hero_has_description', 'noah_prevent_hero_description', 10, 2 );
 
-function noah_header_scroll_arrow( $location = '' ) { ?>
-	<a href="#projectsArchive" class="c-scroll-arrow"><?php get_template_part( 'template-parts/svg/project-scroll-down' ); ?></a>
-<?php }
-add_action( 'pixelgrade_header_after_navbar' ,'noah_header_scroll_arrow', 10, 1 );
-
-// Disable Header component support for Jetpack Social Menu
-add_filter( 'pixelgrade_header_use_jetpack_social_menu', '__return_false' );

@@ -78,11 +78,6 @@ if ( ! function_exists( 'noah_setup' ) ) {
 			)
 		) ) );
 
-		// Add theme support for Jetpack Social Menu, if that is the case
-		if ( apply_filters( 'pixelgrade_header_use_jetpack_social_menu', true ) ) {
-			add_theme_support( 'jetpack-social-menu' );
-		}
-
 		/**
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -95,22 +90,10 @@ if ( ! function_exists( 'noah_setup' ) ) {
 			'caption',
 		) );
 
-
 		/**
-		 * Add support for Post Formats.
-		 * See https://developer.wordpress.org/themes/functionality/post-formats/
+		 * Remove themes' post formats support
 		 */
-		add_theme_support( 'post-formats', array() );
-
-		/**
-		 * This is how we add a post type support like `exerpt`
-		 */
-		add_post_type_support( 'page', 'excerpt' );
-
-		/**
-		 * And this is how we remove a post type support
-		 */
-		remove_post_type_support( 'page', 'thumbnail' );
+		remove_theme_support( 'post-formats' );
 
 		/**
 		 * Add editor custom style to make it look more like the frontend
@@ -119,10 +102,6 @@ if ( ! function_exists( 'noah_setup' ) ) {
 		add_editor_style( array( 'editor-style.css' ) );
 		add_editor_style( noah_ek_mukta_font_url() );
 
-		/**
-		 * Remove themes' post formats support
-		 */
-		remove_theme_support( 'post-formats' );
 	}
 } // noah_setup
 add_action( 'after_setup_theme', 'noah_setup' );
@@ -174,11 +153,9 @@ function noah_load_assets() {
 	 */
 	$main_style_deps = array();
 
-	/* Default Self-hosted Fonts should be loaded when Customify is off */
-	if ( ! class_exists( 'PixCustomifyPlugin' ) ) {
-		wp_enqueue_style( 'noah-fonts-arcamajora3', noah_arcamajora3_font_url() );
-		$main_style_deps[] = 'noah-fonts-arcamajora3';
-	}
+	/* Handle the FONTS */
+	wp_enqueue_style( 'noah-fonts-arcamajora3', noah_arcamajora3_font_url() );
+	$main_style_deps[] = 'noah-fonts-arcamajora3';
 
 	wp_enqueue_style( 'noah-fonts-ek-mukta', noah_ek_mukta_font_url() );
 	$main_style_deps[] = 'noah-fonts-ek-mukta';

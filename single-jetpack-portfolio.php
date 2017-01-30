@@ -19,7 +19,7 @@ get_header(); ?>
 
             <?php while ( have_posts() ) : the_post();
 
-                get_template_part( 'template-parts/content-single', 'jetpack-portfolio' );
+                get_template_part( 'template-parts/project/content-single', 'jetpack-portfolio' );
 
                 // If comments are open or we have at least one comment, load up the comment template.
                 if ( comments_open() || get_comments_number() ) {
@@ -72,7 +72,7 @@ get_header(); ?>
 				                <div <?php noah_portfolio_class( '', $location ); ?>>
 
 					                <?php while ( $projects->have_posts() ) : $projects->the_post();
-						                get_template_part( 'template-parts/content', 'jetpack-portfolio' );
+						                get_template_part( 'template-parts/project/content', 'jetpack-portfolio' );
 					                endwhile; ?>
 
 				                </div>

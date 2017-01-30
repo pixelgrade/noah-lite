@@ -13,16 +13,23 @@ $location = pixelgrade_get_location( 'portfolio jetpack' );
 <div id="post-<?php the_ID(); ?>" <?php post_class( '', get_the_ID() ) ?>>
 	<div class="c-card">
 		<div class="c-card__link">
-			<a href="<?php the_permalink( get_the_ID() ); ?>" class="c-card__content-link c-card__frame">
+
+			<?php if ( has_post_thumbnail( get_the_ID() ) ) { ?>
+			<a class="c-card__content-link" href="<?php the_permalink( get_the_ID() ); ?>">
+				<div class="c-card__frame">
 				<?php
 				// Output the featured image
 				echo get_the_post_thumbnail( get_the_ID() ); ?>
+				</div><!-- .c-card__frame -->
 			</a>
+			<?php } ?>
+
 			<div class="c-card__content">
 				<?php
 				$meta                 = array();
+
 				$portfolio_categories = get_the_terms( get_the_ID(), 'jetpack-portfolio-type' );
-				$category             = "";
+				$category             = '';
 				if ( ! is_wp_error( $portfolio_categories ) && ! empty( $portfolio_categories ) ) {
 					$category .= '<ul class="o-inline">' . PHP_EOL;
 					foreach ( $portfolio_categories as $portfolio_category ) {
@@ -31,8 +38,9 @@ $location = pixelgrade_get_location( 'portfolio jetpack' );
 					$category .= '</ul>' . PHP_EOL;
 				}
 				$meta['category'] = $category;
+
 				$portfolio_tags   = get_the_terms( get_the_ID(), 'jetpack-portfolio-tag' );
-				$tags             = "";
+				$tags             = '';
 				if ( ! is_wp_error( $portfolio_tags ) && ! empty( $portfolio_tags ) ) {
 					$tags .= '<ul class="o-inline">' . PHP_EOL;
 					foreach ( $portfolio_tags as $portfolio_tag ) {
@@ -59,21 +67,20 @@ $location = pixelgrade_get_location( 'portfolio jetpack' );
 					$meta['comments'] = '';
 				}
 
-				if ( pixelgrade_option( 'portfolio_items_primary_meta', 'none' ) !== 'none' && ! empty( $meta[ pixelgrade_option( 'portfolio_items_primary_meta' ) ] ) ) {
-					echo "<div class='c-card__meta h7'>" . $meta[ pixelgrade_option( 'portfolio_items_primary_meta' ) ] . "</div>";
+				if ( get_theme_mod( 'noah_portfolio_items_primary_meta', 'none' ) !== 'none' && ! empty( $meta[ get_theme_mod( 'noah_portfolio_items_primary_meta' ) ] ) ) {
+					echo '<div class="c-card__meta h7">' . $meta[ get_theme_mod( 'noah_portfolio_items_primary_meta' ) ] . '</div>';
 				}
-				if ( pixelgrade_option( 'portfolio_items_title_visibility', true ) ) { ?>
+				if ( get_theme_mod( 'noah_portfolio_items_title_visibility', true ) ) { ?>
 					<h2 class="c-card__title h5"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				<?php }
-				if ( pixelgrade_option( 'portfolio_items_excerpt_visibility', false ) && get_the_excerpt() ) { ?>
+				if ( get_theme_mod( 'noah_portfolio_items_excerpt_visibility', false ) && get_the_excerpt() ) { ?>
 					<div class="c-card__excerpt entry-content">
 						<?php the_excerpt(); ?>
 					</div>
 				<?php }
-				if ( pixelgrade_option( 'portfolio_items_secondary_meta', 'none' ) !== 'none' && ! empty( $meta[ pixelgrade_option( 'portfolio_items_secondary_meta' ) ] ) ) {
-					echo '<div class="c-card__footer h7">' . $meta[ pixelgrade_option( 'portfolio_items_secondary_meta' ) ] . "</div>";
+				if ( get_theme_mod( 'noah_portfolio_items_secondary_meta', 'none' ) !== 'none' && ! empty( $meta[ get_theme_mod( 'noah_portfolio_items_secondary_meta' ) ] ) ) {
+					echo '<div class="c-card__footer h7">' . $meta[ get_theme_mod( 'noah_portfolio_items_secondary_meta' ) ] . '</div>';
 				} ?>
-				<a class="c-card__content-link" href="<?php the_permalink(); ?>"></a>
 			</div><!-- .c-card__content -->
 		</div><!-- .c-card__link -->
 	</div><!-- .c-card -->

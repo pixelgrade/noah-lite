@@ -36,7 +36,7 @@ get_header(); ?>
 				<div <?php noah_portfolio_class( '', $location ); ?>>
 
 					<?php while ( have_posts() ) : the_post();
-						get_template_part( 'template-parts/content', 'jetpack-portfolio' );
+						get_template_part( 'template-parts/project/content', 'jetpack-portfolio' );
 					endwhile; ?>
 
 				</div>

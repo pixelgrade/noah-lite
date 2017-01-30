@@ -14,16 +14,15 @@
 <footer <?php pixelgrade_footer_class(); ?>>
 	<div class="o-wrapper u-container-width content-area">
 
-		<?php if ( is_active_sidebar( 'sidebar-footer' ) ): ?>
-			<div class="c-gallery c-gallery--footer o-grid o-grid--4col-@lap">
-				<?php dynamic_sidebar( 'sidebar-footer' ); ?>
-			</div><!-- .c-gallery--footer -->
-		<?php endif; ?>
+		<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
 		<div class="c-footer__content">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'noah' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'noah' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'noah' ), 'Noah', '<a href="https://pixelgrade.com/" rel="designer">PixelGrade</a>' ); ?>
+			<?php
+			get_template_part( 'template-parts/footer/site-info' );
+
+			if ( ! get_theme_mod( 'noah_footer_hide_back_to_top_link' ) ) { ?>
+			<a class="back-to-top" href="#"><?php esc_html_e( 'Back to Top', 'noah' ); ?></a>
+			<?php } ?>
 		</div><!-- .c-footer__content -->
 	</div><!-- .o-wrapper.u-container-width.content-area -->
 </footer>

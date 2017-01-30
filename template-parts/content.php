@@ -13,11 +13,14 @@ $location = pixelgrade_get_location( '' );
 <div id="post-<?php the_ID(); ?>" <?php post_class() ?>>
 	<div class="c-card">
 		<div class="c-card__link">
+			<?php if ( has_post_thumbnail( get_the_ID() ) ) { ?>
 			<a class="c-card__content-link" href="<?php the_permalink(); ?>">
 				<div class="c-card__frame">
 					<?php the_post_thumbnail(); ?>
 				</div>
 			</a>
+			<?php } ?>
+
 			<div class="c-card__content"><?php
 				$meta       = array();
 				$categories = get_the_terms( get_the_ID(), 'category' );
@@ -58,22 +61,22 @@ $location = pixelgrade_get_location( '' );
 					$meta['comments'] = '';
 				}
 
-				if ( pixelgrade_option( 'blog_items_primary_meta', 'category' ) !== 'none' && ! empty( $meta[ pixelgrade_option( 'blog_items_primary_meta' ) ] ) ) {
-					echo '<div class="c-card__meta h7">' . $meta[ pixelgrade_option( 'blog_items_primary_meta' ) ] . "</div>";
+				if ( get_theme_mod( 'noah_blog_items_primary_meta', 'category' ) !== 'none' && ! empty( $meta[ get_theme_mod( 'noah_blog_items_primary_meta' ) ] ) ) {
+					echo '<div class="c-card__meta h7">' . $meta[ get_theme_mod( 'noah_blog_items_primary_meta' ) ] . "</div>";
 				}
-				if ( pixelgrade_option( 'blog_items_title_visibility', true ) ) { ?>
+				if ( get_theme_mod( 'noah_blog_items_title_visibility', true ) ) { ?>
 					<h2 class="c-card__title h2"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				<?php }
-				if ( pixelgrade_option( 'blog_items_excerpt_visibility', true ) && get_the_excerpt() ) { ?>
+				if ( get_theme_mod( 'noah_blog_items_excerpt_visibility', true ) && get_the_excerpt() ) { ?>
 					<div class="c-card__excerpt entry-content">
 						<?php the_excerpt(); ?>
 					</div>
 				<?php }
-				if ( pixelgrade_option( 'blog_items_secondary_meta', 'date' ) !== 'none' && ! empty( $meta[ pixelgrade_option( 'blog_items_secondary_meta' ) ] ) ) {
-					echo '<div class="c-card__footer h7">' . $meta[ pixelgrade_option( 'blog_items_secondary_meta' ) ] . "</div>";
+				if ( get_theme_mod( 'noah_blog_items_secondary_meta', 'date' ) !== 'none' && ! empty( $meta[ get_theme_mod( 'noah_blog_items_secondary_meta' ) ] ) ) {
+					echo '<div class="c-card__footer h7">' . $meta[ get_theme_mod( 'noah_blog_items_secondary_meta' ) ] . "</div>";
 				}
-				?></div>
-		</div>
+				?></div><!-- .c-card__content -->
+		</div><!-- .c-card__link -->
 		<span class="c-card__badge u-color-accent"></span>
-	</div>
-</div>
+	</div><!-- .c-card -->
+</div><!-- #post-XX -->

@@ -967,3 +967,10 @@ function pixelgrade_hero_the_background_video ($id = null, $opacity = 100, $igno
 
 	echo $output;
 }
+
+/**
+ * Checks to see if we're on the homepage or not.
+ */
+function noah_is_frontpage() {
+	return ( is_front_page() && ! is_home() );
+}

@@ -7,6 +7,12 @@
     width: 100%;
 }
 
+/* Scroll down arrow */
+
+.site-header .menu-scroll-down {
+  display: none;
+}
+
 .c-navbar {
     @extend %heading;
     @extend .fs-12;
