@@ -85,7 +85,7 @@ function noah_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'noah_sanitize_checkbox',
 	) );
 	$wp_customize->add_control( 'noah_footer_hide_back_to_top_link', array(
-		'label'             => __( 'Hide "Back To Top" Link', 'noah' ),
+		'label'             => __( 'Hide Footer "Back To Top" Link', 'noah' ),
 		'section'           => 'noah_theme_options',
 		'type'              => 'checkbox',
 	) );
@@ -140,8 +140,8 @@ function noah_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'noah_portfolio_items_title_position', array(
 		'type'    => 'radio',
-		'label'   => esc_html__( 'Items Title Position', 'noah' ),
-		'desc'    => esc_html__( 'Choose whether the items titles are placed nearby the thumbnail or show as an overlay cover on  mouse over.', 'noah' ),
+		'label'   => esc_html__( 'Project Details Position', 'noah' ),
+		'desc'    => esc_html__( 'Choose whether the project details are placed nearby the thumbnail or show as an overlay cover on  mouse over.', 'noah' ),
 		'choices' => array(
 			'above'   => esc_html__( 'Above', 'noah' ),
 			'below'   => esc_html__( 'Below', 'noah' ),
@@ -157,8 +157,8 @@ function noah_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'noah_portfolio_items_title_alignment_nearby', array(
 		'type'    => 'select',
-		'label'   => esc_html__( 'Title Alignment (Above/Below)', 'noah' ),
-		'desc'    => esc_html__( 'Adjust the alignment of your title.', 'noah' ),
+		'label'   => esc_html__( 'Project Details Alignment (Above/Below)', 'noah' ),
+		'desc'    => esc_html__( 'Adjust the alignment of your project details like title, author.', 'noah' ),
 		'choices' => array(
 			'left'   => esc_html__( '← Left', 'noah' ),
 			'center' => esc_html__( '↔ Center', 'noah' ),
@@ -174,8 +174,8 @@ function noah_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'noah_portfolio_items_title_alignment_overlay', array(
 		'type'    => 'select',
-		'label'   => esc_html__( 'Title Alignment (Overlay)', 'noah' ),
-		'desc'    => esc_html__( 'Adjust the alignment of your hover title.', 'noah' ),
+		'label'   => esc_html__( 'Project Details Alignment (Overlay)', 'noah' ),
+		'desc'    => esc_html__( 'Adjust the alignment of your hover project details like title, author.', 'noah' ),
 		'choices' => array(
 			'top-left'   => esc_html__( '↑ Top     ← Left', 'noah' ),
 			'top-center' => esc_html__( '↑ Top     ↔ Center', 'noah' ),
@@ -219,8 +219,8 @@ function noah_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'noah_portfolio_items_primary_meta', array(
 		'type'    => 'select',
-		'label'   => esc_html__( 'Primary Meta Section', 'noah' ),
-		'desc'    => esc_html__( 'Set the meta info that display around the title. ', 'noah' ),
+		'label'   => esc_html__( 'Main Project Meta', 'noah' ),
+		'desc'    => esc_html__( 'Choose what is the main information you wish to display about a project, besides the title.', 'noah' ),
 		'choices' => array(
 			'none'     => esc_html__( 'None', 'noah' ),
 			'category' => esc_html__( 'Category', 'noah' ),
@@ -239,8 +239,8 @@ function noah_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'noah_portfolio_items_secondary_meta', array(
 		'type'    => 'select',
-		'label'   => esc_html__( 'Secondary Meta Section', 'noah' ),
-		'desc'    => '',
+		'label'   => esc_html__( 'Secondary Project Meta', 'noah' ),
+		'desc'    => esc_html__( 'Choose what is the secondary information you wish to display about a project.', 'noah' ),
 		'choices' => array(
 			'none'     => esc_html__( 'None', 'noah' ),
 			'category' => esc_html__( 'Category', 'noah' ),
@@ -269,8 +269,8 @@ function noah_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'noah_blog_grid_layout', array(
 		'type'    => 'radio',
-		'label'   => esc_html__( 'Grid Layout', 'noah' ),
-		'desc'    => esc_html__( 'Choose whether the items display in a fixed height regular grid, or in a mosaic style layout.', 'noah' ),
+		'label'   => esc_html__( 'Blog Grid Layout', 'noah' ),
+		'desc'    => esc_html__( 'Choose whether the posts are shown in a fixed height regular grid, or in a mosaic style layout.', 'noah' ),
 		'choices' => array(
 			'regular' => esc_html__( 'Regular Grid', 'noah' ),
 			'masonry' => esc_html__( 'Masonry', 'noah' ),
@@ -286,8 +286,8 @@ function noah_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'noah_blog_items_title_position', array(
 		'type'    => 'radio',
-		'label'   => esc_html__( 'Items Title Position', 'noah' ),
-		'desc'    => esc_html__( 'Choose whether the items titles are placed nearby the thumbnail or show as an overlay cover on  mouse over.', 'noah' ),
+		'label'   => esc_html__( 'Post Details Position', 'noah' ),
+		'desc'    => esc_html__( 'Choose whether the post details are placed nearby the thumbnail or show as an overlay cover on  mouse over.', 'noah' ),
 		'choices' => array(
 			'above'   => esc_html__( 'Above', 'noah' ),
 			'below'   => esc_html__( 'Below', 'noah' ),
@@ -303,7 +303,7 @@ function noah_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'noah_blog_items_title_alignment_nearby', array(
 		'type'    => 'select',
-		'label'   => esc_html__( 'Title Alignment (Above/Below)', 'noah' ),
+		'label'   => esc_html__( 'Post Details Alignment (Above/Below)', 'noah' ),
 		'desc'    => esc_html__( 'Adjust the alignment of your title.', 'noah' ),
 		'choices' => array(
 			'left'   => esc_html__( '← Left', 'noah' ),
@@ -320,7 +320,7 @@ function noah_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'noah_blog_items_title_alignment_overlay', array(
 		'type'    => 'select',
-		'label'   => esc_html__( 'Title Alignment (Overlay)', 'noah' ),
+		'label'   => esc_html__( 'Post Details Alignment (Overlay)', 'noah' ),
 		'desc'    => esc_html__( 'Adjust the alignment of your hover title.', 'noah' ),
 		'choices' => array(
 			'top-left'   => esc_html__( '↑ Top     ← Left', 'noah' ),
@@ -365,8 +365,8 @@ function noah_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'noah_blog_items_primary_meta', array(
 		'type'    => 'select',
-		'label'   => esc_html__( 'Primary Meta Section', 'noah' ),
-		'desc'    => esc_html__( 'Set the meta info that display around the title. ', 'noah' ),
+		'label'   => esc_html__( 'Main Post Meta', 'noah' ),
+		'desc'    => esc_html__( 'Choose what is the main information you wish to display about a post, besides the title.', 'noah' ),
 		'choices' => array(
 			'none'     => esc_html__( 'None', 'noah' ),
 			'category' => esc_html__( 'Category', 'noah' ),
@@ -385,8 +385,8 @@ function noah_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( 'noah_blog_items_secondary_meta', array(
 		'type'    => 'select',
-		'label'   => esc_html__( 'Secondary Meta Section', 'noah' ),
-		'desc'    => '',
+		'label'   => esc_html__( 'Secondary Post Meta', 'noah' ),
+		'desc'    => esc_html__( 'Choose what is the secondary information you wish to display about a post.', 'noah' ),
 		'choices' => array(
 			'none'     => esc_html__( 'None', 'noah' ),
 			'category' => esc_html__( 'Category', 'noah' ),
