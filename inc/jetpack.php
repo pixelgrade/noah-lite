@@ -63,28 +63,6 @@ function noah_disable_jetpack_carousel() {
 }
 
 /**
- * Setup the default sharing services
- * See Sharing_Service->get_all_services() for the complete list.
- *
- * @param array $enabled
- *
- * @return array
- */
-function noah_default_jetpack_sharing_services( $enabled ) {
-	return array(
-		'visible' => array(
-			'facebook',
-			'twitter',
-			'pinterest',
-		),
-		'hidden' => array(
-
-		)
-	);
-}
-add_filter( 'sharing_default_services', 'noah_default_jetpack_sharing_services', 10, 1 );
-
-/**
  * Class NoahGalleryCustomSlideshow
  *
  * Code borrowed from the Jetpack_Carousel class
