@@ -7,6 +7,42 @@
  * @package Noah
  */
 
+if ( ! function_exists( 'noah_posted_on' ) ) :
+	/**
+	 * Prints HTML with meta information for the current post-date/time and author.
+	 */
+	function noah_posted_on() {
+
+		echo '<span class="posted-on">' . noah_date_link() . '</span>';
+	}
+endif;
+
+if ( ! function_exists( 'noah_date_link' ) ) :
+	/**
+	 * Prints HTML with meta information for the current post-date/time and author.
+	 */
+	function noah_date_link() {
+		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" hidden datetime="%3$s">%4$s</time>';
+		}
+
+		$time_string = sprintf( $time_string,
+			get_the_date( DATE_W3C ),
+			get_the_date(),
+			get_the_modified_date( DATE_W3C ),
+			get_the_modified_date()
+		);
+
+		// Wrap the time string in a link, and preface it with 'Posted on'.
+		return sprintf(
+		/* translators: %s: post date */
+			__( '<span class="screen-reader-text">Posted on</span> %s', 'noah' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		);
+	} #function
+endif;
+
 if ( ! function_exists( 'noah_get_cats_list' ) ) {
 
 	/**
@@ -705,42 +741,8 @@ function pixelgrade_hero_get_slides_ids( $post = null ){
 
 	$to_return = array();
 
-	/* IF - PixTypes is not active we need to take a different route as no metaboxes will be present */
-	if ( ! class_exists( 'PixTypesPlugin' ) ) {
-		if ( has_post_thumbnail( $post ) ) {
-			$to_return[] = get_post_thumbnail_id( $post );
-		}
-	} else {
-
-		/* ELSE - We can get slides from 3 sources: images, videos and featured projects */
-
-		// First get the Hero Images attachment ids
-		$attachment_ids = trim( get_post_meta( $post->ID, '_hero_background_gallery', true ) );
-		if ( ! empty( $attachment_ids ) ) {
-			$attachment_ids = explode( ',', $attachment_ids );
-			$to_return      = array_merge( $to_return, $attachment_ids );
-		}
-
-		// Secondly, the Hero Videos attachment ids
-		$videos_ids = trim( get_post_meta( $post->ID, '_hero_background_videos', true ) );
-		if ( ! empty( $videos_ids ) ) {
-			$videos_ids = explode( ',', $videos_ids );
-			$to_return  = array_merge( $to_return, $videos_ids );
-		}
-
-		// if we have made it thus far and still haven't found some images or videos, but there is some hero content, add the 0 id to the list
-		// this way the hero loop will work, bypassing the attachment part (there is no attachment with the id 0)
-		// also, this prevents from mistakenly counting the number of slides needed (1 instead of 2 for example -> we would assume no slide would be needed)
-		if ( empty( $to_return ) && pixelgrade_hero_has_description( $post ) ) {
-			$to_return[] = 0;
-		}
-
-		// Thirdly, the Featured Projects
-		$featured_projects = trim( get_post_meta( $post->ID, '_portfolio_featured_projects', true ) );
-		if ( ! empty( $featured_projects ) ) {
-			$featured_projects = explode( ',', $featured_projects );
-			$to_return         = array_merge( $to_return, $featured_projects );
-		}
+	if ( has_post_thumbnail( $post ) ) {
+		$to_return[] = get_post_thumbnail_id( $post );
 	}
 
 	//allow others to make changes
@@ -1036,78 +1038,84 @@ function noah_get_the_post_navigation( $args = array() ) {
 	return $navigation;
 }
 
-function noah_the_author_info_box() {
-	echo noah_get_the_author_info_box();
-}
-
+/*
+ * Return the HTML markup of the author bio.
+ */
 function noah_get_the_author_info_box() {
-	global $post;
-
 	$author_details = '';
 
-	// Detect if it is a single post with a post author
-	if ( is_single() && isset( $post->post_author ) ) {
+	$author_details .= '<aside class="c-author" itemscope itemtype="http://schema.org/Person">' . PHP_EOL;
+	$author_details .= '<div class="c-author__avatar">' . PHP_EOL;
 
-		// Get author's display name
-		$display_name = get_the_author_meta( 'display_name', $post->post_author );
+	/**
+	 * Filter the author bio avatar size, the Jetpack content options way.
+	 *
+	 * @param int $size The avatar height and width size in pixels.
+	 */
+	$author_bio_avatar_size = apply_filters( 'jetpack_author_bio_avatar_size', 100 );
 
-		// If display name is not available then use nickname as display name
-		if ( empty( $display_name ) ) {
-			$display_name = get_the_author_meta( 'nickname', $post->post_author );
-		}
+	$author_details .= get_avatar( get_the_author_meta( 'user_email' ), $author_bio_avatar_size );
 
-		// Get author's biographical information or description
-		$user_description = get_the_author_meta( 'user_description', $post->post_author );
+	$author_details .= '</div><!-- .c-author__avatar -->' . PHP_EOL;
+	$author_details .= '<div class="c-author__details">' . PHP_EOL;
+	$author_details .= '<span class="c-author__label h7">' . esc_html__( 'Posted by', 'noah' ) . '</span>' . PHP_EOL;
+	$author_details .= '<p class="c-author__name h2">' . get_the_author() . '</p>' . PHP_EOL;
+	$author_details .= '<p class="c-author__description" itemprop="description">' . get_the_author_meta( 'description' ) . '</p>' . PHP_EOL;
+	$author_details .= '<div class="o-inline o-inline-xs h7">' .PHP_EOL;
+	$author_details .= '<a class="_color-inherit" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author" title="' . esc_attr( sprintf( __( 'View all posts by %s', 'noah' ), get_the_author() ) ) . '">' . esc_html__( 'All posts', 'noah' ) . '</a>' . PHP_EOL;
+	$author_details .= noah_get_author_bio_links();
 
-
-		if ( ! empty( $user_description ) ) {
-			$author_details .= '<div class="c-author  has-description">';
-		} else {
-			$author_details .= '<div class="c-author">';
-		}
-
-		// Get author's website URL
-		$user_website = get_the_author_meta( 'url', $post->post_author );
-
-		// Get link to the author archive page
-		$user_posts = get_author_posts_url( get_the_author_meta( 'ID', $post->post_author ) );
-
-		$author_avatar = get_avatar( get_the_author_meta( 'user_email' ), 100 );
-
-		if ( ! empty( $author_avatar ) ) {
-			$author_details .= '<div class="c-author__avatar">' . $author_avatar . '</div>';
-		}
-
-		$author_details .= '<div class="c-author__details">';
-
-		if ( ! empty( $display_name ) ) {
-			$author_details .= '<span class="c-author__label h7">' . __( 'Posted by', 'noah' ) . '</span>';
-			$author_details .= '<p class="c-author__name h2">' . $display_name . '</p>';
-		}
-
-		// Author avatar and bio
-		if ( ! empty( $user_description ) ) {
-			$author_details .= '<p class="c-author__description">' . nl2br( $user_description ) . '</p>';
-		}
-
-		$author_details .= '<div class="o-inline o-inline-xs h7">';
-
-		$author_details .= '<a class="_color-inherit" href="' . esc_url( $user_posts ) . '">' . __( 'All posts', 'noah' ) . '</a>';
-
-		$author_details .= '<div class="c-author__links o-inline o-inline-s u-color-accent">';
-
-		// Check if author has a website in their profile
-		if ( ! empty( $user_website ) ) {
-			// Display author website link
-			$author_details .= '<a href="' . esc_url( $user_website ) . '" target="_blank" rel="nofollow">Website</a>';
-		}
-
-		$author_details .= '</div><!-- .c-author__links -->';
-
-		$author_details .= '</div>';
-		$author_details .= '</div><!-- .c-author__details -->';
-		$author_details .= '</div><!-- .c-author -->';
-	}
+	$author_details .= '</div>' . PHP_EOL;
+	$author_details .= '</div><!-- .c-author__details -->' . PHP_EOL;
+	$author_details .= '</aside><!-- .c-author -->' . PHP_EOL;
 
 	return $author_details;
 }
+
+if ( ! function_exists( 'noah_entry_footer' ) ) :
+	/**
+	 * Prints HTML with meta information for posts on archives.
+	 */
+	function noah_entry_footer( $post_id ) {
+		edit_post_link( __( 'Edit', 'noah' ), '<span class="edit-link">', '</span>', $post_id );
+	}
+endif;
+
+
+if ( ! function_exists( 'noah_single_entry_footer' ) ) :
+	/**
+	 * Prints HTML with meta information for the categories, tags, Jetpack likes, shares, related, and comments.
+	 */
+	function noah_single_entry_footer() {
+		edit_post_link( __( 'Edit', 'noah' ), '<span class="edit-link">', '</span>' );
+	} #function
+endif;
+
+if ( ! function_exists( 'noah_get_author_bio_links' ) ) :
+	/**
+	 * Return the markup for the author bio links.
+	 * These are the links/websites added by one to it's Gravatar profile
+	 *
+	 * @param int|WP_Post $post_id Optional. Post ID or post object.
+	 * @return string The HTML markup of the author bio links list.
+	 */
+	function noah_get_author_bio_links( $post_id = null ) {
+		$post = get_post( $post_id );
+		$markup = '';
+		if ( empty( $post ) ) {
+			return $markup;
+		}
+		$str = wp_remote_fopen( 'https://www.gravatar.com/' . md5( strtolower( trim( get_the_author_meta( 'user_email' ) ) ) ) . '.php' );
+		$profile = unserialize( $str );
+		if ( is_array( $profile ) && ! empty( $profile['entry'][0]['urls'] ) ) {
+			$markup .= '<div class="c-author__links o-inline o-inline-s u-color-accent">' . PHP_EOL;
+			foreach ( $profile['entry'][0]['urls'] as $link ) {
+				if ( ! empty( $link['value'] ) && ! empty( $link['title'] ) ) {
+					$markup .= '<a class="c-author__social-link" href="' . esc_url( $link['value'] ) . '" target="_blank">' . $link['title'] . '</a>' . PHP_EOL;
+				}
+			}
+			$markup .= '</div><!-- .c-author__links -->' . PHP_EOL;
+		}
+		return $markup;
+	} #function
+endif;

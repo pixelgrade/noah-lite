@@ -7,7 +7,21 @@
  * @package Noah
  */
 
-function noah_load_jetpack_compatibility() {
+function noah_jetpack_setup() {
+	// Add theme support for Infinite Scroll.
+	add_theme_support( 'infinite-scroll', array(
+		'container' => 'main',
+		'render'    => 'noah_infinite_scroll_render',
+		'footer'    => 'page',
+		'footer_widgets' => array(
+			'sidebar-2',
+		),
+		'wrapper'   => false,
+	) );
+
+	// Add theme support for Responsive Videos.
+	add_theme_support( 'jetpack-responsive-videos' );
+
 	// Add support for the Jetpack Portfolio Custom Post Type
 	add_theme_support( 'jetpack-portfolio' );
 
@@ -16,17 +30,41 @@ function noah_load_jetpack_compatibility() {
 		add_filter( 'jp_carousel_maybe_disable', 'noah_disable_jetpack_carousel' );
 	}
 
+	add_theme_support( 'jetpack-content-options', array(
+		'blog-display'       => 'excerpt', // the default setting of the theme: 'content', 'excerpt' or array( 'content', 'excerpt' ) for themes mixing both display.
+		'author-bio'         => true, // display or not the author bio: true or false.
+		'masonry'            => '.c-gallery--masonry', // a CSS selector matching the elements that triggers a masonry refresh if the theme is using a masonry layout.
+		'post-details'       => array(
+			'stylesheet'      => 'noah-style', // name of the theme's stylesheet.
+			'date'            => '.posted-on', // a CSS selector matching the elements that display the post date.
+			'categories'      => '.cat-links', // a CSS selector matching the elements that display the post categories.
+			'tags'            => '.tags', // a CSS selector matching the elements that display the post tags.
+			'author'          => '.byline', // a CSS selector matching the elements that display the post author.
+		),
+		'featured-images'    => array(
+			'archive'         => true, // enable or not the featured image check for archive pages: true or false.
+			'post'            => true, // enable or not the featured image check for single posts: true or false.
+			'page'            => true, // enable or not the featured image check for single pages: true or false.
+		),
+	) );
 }
-add_action( 'after_setup_theme', 'noah_load_jetpack_compatibility', 30 );
+add_action( 'after_setup_theme', 'noah_jetpack_setup', 30 );
 
-function jetpack_remove_rp() {
-	if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
-		$jprp     = Jetpack_RelatedPosts::init();
-		$callback = array( $jprp, 'filter_add_target_to_dom' );
-		remove_filter( 'the_content', $callback, 40 );
+/**
+ * Custom render function for Infinite Scroll.
+ *
+ * @since Noah 1.2
+ */
+function noah_infinite_scroll_render() {
+	while ( have_posts() ) {
+		the_post();
+		if ( is_search() ) :
+			get_template_part( 'template-parts/content', 'search' );
+		else :
+			get_template_part( 'template-parts/content', get_post_format() );
+		endif;
 	}
-}
-add_filter( 'wp', 'jetpack_remove_rp', 20 );
+} // end function noah_infinite_scroll_render
 
 /**
  * Filter the theme page templates and remove the `page-templates/portfolio-page.php` when no jetpack-portfolio CPT

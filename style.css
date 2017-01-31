@@ -494,34 +494,34 @@ figure {
  * 2.0 - Base Styles
  *   2.1 - Typography
  */
-.fs-10, .h7, .entry-content cite, .comment-content cite, .c-author__links, .c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
+.fs-10, .h7, .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, .c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
   font-size: 10px; }
 
-.fs-11, .h6, .entry-content h6, .comment-content h6, .tagcloud, #content .sd-content ul li a {
+.fs-11, .h6, .entry-content h6, .comment-content h6, .entry-footer h6, .tagcloud, #content .sd-content ul li a {
   font-size: 11px; }
 
-.fs-12, .h5, .entry-content h5, .comment-content h5, .body.body .content-area label, .c-navbar, .pingback .edit-link,
+.fs-12, .h5, .entry-content h5, .comment-content h5, .entry-footer h5, .body.body .content-area label, .c-navbar, .pingback .edit-link,
 .trackback .edit-link,
 .comment-links, .logged-in-as, .calendar_wrap table caption {
   font-size: 12px; }
 
-.fs-13, .h4, .entry-content h4, .comment-content h4, .c-controls__cursor, .c-btn, input[type="submit"],
+.fs-13, .h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-controls__cursor, .c-btn, input[type="submit"],
 input[type="button"],
 button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .posts-navigation .nav-previous,
 .posts-navigation .nav-next, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
   font-size: 13px; }
 
-.fs-15, .h3, .entry-content h3, .comment-content h3, .c-slider__header .c-page-header .c-page-header__title, body #jp-relatedposts h3.jp-relatedposts-headline {
+.fs-15, .h3, .entry-content h3, .comment-content h3, .entry-footer h3, .c-slider__header .c-page-header .c-page-header__title, body #jp-relatedposts h3.jp-relatedposts-headline {
   font-size: 15px; }
 
 .fs-16 {
   font-size: 16px; }
 
-.fs-18, .h2, .entry-content h2, .comment-content h2, .c-overlay .sd-social-text .sd-content.sd-content li,
+.fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2, .c-overlay .sd-social-text .sd-content.sd-content li,
 .c-overlay .sd-social-icon-text .sd-content.sd-content li {
   font-size: 18px; }
 
-.fs-23, .h1, .entry-content h1, .comment-content h1, .c-overlay .sd-social .sd-title, .entry-content blockquote, .comment-content blockquote {
+.fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .c-overlay .sd-social .sd-title, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
   font-size: 23px; }
 
 .fs-24 {
@@ -540,27 +540,27 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
   font-size: 90px; }
 
 @media only screen and (max-width: 760px) {
-  .fs-10, .h7, .entry-content cite, .comment-content cite, .c-author__links, .c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
+  .fs-10, .h7, .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, .c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
     font-size: 9px; }
-  .fs-11, .h6, .entry-content h6, .comment-content h6, .tagcloud, #content .sd-content ul li a {
+  .fs-11, .h6, .entry-content h6, .comment-content h6, .entry-footer h6, .tagcloud, #content .sd-content ul li a {
     font-size: 10px; }
-  .fs-12, .h5, .entry-content h5, .comment-content h5, .body.body .content-area label, .c-navbar, .pingback .edit-link,
+  .fs-12, .h5, .entry-content h5, .comment-content h5, .entry-footer h5, .body.body .content-area label, .c-navbar, .pingback .edit-link,
   .trackback .edit-link,
   .comment-links, .logged-in-as, .calendar_wrap table caption {
     font-size: 11px; }
-  .fs-13, .h4, .entry-content h4, .comment-content h4, .c-controls__cursor, .c-btn, input[type="submit"],
+  .fs-13, .h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-controls__cursor, .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .posts-navigation .nav-previous,
   .posts-navigation .nav-next, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
     font-size: 12px; }
-  .fs-15, .h3, .entry-content h3, .comment-content h3, .c-slider__header .c-page-header .c-page-header__title, body #jp-relatedposts h3.jp-relatedposts-headline {
+  .fs-15, .h3, .entry-content h3, .comment-content h3, .entry-footer h3, .c-slider__header .c-page-header .c-page-header__title, body #jp-relatedposts h3.jp-relatedposts-headline {
     font-size: 14px; }
   .fs-16 {
     font-size: 15px; }
-  .fs-18, .h2, .entry-content h2, .comment-content h2, .c-overlay .sd-social-text .sd-content.sd-content li,
+  .fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2, .c-overlay .sd-social-text .sd-content.sd-content li,
   .c-overlay .sd-social-icon-text .sd-content.sd-content li {
     font-size: 17px; }
-  .fs-23, .h1, .entry-content h1, .comment-content h1, .c-overlay .sd-social .sd-title, .entry-content blockquote, .comment-content blockquote {
+  .fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .c-overlay .sd-social .sd-title, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
     font-size: 21px; }
   .fs-24 {
     font-size: 22px; }
@@ -574,27 +574,27 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     font-size: 74px; } }
 
 @media only screen and (max-width: 560px) {
-  .fs-10, .h7, .entry-content cite, .comment-content cite, .c-author__links, .c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
+  .fs-10, .h7, .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, .c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
     font-size: 9px; }
-  .fs-11, .h6, .entry-content h6, .comment-content h6, .tagcloud, #content .sd-content ul li a {
+  .fs-11, .h6, .entry-content h6, .comment-content h6, .entry-footer h6, .tagcloud, #content .sd-content ul li a {
     font-size: 10px; }
-  .fs-12, .h5, .entry-content h5, .comment-content h5, .body.body .content-area label, .c-navbar, .pingback .edit-link,
+  .fs-12, .h5, .entry-content h5, .comment-content h5, .entry-footer h5, .body.body .content-area label, .c-navbar, .pingback .edit-link,
   .trackback .edit-link,
   .comment-links, .logged-in-as, .calendar_wrap table caption {
     font-size: 11px; }
-  .fs-13, .h4, .entry-content h4, .comment-content h4, .c-controls__cursor, .c-btn, input[type="submit"],
+  .fs-13, .h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-controls__cursor, .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .posts-navigation .nav-previous,
   .posts-navigation .nav-next, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
     font-size: 11px; }
-  .fs-15, .h3, .entry-content h3, .comment-content h3, .c-slider__header .c-page-header .c-page-header__title, body #jp-relatedposts h3.jp-relatedposts-headline {
+  .fs-15, .h3, .entry-content h3, .comment-content h3, .entry-footer h3, .c-slider__header .c-page-header .c-page-header__title, body #jp-relatedposts h3.jp-relatedposts-headline {
     font-size: 13px; }
   .fs-16 {
     font-size: 14px; }
-  .fs-18, .h2, .entry-content h2, .comment-content h2, .c-overlay .sd-social-text .sd-content.sd-content li,
+  .fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2, .c-overlay .sd-social-text .sd-content.sd-content li,
   .c-overlay .sd-social-icon-text .sd-content.sd-content li {
     font-size: 16px; }
-  .fs-23, .h1, .entry-content h1, .comment-content h1, .c-overlay .sd-social .sd-title, .entry-content blockquote, .comment-content blockquote {
+  .fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .c-overlay .sd-social .sd-title, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
     font-size: 20px; }
   .fs-24 {
     font-size: 21px; }
@@ -608,27 +608,27 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     font-size: 63px; } }
 
 @media only screen and (max-width: 400px) {
-  .fs-10, .h7, .entry-content cite, .comment-content cite, .c-author__links, .c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
+  .fs-10, .h7, .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, .c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
     font-size: 8px; }
-  .fs-11, .h6, .entry-content h6, .comment-content h6, .tagcloud, #content .sd-content ul li a {
+  .fs-11, .h6, .entry-content h6, .comment-content h6, .entry-footer h6, .tagcloud, #content .sd-content ul li a {
     font-size: 9px; }
-  .fs-12, .h5, .entry-content h5, .comment-content h5, .body.body .content-area label, .c-navbar, .pingback .edit-link,
+  .fs-12, .h5, .entry-content h5, .comment-content h5, .entry-footer h5, .body.body .content-area label, .c-navbar, .pingback .edit-link,
   .trackback .edit-link,
   .comment-links, .logged-in-as, .calendar_wrap table caption {
     font-size: 10px; }
-  .fs-13, .h4, .entry-content h4, .comment-content h4, .c-controls__cursor, .c-btn, input[type="submit"],
+  .fs-13, .h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-controls__cursor, .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .posts-navigation .nav-previous,
   .posts-navigation .nav-next, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
     font-size: 11px; }
-  .fs-15, .h3, .entry-content h3, .comment-content h3, .c-slider__header .c-page-header .c-page-header__title, body #jp-relatedposts h3.jp-relatedposts-headline {
+  .fs-15, .h3, .entry-content h3, .comment-content h3, .entry-footer h3, .c-slider__header .c-page-header .c-page-header__title, body #jp-relatedposts h3.jp-relatedposts-headline {
     font-size: 12px; }
   .fs-16 {
     font-size: 13px; }
-  .fs-18, .h2, .entry-content h2, .comment-content h2, .c-overlay .sd-social-text .sd-content.sd-content li,
+  .fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2, .c-overlay .sd-social-text .sd-content.sd-content li,
   .c-overlay .sd-social-icon-text .sd-content.sd-content li {
     font-size: 15px; }
-  .fs-23, .h1, .entry-content h1, .comment-content h1, .c-overlay .sd-social .sd-title, .entry-content blockquote, .comment-content blockquote {
+  .fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .c-overlay .sd-social .sd-title, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
     font-size: 19px; }
   .fs-24 {
     font-size: 19px; }
@@ -684,8 +684,8 @@ body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedpo
 .c-author .c-author__description, .c-footer .c-widget__title:after {
   padding-bottom: 24px; }
 
-.h0:after, .entry-content .h0:after, .comment-content .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .c-overlay .sd-social .sd-title:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
-.c-overlay .sd-social-icon-text .sd-content.sd-content li:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+.h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .c-overlay .sd-social .sd-title:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
+.c-overlay .sd-social-icon-text .sd-content.sd-content li:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
   padding-bottom: 36px; }
 
 .gallery {
@@ -700,7 +700,7 @@ ul.instagram-pics > li {
 .gallery.gallery--spacing-small > *, .c-post-navigation__prev span, .nav-previous span, .c-post-navigation__next, .nav-next {
   padding-left: 24px; }
 
-.wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-content ul ol, .comment-content ul ol, .entry-content ul dl, .comment-content ul dl, .entry-content ol ul, .comment-content ol ul, .entry-content ol ol, .comment-content ol ol, .entry-content ol dl, .comment-content ol dl, .entry-content dl ul, .comment-content dl ul, .entry-content dl ol, .comment-content dl ol, .entry-content dl dl, .comment-content dl dl, .gallery.gallery--spacing-medium > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+.wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ul dl, .comment-content ul dl, .entry-footer ul dl, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol, .entry-content ol dl, .comment-content ol dl, .entry-footer ol dl, .entry-content dl ul, .comment-content dl ul, .entry-footer dl ul, .entry-content dl ol, .comment-content dl ol, .entry-footer dl ol, .entry-content dl dl, .comment-content dl dl, .entry-footer dl dl, .gallery.gallery--spacing-medium > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
   padding-left: 36px; }
 
 .alignright, .c-gallery--footer .c-gallery__item, .gallery.gallery--spacing-large > * {
@@ -718,7 +718,7 @@ ul.instagram-pics > li {
 .nf-field .list-checkbox-wrap .nf-field-element, .wp-caption-text, .gallery-caption, body.search .c-page-header__title span, .gridable--row img {
   margin-top: 12px; }
 
-.entry-content cite, .comment-content cite, .c-author__links, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone, .c-card__media + .c-card__meta, .c-card__content > :not(:first-child), .c-card__media + .c-card__content, .c-card__footer, .gallery.gallery--spacing-small > * {
+.entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone, .c-card__media + .c-card__meta, .c-card__content > :not(:first-child), .c-card__media + .c-card__content, .c-card__footer, .gallery.gallery--spacing-small > * {
   margin-top: 24px; }
 
 .gallery.gallery--spacing-medium > *, .pingback + .pingback,
@@ -756,10 +756,10 @@ ul.instagram-pics > li {
 .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .c-page-header .c-page-header__title, ul.instagram-pics > li, .widget_rss li .rsswidget, .widget_rss .rss-date, .gridable--row img {
   margin-bottom: 12px; }
 
-.entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
+.entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
   margin-bottom: 24px; }
 
-.entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-content table, .comment-content table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+.entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
   margin-bottom: 36px; }
 
 [class*="embed-"],
@@ -799,7 +799,7 @@ ul.instagram-pics > li {
 .gallery.gallery--spacing-xlarge {
   margin-left: -90px; }
 
-.entry-content ul li:before, .comment-content ul li:before, .entry-content ol li:before, .comment-content ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
+.entry-content ul li:before, .comment-content ul li:before, .entry-footer ul li:before, .entry-content ol li:before, .comment-content ol li:before, .entry-footer ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
   margin-right: 12px; }
 
 .o-inline-s > *, .c-card__badge {
@@ -843,8 +843,8 @@ ul.instagram-pics > li {
   .c-gallery--title-above .c-card__content, .c-card__title:after, .c-slider__header .c-page-header, .c-author .c-author__name:after,
   .c-author .c-author__description, .c-footer .c-widget__title:after {
     padding-bottom: 24px; }
-  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .c-overlay .sd-social .sd-title:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .c-overlay .sd-social .sd-title:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
+  .c-overlay .sd-social-icon-text .sd-content.sd-content li:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
     padding-bottom: 35px; }
   .gallery {
     padding-bottom: 53px; }
@@ -854,7 +854,7 @@ ul.instagram-pics > li {
     padding-left: 12px; }
   .gallery.gallery--spacing-small > *, .c-post-navigation__prev span, .nav-previous span, .c-post-navigation__next, .nav-next {
     padding-left: 24px; }
-  .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-content ul ol, .comment-content ul ol, .entry-content ul dl, .comment-content ul dl, .entry-content ol ul, .comment-content ol ul, .entry-content ol ol, .comment-content ol ol, .entry-content ol dl, .comment-content ol dl, .entry-content dl ul, .comment-content dl ul, .entry-content dl ol, .comment-content dl ol, .entry-content dl dl, .comment-content dl dl, .gallery.gallery--spacing-medium > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+  .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ul dl, .comment-content ul dl, .entry-footer ul dl, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol, .entry-content ol dl, .comment-content ol dl, .entry-footer ol dl, .entry-content dl ul, .comment-content dl ul, .entry-footer dl ul, .entry-content dl ol, .comment-content dl ol, .entry-footer dl ol, .entry-content dl dl, .comment-content dl dl, .entry-footer dl dl, .gallery.gallery--spacing-medium > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
     padding-left: 35px; }
   .alignright, .c-gallery--footer .c-gallery__item, .gallery.gallery--spacing-large > * {
     padding-left: 53px; }
@@ -868,7 +868,7 @@ ul.instagram-pics > li {
   .wpcf7-form-control-wrap span, .wpforms-container[class] .wpforms-field-row-block input + label, .nf-field .list-radio-wrap .nf-field-element,
   .nf-field .list-checkbox-wrap .nf-field-element, .wp-caption-text, .gallery-caption, body.search .c-page-header__title span, .gridable--row img {
     margin-top: 12px; }
-  .entry-content cite, .comment-content cite, .c-author__links, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone, .c-card__media + .c-card__meta, .c-card__content > :not(:first-child), .c-card__media + .c-card__content, .c-card__footer, .gallery.gallery--spacing-small > * {
+  .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone, .c-card__media + .c-card__meta, .c-card__content > :not(:first-child), .c-card__media + .c-card__content, .c-card__footer, .gallery.gallery--spacing-small > * {
     margin-top: 24px; }
   .gallery.gallery--spacing-medium > *, .pingback + .pingback,
   .trackback + .pingback, .pingback + .trackback,
@@ -896,9 +896,9 @@ ul.instagram-pics > li {
   .wpforms-container[class] .wpforms-field-radio .wpforms-field-label,
   .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .c-page-header .c-page-header__title, ul.instagram-pics > li, .widget_rss li .rsswidget, .widget_rss .rss-date, .gridable--row img {
     margin-bottom: 12px; }
-  .entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
+  .entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
     margin-bottom: 24px; }
-  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-content table, .comment-content table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
     margin-bottom: 35px; }
   [class*="embed-"],
   [class^="embed-"], .alignleft,
@@ -928,7 +928,7 @@ ul.instagram-pics > li {
   .c-gallery, .gallery,
   .gallery.gallery--spacing-xlarge {
     margin-left: -64px; }
-  .entry-content ul li:before, .comment-content ul li:before, .entry-content ol li:before, .comment-content ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
+  .entry-content ul li:before, .comment-content ul li:before, .entry-footer ul li:before, .entry-content ol li:before, .comment-content ol li:before, .entry-footer ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
     margin-right: 12px; }
   .o-inline-s > *, .c-card__badge {
     margin-right: 24px; }
@@ -969,8 +969,8 @@ ul.instagram-pics > li {
   .c-gallery--title-above .c-card__content, .c-card__title:after, .c-slider__header .c-page-header, .c-author .c-author__name:after,
   .c-author .c-author__description, .c-footer .c-widget__title:after {
     padding-bottom: 24px; }
-  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .c-overlay .sd-social .sd-title:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .c-overlay .sd-social .sd-title:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
+  .c-overlay .sd-social-icon-text .sd-content.sd-content li:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
     padding-bottom: 34px; }
   .gallery {
     padding-bottom: 47px; }
@@ -980,7 +980,7 @@ ul.instagram-pics > li {
     padding-left: 12px; }
   .gallery.gallery--spacing-small > *, .c-post-navigation__prev span, .nav-previous span, .c-post-navigation__next, .nav-next {
     padding-left: 24px; }
-  .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-content ul ol, .comment-content ul ol, .entry-content ul dl, .comment-content ul dl, .entry-content ol ul, .comment-content ol ul, .entry-content ol ol, .comment-content ol ol, .entry-content ol dl, .comment-content ol dl, .entry-content dl ul, .comment-content dl ul, .entry-content dl ol, .comment-content dl ol, .entry-content dl dl, .comment-content dl dl, .gallery.gallery--spacing-medium > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+  .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ul dl, .comment-content ul dl, .entry-footer ul dl, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol, .entry-content ol dl, .comment-content ol dl, .entry-footer ol dl, .entry-content dl ul, .comment-content dl ul, .entry-footer dl ul, .entry-content dl ol, .comment-content dl ol, .entry-footer dl ol, .entry-content dl dl, .comment-content dl dl, .entry-footer dl dl, .gallery.gallery--spacing-medium > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
     padding-left: 34px; }
   .alignright, .c-gallery--footer .c-gallery__item, .gallery.gallery--spacing-large > * {
     padding-left: 47px; }
@@ -994,7 +994,7 @@ ul.instagram-pics > li {
   .wpcf7-form-control-wrap span, .wpforms-container[class] .wpforms-field-row-block input + label, .nf-field .list-radio-wrap .nf-field-element,
   .nf-field .list-checkbox-wrap .nf-field-element, .wp-caption-text, .gallery-caption, body.search .c-page-header__title span, .gridable--row img {
     margin-top: 12px; }
-  .entry-content cite, .comment-content cite, .c-author__links, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone, .c-card__media + .c-card__meta, .c-card__content > :not(:first-child), .c-card__media + .c-card__content, .c-card__footer, .gallery.gallery--spacing-small > * {
+  .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone, .c-card__media + .c-card__meta, .c-card__content > :not(:first-child), .c-card__media + .c-card__content, .c-card__footer, .gallery.gallery--spacing-small > * {
     margin-top: 24px; }
   .gallery.gallery--spacing-medium > *, .pingback + .pingback,
   .trackback + .pingback, .pingback + .trackback,
@@ -1022,9 +1022,9 @@ ul.instagram-pics > li {
   .wpforms-container[class] .wpforms-field-radio .wpforms-field-label,
   .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .c-page-header .c-page-header__title, ul.instagram-pics > li, .widget_rss li .rsswidget, .widget_rss .rss-date, .gridable--row img {
     margin-bottom: 12px; }
-  .entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
+  .entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
     margin-bottom: 24px; }
-  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-content table, .comment-content table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
     margin-bottom: 34px; }
   [class*="embed-"],
   [class^="embed-"], .alignleft,
@@ -1054,7 +1054,7 @@ ul.instagram-pics > li {
   .c-gallery, .gallery,
   .gallery.gallery--spacing-xlarge {
     margin-left: -49px; }
-  .entry-content ul li:before, .comment-content ul li:before, .entry-content ol li:before, .comment-content ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
+  .entry-content ul li:before, .comment-content ul li:before, .entry-footer ul li:before, .entry-content ol li:before, .comment-content ol li:before, .entry-footer ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
     margin-right: 12px; }
   .o-inline-s > *, .c-card__badge {
     margin-right: 24px; }
@@ -1095,8 +1095,8 @@ ul.instagram-pics > li {
   .c-gallery--title-above .c-card__content, .c-card__title:after, .c-slider__header .c-page-header, .c-author .c-author__name:after,
   .c-author .c-author__description, .c-footer .c-widget__title:after {
     padding-bottom: 23px; }
-  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .c-overlay .sd-social .sd-title:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .c-overlay .sd-social .sd-title:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
+  .c-overlay .sd-social-icon-text .sd-content.sd-content li:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
     padding-bottom: 33px; }
   .gallery {
     padding-bottom: 42px; }
@@ -1106,7 +1106,7 @@ ul.instagram-pics > li {
     padding-left: 12px; }
   .gallery.gallery--spacing-small > *, .c-post-navigation__prev span, .nav-previous span, .c-post-navigation__next, .nav-next {
     padding-left: 23px; }
-  .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-content ul ol, .comment-content ul ol, .entry-content ul dl, .comment-content ul dl, .entry-content ol ul, .comment-content ol ul, .entry-content ol ol, .comment-content ol ol, .entry-content ol dl, .comment-content ol dl, .entry-content dl ul, .comment-content dl ul, .entry-content dl ol, .comment-content dl ol, .entry-content dl dl, .comment-content dl dl, .gallery.gallery--spacing-medium > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+  .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ul dl, .comment-content ul dl, .entry-footer ul dl, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol, .entry-content ol dl, .comment-content ol dl, .entry-footer ol dl, .entry-content dl ul, .comment-content dl ul, .entry-footer dl ul, .entry-content dl ol, .comment-content dl ol, .entry-footer dl ol, .entry-content dl dl, .comment-content dl dl, .entry-footer dl dl, .gallery.gallery--spacing-medium > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
     padding-left: 33px; }
   .alignright, .c-gallery--footer .c-gallery__item, .gallery.gallery--spacing-large > * {
     padding-left: 42px; }
@@ -1120,7 +1120,7 @@ ul.instagram-pics > li {
   .wpcf7-form-control-wrap span, .wpforms-container[class] .wpforms-field-row-block input + label, .nf-field .list-radio-wrap .nf-field-element,
   .nf-field .list-checkbox-wrap .nf-field-element, .wp-caption-text, .gallery-caption, body.search .c-page-header__title span, .gridable--row img {
     margin-top: 12px; }
-  .entry-content cite, .comment-content cite, .c-author__links, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone, .c-card__media + .c-card__meta, .c-card__content > :not(:first-child), .c-card__media + .c-card__content, .c-card__footer, .gallery.gallery--spacing-small > * {
+  .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone, .c-card__media + .c-card__meta, .c-card__content > :not(:first-child), .c-card__media + .c-card__content, .c-card__footer, .gallery.gallery--spacing-small > * {
     margin-top: 23px; }
   .gallery.gallery--spacing-medium > *, .pingback + .pingback,
   .trackback + .pingback, .pingback + .trackback,
@@ -1148,9 +1148,9 @@ ul.instagram-pics > li {
   .wpforms-container[class] .wpforms-field-radio .wpforms-field-label,
   .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .c-page-header .c-page-header__title, ul.instagram-pics > li, .widget_rss li .rsswidget, .widget_rss .rss-date, .gridable--row img {
     margin-bottom: 12px; }
-  .entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
+  .entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
     margin-bottom: 23px; }
-  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-content table, .comment-content table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
     margin-bottom: 33px; }
   [class*="embed-"],
   [class^="embed-"], .alignleft,
@@ -1180,7 +1180,7 @@ ul.instagram-pics > li {
   .c-gallery, .gallery,
   .gallery.gallery--spacing-xlarge {
     margin-left: -40px; }
-  .entry-content ul li:before, .comment-content ul li:before, .entry-content ol li:before, .comment-content ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
+  .entry-content ul li:before, .comment-content ul li:before, .entry-footer ul li:before, .entry-content ol li:before, .comment-content ol li:before, .entry-footer ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
     margin-right: 12px; }
   .o-inline-s > *, .c-card__badge {
     margin-right: 23px; }
@@ -1193,31 +1193,39 @@ ul.instagram-pics > li {
 .h0,
 .entry-content .h0,
 .comment-content .h0,
+.entry-footer .h0,
 .h1,
 .entry-content h1,
 .comment-content h1,
+.entry-footer h1,
 .c-overlay .sd-social .sd-title, h1,
 .h2,
 .entry-content h2,
 .comment-content h2,
+.entry-footer h2,
 .c-overlay .sd-social-text .sd-content.sd-content li,
 .c-overlay .sd-social-icon-text .sd-content.sd-content li, h2,
 .h3,
 .entry-content h3,
-.comment-content h3, h3,
+.comment-content h3,
+.entry-footer h3, h3,
 .h4,
 .entry-content h4,
 .comment-content h4,
+.entry-footer h4,
 .c-controls__cursor, h4,
 .h5,
 .entry-content h5,
-.comment-content h5, h5,
+.comment-content h5,
+.entry-footer h5, h5,
 .h6,
 .entry-content h6,
-.comment-content h6, h6,
+.comment-content h6,
+.entry-footer h6, h6,
 .h7,
 .entry-content cite,
 .comment-content cite,
+.entry-footer cite,
 .c-author__links {
   font-family: "Arca Majora", sans-serif;
   font-weight: 400;
@@ -1228,36 +1236,43 @@ ul.instagram-pics > li {
   .h1:last-child:after,
   .entry-content h1:last-child:after,
   .comment-content h1:last-child:after,
+  .entry-footer h1:last-child:after,
   .c-overlay .sd-social .sd-title:last-child:after, h1:last-child:after,
   .h2:last-child:after,
   .entry-content h2:last-child:after,
   .comment-content h2:last-child:after,
+  .entry-footer h2:last-child:after,
   .c-overlay .sd-social-text .sd-content.sd-content li:last-child:after,
   .c-overlay .sd-social-icon-text .sd-content.sd-content li:last-child:after, h2:last-child:after,
   .h3:last-child:after,
   .entry-content h3:last-child:after,
-  .comment-content h3:last-child:after, h3:last-child:after,
+  .comment-content h3:last-child:after,
+  .entry-footer h3:last-child:after, h3:last-child:after,
   .h4:last-child:after,
   .entry-content h4:last-child:after,
   .comment-content h4:last-child:after,
+  .entry-footer h4:last-child:after,
   .c-controls__cursor:last-child:after, h4:last-child:after,
   .h5:last-child:after,
   .entry-content h5:last-child:after,
-  .comment-content h5:last-child:after, h5:last-child:after,
+  .comment-content h5:last-child:after,
+  .entry-footer h5:last-child:after, h5:last-child:after,
   .h6:last-child:after,
   .entry-content h6:last-child:after,
-  .comment-content h6:last-child:after, h6:last-child:after,
+  .comment-content h6:last-child:after,
+  .entry-footer h6:last-child:after, h6:last-child:after,
   .h7:last-child:after,
   .entry-content cite:last-child:after,
   .comment-content cite:last-child:after,
+  .entry-footer cite:last-child:after,
   .c-author__links:last-child:after {
     padding-bottom: 0; }
 
-.h0, .entry-content .h0, .comment-content .h0, .h1, .entry-content h1, .comment-content h1, .c-overlay .sd-social .sd-title {
+.h0, .entry-content .h0, .comment-content .h0, .entry-footer .h0, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .c-overlay .sd-social .sd-title {
   letter-spacing: .174em; }
 
-.h2, .entry-content h2, .comment-content h2, .c-overlay .sd-social-text .sd-content.sd-content li,
-.c-overlay .sd-social-icon-text .sd-content.sd-content li, .h3, .entry-content h3, .comment-content h3 {
+.h2, .entry-content h2, .comment-content h2, .entry-footer h2, .c-overlay .sd-social-text .sd-content.sd-content li,
+.c-overlay .sd-social-icon-text .sd-content.sd-content li, .h3, .entry-content h3, .comment-content h3, .entry-footer h3 {
   letter-spacing: .133em; }
 
 .h0[class] {
@@ -1270,101 +1285,101 @@ ul.instagram-pics > li {
   .h0[class]:after {
     margin-top: -0.21335em; }
 
-.h1, .entry-content h1, .comment-content h1, .c-overlay .sd-social .sd-title {
+.h1, .entry-content h1, .comment-content h1, .entry-footer h1, .c-overlay .sd-social .sd-title {
   line-height: 1.17391; }
-  .h1:before, .entry-content h1:before, .comment-content h1:before, .c-overlay .sd-social .sd-title:before, .h1:after, .entry-content h1:after, .comment-content h1:after, .c-overlay .sd-social .sd-title:after {
+  .h1:before, .entry-content h1:before, .comment-content h1:before, .entry-footer h1:before, .c-overlay .sd-social .sd-title:before, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .c-overlay .sd-social .sd-title:after {
     content: "";
     display: block; }
-  .h1:before, .entry-content h1:before, .comment-content h1:before, .c-overlay .sd-social .sd-title:before {
+  .h1:before, .entry-content h1:before, .comment-content h1:before, .entry-footer h1:before, .c-overlay .sd-social .sd-title:before {
     margin-bottom: -0.20031em; }
-  .h1:after, .entry-content h1:after, .comment-content h1:after, .c-overlay .sd-social .sd-title:after {
+  .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .c-overlay .sd-social .sd-title:after {
     margin-top: -0.20031em; }
 
-.h2, .entry-content h2, .comment-content h2, .c-overlay .sd-social-text .sd-content.sd-content li,
+.h2, .entry-content h2, .comment-content h2, .entry-footer h2, .c-overlay .sd-social-text .sd-content.sd-content li,
 .c-overlay .sd-social-icon-text .sd-content.sd-content li {
   line-height: 1.16667; }
-  .h2:before, .entry-content h2:before, .comment-content h2:before, .c-overlay .sd-social-text .sd-content.sd-content li:before,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li:before, .h2:after, .entry-content h2:after, .comment-content h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
+  .h2:before, .entry-content h2:before, .comment-content h2:before, .entry-footer h2:before, .c-overlay .sd-social-text .sd-content.sd-content li:before,
+  .c-overlay .sd-social-icon-text .sd-content.sd-content li:before, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
   .c-overlay .sd-social-icon-text .sd-content.sd-content li:after {
     content: "";
     display: block; }
-  .h2:before, .entry-content h2:before, .comment-content h2:before, .c-overlay .sd-social-text .sd-content.sd-content li:before,
+  .h2:before, .entry-content h2:before, .comment-content h2:before, .entry-footer h2:before, .c-overlay .sd-social-text .sd-content.sd-content li:before,
   .c-overlay .sd-social-icon-text .sd-content.sd-content li:before {
     margin-bottom: -0.19668em; }
-  .h2:after, .entry-content h2:after, .comment-content h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
+  .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
   .c-overlay .sd-social-icon-text .sd-content.sd-content li:after {
     margin-top: -0.19668em; }
 
-.h3, .entry-content h3, .comment-content h3 {
+.h3, .entry-content h3, .comment-content h3, .entry-footer h3 {
   line-height: 1.2; }
-  .h3:before, .entry-content h3:before, .comment-content h3:before, .h3:after, .entry-content h3:after, .comment-content h3:after {
+  .h3:before, .entry-content h3:before, .comment-content h3:before, .entry-footer h3:before, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after {
     content: "";
     display: block; }
-  .h3:before, .entry-content h3:before, .comment-content h3:before {
+  .h3:before, .entry-content h3:before, .comment-content h3:before, .entry-footer h3:before {
     margin-bottom: -0.21335em; }
-  .h3:after, .entry-content h3:after, .comment-content h3:after {
+  .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after {
     margin-top: -0.21335em; }
 
-.h4, .entry-content h4, .comment-content h4, .c-controls__cursor {
+.h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-controls__cursor {
   line-height: 1.15385; }
-  .h4:before, .entry-content h4:before, .comment-content h4:before, .c-controls__cursor:before, .h4:after, .entry-content h4:after, .comment-content h4:after, .c-controls__cursor:after {
+  .h4:before, .entry-content h4:before, .comment-content h4:before, .entry-footer h4:before, .c-controls__cursor:before, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .c-controls__cursor:after {
     content: "";
     display: block; }
-  .h4:before, .entry-content h4:before, .comment-content h4:before, .c-controls__cursor:before {
+  .h4:before, .entry-content h4:before, .comment-content h4:before, .entry-footer h4:before, .c-controls__cursor:before {
     margin-bottom: -0.19027em; }
-  .h4:after, .entry-content h4:after, .comment-content h4:after, .c-controls__cursor:after {
+  .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .c-controls__cursor:after {
     margin-top: -0.19027em; }
 
-.h5, .entry-content h5, .comment-content h5 {
+.h5, .entry-content h5, .comment-content h5, .entry-footer h5 {
   line-height: 1.16667; }
-  .h5:before, .entry-content h5:before, .comment-content h5:before, .h5:after, .entry-content h5:after, .comment-content h5:after {
+  .h5:before, .entry-content h5:before, .comment-content h5:before, .entry-footer h5:before, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after {
     content: "";
     display: block; }
-  .h5:before, .entry-content h5:before, .comment-content h5:before {
+  .h5:before, .entry-content h5:before, .comment-content h5:before, .entry-footer h5:before {
     margin-bottom: -0.19668em; }
-  .h5:after, .entry-content h5:after, .comment-content h5:after {
+  .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after {
     margin-top: -0.19668em; }
 
-.h6, .entry-content h6, .comment-content h6 {
+.h6, .entry-content h6, .comment-content h6, .entry-footer h6 {
   line-height: 1.18182; }
-  .h6:before, .entry-content h6:before, .comment-content h6:before, .h6:after, .entry-content h6:after, .comment-content h6:after {
+  .h6:before, .entry-content h6:before, .comment-content h6:before, .entry-footer h6:before, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after {
     content: "";
     display: block; }
-  .h6:before, .entry-content h6:before, .comment-content h6:before {
+  .h6:before, .entry-content h6:before, .comment-content h6:before, .entry-footer h6:before {
     margin-bottom: -0.20426em; }
-  .h6:after, .entry-content h6:after, .comment-content h6:after {
+  .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after {
     margin-top: -0.20426em; }
 
-.h7, .entry-content cite, .comment-content cite, .c-author__links {
+.h7, .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links {
   line-height: 1.2; }
-  .h7:before, .entry-content cite:before, .comment-content cite:before, .c-author__links:before, .h7:after, .entry-content cite:after, .comment-content cite:after, .c-author__links:after {
+  .h7:before, .entry-content cite:before, .comment-content cite:before, .entry-footer cite:before, .c-author__links:before, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after {
     content: "";
     display: block; }
-  .h7:before, .entry-content cite:before, .comment-content cite:before, .c-author__links:before {
+  .h7:before, .entry-content cite:before, .comment-content cite:before, .entry-footer cite:before, .c-author__links:before {
     margin-bottom: -0.21335em; }
-  .h7:after, .entry-content cite:after, .comment-content cite:after, .c-author__links:after {
+  .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after {
     margin-top: -0.21335em; }
 
-.entry-content blockquote, .comment-content blockquote {
+.entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
   line-height: 1.30435;
   font-family: "Times", serif;
   font-style: italic; }
-  .entry-content blockquote:before, .comment-content blockquote:before, .entry-content blockquote:after, .comment-content blockquote:after {
+  .entry-content blockquote:before, .comment-content blockquote:before, .entry-footer blockquote:before, .entry-content blockquote:after, .comment-content blockquote:after, .entry-footer blockquote:after {
     content: "";
     display: block; }
-  .entry-content blockquote:before, .comment-content blockquote:before {
+  .entry-content blockquote:before, .comment-content blockquote:before, .entry-footer blockquote:before {
     margin-bottom: -0.31217em; }
-  .entry-content blockquote:after, .comment-content blockquote:after {
+  .entry-content blockquote:after, .comment-content blockquote:after, .entry-footer blockquote:after {
     margin-top: -0.31217em; }
-  .entry-content blockquote p, .comment-content blockquote p {
+  .entry-content blockquote p, .comment-content blockquote p, .entry-footer blockquote p {
     font: inherit; }
 
-.entry-content cite, .comment-content cite, .c-author__links {
+.entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links {
   display: block;
   color: #BF493D;
   font-style: normal; }
 
-.entry-content cite:before, .comment-content cite:before, .c-author__links:before, .c-page-header__taxonomy:not(:first-child):before {
+.entry-content cite:before, .comment-content cite:before, .entry-footer cite:before, .c-author__links:before, .c-page-header__taxonomy:not(:first-child):before {
   position: relative;
   top: -0.5em;
   content: "";
@@ -1390,23 +1405,23 @@ a {
     text-decoration: underline; }
 
 /* Definition Lists */
-.entry-content dl, .comment-content dl {
+.entry-content dl, .comment-content dl, .entry-footer dl {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  .entry-content dl dt:last-of-type, .comment-content dl dt:last-of-type, .entry-content dl dd:last-of-type, .comment-content dl dd:last-of-type {
+  .entry-content dl dt:last-of-type, .comment-content dl dt:last-of-type, .entry-footer dl dt:last-of-type, .entry-content dl dd:last-of-type, .comment-content dl dd:last-of-type, .entry-footer dl dd:last-of-type {
     border-bottom: 0; }
-  .entry-content dl dt, .comment-content dl dt {
+  .entry-content dl dt, .comment-content dl dt, .entry-footer dl dt {
     font-weight: bold;
     -ms-flex-preferred-size: 33%;
         flex-basis: 33%; }
-  .entry-content dl dd, .comment-content dl dd {
+  .entry-content dl dd, .comment-content dl dd, .entry-footer dl dd {
     -ms-flex-preferred-size: 66%;
         flex-basis: 66%; }
-    .entry-content dl dd :first-child, .comment-content dl dd :first-child {
+    .entry-content dl dd :first-child, .comment-content dl dd :first-child, .entry-footer dl dd :first-child {
       margin-top: 0; }
-    .entry-content dl dd :last-child, .comment-content dl dd :last-child {
+    .entry-content dl dd :last-child, .comment-content dl dd :last-child, .entry-footer dl dd :last-child {
       margin-bottom: 0; }
 
 /* Unordered Lists */
@@ -1417,7 +1432,7 @@ pre {
   word-break: break-all;
   word-wrap: break-word; }
 
-.entry-content pre, .comment-content pre {
+.entry-content pre, .comment-content pre, .entry-footer pre {
   padding: 1rem 2rem;
   border: 1px solid #c7c7c7; }
 
@@ -1431,16 +1446,16 @@ table {
   table td {
     vertical-align: middle; }
 
-.entry-content table tr, .comment-content table tr, .entry-content table thead, .comment-content table thead, .entry-content table tbody, .comment-content table tbody, .entry-content table tfoot, .comment-content table tfoot {
+.entry-content table tr, .comment-content table tr, .entry-footer table tr, .entry-content table thead, .comment-content table thead, .entry-footer table thead, .entry-content table tbody, .comment-content table tbody, .entry-footer table tbody, .entry-content table tfoot, .comment-content table tfoot, .entry-footer table tfoot {
   border-bottom: 1px solid #c7c7c7; }
-  .entry-content table tr:last-child, .comment-content table tr:last-child, .entry-content table thead:last-child, .comment-content table thead:last-child, .entry-content table tbody:last-child, .comment-content table tbody:last-child, .entry-content table tfoot:last-child, .comment-content table tfoot:last-child {
+  .entry-content table tr:last-child, .comment-content table tr:last-child, .entry-footer table tr:last-child, .entry-content table thead:last-child, .comment-content table thead:last-child, .entry-footer table thead:last-child, .entry-content table tbody:last-child, .comment-content table tbody:last-child, .entry-footer table tbody:last-child, .entry-content table tfoot:last-child, .comment-content table tfoot:last-child, .entry-footer table tfoot:last-child {
     border-bottom: 0; }
 
-.entry-content table th, .comment-content table th, .entry-content table td, .comment-content table td {
+.entry-content table th, .comment-content table th, .entry-footer table th, .entry-content table td, .comment-content table td, .entry-footer table td {
   padding: .5em; }
-  .entry-content table th:first-child, .comment-content table th:first-child, .entry-content table td:first-child, .comment-content table td:first-child {
+  .entry-content table th:first-child, .comment-content table th:first-child, .entry-footer table th:first-child, .entry-content table td:first-child, .comment-content table td:first-child, .entry-footer table td:first-child {
     padding-left: 0; }
-  .entry-content table th:last-child, .comment-content table th:last-child, .entry-content table td:last-child, .comment-content table td:last-child {
+  .entry-content table th:last-child, .comment-content table th:last-child, .entry-footer table th:last-child, .entry-content table td:last-child, .comment-content table td:last-child, .entry-footer table td:last-child {
     padding-right: 0; }
 
 input,
@@ -1722,67 +1737,82 @@ body {
   -webkit-hyphens: auto;
   hyphens: auto; }
 
-.entry-content p, .comment-content p,
+.entry-content p, .comment-content p, .entry-footer p,
 .entry-content address,
-.comment-content address {
+.comment-content address,
+.entry-footer address {
   line-height: 1.71429; }
-  .entry-content p:before, .comment-content p:before, .entry-content p:after, .comment-content p:after,
+  .entry-content p:before, .comment-content p:before, .entry-footer p:before, .entry-content p:after, .comment-content p:after, .entry-footer p:after,
   .entry-content address:before,
   .comment-content address:before,
+  .entry-footer address:before,
   .entry-content address:after,
-  .comment-content address:after {
+  .comment-content address:after,
+  .entry-footer address:after {
     content: "";
     display: block; }
-  .entry-content p:before, .comment-content p:before,
+  .entry-content p:before, .comment-content p:before, .entry-footer p:before,
   .entry-content address:before,
-  .comment-content address:before {
+  .comment-content address:before,
+  .entry-footer address:before {
     margin-bottom: -0.50714em; }
-  .entry-content p:after, .comment-content p:after,
+  .entry-content p:after, .comment-content p:after, .entry-footer p:after,
   .entry-content address:after,
-  .comment-content address:after {
+  .comment-content address:after,
+  .entry-footer address:after {
     margin-top: -0.50714em; }
 
-.entry-content ul, .comment-content ul,
+.entry-content ul, .comment-content ul, .entry-footer ul,
 .entry-content ol,
 .comment-content ol,
+.entry-footer ol,
 .entry-content dl,
-.comment-content dl {
+.comment-content dl,
+.entry-footer dl {
   line-height: 2; }
-  .entry-content ul:before, .comment-content ul:before, .entry-content ul:after, .comment-content ul:after,
+  .entry-content ul:before, .comment-content ul:before, .entry-footer ul:before, .entry-content ul:after, .comment-content ul:after, .entry-footer ul:after,
   .entry-content ol:before,
   .comment-content ol:before,
+  .entry-footer ol:before,
   .entry-content ol:after,
   .comment-content ol:after,
+  .entry-footer ol:after,
   .entry-content dl:before,
   .comment-content dl:before,
+  .entry-footer dl:before,
   .entry-content dl:after,
-  .comment-content dl:after {
+  .comment-content dl:after,
+  .entry-footer dl:after {
     content: "";
     display: block; }
-  .entry-content ul:before, .comment-content ul:before,
+  .entry-content ul:before, .comment-content ul:before, .entry-footer ul:before,
   .entry-content ol:before,
   .comment-content ol:before,
+  .entry-footer ol:before,
   .entry-content dl:before,
-  .comment-content dl:before {
+  .comment-content dl:before,
+  .entry-footer dl:before {
     margin-bottom: -0.65em; }
-  .entry-content ul:after, .comment-content ul:after,
+  .entry-content ul:after, .comment-content ul:after, .entry-footer ul:after,
   .entry-content ol:after,
   .comment-content ol:after,
+  .entry-footer ol:after,
   .entry-content dl:after,
-  .comment-content dl:after {
+  .comment-content dl:after,
+  .entry-footer dl:after {
     margin-top: -0.65em; }
 
-.entry-content ul ul:before, .comment-content ul ul:before, .entry-content ul ul:after, .comment-content ul ul:after, .entry-content ul ol:before, .comment-content ul ol:before, .entry-content ul ol:after, .comment-content ul ol:after, .entry-content ul dl:before, .comment-content ul dl:before, .entry-content ul dl:after, .comment-content ul dl:after, .entry-content ol ul:before, .comment-content ol ul:before, .entry-content ol ul:after, .comment-content ol ul:after, .entry-content ol ol:before, .comment-content ol ol:before, .entry-content ol ol:after, .comment-content ol ol:after, .entry-content ol dl:before, .comment-content ol dl:before, .entry-content ol dl:after, .comment-content ol dl:after, .entry-content dl ul:before, .comment-content dl ul:before, .entry-content dl ul:after, .comment-content dl ul:after, .entry-content dl ol:before, .comment-content dl ol:before, .entry-content dl ol:after, .comment-content dl ol:after, .entry-content dl dl:before, .comment-content dl dl:before, .entry-content dl dl:after, .comment-content dl dl:after {
+.entry-content ul ul:before, .comment-content ul ul:before, .entry-footer ul ul:before, .entry-content ul ul:after, .comment-content ul ul:after, .entry-footer ul ul:after, .entry-content ul ol:before, .comment-content ul ol:before, .entry-footer ul ol:before, .entry-content ul ol:after, .comment-content ul ol:after, .entry-footer ul ol:after, .entry-content ul dl:before, .comment-content ul dl:before, .entry-footer ul dl:before, .entry-content ul dl:after, .comment-content ul dl:after, .entry-footer ul dl:after, .entry-content ol ul:before, .comment-content ol ul:before, .entry-footer ol ul:before, .entry-content ol ul:after, .comment-content ol ul:after, .entry-footer ol ul:after, .entry-content ol ol:before, .comment-content ol ol:before, .entry-footer ol ol:before, .entry-content ol ol:after, .comment-content ol ol:after, .entry-footer ol ol:after, .entry-content ol dl:before, .comment-content ol dl:before, .entry-footer ol dl:before, .entry-content ol dl:after, .comment-content ol dl:after, .entry-footer ol dl:after, .entry-content dl ul:before, .comment-content dl ul:before, .entry-footer dl ul:before, .entry-content dl ul:after, .comment-content dl ul:after, .entry-footer dl ul:after, .entry-content dl ol:before, .comment-content dl ol:before, .entry-footer dl ol:before, .entry-content dl ol:after, .comment-content dl ol:after, .entry-footer dl ol:after, .entry-content dl dl:before, .comment-content dl dl:before, .entry-footer dl dl:before, .entry-content dl dl:after, .comment-content dl dl:after, .entry-footer dl dl:after {
   content: none; }
 
-.entry-content ul li:before, .comment-content ul li:before {
+.entry-content ul li:before, .comment-content ul li:before, .entry-footer ul li:before {
   content: "\2022"; }
 
-.entry-content ol, .comment-content ol {
+.entry-content ol, .comment-content ol, .entry-footer ol {
   counter-reset: list-counter; }
-  .entry-content ol li, .comment-content ol li {
+  .entry-content ol li, .comment-content ol li, .entry-footer ol li {
     counter-increment: list-counter; }
-    .entry-content ol li:before, .comment-content ol li:before {
+    .entry-content ol li:before, .comment-content ol li:before, .entry-footer ol li:before {
       content: counter(list-counter) "."; }
 
 b,
@@ -1794,20 +1824,20 @@ i,
 small {
   font-style: italic; }
 
-.entry-content .intro, .comment-content .intro {
+.entry-content .intro, .comment-content .intro, .entry-footer .intro {
   line-height: 1.42857;
   font-family: "EK Mukta", sans-serif;
   letter-spacing: 0.07714em;
   text-transform: uppercase; }
-  .entry-content .intro:before, .entry-content .intro:after, .comment-content .intro:before, .comment-content .intro:after {
+  .entry-content .intro:before, .entry-content .intro:after, .comment-content .intro:before, .comment-content .intro:after, .entry-footer .intro:before, .entry-footer .intro:after {
     content: "";
     display: block; }
-  .entry-content .intro:before, .comment-content .intro:before {
+  .entry-content .intro:before, .comment-content .intro:before, .entry-footer .intro:before {
     margin-bottom: -0.36429em; }
-  .entry-content .intro:after, .comment-content .intro:after {
+  .entry-content .intro:after, .comment-content .intro:after, .entry-footer .intro:after {
     margin-top: -0.36429em; }
 
-.entry-content .dropcap, .comment-content .dropcap {
+.entry-content .dropcap, .comment-content .dropcap, .entry-footer .dropcap {
   float: left;
   font-family: "Georgia", serif;
   font-size: 3.58333rem;
@@ -2653,14 +2683,14 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
   height: 100%;
   object-fit: cover; }
 
-.c-hero h1, .c-hero .h1, .c-hero .entry-content h1, .entry-content .c-hero h1, .c-hero .comment-content h1, .comment-content .c-hero h1, .c-hero .c-overlay .sd-social .sd-title, .c-overlay .sd-social .c-hero .sd-title,
-.c-hero h2, .c-hero .h2, .c-hero .entry-content h2, .entry-content .c-hero h2, .c-hero .comment-content h2, .comment-content .c-hero h2, .c-hero .c-overlay .sd-social-text .sd-content.sd-content li, .c-overlay .sd-social-text .sd-content.sd-content .c-hero li, .c-hero
+.c-hero h1, .c-hero .h1, .c-hero .entry-content h1, .entry-content .c-hero h1, .c-hero .comment-content h1, .comment-content .c-hero h1, .c-hero .entry-footer h1, .entry-footer .c-hero h1, .c-hero .c-overlay .sd-social .sd-title, .c-overlay .sd-social .c-hero .sd-title,
+.c-hero h2, .c-hero .h2, .c-hero .entry-content h2, .entry-content .c-hero h2, .c-hero .comment-content h2, .comment-content .c-hero h2, .c-hero .entry-footer h2, .entry-footer .c-hero h2, .c-hero .c-overlay .sd-social-text .sd-content.sd-content li, .c-overlay .sd-social-text .sd-content.sd-content .c-hero li, .c-hero
 .c-overlay .sd-social-icon-text .sd-content.sd-content li,
 .c-overlay .sd-social-icon-text .sd-content.sd-content .c-hero li,
-.c-hero h3, .c-hero .h3, .c-hero .entry-content h3, .entry-content .c-hero h3, .c-hero .comment-content h3, .comment-content .c-hero h3,
-.c-hero h4, .c-hero .h4, .c-hero .entry-content h4, .entry-content .c-hero h4, .c-hero .comment-content h4, .comment-content .c-hero h4, .c-hero .c-controls__cursor,
-.c-hero h5, .c-hero .h5, .c-hero .entry-content h5, .entry-content .c-hero h5, .c-hero .comment-content h5, .comment-content .c-hero h5,
-.c-hero h6, .c-hero .h6, .c-hero .entry-content h6, .entry-content .c-hero h6, .c-hero .comment-content h6, .comment-content .c-hero h6 {
+.c-hero h3, .c-hero .h3, .c-hero .entry-content h3, .entry-content .c-hero h3, .c-hero .comment-content h3, .comment-content .c-hero h3, .c-hero .entry-footer h3, .entry-footer .c-hero h3,
+.c-hero h4, .c-hero .h4, .c-hero .entry-content h4, .entry-content .c-hero h4, .c-hero .comment-content h4, .comment-content .c-hero h4, .c-hero .entry-footer h4, .entry-footer .c-hero h4, .c-hero .c-controls__cursor,
+.c-hero h5, .c-hero .h5, .c-hero .entry-content h5, .entry-content .c-hero h5, .c-hero .comment-content h5, .comment-content .c-hero h5, .c-hero .entry-footer h5, .entry-footer .c-hero h5,
+.c-hero h6, .c-hero .h6, .c-hero .entry-content h6, .entry-content .c-hero h6, .c-hero .comment-content h6, .comment-content .c-hero h6, .c-hero .entry-footer h6, .entry-footer .c-hero h6 {
   color: inherit; }
 
 .c-hero__background {

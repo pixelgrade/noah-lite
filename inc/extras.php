@@ -731,14 +731,37 @@ function noah_tags_list( $content ) {
 		$tags_list = get_the_tag_list();
 
 		if ( $tags_list && is_singular( 'post' ) ) {
-			$tags_content .= '<div class="o-inline o-inline-xs tags h6"><div class="tags__title">' . __( 'Tags', 'noah' ) . sprintf( '</div>' . esc_html__( '%1$s', 'noah' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+			$tags_content .= '<div class="o-inline o-inline-xs tags h6"><span class="tags__title">' . esc_html__( 'Tags', 'noah' ) . '</span><span class="tags-links">' . $tags_list . '</span></div>'; // WPCS: XSS OK.
 		}
 	}
 
 	return $content . $tags_content;
 }
 // add this filter with a priority smaller than sharedaddy - it has 19
+// This way the tags will appear before the share buttons
 add_filter( 'the_content', 'noah_tags_list', 18 );
+
+/**
+ * Prints HTML with the author bio, before the related posts and after the tags and share buttons
+ * We don't use the jetpack_author_bio() function because we want to use our own custom markup, but we respect the content options.
+ */
+function noah_author_bio( $content ) {
+
+	$author_bio_content = '';
+
+	// Only show the other bio for posts
+	if ( 'post' == get_post_type() ) {
+		// Respect the content options
+		if ( ! function_exists( 'jetpack_author_bio' ) || get_option( 'jetpack_content_author_bio', true ) ) {
+			$author_bio_content .= noah_get_the_author_info_box();
+		}
+	}
+
+	return $content . $author_bio_content;
+}
+// add this filter with a priority smaller than related posts - it has 40
+// This way the the author biop will appear before the related posts
+add_filter( 'the_content', 'noah_author_bio', 30 );
 
 function noah_custom_excerpt_length( $length ) {
 	return 35;

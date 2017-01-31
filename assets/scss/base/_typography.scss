@@ -156,6 +156,6 @@ a           { @extend %hyperlink    !optional; }
     }
 }
 
-#{$content-class} {
+#{$content-class}, .entry-footer {
     @include render-typography-styles();
 }

@@ -13,16 +13,10 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<?php
-	/**
-	 * This function is required, here the assets are loaded and lots of plugins are hooking their meta or scripts here.
-	 * Usually without wp_head() a theme will break.
-	 */
-	wp_head(); ?>
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<?php wp_head(); ?>
 </head>
 <?php
 /**
@@ -30,13 +24,9 @@
  * The `pixelgrade_body_attributes()` is of our own making. It does what `body_class()` does, but for attributes
  */?>
 <body <?php body_class(); ?> <?php pixelgrade_body_attributes(); ?>>
-
 <div id="barba-wrapper" class="hfeed site">
-
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'noah' ); ?></a>
-
 	<div id="content" class="site-content barba-container js-header-height-padding-top">
-
 		<header id="masthead" <?php pixelgrade_header_class(); ?> role="banner">
 			<div class="u-header_sides_spacing">
 				<div class="o-wrapper  u-container-width  c-navbar__wrapper">

@@ -19,7 +19,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-
+<div class="u-content-width">
 <div id="comments" class="comments-area">
 	<?php
 	$req 			= get_option( 'require_name_email' );
@@ -91,3 +91,4 @@ if ( post_password_required() ) {
 	comment_form( $args ); ?>
 
 </div><!-- .comments-area -->
+</div>

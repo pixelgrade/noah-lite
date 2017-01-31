@@ -427,30 +427,30 @@ img[height] {
 figure {
   margin: 0; }
 
-.fs-10, .h7, .mce-content-body cite {
+.fs-10, .h7, .mce-content-body cite, .entry-footer cite {
   font-size: 10px; }
 
-.fs-11, .h6, .mce-content-body h6 {
+.fs-11, .h6, .mce-content-body h6, .entry-footer h6 {
   font-size: 11px; }
 
-.fs-12, .body.body .content-area label, .h5, .mce-content-body h5 {
+.fs-12, .body.body .content-area label, .h5, .mce-content-body h5, .entry-footer h5 {
   font-size: 12px; }
 
-.fs-13, .h4, .mce-content-body h4, .c-btn, input[type="submit"],
+.fs-13, .h4, .mce-content-body h4, .entry-footer h4, .c-btn, input[type="submit"],
 input[type="button"],
 button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   font-size: 13px; }
 
-.fs-15, .h3, .mce-content-body h3 {
+.fs-15, .h3, .mce-content-body h3, .entry-footer h3 {
   font-size: 15px; }
 
 .fs-16 {
   font-size: 16px; }
 
-.fs-18, .h2, .mce-content-body h2 {
+.fs-18, .h2, .mce-content-body h2, .entry-footer h2 {
   font-size: 18px; }
 
-.fs-23, .mce-content-body blockquote, .h1, .mce-content-body h1 {
+.fs-23, .mce-content-body blockquote, .entry-footer blockquote, .h1, .mce-content-body h1, .entry-footer h1 {
   font-size: 23px; }
 
 .fs-24 {
@@ -469,23 +469,23 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   font-size: 90px; }
 
 @media only screen and (max-width: 760px) {
-  .fs-10, .h7, .mce-content-body cite {
+  .fs-10, .h7, .mce-content-body cite, .entry-footer cite {
     font-size: 9px; }
-  .fs-11, .h6, .mce-content-body h6 {
+  .fs-11, .h6, .mce-content-body h6, .entry-footer h6 {
     font-size: 10px; }
-  .fs-12, .body.body .content-area label, .h5, .mce-content-body h5 {
+  .fs-12, .body.body .content-area label, .h5, .mce-content-body h5, .entry-footer h5 {
     font-size: 11px; }
-  .fs-13, .h4, .mce-content-body h4, .c-btn, input[type="submit"],
+  .fs-13, .h4, .mce-content-body h4, .entry-footer h4, .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     font-size: 12px; }
-  .fs-15, .h3, .mce-content-body h3 {
+  .fs-15, .h3, .mce-content-body h3, .entry-footer h3 {
     font-size: 14px; }
   .fs-16 {
     font-size: 15px; }
-  .fs-18, .h2, .mce-content-body h2 {
+  .fs-18, .h2, .mce-content-body h2, .entry-footer h2 {
     font-size: 17px; }
-  .fs-23, .mce-content-body blockquote, .h1, .mce-content-body h1 {
+  .fs-23, .mce-content-body blockquote, .entry-footer blockquote, .h1, .mce-content-body h1, .entry-footer h1 {
     font-size: 21px; }
   .fs-24 {
     font-size: 22px; }
@@ -499,23 +499,23 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     font-size: 74px; } }
 
 @media only screen and (max-width: 560px) {
-  .fs-10, .h7, .mce-content-body cite {
+  .fs-10, .h7, .mce-content-body cite, .entry-footer cite {
     font-size: 9px; }
-  .fs-11, .h6, .mce-content-body h6 {
+  .fs-11, .h6, .mce-content-body h6, .entry-footer h6 {
     font-size: 10px; }
-  .fs-12, .body.body .content-area label, .h5, .mce-content-body h5 {
+  .fs-12, .body.body .content-area label, .h5, .mce-content-body h5, .entry-footer h5 {
     font-size: 11px; }
-  .fs-13, .h4, .mce-content-body h4, .c-btn, input[type="submit"],
+  .fs-13, .h4, .mce-content-body h4, .entry-footer h4, .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     font-size: 11px; }
-  .fs-15, .h3, .mce-content-body h3 {
+  .fs-15, .h3, .mce-content-body h3, .entry-footer h3 {
     font-size: 13px; }
   .fs-16 {
     font-size: 14px; }
-  .fs-18, .h2, .mce-content-body h2 {
+  .fs-18, .h2, .mce-content-body h2, .entry-footer h2 {
     font-size: 16px; }
-  .fs-23, .mce-content-body blockquote, .h1, .mce-content-body h1 {
+  .fs-23, .mce-content-body blockquote, .entry-footer blockquote, .h1, .mce-content-body h1, .entry-footer h1 {
     font-size: 20px; }
   .fs-24 {
     font-size: 21px; }
@@ -529,23 +529,23 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     font-size: 63px; } }
 
 @media only screen and (max-width: 400px) {
-  .fs-10, .h7, .mce-content-body cite {
+  .fs-10, .h7, .mce-content-body cite, .entry-footer cite {
     font-size: 8px; }
-  .fs-11, .h6, .mce-content-body h6 {
+  .fs-11, .h6, .mce-content-body h6, .entry-footer h6 {
     font-size: 9px; }
-  .fs-12, .body.body .content-area label, .h5, .mce-content-body h5 {
+  .fs-12, .body.body .content-area label, .h5, .mce-content-body h5, .entry-footer h5 {
     font-size: 10px; }
-  .fs-13, .h4, .mce-content-body h4, .c-btn, input[type="submit"],
+  .fs-13, .h4, .mce-content-body h4, .entry-footer h4, .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     font-size: 11px; }
-  .fs-15, .h3, .mce-content-body h3 {
+  .fs-15, .h3, .mce-content-body h3, .entry-footer h3 {
     font-size: 12px; }
   .fs-16 {
     font-size: 13px; }
-  .fs-18, .h2, .mce-content-body h2 {
+  .fs-18, .h2, .mce-content-body h2, .entry-footer h2 {
     font-size: 15px; }
-  .fs-23, .mce-content-body blockquote, .h1, .mce-content-body h1 {
+  .fs-23, .mce-content-body blockquote, .entry-footer blockquote, .h1, .mce-content-body h1, .entry-footer h1 {
     font-size: 19px; }
   .fs-24 {
     font-size: 19px; }
@@ -567,10 +567,10 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
 .body.body .content-area label:after {
   padding-bottom: 12px; }
 
-.h0:after, .mce-content-body .h0:after, .h1:after, .mce-content-body h1:after, .h2:after, .mce-content-body h2:after, .h3:after, .mce-content-body h3:after, .h4:after, .mce-content-body h4:after, .h5:after, .mce-content-body h5:after, .h6:after, .mce-content-body h6:after, .h7:after, .mce-content-body cite:after {
+.h0:after, .mce-content-body .h0:after, .entry-footer .h0:after, .h1:after, .mce-content-body h1:after, .entry-footer h1:after, .h2:after, .mce-content-body h2:after, .entry-footer h2:after, .h3:after, .mce-content-body h3:after, .entry-footer h3:after, .h4:after, .mce-content-body h4:after, .entry-footer h4:after, .h5:after, .mce-content-body h5:after, .entry-footer h5:after, .h6:after, .mce-content-body h6:after, .entry-footer h6:after, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
   padding-bottom: 36px; }
 
-.wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .mce-content-body ul ol, .mce-content-body ul dl, .mce-content-body ol ul, .mce-content-body ol ol, .mce-content-body ol dl, .mce-content-body dl ul, .mce-content-body dl ol, .mce-content-body dl dl {
+.wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
   padding-left: 36px; }
 
 .alignright {
@@ -580,7 +580,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
 .nf-field .list-checkbox-wrap .nf-field-element, .wp-caption-text {
   margin-top: 12px; }
 
-.mce-content-body cite, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone {
+.mce-content-body cite, .entry-footer cite, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone {
   margin-top: 24px; }
 
 .alignleft,
@@ -593,10 +593,10 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
 .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label {
   margin-bottom: 12px; }
 
-.mce-content-body blockquote p:not(:last-child), .nf-form-fields-required {
+.mce-content-body blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required {
   margin-bottom: 24px; }
 
-.mce-content-body blockquote:not(:last-child), .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .mce-content-body p:not(:last-child), .mce-content-body address:not(:last-child), .mce-content-body ul:not(:last-child), .mce-content-body ol:not(:last-child), .mce-content-body dl:not(:last-child) {
+.mce-content-body blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .entry-footer pre, .mce-content-body p:not(:last-child), .entry-footer p:not(:last-child), .mce-content-body address:not(:last-child), .entry-footer address:not(:last-child), .mce-content-body ul:not(:last-child), .entry-footer ul:not(:last-child), .mce-content-body ol:not(:last-child), .entry-footer ol:not(:last-child), .mce-content-body dl:not(:last-child), .entry-footer dl:not(:last-child) {
   margin-bottom: 36px; }
 
 .alignleft,
@@ -613,7 +613,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
 .wpforms-container[class] .wpforms-field-container {
   margin-left: -36px; }
 
-.mce-content-body ul li:before, .mce-content-body ol li:before {
+.mce-content-body ul li:before, .entry-footer ul li:before, .mce-content-body ol li:before, .entry-footer ol li:before {
   margin-right: 12px; }
 
 @media only screen and (max-width: 760px) {
@@ -623,16 +623,16 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     padding-right: 53px; }
   .body.body .content-area label:after {
     padding-bottom: 12px; }
-  .h0:after, .mce-content-body .h0:after, .h1:after, .mce-content-body h1:after, .h2:after, .mce-content-body h2:after, .h3:after, .mce-content-body h3:after, .h4:after, .mce-content-body h4:after, .h5:after, .mce-content-body h5:after, .h6:after, .mce-content-body h6:after, .h7:after, .mce-content-body cite:after {
+  .h0:after, .mce-content-body .h0:after, .entry-footer .h0:after, .h1:after, .mce-content-body h1:after, .entry-footer h1:after, .h2:after, .mce-content-body h2:after, .entry-footer h2:after, .h3:after, .mce-content-body h3:after, .entry-footer h3:after, .h4:after, .mce-content-body h4:after, .entry-footer h4:after, .h5:after, .mce-content-body h5:after, .entry-footer h5:after, .h6:after, .mce-content-body h6:after, .entry-footer h6:after, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
     padding-bottom: 35px; }
-  .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .mce-content-body ul ol, .mce-content-body ul dl, .mce-content-body ol ul, .mce-content-body ol ol, .mce-content-body ol dl, .mce-content-body dl ul, .mce-content-body dl ol, .mce-content-body dl dl {
+  .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
     padding-left: 35px; }
   .alignright {
     padding-left: 53px; }
   .wpcf7-form-control-wrap span, .wpforms-container[class] .wpforms-field-row-block input + label, .nf-field .list-radio-wrap .nf-field-element,
   .nf-field .list-checkbox-wrap .nf-field-element, .wp-caption-text {
     margin-top: 12px; }
-  .mce-content-body cite, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone {
+  .mce-content-body cite, .entry-footer cite, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone {
     margin-top: 24px; }
   .alignleft,
   .alignright,
@@ -642,9 +642,9 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   .wpforms-container[class] .wpforms-field-radio .wpforms-field-label,
   .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label {
     margin-bottom: 12px; }
-  .mce-content-body blockquote p:not(:last-child), .nf-form-fields-required {
+  .mce-content-body blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required {
     margin-bottom: 24px; }
-  .mce-content-body blockquote:not(:last-child), .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .mce-content-body p:not(:last-child), .mce-content-body address:not(:last-child), .mce-content-body ul:not(:last-child), .mce-content-body ol:not(:last-child), .mce-content-body dl:not(:last-child) {
+  .mce-content-body blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .entry-footer pre, .mce-content-body p:not(:last-child), .entry-footer p:not(:last-child), .mce-content-body address:not(:last-child), .entry-footer address:not(:last-child), .mce-content-body ul:not(:last-child), .entry-footer ul:not(:last-child), .mce-content-body ol:not(:last-child), .entry-footer ol:not(:last-child), .mce-content-body dl:not(:last-child), .entry-footer dl:not(:last-child) {
     margin-bottom: 35px; }
   .alignleft,
   .alignright,
@@ -657,7 +657,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     margin-left: 12px; }
   .wpforms-container[class] .wpforms-field-container {
     margin-left: -35px; }
-  .mce-content-body ul li:before, .mce-content-body ol li:before {
+  .mce-content-body ul li:before, .entry-footer ul li:before, .mce-content-body ol li:before, .entry-footer ol li:before {
     margin-right: 12px; } }
 
 @media only screen and (max-width: 560px) {
@@ -667,16 +667,16 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     padding-right: 47px; }
   .body.body .content-area label:after {
     padding-bottom: 12px; }
-  .h0:after, .mce-content-body .h0:after, .h1:after, .mce-content-body h1:after, .h2:after, .mce-content-body h2:after, .h3:after, .mce-content-body h3:after, .h4:after, .mce-content-body h4:after, .h5:after, .mce-content-body h5:after, .h6:after, .mce-content-body h6:after, .h7:after, .mce-content-body cite:after {
+  .h0:after, .mce-content-body .h0:after, .entry-footer .h0:after, .h1:after, .mce-content-body h1:after, .entry-footer h1:after, .h2:after, .mce-content-body h2:after, .entry-footer h2:after, .h3:after, .mce-content-body h3:after, .entry-footer h3:after, .h4:after, .mce-content-body h4:after, .entry-footer h4:after, .h5:after, .mce-content-body h5:after, .entry-footer h5:after, .h6:after, .mce-content-body h6:after, .entry-footer h6:after, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
     padding-bottom: 34px; }
-  .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .mce-content-body ul ol, .mce-content-body ul dl, .mce-content-body ol ul, .mce-content-body ol ol, .mce-content-body ol dl, .mce-content-body dl ul, .mce-content-body dl ol, .mce-content-body dl dl {
+  .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
     padding-left: 34px; }
   .alignright {
     padding-left: 47px; }
   .wpcf7-form-control-wrap span, .wpforms-container[class] .wpforms-field-row-block input + label, .nf-field .list-radio-wrap .nf-field-element,
   .nf-field .list-checkbox-wrap .nf-field-element, .wp-caption-text {
     margin-top: 12px; }
-  .mce-content-body cite, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone {
+  .mce-content-body cite, .entry-footer cite, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone {
     margin-top: 24px; }
   .alignleft,
   .alignright,
@@ -686,9 +686,9 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   .wpforms-container[class] .wpforms-field-radio .wpforms-field-label,
   .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label {
     margin-bottom: 12px; }
-  .mce-content-body blockquote p:not(:last-child), .nf-form-fields-required {
+  .mce-content-body blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required {
     margin-bottom: 24px; }
-  .mce-content-body blockquote:not(:last-child), .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .mce-content-body p:not(:last-child), .mce-content-body address:not(:last-child), .mce-content-body ul:not(:last-child), .mce-content-body ol:not(:last-child), .mce-content-body dl:not(:last-child) {
+  .mce-content-body blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .entry-footer pre, .mce-content-body p:not(:last-child), .entry-footer p:not(:last-child), .mce-content-body address:not(:last-child), .entry-footer address:not(:last-child), .mce-content-body ul:not(:last-child), .entry-footer ul:not(:last-child), .mce-content-body ol:not(:last-child), .entry-footer ol:not(:last-child), .mce-content-body dl:not(:last-child), .entry-footer dl:not(:last-child) {
     margin-bottom: 34px; }
   .alignleft,
   .alignright,
@@ -701,7 +701,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     margin-left: 12px; }
   .wpforms-container[class] .wpforms-field-container {
     margin-left: -34px; }
-  .mce-content-body ul li:before, .mce-content-body ol li:before {
+  .mce-content-body ul li:before, .entry-footer ul li:before, .mce-content-body ol li:before, .entry-footer ol li:before {
     margin-right: 12px; } }
 
 @media only screen and (max-width: 400px) {
@@ -711,16 +711,16 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     padding-right: 42px; }
   .body.body .content-area label:after {
     padding-bottom: 12px; }
-  .h0:after, .mce-content-body .h0:after, .h1:after, .mce-content-body h1:after, .h2:after, .mce-content-body h2:after, .h3:after, .mce-content-body h3:after, .h4:after, .mce-content-body h4:after, .h5:after, .mce-content-body h5:after, .h6:after, .mce-content-body h6:after, .h7:after, .mce-content-body cite:after {
+  .h0:after, .mce-content-body .h0:after, .entry-footer .h0:after, .h1:after, .mce-content-body h1:after, .entry-footer h1:after, .h2:after, .mce-content-body h2:after, .entry-footer h2:after, .h3:after, .mce-content-body h3:after, .entry-footer h3:after, .h4:after, .mce-content-body h4:after, .entry-footer h4:after, .h5:after, .mce-content-body h5:after, .entry-footer h5:after, .h6:after, .mce-content-body h6:after, .entry-footer h6:after, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
     padding-bottom: 33px; }
-  .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .mce-content-body ul ol, .mce-content-body ul dl, .mce-content-body ol ul, .mce-content-body ol ol, .mce-content-body ol dl, .mce-content-body dl ul, .mce-content-body dl ol, .mce-content-body dl dl {
+  .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
     padding-left: 33px; }
   .alignright {
     padding-left: 42px; }
   .wpcf7-form-control-wrap span, .wpforms-container[class] .wpforms-field-row-block input + label, .nf-field .list-radio-wrap .nf-field-element,
   .nf-field .list-checkbox-wrap .nf-field-element, .wp-caption-text {
     margin-top: 12px; }
-  .mce-content-body cite, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone {
+  .mce-content-body cite, .entry-footer cite, figure.alignleft, figure.alignright, figure.aligncenter, figure.alignnone {
     margin-top: 23px; }
   .alignleft,
   .alignright,
@@ -730,9 +730,9 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   .wpforms-container[class] .wpforms-field-radio .wpforms-field-label,
   .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label {
     margin-bottom: 12px; }
-  .mce-content-body blockquote p:not(:last-child), .nf-form-fields-required {
+  .mce-content-body blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required {
     margin-bottom: 23px; }
-  .mce-content-body blockquote:not(:last-child), .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .mce-content-body p:not(:last-child), .mce-content-body address:not(:last-child), .mce-content-body ul:not(:last-child), .mce-content-body ol:not(:last-child), .mce-content-body dl:not(:last-child) {
+  .mce-content-body blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .entry-footer pre, .mce-content-body p:not(:last-child), .entry-footer p:not(:last-child), .mce-content-body address:not(:last-child), .entry-footer address:not(:last-child), .mce-content-body ul:not(:last-child), .entry-footer ul:not(:last-child), .mce-content-body ol:not(:last-child), .entry-footer ol:not(:last-child), .mce-content-body dl:not(:last-child), .entry-footer dl:not(:last-child) {
     margin-bottom: 33px; }
   .alignleft,
   .alignright,
@@ -745,29 +745,29 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     margin-left: 12px; }
   .wpforms-container[class] .wpforms-field-container {
     margin-left: -33px; }
-  .mce-content-body ul li:before, .mce-content-body ol li:before {
+  .mce-content-body ul li:before, .entry-footer ul li:before, .mce-content-body ol li:before, .entry-footer ol li:before {
     margin-right: 12px; } }
 
-.mce-content-body blockquote {
+.mce-content-body blockquote, .entry-footer blockquote {
   line-height: 1.30435;
   font-family: "Times", serif;
   font-style: italic; }
-  .mce-content-body blockquote:before, .mce-content-body blockquote:after {
+  .mce-content-body blockquote:before, .entry-footer blockquote:before, .mce-content-body blockquote:after, .entry-footer blockquote:after {
     content: "";
     display: block; }
-  .mce-content-body blockquote:before {
+  .mce-content-body blockquote:before, .entry-footer blockquote:before {
     margin-bottom: -0.31217em; }
-  .mce-content-body blockquote:after {
+  .mce-content-body blockquote:after, .entry-footer blockquote:after {
     margin-top: -0.31217em; }
-  .mce-content-body blockquote p {
+  .mce-content-body blockquote p, .entry-footer blockquote p {
     font: inherit; }
 
-.mce-content-body cite {
+.mce-content-body cite, .entry-footer cite {
   display: block;
   color: #BF493D;
   font-style: normal; }
 
-.mce-content-body cite:before {
+.mce-content-body cite:before, .entry-footer cite:before {
   position: relative;
   top: -0.5em;
   content: "";
@@ -1043,27 +1043,35 @@ pre {
   word-break: break-all;
   word-wrap: break-word; }
 
-.mce-content-body pre {
+.mce-content-body pre, .entry-footer pre {
   padding: 1rem 2rem;
   border: 1px solid #c7c7c7; }
 
 .body.body .content-area label,
 .h0,
 .mce-content-body .h0,
+.entry-footer .h0,
 .h1,
-.mce-content-body h1, h1,
+.mce-content-body h1,
+.entry-footer h1, h1,
 .h2,
-.mce-content-body h2, h2,
+.mce-content-body h2,
+.entry-footer h2, h2,
 .h3,
-.mce-content-body h3, h3,
+.mce-content-body h3,
+.entry-footer h3, h3,
 .h4,
-.mce-content-body h4, h4,
+.mce-content-body h4,
+.entry-footer h4, h4,
 .h5,
-.mce-content-body h5, h5,
+.mce-content-body h5,
+.entry-footer h5, h5,
 .h6,
-.mce-content-body h6, h6,
+.mce-content-body h6,
+.entry-footer h6, h6,
 .h7,
-.mce-content-body cite {
+.mce-content-body cite,
+.entry-footer cite {
   font-family: "Arca Majora", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -1071,25 +1079,32 @@ pre {
   .body.body .content-area label:last-child:after,
   .h0:last-child:after,
   .h1:last-child:after,
-  .mce-content-body h1:last-child:after, h1:last-child:after,
+  .mce-content-body h1:last-child:after,
+  .entry-footer h1:last-child:after, h1:last-child:after,
   .h2:last-child:after,
-  .mce-content-body h2:last-child:after, h2:last-child:after,
+  .mce-content-body h2:last-child:after,
+  .entry-footer h2:last-child:after, h2:last-child:after,
   .h3:last-child:after,
-  .mce-content-body h3:last-child:after, h3:last-child:after,
+  .mce-content-body h3:last-child:after,
+  .entry-footer h3:last-child:after, h3:last-child:after,
   .h4:last-child:after,
-  .mce-content-body h4:last-child:after, h4:last-child:after,
+  .mce-content-body h4:last-child:after,
+  .entry-footer h4:last-child:after, h4:last-child:after,
   .h5:last-child:after,
-  .mce-content-body h5:last-child:after, h5:last-child:after,
+  .mce-content-body h5:last-child:after,
+  .entry-footer h5:last-child:after, h5:last-child:after,
   .h6:last-child:after,
-  .mce-content-body h6:last-child:after, h6:last-child:after,
+  .mce-content-body h6:last-child:after,
+  .entry-footer h6:last-child:after, h6:last-child:after,
   .h7:last-child:after,
-  .mce-content-body cite:last-child:after {
+  .mce-content-body cite:last-child:after,
+  .entry-footer cite:last-child:after {
     padding-bottom: 0; }
 
-.h0, .mce-content-body .h0, .h1, .mce-content-body h1 {
+.h0, .mce-content-body .h0, .entry-footer .h0, .h1, .mce-content-body h1, .entry-footer h1 {
   letter-spacing: .174em; }
 
-.h2, .mce-content-body h2, .h3, .mce-content-body h3 {
+.h2, .mce-content-body h2, .entry-footer h2, .h3, .mce-content-body h3, .entry-footer h3 {
   letter-spacing: .133em; }
 
 .h0[class] {
@@ -1102,74 +1117,74 @@ pre {
   .h0[class]:after {
     margin-top: -0.21335em; }
 
-.h1, .mce-content-body h1 {
+.h1, .mce-content-body h1, .entry-footer h1 {
   line-height: 1.17391; }
-  .h1:before, .mce-content-body h1:before, .h1:after, .mce-content-body h1:after {
+  .h1:before, .mce-content-body h1:before, .entry-footer h1:before, .h1:after, .mce-content-body h1:after, .entry-footer h1:after {
     content: "";
     display: block; }
-  .h1:before, .mce-content-body h1:before {
+  .h1:before, .mce-content-body h1:before, .entry-footer h1:before {
     margin-bottom: -0.20031em; }
-  .h1:after, .mce-content-body h1:after {
+  .h1:after, .mce-content-body h1:after, .entry-footer h1:after {
     margin-top: -0.20031em; }
 
-.h2, .mce-content-body h2 {
+.h2, .mce-content-body h2, .entry-footer h2 {
   line-height: 1.16667; }
-  .h2:before, .mce-content-body h2:before, .h2:after, .mce-content-body h2:after {
+  .h2:before, .mce-content-body h2:before, .entry-footer h2:before, .h2:after, .mce-content-body h2:after, .entry-footer h2:after {
     content: "";
     display: block; }
-  .h2:before, .mce-content-body h2:before {
+  .h2:before, .mce-content-body h2:before, .entry-footer h2:before {
     margin-bottom: -0.19668em; }
-  .h2:after, .mce-content-body h2:after {
+  .h2:after, .mce-content-body h2:after, .entry-footer h2:after {
     margin-top: -0.19668em; }
 
-.h3, .mce-content-body h3 {
+.h3, .mce-content-body h3, .entry-footer h3 {
   line-height: 1.2; }
-  .h3:before, .mce-content-body h3:before, .h3:after, .mce-content-body h3:after {
+  .h3:before, .mce-content-body h3:before, .entry-footer h3:before, .h3:after, .mce-content-body h3:after, .entry-footer h3:after {
     content: "";
     display: block; }
-  .h3:before, .mce-content-body h3:before {
+  .h3:before, .mce-content-body h3:before, .entry-footer h3:before {
     margin-bottom: -0.21335em; }
-  .h3:after, .mce-content-body h3:after {
+  .h3:after, .mce-content-body h3:after, .entry-footer h3:after {
     margin-top: -0.21335em; }
 
-.h4, .mce-content-body h4 {
+.h4, .mce-content-body h4, .entry-footer h4 {
   line-height: 1.15385; }
-  .h4:before, .mce-content-body h4:before, .h4:after, .mce-content-body h4:after {
+  .h4:before, .mce-content-body h4:before, .entry-footer h4:before, .h4:after, .mce-content-body h4:after, .entry-footer h4:after {
     content: "";
     display: block; }
-  .h4:before, .mce-content-body h4:before {
+  .h4:before, .mce-content-body h4:before, .entry-footer h4:before {
     margin-bottom: -0.19027em; }
-  .h4:after, .mce-content-body h4:after {
+  .h4:after, .mce-content-body h4:after, .entry-footer h4:after {
     margin-top: -0.19027em; }
 
-.h5, .mce-content-body h5 {
+.h5, .mce-content-body h5, .entry-footer h5 {
   line-height: 1.16667; }
-  .h5:before, .mce-content-body h5:before, .h5:after, .mce-content-body h5:after {
+  .h5:before, .mce-content-body h5:before, .entry-footer h5:before, .h5:after, .mce-content-body h5:after, .entry-footer h5:after {
     content: "";
     display: block; }
-  .h5:before, .mce-content-body h5:before {
+  .h5:before, .mce-content-body h5:before, .entry-footer h5:before {
     margin-bottom: -0.19668em; }
-  .h5:after, .mce-content-body h5:after {
+  .h5:after, .mce-content-body h5:after, .entry-footer h5:after {
     margin-top: -0.19668em; }
 
-.h6, .mce-content-body h6 {
+.h6, .mce-content-body h6, .entry-footer h6 {
   line-height: 1.18182; }
-  .h6:before, .mce-content-body h6:before, .h6:after, .mce-content-body h6:after {
+  .h6:before, .mce-content-body h6:before, .entry-footer h6:before, .h6:after, .mce-content-body h6:after, .entry-footer h6:after {
     content: "";
     display: block; }
-  .h6:before, .mce-content-body h6:before {
+  .h6:before, .mce-content-body h6:before, .entry-footer h6:before {
     margin-bottom: -0.20426em; }
-  .h6:after, .mce-content-body h6:after {
+  .h6:after, .mce-content-body h6:after, .entry-footer h6:after {
     margin-top: -0.20426em; }
 
-.h7, .mce-content-body cite {
+.h7, .mce-content-body cite, .entry-footer cite {
   line-height: 1.2; }
-  .h7:before, .mce-content-body cite:before, .h7:after, .mce-content-body cite:after {
+  .h7:before, .mce-content-body cite:before, .entry-footer cite:before, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
     content: "";
     display: block; }
-  .h7:before, .mce-content-body cite:before {
+  .h7:before, .mce-content-body cite:before, .entry-footer cite:before {
     margin-bottom: -0.21335em; }
-  .h7:after, .mce-content-body cite:after {
+  .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
     margin-top: -0.21335em; }
 
 .body.body .content-area input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="file"]), .body.body .content-area textarea, .body.body .content-area select,
@@ -1199,52 +1214,67 @@ body {
   -webkit-hyphens: auto;
   hyphens: auto; }
 
-.mce-content-body p,
-.mce-content-body address {
+.mce-content-body p, .entry-footer p,
+.mce-content-body address,
+.entry-footer address {
   line-height: 1.71429; }
-  .mce-content-body p:before, .mce-content-body p:after,
+  .mce-content-body p:before, .entry-footer p:before, .mce-content-body p:after, .entry-footer p:after,
   .mce-content-body address:before,
-  .mce-content-body address:after {
+  .entry-footer address:before,
+  .mce-content-body address:after,
+  .entry-footer address:after {
     content: "";
     display: block; }
-  .mce-content-body p:before,
-  .mce-content-body address:before {
+  .mce-content-body p:before, .entry-footer p:before,
+  .mce-content-body address:before,
+  .entry-footer address:before {
     margin-bottom: -0.50714em; }
-  .mce-content-body p:after,
-  .mce-content-body address:after {
+  .mce-content-body p:after, .entry-footer p:after,
+  .mce-content-body address:after,
+  .entry-footer address:after {
     margin-top: -0.50714em; }
 
-.mce-content-body ul,
+.mce-content-body ul, .entry-footer ul,
 .mce-content-body ol,
-.mce-content-body dl {
+.entry-footer ol,
+.mce-content-body dl,
+.entry-footer dl {
   line-height: 2; }
-  .mce-content-body ul:before, .mce-content-body ul:after,
+  .mce-content-body ul:before, .entry-footer ul:before, .mce-content-body ul:after, .entry-footer ul:after,
   .mce-content-body ol:before,
+  .entry-footer ol:before,
   .mce-content-body ol:after,
+  .entry-footer ol:after,
   .mce-content-body dl:before,
-  .mce-content-body dl:after {
+  .entry-footer dl:before,
+  .mce-content-body dl:after,
+  .entry-footer dl:after {
     content: "";
     display: block; }
-  .mce-content-body ul:before,
+  .mce-content-body ul:before, .entry-footer ul:before,
   .mce-content-body ol:before,
-  .mce-content-body dl:before {
+  .entry-footer ol:before,
+  .mce-content-body dl:before,
+  .entry-footer dl:before {
     margin-bottom: -0.65em; }
-  .mce-content-body ul:after,
+  .mce-content-body ul:after, .entry-footer ul:after,
   .mce-content-body ol:after,
-  .mce-content-body dl:after {
+  .entry-footer ol:after,
+  .mce-content-body dl:after,
+  .entry-footer dl:after {
     margin-top: -0.65em; }
 
-.mce-content-body ul ul:before, .mce-content-body ul ul:after, .mce-content-body ul ol:before, .mce-content-body ul ol:after, .mce-content-body ul dl:before, .mce-content-body ul dl:after, .mce-content-body ol ul:before, .mce-content-body ol ul:after, .mce-content-body ol ol:before, .mce-content-body ol ol:after, .mce-content-body ol dl:before, .mce-content-body ol dl:after, .mce-content-body dl ul:before, .mce-content-body dl ul:after, .mce-content-body dl ol:before, .mce-content-body dl ol:after, .mce-content-body dl dl:before, .mce-content-body dl dl:after {
+.mce-content-body ul ul:before, .entry-footer ul ul:before, .mce-content-body ul ul:after, .entry-footer ul ul:after, .mce-content-body ul ol:before, .entry-footer ul ol:before, .mce-content-body ul ol:after, .entry-footer ul ol:after, .mce-content-body ul dl:before, .entry-footer ul dl:before, .mce-content-body ul dl:after, .entry-footer ul dl:after, .mce-content-body ol ul:before, .entry-footer ol ul:before, .mce-content-body ol ul:after, .entry-footer ol ul:after, .mce-content-body ol ol:before, .entry-footer ol ol:before, .mce-content-body ol ol:after, .entry-footer ol ol:after, .mce-content-body ol dl:before, .entry-footer ol dl:before, .mce-content-body ol dl:after, .entry-footer ol dl:after, .mce-content-body dl ul:before, .entry-footer dl ul:before, .mce-content-body dl ul:after, .entry-footer dl ul:after, .mce-content-body dl ol:before, .entry-footer dl ol:before, .mce-content-body dl ol:after, .entry-footer dl ol:after, .mce-content-body dl dl:before, .entry-footer dl dl:before, .mce-content-body dl dl:after, .entry-footer dl dl:after {
   content: none; }
 
-.mce-content-body ul li:before {
+.mce-content-body ul li:before, .entry-footer ul li:before {
   content: "\2022"; }
 
-.mce-content-body ol {
+.mce-content-body ol, .entry-footer ol {
   counter-reset: list-counter; }
-  .mce-content-body ol li {
+  .mce-content-body ol li, .entry-footer ol li {
     counter-increment: list-counter; }
-    .mce-content-body ol li:before {
+    .mce-content-body ol li:before, .entry-footer ol li:before {
       content: counter(list-counter) "."; }
 
 b,
@@ -1256,20 +1286,20 @@ i,
 small {
   font-style: italic; }
 
-.mce-content-body .intro {
+.mce-content-body .intro, .entry-footer .intro {
   line-height: 1.42857;
   font-family: "EK Mukta", sans-serif;
   letter-spacing: 0.07714em;
   text-transform: uppercase; }
-  .mce-content-body .intro:before, .mce-content-body .intro:after {
+  .mce-content-body .intro:before, .mce-content-body .intro:after, .entry-footer .intro:before, .entry-footer .intro:after {
     content: "";
     display: block; }
-  .mce-content-body .intro:before {
+  .mce-content-body .intro:before, .entry-footer .intro:before {
     margin-bottom: -0.36429em; }
-  .mce-content-body .intro:after {
+  .mce-content-body .intro:after, .entry-footer .intro:after {
     margin-top: -0.36429em; }
 
-.mce-content-body .dropcap {
+.mce-content-body .dropcap, .entry-footer .dropcap {
   float: left;
   font-family: "Georgia", serif;
   font-size: 3.58333rem;

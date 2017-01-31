@@ -75,6 +75,8 @@ $location = pixelgrade_get_location( '' );
 				if ( get_theme_mod( 'noah_blog_items_secondary_meta', 'date' ) !== 'none' && ! empty( $meta[ get_theme_mod( 'noah_blog_items_secondary_meta' ) ] ) ) {
 					echo '<div class="c-card__footer h7">' . $meta[ get_theme_mod( 'noah_blog_items_secondary_meta' ) ] . "</div>";
 				}
+
+				noah_entry_footer( get_the_ID() );
 				?></div><!-- .c-card__content -->
 		</div><!-- .c-card__link -->
 		<span class="c-card__badge u-color-accent"></span>

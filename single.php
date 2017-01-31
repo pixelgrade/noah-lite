@@ -21,32 +21,16 @@ get_header(); ?>
 
 					get_template_part( 'template-parts/content', 'single' );
 
-					 ?>
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) {
+						comments_template();
+					}
 
-					<div class="u-content-width">
-
-						<?php
-						noah_the_author_info_box();
-
-						if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'related-posts' ) ) {
-							echo do_shortcode( '[jetpack-related-posts]' );
-						}
-
-						noah_the_post_navigation();
-
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) {
-							comments_template();
-						} ?>
-
-					</div>
-
-				<?php endwhile; // End of the loop. ?>
+				endwhile; // End of the loop. ?>
 
 			</main><!-- #main -->
 		</div>
 	</div><!-- #primary -->
 
 <?php
-//get_sidebar();
 get_footer(); ?>

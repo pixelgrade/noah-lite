@@ -17,30 +17,28 @@ $location = pixelgrade_get_location( 'single project jetpack' );
 	<div class="u-full-width u-container-sides-spacings">
 		<div class="o-wrapper u-container-width">
 			<div class="c-project__content  o-wrapper  js-project-content">
-				<header class="c-page-header">
+				<header class="c-page-header  entry-header">
 
 					<?php the_title( '<h1 class="c-page-header__title">', '</h1>' ); ?>
 
 					<div class="c-page-header__meta h7">
 
 						<?php if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'sharedaddy' ) ) { ?>
-							<a class="c-meta__share-link" href="#"><?php _e( 'Share', 'noah' ); ?></a>
+							<a class="c-meta__share-link" href="#"><?php esc_html_e( 'Share', 'noah' ); ?></a>
 						<?php } ?>
 
 						<?php
-							$the_term_list = get_the_term_list( get_the_ID(), 'jetpack-portfolio-type' );
-							if ( ! empty( $the_term_list ) ) {
-						?>
+						$the_term_list = get_the_term_list( get_the_ID(), 'jetpack-portfolio-type' );
+						if ( ! empty( $the_term_list ) ) { ?>
 						<span class="c-page-header__taxonomy  u-color-accent"><?php echo $the_term_list ?></span>
 						<?php } ?>
 
-					</div>
-
-				</header>
+					</div><!-- .c-page-header__meta -->
+				</header><!-- .c-page-header -->
 
 				<div class="entry-content  u-content-width">
 					<?php the_content(); ?>
-				</div>
+				</div><!-- .entry-content -->
 				<?php wp_link_pages( array(
 					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'noah' ),
 					'after'  => '</div>',

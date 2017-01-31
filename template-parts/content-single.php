@@ -18,11 +18,12 @@ $location = pixelgrade_get_location( 'post single' );
 		<?php the_title( '<h1 class="c-page-header__title  entry-title"><span>', '</span></h1>' ); ?>
 
 		<div class="c-page-header__meta h7">
-			<span><?php the_time( 'j F' ); ?></span>
+			<?php noah_posted_on(); ?>
+
 			<span class="c-page-header__taxonomy  u-color-accent"><?php noah_the_first_category(); ?></span>
 
 		</div><!-- .entry-meta -->
-	</header>
+	</header><!-- .c-page-header -->
 
 	<div class="entry-content  u-content-width">
 
@@ -34,5 +35,15 @@ $location = pixelgrade_get_location( 'post single' );
 		) ); ?>
 
 	</div><!-- .entry-content -->
+
+	<footer class="entry-footer  u-content-width">
+		<div>
+
+		<?php noah_single_entry_footer(); ?>
+
+		<?php noah_the_post_navigation(); ?>
+
+		</div>
+	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
