@@ -22,32 +22,48 @@ $location = pixelgrade_get_location( '' );
 			<?php } ?>
 
 			<div class="c-card__content"><?php
-				$meta       = array();
-				$categories = get_the_terms( get_the_ID(), 'category' );
-				$category   = "";
-				if ( ! is_wp_error( $categories ) && ! empty( $categories ) ) {
-					$category .= '<ul class="o-inline o-inline-xs">' . PHP_EOL;
-					foreach ( $categories as $this_category ) {
-						$category .= '<li><a href="' . esc_url( get_category_link( $this_category->term_id ) ) . '">' . $this_category->name . '</a></li>' . PHP_EOL;
-					};
-					$category .= '</ul>' . PHP_EOL;
+				// Gather up all the meta we might need to display
+				// But first initialize please
+				$meta = array(
+					'category' => false,
+					'tags' => false,
+					'author' => false,
+					'date' => false,
+					'comments' => false,
+				);
+
+				if ( ( noah_blog_items_primary_meta_control_show() && 'category' == get_theme_mod( 'noah_blog_items_primary_meta', 'category' ) )
+				     || ( noah_blog_items_secondary_meta_control_show() && 'category' == get_theme_mod( 'noah_blog_items_secondary_meta', 'date' ) ) ) {
+					$categories = get_the_terms( get_the_ID(), 'category' );
+					$category   = "";
+					if ( ! is_wp_error( $categories ) && ! empty( $categories ) ) {
+						$category .= '<ul class="o-inline o-inline-xs cats">' . PHP_EOL;
+						foreach ( $categories as $this_category ) {
+							$category .= '<li><a href="' . esc_url( get_category_link( $this_category->term_id ) ) . '">' . $this_category->name . '</a></li>' . PHP_EOL;
+						};
+						$category .= '</ul>' . PHP_EOL;
+					}
+					$meta['category'] = $category;
 				}
-				$meta['category'] = $category;
-				$tags             = get_the_terms( get_the_ID(), 'tag' );
-				$tag              = "";
-				if ( ! is_wp_error( $tags ) && ! empty( $tags ) ) {
-					$tag .= '<ul class="o-inline o-inline-xs">' . PHP_EOL;
-					foreach ( $tags as $my_tag ) {
-						$tag .= '<li>' . $my_tag->name . '</li>' . PHP_EOL;
-					};
-					$tag .= '</ul>' . PHP_EOL;
+
+				if ( ( noah_blog_items_primary_meta_control_show() && 'tags' == get_theme_mod( 'noah_blog_items_primary_meta', 'category' ) )
+				     || ( noah_blog_items_secondary_meta_control_show() && 'tags' == get_theme_mod( 'noah_blog_items_secondary_meta', 'date' ) ) ) {
+					$tags = get_the_terms( get_the_ID(), 'tag' );
+					$tag  = "";
+					if ( ! is_wp_error( $tags ) && ! empty( $tags ) ) {
+						$tag .= '<ul class="o-inline o-inline-xs tags">' . PHP_EOL;
+						foreach ( $tags as $my_tag ) {
+							$tag .= '<li>' . $my_tag->name . '</li>' . PHP_EOL;
+						};
+						$tag .= '</ul>' . PHP_EOL;
+					}
+					$meta['tags'] = $tag;
 				}
-				$meta['tags']   = $tag;
-				$meta['author'] = get_the_author();
-				$meta['date']   = get_the_time( 'j F' );
+
+				$meta['author'] = '<span class="byline">' . get_the_author() . '</span>';
+				$meta['date']   = '<span class="posted-on">' . noah_date_link() . '</span>';
 
 				$comments_number = get_comments_number(); // get_comments_number returns only a numeric value
-
 				if ( comments_open() ) {
 					if ( $comments_number == 0 ) {
 						$comments = __( 'No Comments', 'noah' );
@@ -61,18 +77,22 @@ $location = pixelgrade_get_location( '' );
 					$meta['comments'] = '';
 				}
 
-				if ( get_theme_mod( 'noah_blog_items_primary_meta', 'category' ) !== 'none' && ! empty( $meta[ get_theme_mod( 'noah_blog_items_primary_meta' ) ] ) ) {
+				// Display the post's details
+				if ( noah_blog_items_primary_meta_control_show() && get_theme_mod( 'noah_blog_items_primary_meta', 'category' ) !== 'none' && ! empty( $meta[ get_theme_mod( 'noah_blog_items_primary_meta' ) ] ) ) {
 					echo '<div class="c-card__meta h7">' . $meta[ get_theme_mod( 'noah_blog_items_primary_meta' ) ] . "</div>";
 				}
+
 				if ( get_theme_mod( 'noah_blog_items_title_visibility', true ) ) { ?>
 					<h2 class="c-card__title h2"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				<?php }
-				if ( get_theme_mod( 'noah_blog_items_excerpt_visibility', true ) && get_the_excerpt() ) { ?>
+
+				if ( noah_blog_items_excerpt_visibility_control_show() && get_theme_mod( 'noah_blog_items_excerpt_visibility', true ) && get_the_excerpt() ) { ?>
 					<div class="c-card__excerpt entry-content">
 						<?php the_excerpt(); ?>
 					</div>
 				<?php }
-				if ( get_theme_mod( 'noah_blog_items_secondary_meta', 'date' ) !== 'none' && ! empty( $meta[ get_theme_mod( 'noah_blog_items_secondary_meta' ) ] ) ) {
+
+				if ( noah_blog_items_secondary_meta_control_show() && get_theme_mod( 'noah_blog_items_secondary_meta', 'date' ) !== 'none' && ! empty( $meta[ get_theme_mod( 'noah_blog_items_secondary_meta' ) ] ) ) {
 					echo '<div class="c-card__footer h7">' . $meta[ get_theme_mod( 'noah_blog_items_secondary_meta' ) ] . "</div>";
 				}
 

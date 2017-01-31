@@ -26,34 +26,48 @@ $location = pixelgrade_get_location( 'portfolio jetpack' );
 
 			<div class="c-card__content">
 				<?php
-				$meta                 = array();
+				// Gather up all the meta we might need to display
+				// But first initialize please
+				$meta = array(
+					'category' => false,
+					'tags' => false,
+					'author' => false,
+					'date' => false,
+					'comments' => false,
+				);
 
-				$portfolio_categories = get_the_terms( get_the_ID(), 'jetpack-portfolio-type' );
-				$category             = '';
-				if ( ! is_wp_error( $portfolio_categories ) && ! empty( $portfolio_categories ) ) {
-					$category .= '<ul class="o-inline">' . PHP_EOL;
-					foreach ( $portfolio_categories as $portfolio_category ) {
-						$category .= '<li><a href="' . esc_url( get_category_link( $portfolio_category->term_id ) ) . '">' . $portfolio_category->name . '</a></li>' . PHP_EOL;
-					};
-					$category .= '</ul>' . PHP_EOL;
+				if ( ( noah_portfolio_items_primary_meta_control_show() && 'category' == get_theme_mod( 'noah_portfolio_items_primary_meta', 'none' ) )
+				     || ( noah_portfolio_items_secondary_meta_control_show() && 'category' == get_theme_mod( 'noah_portfolio_items_secondary_meta', 'none' ) ) ) {
+					$portfolio_categories = get_the_terms( get_the_ID(), 'jetpack-portfolio-type' );
+					$category             = '';
+					if ( ! is_wp_error( $portfolio_categories ) && ! empty( $portfolio_categories ) ) {
+						$category .= '<ul class="o-inline">' . PHP_EOL;
+						foreach ( $portfolio_categories as $portfolio_category ) {
+							$category .= '<li><a href="' . esc_url( get_category_link( $portfolio_category->term_id ) ) . '">' . $portfolio_category->name . '</a></li>' . PHP_EOL;
+						};
+						$category .= '</ul>' . PHP_EOL;
+					}
+					$meta['category'] = $category;
 				}
-				$meta['category'] = $category;
 
-				$portfolio_tags   = get_the_terms( get_the_ID(), 'jetpack-portfolio-tag' );
-				$tags             = '';
-				if ( ! is_wp_error( $portfolio_tags ) && ! empty( $portfolio_tags ) ) {
-					$tags .= '<ul class="o-inline">' . PHP_EOL;
-					foreach ( $portfolio_tags as $portfolio_tag ) {
-						$tags .= '<li>' . $portfolio_tag->name . '</li>' . PHP_EOL;
-					};
-					$tags .= '</ul>' . PHP_EOL;
+				if ( ( noah_portfolio_items_primary_meta_control_show() && 'tags' == get_theme_mod( 'noah_portfolio_items_primary_meta', 'none' ) )
+				     || ( noah_portfolio_items_secondary_meta_control_show() && 'tags' == get_theme_mod( 'noah_portfolio_items_secondary_meta', 'none' ) ) ) {
+					$portfolio_tags = get_the_terms( get_the_ID(), 'jetpack-portfolio-tag' );
+					$tags           = '';
+					if ( ! is_wp_error( $portfolio_tags ) && ! empty( $portfolio_tags ) ) {
+						$tags .= '<ul class="o-inline">' . PHP_EOL;
+						foreach ( $portfolio_tags as $portfolio_tag ) {
+							$tags .= '<li>' . $portfolio_tag->name . '</li>' . PHP_EOL;
+						};
+						$tags .= '</ul>' . PHP_EOL;
+					}
+					$meta['tags'] = $tags;
 				}
-				$meta['tags']   = $tags;
-				$meta['author'] = get_the_author();
-				$meta['date']   = get_the_time( 'j F' );
+
+				$meta['author'] = '<span class="byline">' . get_the_author() . '</span>';
+				$meta['date']   = '<span class="posted-on">' . noah_date_link() . '</span>';
 
 				$comments_number = get_comments_number(); // get_comments_number returns only a numeric value
-
 				if ( comments_open() ) {
 					if ( $comments_number == 0 ) {
 						$comments = __( 'No Comments', 'noah' );
@@ -67,18 +81,22 @@ $location = pixelgrade_get_location( 'portfolio jetpack' );
 					$meta['comments'] = '';
 				}
 
-				if ( get_theme_mod( 'noah_portfolio_items_primary_meta', 'none' ) !== 'none' && ! empty( $meta[ get_theme_mod( 'noah_portfolio_items_primary_meta' ) ] ) ) {
+				// Display the project's details
+				if ( noah_portfolio_items_primary_meta_control_show() && get_theme_mod( 'noah_portfolio_items_primary_meta', 'none' ) !== 'none' && ! empty( $meta[ get_theme_mod( 'noah_portfolio_items_primary_meta' ) ] ) ) {
 					echo '<div class="c-card__meta h7">' . $meta[ get_theme_mod( 'noah_portfolio_items_primary_meta' ) ] . '</div>';
 				}
+
 				if ( get_theme_mod( 'noah_portfolio_items_title_visibility', true ) ) { ?>
 					<h2 class="c-card__title h5"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				<?php }
-				if ( get_theme_mod( 'noah_portfolio_items_excerpt_visibility', false ) && get_the_excerpt() ) { ?>
+
+				if ( noah_portfolio_items_excerpt_visibility_control_show() && get_theme_mod( 'noah_portfolio_items_excerpt_visibility', false ) && get_the_excerpt() ) { ?>
 					<div class="c-card__excerpt entry-content">
 						<?php the_excerpt(); ?>
 					</div>
 				<?php }
-				if ( get_theme_mod( 'noah_portfolio_items_secondary_meta', 'none' ) !== 'none' && ! empty( $meta[ get_theme_mod( 'noah_portfolio_items_secondary_meta' ) ] ) ) {
+
+				if ( noah_portfolio_items_secondary_meta_control_show() && get_theme_mod( 'noah_portfolio_items_secondary_meta', 'none' ) !== 'none' && ! empty( $meta[ get_theme_mod( 'noah_portfolio_items_secondary_meta' ) ] ) ) {
 					echo '<div class="c-card__footer h7">' . $meta[ get_theme_mod( 'noah_portfolio_items_secondary_meta' ) ] . '</div>';
 				} ?>
 			</div><!-- .c-card__content -->

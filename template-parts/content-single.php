@@ -20,7 +20,7 @@ $location = pixelgrade_get_location( 'post single' );
 		<div class="c-page-header__meta h7">
 			<?php noah_posted_on(); ?>
 
-			<span class="c-page-header__taxonomy  u-color-accent"><?php noah_the_first_category(); ?></span>
+			<span class="c-page-header__taxonomy  u-color-accent cats"><?php noah_the_first_category(); ?></span>
 
 		</div><!-- .entry-meta -->
 	</header><!-- .c-page-header -->

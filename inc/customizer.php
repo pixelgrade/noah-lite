@@ -26,9 +26,10 @@ function noah_customize_register( $wp_customize ) {
 		) );
 	}
 
-	/*
+	/* =========================
 	 * Add custom Theme settings
-	 */
+	 * ========================= */
+
 	$wp_customize->add_section( 'noah_theme_options', array(
 		'title'             => esc_html__( 'Theme', 'noah' ),
 		'description' => esc_html__( 'Your theme\'s general settings.', 'noah' ),
@@ -51,7 +52,6 @@ function noah_customize_register( $wp_customize ) {
 		'default'           => 'sticky',
 		'sanitize_callback' => 'noah_sanitize_header_position',
 	) );
-
 	$wp_customize->add_control( 'noah_header_position', array(
 		'label'   => esc_html__( 'Header Position', 'noah' ),
 		'section' => 'noah_theme_options',
@@ -67,7 +67,6 @@ function noah_customize_register( $wp_customize ) {
 		'default' => 'full',
 		'sanitize_callback' => 'noah_sanitize_header_width',
 	) );
-
 	$wp_customize->add_control( 'noah_header_width', array(
 		'type'    => 'select',
 		'label'   => esc_html__( 'Header Width', 'components' ),
@@ -80,21 +79,10 @@ function noah_customize_register( $wp_customize ) {
 	) );
 
 	/* Footer Options */
-	$wp_customize->add_setting( 'noah_footer_hide_back_to_top_link', array(
-		'default'           => '',
-		'sanitize_callback' => 'noah_sanitize_checkbox',
-	) );
-	$wp_customize->add_control( 'noah_footer_hide_back_to_top_link', array(
-		'label'             => __( 'Hide Footer "Back To Top" Link', 'noah' ),
-		'section'           => 'noah_theme_options',
-		'type'              => 'checkbox',
-	) );
-
 	$wp_customize->add_setting( 'noah_footer_layout', array(
 		'default'           => 'row',
 		'sanitize_callback' => 'noah_sanitize_footer_layout',
 	) );
-
 	$wp_customize->add_control( 'noah_footer_layout', array(
 		'label'       => esc_html__( '"Footer Area" Widgets Layout', 'noah' ),
 		'section'     => 'noah_theme_options',
@@ -106,9 +94,20 @@ function noah_customize_register( $wp_customize ) {
 		),
 	) );
 
-	/*
+	$wp_customize->add_setting( 'noah_footer_hide_back_to_top_link', array(
+		'default'           => '',
+		'sanitize_callback' => 'noah_sanitize_checkbox',
+	) );
+	$wp_customize->add_control( 'noah_footer_hide_back_to_top_link', array(
+		'label'             => __( 'Hide Footer "Back To Top" Link', 'noah' ),
+		'section'           => 'noah_theme_options',
+		'type'              => 'checkbox',
+	) );
+
+	/* =============================
 	 * Add custom Portfolio settings
-	 */
+	 * ============================= */
+
 	$wp_customize->add_section( 'noah_portfolio_options', array(
 		'title'             => esc_html__( 'Portfolio Grid', 'noah' ),
 		'description' => esc_html__( 'Here you can control the portfolio grid\'s layout and features.', 'noah' ),
@@ -120,7 +119,6 @@ function noah_customize_register( $wp_customize ) {
 		'default' => 'packed',
 		'sanitize_callback' => 'noah_sanitize_grid_layout',
 	) );
-
 	$wp_customize->add_control( 'noah_portfolio_grid_layout', array(
 		'type'    => 'radio',
 		'label'   => esc_html__( 'Portfolio Grid Layout', 'noah' ),
@@ -137,7 +135,6 @@ function noah_customize_register( $wp_customize ) {
 		'default' => 'below',
 		'sanitize_callback' => 'noah_sanitize_items_title_position',
 	) );
-
 	$wp_customize->add_control( 'noah_portfolio_items_title_position', array(
 		'type'    => 'radio',
 		'label'   => esc_html__( 'Project Details Position', 'noah' ),
@@ -154,10 +151,9 @@ function noah_customize_register( $wp_customize ) {
 		'default' => 'left',
 		'sanitize_callback' => 'noah_sanitize_items_title_alignment_nearby',
 	) );
-
 	$wp_customize->add_control( 'noah_portfolio_items_title_alignment_nearby', array(
 		'type'    => 'select',
-		'label'   => esc_html__( 'Project Details Alignment (Above/Below)', 'noah' ),
+		'label'   => esc_html__( 'Project Details Alignment', 'noah' ),
 		'desc'    => esc_html__( 'Adjust the alignment of your project details like title, author.', 'noah' ),
 		'choices' => array(
 			'left'   => esc_html__( '← Left', 'noah' ),
@@ -165,16 +161,16 @@ function noah_customize_register( $wp_customize ) {
 			'right'  => esc_html__( '→ Right', 'noah' ),
 		),
 		'section' => 'noah_portfolio_options',
+		'active_callback' => 'noah_portfolio_items_title_alignment_nearby_control_show',
 	) );
 
 	$wp_customize->add_setting( 'noah_portfolio_items_title_alignment_overlay', array(
 		'default' => 'middle-center',
 		'sanitize_callback' => 'noah_sanitize_items_title_alignment_overlay',
 	) );
-
 	$wp_customize->add_control( 'noah_portfolio_items_title_alignment_overlay', array(
 		'type'    => 'select',
-		'label'   => esc_html__( 'Project Details Alignment (Overlay)', 'noah' ),
+		'label'   => esc_html__( 'Project Details Alignment', 'noah' ),
 		'desc'    => esc_html__( 'Adjust the alignment of your hover project details like title, author.', 'noah' ),
 		'choices' => array(
 			'top-left'   => esc_html__( '↑ Top     ← Left', 'noah' ),
@@ -190,6 +186,27 @@ function noah_customize_register( $wp_customize ) {
 			'bottom-right'  => esc_html__( '↓ Bottom     → Right', 'noah' ),
 		),
 		'section' => 'noah_portfolio_options',
+		'active_callback' => 'noah_portfolio_items_title_alignment_overlay_control_show',
+	) );
+
+	$wp_customize->add_setting( 'noah_portfolio_items_primary_meta', array(
+		'default' => 'none',
+		'sanitize_callback' => 'noah_sanitize_items_primary_meta',
+	) );
+	$wp_customize->add_control( 'noah_portfolio_items_primary_meta', array(
+		'type'    => 'select',
+		'label'   => esc_html__( 'Main Project Meta', 'noah' ),
+		'desc'    => esc_html__( 'Choose what is the main information you wish to display about a project, besides the title.', 'noah' ),
+		'choices' => array(
+			'none'     => esc_html__( 'None', 'noah' ),
+			'category' => esc_html__( 'Categories', 'noah' ),
+			'author'   => esc_html__( 'Author', 'noah' ),
+			'date'     => esc_html__( 'Date', 'noah' ),
+			'tags'     => esc_html__( 'Tags', 'noah' ),
+			'comments' => esc_html__( 'Comments', 'noah' ),
+		),
+		'section' => 'noah_portfolio_options',
+		'active_callback' => 'noah_portfolio_items_primary_meta_control_show',
 	) );
 
 	$wp_customize->add_setting( 'noah_portfolio_items_title_visibility', array(
@@ -210,51 +227,33 @@ function noah_customize_register( $wp_customize ) {
 		'label'   => esc_html__( 'Show Excerpt Text', 'noah' ),
 		'section'           => 'noah_portfolio_options',
 		'type'              => 'checkbox',
-	) );
-
-	$wp_customize->add_setting( 'noah_portfolio_items_primary_meta', array(
-		'default' => 'none',
-		'sanitize_callback' => 'noah_sanitize_items_primary_meta',
-	) );
-
-	$wp_customize->add_control( 'noah_portfolio_items_primary_meta', array(
-		'type'    => 'select',
-		'label'   => esc_html__( 'Main Project Meta', 'noah' ),
-		'desc'    => esc_html__( 'Choose what is the main information you wish to display about a project, besides the title.', 'noah' ),
-		'choices' => array(
-			'none'     => esc_html__( 'None', 'noah' ),
-			'category' => esc_html__( 'Category', 'noah' ),
-			'author'   => esc_html__( 'Author', 'noah' ),
-			'date'     => esc_html__( 'Date', 'noah' ),
-			'tags'     => esc_html__( 'Tags', 'noah' ),
-			'comments' => esc_html__( 'Comments', 'noah' ),
-		),
-		'section' => 'noah_portfolio_options',
+		'active_callback' => 'noah_portfolio_items_excerpt_visibility_control_show',
 	) );
 
 	$wp_customize->add_setting( 'noah_portfolio_items_secondary_meta', array(
 		'default' => 'none',
 		'sanitize_callback' => 'noah_sanitize_items_secondary_meta',
 	) );
-
 	$wp_customize->add_control( 'noah_portfolio_items_secondary_meta', array(
 		'type'    => 'select',
 		'label'   => esc_html__( 'Secondary Project Meta', 'noah' ),
 		'desc'    => esc_html__( 'Choose what is the secondary information you wish to display about a project.', 'noah' ),
 		'choices' => array(
 			'none'     => esc_html__( 'None', 'noah' ),
-			'category' => esc_html__( 'Category', 'noah' ),
+			'category' => esc_html__( 'Categories', 'noah' ),
 			'author'   => esc_html__( 'Author', 'noah' ),
 			'date'     => esc_html__( 'Date', 'noah' ),
 			'tags'     => esc_html__( 'Tags', 'noah' ),
 			'comments' => esc_html__( 'Comments', 'noah' ),
 		),
 		'section' => 'noah_portfolio_options',
+		'active_callback' => 'noah_portfolio_items_secondary_meta_control_show',
 	) );
 
-	/*
+	/* ========================
 	 * Add custom Blog settings
-	 */
+	 * ======================== */
+
 	$wp_customize->add_section( 'noah_blog_options', array(
 		'title'             => esc_html__( 'Blog Grid', 'noah' ),
 		'description' => esc_html__( 'Here you can control the blog grid\'s layout and features.', 'noah' ),
@@ -266,7 +265,6 @@ function noah_customize_register( $wp_customize ) {
 		'default' => 'masonry',
 		'sanitize_callback' => 'noah_sanitize_grid_layout',
 	) );
-
 	$wp_customize->add_control( 'noah_blog_grid_layout', array(
 		'type'    => 'radio',
 		'label'   => esc_html__( 'Blog Grid Layout', 'noah' ),
@@ -283,7 +281,6 @@ function noah_customize_register( $wp_customize ) {
 		'default' => 'below',
 		'sanitize_callback' => 'noah_sanitize_items_title_position',
 	) );
-
 	$wp_customize->add_control( 'noah_blog_items_title_position', array(
 		'type'    => 'radio',
 		'label'   => esc_html__( 'Post Details Position', 'noah' ),
@@ -300,10 +297,9 @@ function noah_customize_register( $wp_customize ) {
 		'default' => 'left',
 		'sanitize_callback' => 'noah_sanitize_items_title_alignment_nearby',
 	) );
-
 	$wp_customize->add_control( 'noah_blog_items_title_alignment_nearby', array(
 		'type'    => 'select',
-		'label'   => esc_html__( 'Post Details Alignment (Above/Below)', 'noah' ),
+		'label'   => esc_html__( 'Post Details Alignment', 'noah' ),
 		'desc'    => esc_html__( 'Adjust the alignment of your title.', 'noah' ),
 		'choices' => array(
 			'left'   => esc_html__( '← Left', 'noah' ),
@@ -311,16 +307,16 @@ function noah_customize_register( $wp_customize ) {
 			'right'  => esc_html__( '→ Right', 'noah' ),
 		),
 		'section' => 'noah_blog_options',
+		'active_callback' => 'noah_blog_items_title_alignment_nearby_control_show',
 	) );
 
 	$wp_customize->add_setting( 'noah_blog_items_title_alignment_overlay', array(
 		'default' => 'middle-center',
 		'sanitize_callback' => 'noah_sanitize_items_title_alignment_overlay',
 	) );
-
 	$wp_customize->add_control( 'noah_blog_items_title_alignment_overlay', array(
 		'type'    => 'select',
-		'label'   => esc_html__( 'Post Details Alignment (Overlay)', 'noah' ),
+		'label'   => esc_html__( 'Post Details Alignment', 'noah' ),
 		'desc'    => esc_html__( 'Adjust the alignment of your hover title.', 'noah' ),
 		'choices' => array(
 			'top-left'   => esc_html__( '↑ Top     ← Left', 'noah' ),
@@ -336,6 +332,27 @@ function noah_customize_register( $wp_customize ) {
 			'bottom-right'  => esc_html__( '↓ Bottom     → Right', 'noah' ),
 		),
 		'section' => 'noah_blog_options',
+		'active_callback' => 'noah_blog_items_title_alignment_overlay_control_show',
+	) );
+
+	$wp_customize->add_setting( 'noah_blog_items_primary_meta', array(
+		'default' => 'none',
+		'sanitize_callback' => 'noah_sanitize_items_primary_meta',
+	) );
+	$wp_customize->add_control( 'noah_blog_items_primary_meta', array(
+		'type'    => 'select',
+		'label'   => esc_html__( 'Main Post Meta', 'noah' ),
+		'desc'    => esc_html__( 'Choose what is the main information you wish to display about a post, besides the title.', 'noah' ),
+		'choices' => array(
+			'none'     => esc_html__( 'None', 'noah' ),
+			'category' => esc_html__( 'Categories', 'noah' ),
+			'author'   => esc_html__( 'Author', 'noah' ),
+			'date'     => esc_html__( 'Date', 'noah' ),
+			'tags'     => esc_html__( 'Tags', 'noah' ),
+			'comments' => esc_html__( 'Comments', 'noah' ),
+		),
+		'section' => 'noah_blog_options',
+		'active_callback' => 'noah_blog_items_primary_meta_control_show',
 	) );
 
 	$wp_customize->add_setting( 'noah_blog_items_title_visibility', array(
@@ -356,49 +373,203 @@ function noah_customize_register( $wp_customize ) {
 		'label'   => esc_html__( 'Show Excerpt Text', 'noah' ),
 		'section'           => 'noah_blog_options',
 		'type'              => 'checkbox',
-	) );
-
-	$wp_customize->add_setting( 'noah_blog_items_primary_meta', array(
-		'default' => 'none',
-		'sanitize_callback' => 'noah_sanitize_items_primary_meta',
-	) );
-
-	$wp_customize->add_control( 'noah_blog_items_primary_meta', array(
-		'type'    => 'select',
-		'label'   => esc_html__( 'Main Post Meta', 'noah' ),
-		'desc'    => esc_html__( 'Choose what is the main information you wish to display about a post, besides the title.', 'noah' ),
-		'choices' => array(
-			'none'     => esc_html__( 'None', 'noah' ),
-			'category' => esc_html__( 'Category', 'noah' ),
-			'author'   => esc_html__( 'Author', 'noah' ),
-			'date'     => esc_html__( 'Date', 'noah' ),
-			'tags'     => esc_html__( 'Tags', 'noah' ),
-			'comments' => esc_html__( 'Comments', 'noah' ),
-		),
-		'section' => 'noah_blog_options',
+		'active_callback' => 'noah_blog_items_excerpt_visibility_control_show',
 	) );
 
 	$wp_customize->add_setting( 'noah_blog_items_secondary_meta', array(
 		'default' => 'none',
 		'sanitize_callback' => 'noah_sanitize_items_secondary_meta',
 	) );
-
 	$wp_customize->add_control( 'noah_blog_items_secondary_meta', array(
 		'type'    => 'select',
 		'label'   => esc_html__( 'Secondary Post Meta', 'noah' ),
 		'desc'    => esc_html__( 'Choose what is the secondary information you wish to display about a post.', 'noah' ),
 		'choices' => array(
 			'none'     => esc_html__( 'None', 'noah' ),
-			'category' => esc_html__( 'Category', 'noah' ),
+			'category' => esc_html__( 'Categories', 'noah' ),
 			'author'   => esc_html__( 'Author', 'noah' ),
 			'date'     => esc_html__( 'Date', 'noah' ),
 			'tags'     => esc_html__( 'Tags', 'noah' ),
 			'comments' => esc_html__( 'Comments', 'noah' ),
 		),
 		'section' => 'noah_blog_options',
+		'active_callback' => 'noah_blog_items_secondary_meta_control_show',
 	) );
 }
 add_action( 'customize_register', 'noah_customize_register', 11, 1 );
+
+/* ====================================
+ * PORTFOLIO GRID CONTROLS CONDITIONALS
+ * ==================================== */
+
+/**
+ * Decides when to show the project nearby alignment control.
+ *
+ * @return bool
+ */
+function noah_portfolio_items_title_alignment_nearby_control_show() {
+	$position = get_theme_mod( 'noah_portfolio_items_title_position' );
+	// We hide it when displaying as overlay
+	if ( 'overlay' == $position ) {
+		return false;
+	}
+
+	return true;
+}
+
+/**
+ * Decides when to show the project overlay alignment control.
+ *
+ * @return bool
+ */
+function noah_portfolio_items_title_alignment_overlay_control_show() {
+	$position = get_theme_mod( 'noah_portfolio_items_title_position' );
+	// We hide it when not displaying as overlay
+	if ( 'overlay' != $position ) {
+		return false;
+	}
+
+	return true;
+}
+
+/**
+ * Decides when to show the portfolio show excerpt control.
+ *
+ * @return bool
+ */
+function noah_portfolio_items_excerpt_visibility_control_show() {
+	$layout = get_theme_mod( 'noah_portfolio_grid_layout' );
+	$position = get_theme_mod( 'noah_portfolio_items_title_position' );
+	// We hide it if the layout is packed or the position is overlay
+	if ( 'packed' == $layout || 'overlay' == $position ) {
+		return false;
+	}
+
+	return true;
+}
+
+/**
+ * Decides when to show the portfolio primary meta control.
+ *
+ * @return bool
+ */
+function noah_portfolio_items_primary_meta_control_show() {
+	$layout = get_theme_mod( 'noah_portfolio_grid_layout' );
+	$position = get_theme_mod( 'noah_portfolio_items_title_position' );
+
+	// We hide the primary meta when the layout is packed and we display above or below
+	if ( 'packed' == $layout && 'overlay' != $position ) {
+		return false;
+	}
+
+	return true;
+}
+
+/**
+ * Decides when to show the portfolio secondary meta control.
+ *
+ * @return bool
+ */
+function noah_portfolio_items_secondary_meta_control_show() {
+	$layout = get_theme_mod( 'noah_portfolio_grid_layout' );
+	$position = get_theme_mod( 'noah_portfolio_items_title_position' );
+
+	// We hide the primary meta when the layout is packed and we display above or below
+	if ( 'packed' == $layout && 'overlay' != $position ) {
+		return false;
+	}
+
+	return true;
+}
+
+/* ===============================
+ * BLOG GRID CONTROLS CONDITIONALS
+ * =============================== */
+
+/**
+ * Decides when to show the blog nearby alignment control.
+ *
+ * @return bool
+ */
+function noah_blog_items_title_alignment_nearby_control_show() {
+	$position = get_theme_mod( 'noah_blog_items_title_position' );
+	// We hide it when displaying as overlay
+	if ( 'overlay' == $position ) {
+		return false;
+	}
+
+	return true;
+}
+
+/**
+ * Decides when to show the blog overlay alignment control.
+ *
+ * @return bool
+ */
+function noah_blog_items_title_alignment_overlay_control_show() {
+	$position = get_theme_mod( 'noah_blog_items_title_position' );
+	// We hide it when not displaying as overlay
+	if ( 'overlay' != $position ) {
+		return false;
+	}
+
+	return true;
+}
+
+/**
+ * Decides when to show the blog show excerpt control.
+ *
+ * @return bool
+ */
+function noah_blog_items_excerpt_visibility_control_show() {
+	$layout = get_theme_mod( 'noah_blog_grid_layout' );
+	$position = get_theme_mod( 'noah_blog_items_title_position' );
+
+	// We hide it if the layout is packed or the position is overlay
+	if ( 'packed' == $layout || 'overlay' == $position ) {
+		return false;
+	}
+
+	return true;
+}
+
+/**
+ * Decides when to show the blog primary meta control.
+ *
+ * @return bool
+ */
+function noah_blog_items_primary_meta_control_show() {
+	$layout = get_theme_mod( 'noah_blog_grid_layout' );
+	$position = get_theme_mod( 'noah_blog_items_title_position' );
+
+	// We hide the primary meta when the layout is packed and we display above or below
+	if ( 'packed' == $layout && 'overlay' != $position ) {
+		return false;
+	}
+
+	return true;
+}
+
+/**
+ * Decides when to show the blog secondary meta control.
+ *
+ * @return bool
+ */
+function noah_blog_items_secondary_meta_control_show() {
+	$layout = get_theme_mod( 'noah_blog_grid_layout' );
+	$position = get_theme_mod( 'noah_blog_items_title_position' );
+
+	// We hide the primary meta when the layout is packed and we display above or below
+	if ( 'packed' == $layout && 'overlay' != $position ) {
+		return false;
+	}
+
+	return true;
+}
+
+/* =========================
+ * SANITIZATION FOR SETTINGS
+ * ========================= */
 
 /**
  * Sanitize the header position options.
@@ -590,6 +761,10 @@ function noah_sanitize_checkbox( $input ) {
 		return false;
 	}
 }
+
+/* ============================
+ * Customizer rendering helpers
+ * ============================ */
 
 /**
  * Render the site title for the selective refresh partial.

@@ -31,19 +31,19 @@ function noah_jetpack_setup() {
 	}
 
 	add_theme_support( 'jetpack-content-options', array(
-		'blog-display'       => 'excerpt', // the default setting of the theme: 'content', 'excerpt' or array( 'content', 'excerpt' ) for themes mixing both display.
+		'blog-display'       => false, // we only show the excerpt, not full post content on archives
 		'author-bio'         => true, // display or not the author bio: true or false.
 		'masonry'            => '.c-gallery--masonry', // a CSS selector matching the elements that triggers a masonry refresh if the theme is using a masonry layout.
 		'post-details'       => array(
 			'stylesheet'      => 'noah-style', // name of the theme's stylesheet.
 			'date'            => '.posted-on', // a CSS selector matching the elements that display the post date.
-			'categories'      => '.cat-links', // a CSS selector matching the elements that display the post categories.
+			'categories'      => '.cats', // a CSS selector matching the elements that display the post categories.
 			'tags'            => '.tags', // a CSS selector matching the elements that display the post tags.
 			'author'          => '.byline', // a CSS selector matching the elements that display the post author.
 		),
 		'featured-images'    => array(
 			'archive'         => true, // enable or not the featured image check for archive pages: true or false.
-			'post'            => true, // enable or not the featured image check for single posts: true or false.
+			'post'            => false, // we do not display the featured image on single posts
 			'page'            => true, // enable or not the featured image check for single pages: true or false.
 		),
 	) );

@@ -166,7 +166,7 @@ function noah_get_blog_class( $class = '', $location = '' ) {
 
 	$columns_class = 'o-grid--' . $columns . 'col-@desk o-grid--' . $columns_at_lap . 'col-@lap o-grid--' . $columns_at_pad . 'col-@pad';
 	// title position
-	$title_position       = get_theme_mod( 'noah_blog_items_title_position', 'below' );
+	$title_position = get_theme_mod( 'noah_blog_items_title_position', 'below' );
 	$title_position_class = 'c-gallery--title-' . $title_position;
 
 	if ( $title_position == 'overlay' ) {
