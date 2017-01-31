@@ -3246,6 +3246,10 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
   z-index: 7000;
   width: 100%; }
 
+/* Scroll down arrow */
+.site-header .menu-scroll-down {
+  display: none; }
+
 .has-hero:not(.is-scrolled) .site-header, .has-hero:not(.is-scrolled)
 .c-navbar__label, .has-hero:not(.is-scrolled)
 .c-navbar__zone--middle {

@@ -14,7 +14,6 @@
  *
  * @return array
  */
-
 function noah_body_classes( $classes ) {
 
 	$classes[] = 'body';
@@ -167,7 +166,7 @@ function noah_get_blog_class( $class = '', $location = '' ) {
 
 	$columns_class = 'o-grid--' . $columns . 'col-@desk o-grid--' . $columns_at_lap . 'col-@lap o-grid--' . $columns_at_pad . 'col-@pad';
 	// title position
-	$title_position       = pixelgrade_option( 'blog_items_title_position', 'below' );
+	$title_position       = get_theme_mod( 'noah_blog_items_title_position', 'below' );
 	$title_position_class = 'c-gallery--title-' . $title_position;
 
 	if ( $title_position == 'overlay' ) {
@@ -216,11 +215,11 @@ function noah_body_attributes( $attributes ) {
 		$attributes['data-ajaxloading'] = '';
 	}
 
-	if ( pixelgrade_option( 'main_color' ) ) {
-		$attributes['data-color'] = pixelgrade_option( 'main_color' );
-	}
+//	if ( pixelgrade_option( 'main_color' ) ) {
+//		$attributes['data-color'] = pixelgrade_option( 'main_color' );
+//	}
 
-	$attributes['data-parallax'] = pixelgrade_option( 'parallax_amount' );
+//	$attributes['data-parallax'] = pixelgrade_option( 'parallax_amount' );
 
 	//we use this so we can generate links with post id
 	//right now we use it to change the Edit Post link in the admin bar

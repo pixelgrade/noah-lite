@@ -42,13 +42,3 @@ function noah_dequeue_fonts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'noah_dequeue_fonts' );
-
-/**
- * Disable the widont filter on WP.com to avoid stray &nbsps
- *
- * @link https://vip.wordpress.com/functions/widont/
- */
-function noah_wido() {
-	remove_filter( 'the_title', 'widont' );
-}
-add_action( 'init', 'noah_wido' );

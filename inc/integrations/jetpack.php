@@ -96,7 +96,7 @@ class NoahGalleryCustomSlideshow {
 	public $in_gallery = false;
 
 	function __construct() {
-		add_action( 'init', array( $this, 'init' ) );
+		add_action( 'after_setup_theme', array( $this, 'init' ) );
 	}
 
 	function init() {

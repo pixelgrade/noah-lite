@@ -6,7 +6,7 @@
  *
  * @see      https://pixelgrade.com
  * @author   Pixelgrade
- * @package  Components/Gallery
+ * @package  Noah
  * @version  1.1.2
  */
 

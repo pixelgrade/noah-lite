@@ -10,11 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-/**
- * Load our global Pixelgrade template tags
- */
-require_once 'pixelgrade_template-tags.php';
-
 /*==========================
 	LOAD THE COMPONENTS
 ==========================*/
@@ -35,7 +30,7 @@ require_once 'pixelgrade_template-tags.php';
 function Pixelgrade_Gallery_Settings() {
 	//only load if we have to
 	if ( ! class_exists( 'Pixelgrade_Gallery_Settings') ) {
-		pxg_load_component_file( 'gallery', 'class-gallery-settings' );
+		require_once( 'gallery/class-gallery-settings.php' );
 	}
 	return Pixelgrade_Gallery_Settings::instance();
 }
