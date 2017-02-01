@@ -25,11 +25,13 @@ function noah_jetpack_setup() {
 	// Add support for the Jetpack Portfolio Custom Post Type
 	add_theme_support( 'jetpack-portfolio' );
 
+	// We don't want the default carousel behaviour - this is why we are disabling it for projects
 	if ( 'jetpack-portfolio' === get_post_type() ) {
 		add_filter( 'jp_carousel_force_enable' , 'noah_force_enable_jetpack_carousel' );
 		add_filter( 'jp_carousel_maybe_disable', 'noah_disable_jetpack_carousel' );
 	}
 
+	// Add support for content options, where it's appropriate
 	add_theme_support( 'jetpack-content-options', array(
 		'blog-display'       => false, // we only show the excerpt, not full post content on archives
 		'author-bio'         => true, // display or not the author bio: true or false.

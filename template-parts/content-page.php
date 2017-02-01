@@ -11,12 +11,9 @@ $location = pixelgrade_get_location( 'page' );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<?php if ( apply_filters( 'pixelgrade_display_entry_header', true, $location ) ) : //allow others to prevent this from displaying ?>
 	<header class="c-page-header  entry-header">
 		<?php the_title( '<h1 class="c-page-header__title  entry-title"><span>', '</span></h1>' ); ?>
 	</header><!-- .entry-header -->
-	<?php endif; ?>
 
 	<div class="entry-content  u-content-width  u-content-bottom-spacing">
 
@@ -44,5 +41,4 @@ $location = pixelgrade_get_location( 'page' );
 		<?php endif; ?>
 
 	</div><!-- .entry-content -->
-
 </article><!-- #post-## -->

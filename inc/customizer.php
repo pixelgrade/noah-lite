@@ -736,19 +736,6 @@ function noah_sanitize_footer_layout( $input ) {
 }
 
 /**
- * Sanitize the colorscheme.
- */
-function noah_sanitize_colorscheme( $input ) {
-	$valid = array( 'light', 'dark', 'custom' );
-
-	if ( in_array( $input, $valid ) ) {
-		return $input;
-	}
-
-	return 'light';
-}
-
-/**
  * Sanitize the checkbox.
  *
  * @param boolean $input.
@@ -769,7 +756,6 @@ function noah_sanitize_checkbox( $input ) {
 /**
  * Render the site title for the selective refresh partial.
  *
- * @since Twenty Seventeen 1.0
  * @see noah_customize_register()
  *
  * @return void
@@ -781,8 +767,7 @@ function noah_customize_partial_blogname() {
 /**
  * Render the site tagline for the selective refresh partial.
  *
- * @since Noah 1.1.1
- * @see gema_customize_register()
+ * @see noah_customize_register()
  *
  * @return void
  */

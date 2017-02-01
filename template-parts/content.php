@@ -10,7 +10,7 @@
 $location = pixelgrade_get_location( '' );
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class() ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class() ?>>
 	<div class="c-card">
 		<div class="c-card__link">
 			<?php if ( has_post_thumbnail( get_the_ID() ) ) { ?>
@@ -32,8 +32,12 @@ $location = pixelgrade_get_location( '' );
 					'comments' => false,
 				);
 
-				if ( ( noah_blog_items_primary_meta_control_show() && 'category' == get_theme_mod( 'noah_blog_items_primary_meta', 'category' ) )
-				     || ( noah_blog_items_secondary_meta_control_show() && 'category' == get_theme_mod( 'noah_blog_items_secondary_meta', 'date' ) ) ) {
+				// And get the options
+				$blog_items_primary_meta = get_theme_mod( 'noah_blog_items_primary_meta', 'category' );
+				$blog_items_secondary_meta = get_theme_mod( 'noah_blog_items_secondary_meta', 'date' );
+
+				if ( ( noah_blog_items_primary_meta_control_show() && 'category' == $blog_items_primary_meta )
+				     || ( noah_blog_items_secondary_meta_control_show() && 'category' == $blog_items_secondary_meta ) ) {
 					$categories = get_the_terms( get_the_ID(), 'category' );
 					$category   = "";
 					if ( ! is_wp_error( $categories ) && ! empty( $categories ) ) {
@@ -46,8 +50,8 @@ $location = pixelgrade_get_location( '' );
 					$meta['category'] = $category;
 				}
 
-				if ( ( noah_blog_items_primary_meta_control_show() && 'tags' == get_theme_mod( 'noah_blog_items_primary_meta', 'category' ) )
-				     || ( noah_blog_items_secondary_meta_control_show() && 'tags' == get_theme_mod( 'noah_blog_items_secondary_meta', 'date' ) ) ) {
+				if ( ( noah_blog_items_primary_meta_control_show() && 'tags' == $blog_items_primary_meta )
+				     || ( noah_blog_items_secondary_meta_control_show() && 'tags' == $blog_items_secondary_meta ) ) {
 					$tags = get_the_terms( get_the_ID(), 'tag' );
 					$tag  = "";
 					if ( ! is_wp_error( $tags ) && ! empty( $tags ) ) {
@@ -78,8 +82,8 @@ $location = pixelgrade_get_location( '' );
 				}
 
 				// Display the post's details
-				if ( noah_blog_items_primary_meta_control_show() && get_theme_mod( 'noah_blog_items_primary_meta', 'category' ) !== 'none' && ! empty( $meta[ get_theme_mod( 'noah_blog_items_primary_meta' ) ] ) ) {
-					echo '<div class="c-card__meta h7">' . $meta[ get_theme_mod( 'noah_blog_items_primary_meta' ) ] . "</div>";
+				if ( noah_blog_items_primary_meta_control_show() && $blog_items_primary_meta !== 'none' && ! empty( $meta[ $blog_items_primary_meta ] ) ) {
+					echo '<div class="c-card__meta h7">' . $meta[ $blog_items_primary_meta ] . "</div>";
 				}
 
 				if ( get_theme_mod( 'noah_blog_items_title_visibility', true ) ) { ?>
@@ -92,8 +96,8 @@ $location = pixelgrade_get_location( '' );
 					</div>
 				<?php }
 
-				if ( noah_blog_items_secondary_meta_control_show() && get_theme_mod( 'noah_blog_items_secondary_meta', 'date' ) !== 'none' && ! empty( $meta[ get_theme_mod( 'noah_blog_items_secondary_meta' ) ] ) ) {
-					echo '<div class="c-card__footer h7">' . $meta[ get_theme_mod( 'noah_blog_items_secondary_meta' ) ] . "</div>";
+				if ( noah_blog_items_secondary_meta_control_show() && $blog_items_secondary_meta !== 'none' && ! empty( $meta[ $blog_items_secondary_meta ] ) ) {
+					echo '<div class="c-card__footer h7">' . $meta[ $blog_items_secondary_meta ] . "</div>";
 				}
 
 				noah_entry_footer( get_the_ID() );
@@ -101,4 +105,4 @@ $location = pixelgrade_get_location( '' );
 		</div><!-- .c-card__link -->
 		<span class="c-card__badge u-color-accent"></span>
 	</div><!-- .c-card -->
-</div><!-- #post-XX -->
+</article><!-- #post-XX -->

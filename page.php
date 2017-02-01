@@ -22,19 +22,19 @@ get_header(); ?>
 		<div class="o-wrapper  u-container-width">
 			<main id="main" class="o-wrapper  site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post();
+			<?php
+			while ( have_posts() ) : the_post();
 				get_template_part( 'template-parts/content', 'page' );
-			?>
+
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) : ?>
 
 				<div class="u-content-width">
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					} ?>
-				</div>
+					<?php comments_template(); ?>
+				</div><!-- .u-content-width -->
 
-			<?php endwhile; // End of the loop. ?>
+				<?php endif;
+			endwhile; // End of the loop. ?>
 
 			</main><!-- #main -->
 		</div>

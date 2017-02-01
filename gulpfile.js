@@ -191,7 +191,8 @@ gulp.task('build', 'Remove unneeded files and folders from the build folder', ['
         '.csscomb',
         '.codeclimate.yml',
         'tests',
-        'circle.yml'
+        'circle.yml',
+        'inc/integrations' // since we are not using typeline with Customify there is no need to keep the json config
     ];
 
     files_to_remove.forEach(function (e, k) {
