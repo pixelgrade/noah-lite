@@ -82,7 +82,7 @@ function noah_get_portfolio_class( $class = '', $location = '' ) {
 	}
 
 	// items per row
-	$columns        = 4;
+	$columns        = 3;
 	$columns_at_lap = $columns >= 5 ? $columns - 1 : $columns;
 	$columns_at_pad = $columns_at_lap >= 4 ? $columns_at_lap - 1 : $columns_at_lap;
 
