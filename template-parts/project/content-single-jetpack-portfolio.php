@@ -23,10 +23,6 @@ $location = pixelgrade_get_location( 'single project jetpack' );
 
 					<div class="c-page-header__meta h7">
 
-						<?php if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'sharedaddy' ) ) { ?>
-							<a class="c-meta__share-link" href="#"><?php esc_html_e( 'Share', 'noah' ); ?></a>
-						<?php } ?>
-
 						<?php
 						$the_term_list = get_the_term_list( get_the_ID(), 'jetpack-portfolio-type' );
 						if ( ! empty( $the_term_list ) ) { ?>

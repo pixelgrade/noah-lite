@@ -23,9 +23,7 @@ get_header(); ?>
 
                 // If comments are open or we have at least one comment, load up the comment template.
                 if ( comments_open() || get_comments_number() ) {
-                    ob_start();
                     comments_template();
-                    $comments = ob_get_clean();
                 }
 
             endwhile; // End of the loop. ?>
