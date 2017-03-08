@@ -58,10 +58,10 @@ gulp.task('styles', 'Compiles Sass and uses autoprefixer', ['styles-components']
     }
 
     return gulp.src('assets/scss/*.scss')
-        .pipe(jsonToSass({
-            source: 'inc/integrations/typeline-config.json',
-            output: 'assets/scss/tools/_typeline-config.scss'
-        }))
+        // .pipe(jsonToSass({
+        //     source: 'inc/integrations/typeline-config.json',
+        //     output: 'assets/scss/tools/_typeline-config.scss'
+        // }))
 //        .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
         .pipe(prefix("last 3 versions", "> 1%"))

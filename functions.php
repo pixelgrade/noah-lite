@@ -218,11 +218,6 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Pixelgrade Components.
- */
-require get_template_directory() . '/components/power-up.php';
-
-/**
  * Customization for the used Pixelgrade Components
  */
 require get_template_directory() . '/inc/components.php';

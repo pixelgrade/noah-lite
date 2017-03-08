@@ -19,7 +19,9 @@ $location = pixelgrade_get_location( 'portfolio jetpack' );
 				<div class="c-card__frame">
 				<?php
 				// Output the featured image
-				echo get_the_post_thumbnail( get_the_ID() ); ?>
+				// We don't use get_the_post_thumbnail() because we want to prevent Jetpack Carousel to attach itself to these images
+				$post_thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+				echo noah_get_attachment_image( $post_thumbnail_id, 'post-thumbnail' ); ?>
 				</div><!-- .c-card__frame -->
 			</a>
 			<?php } ?>

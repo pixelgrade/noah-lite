@@ -663,19 +663,6 @@ function noah_mce_before_init( $settings ) {
 }
 add_filter( 'tiny_mce_before_init', 'noah_mce_before_init' );
 
-function noah_ajax_get_content_callback() {
-	if ( isset( $_POST['page_url'] ) ) {
-		$id      = absint( url_to_postid( $_POST['page_url'] ) );
-		$page    = get_post( $id );
-		$title   = '<div class="c-page-header__title h1 u-align-center">' . $page->post_title . '</div>';
-		$content = $title . apply_filters( 'the_content', $page->post_content );
-		echo $content;
-	}
-	die();
-}
-add_action( 'wp_ajax_nopriv_noah_ajax_get_content', 'noah_ajax_get_content_callback' );
-add_action( 'wp_ajax_noah_ajax_get_content', 'noah_ajax_get_content_callback' );
-
 /**
  * Generate the Arca Majora 3 font URL
  *
@@ -808,3 +795,69 @@ function noah_menu_item_color($atts, $item, $args, $depth) {
 	return $atts;
 }
 add_filter('nav_menu_link_attributes', 'noah_menu_item_color', 10, 4);
+
+/**
+ * Get an HTML img element representing an image attachment
+ *
+ * While `$size` will accept an array, it is better to register a size with
+ * add_image_size() so that a cropped version is generated. It's much more
+ * efficient than having to find the closest-sized image and then having the
+ * browser scale down the image.
+ *
+ * @param int          $attachment_id Image attachment ID.
+ * @param string|array $size          Optional. Image size. Accepts any valid image size, or an array of width
+ *                                    and height values in pixels (in that order). Default 'thumbnail'.
+ * @param bool         $icon          Optional. Whether the image should be treated as an icon. Default false.
+ * @param string|array $attr          Optional. Attributes for the image markup. Default empty.
+ * @return string HTML img element or empty string on failure.
+ */
+function noah_get_attachment_image($attachment_id, $size = 'thumbnail', $icon = false, $attr = '') {
+	$html = '';
+	$image = wp_get_attachment_image_src($attachment_id, $size, $icon);
+	if ( $image ) {
+		list($src, $width, $height) = $image;
+		$hwstring = image_hwstring($width, $height);
+		$size_class = $size;
+		if ( is_array( $size_class ) ) {
+			$size_class = join( 'x', $size_class );
+		}
+		$attachment = get_post($attachment_id);
+		$default_attr = array(
+			'src'	=> $src,
+			'class'	=> "attachment-$size_class size-$size_class",
+			'alt'	=> trim( strip_tags( get_post_meta( $attachment_id, '_wp_attachment_image_alt', true ) ) ),
+		);
+
+		$attr = wp_parse_args( $attr, $default_attr );
+
+		// Generate 'srcset' and 'sizes' if not already present.
+		if ( empty( $attr['srcset'] ) ) {
+			$image_meta = wp_get_attachment_metadata( $attachment_id );
+
+			if ( is_array( $image_meta ) ) {
+				$size_array = array( absint( $width ), absint( $height ) );
+				$srcset = wp_calculate_image_srcset( $size_array, $src, $image_meta, $attachment_id );
+				$sizes = wp_calculate_image_sizes( $size_array, $src, $image_meta, $attachment_id );
+
+				if ( $srcset && ( $sizes || ! empty( $attr['sizes'] ) ) ) {
+					$attr['srcset'] = $srcset;
+
+					if ( empty( $attr['sizes'] ) ) {
+						$attr['sizes'] = $sizes;
+					}
+				}
+			}
+		}
+
+		// This is a modified version of the core wp_get_attachment_image()
+		// The difference we've skipped the 'wp_get_attachment_image_attributes' filter in order to prevent Jetpack Carousel from messing with it
+		$attr = array_map( 'esc_attr', $attr );
+		$html = rtrim("<img $hwstring");
+		foreach ( $attr as $name => $value ) {
+			$html .= " $name=" . '"' . $value . '"';
+		}
+		$html .= ' />';
+	}
+
+	return $html;
+}

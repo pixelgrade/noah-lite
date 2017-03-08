@@ -79,28 +79,6 @@ function handle_new_content( $container ) {
 
 function event_handlers_once() {
 	var $body = $( 'body' );
-
-	$body.on( 'click', '.c-meta__share-link', function ( e ) {
-		e.preventDefault();
-
-		var shareContent = $( '.sharedaddy' );
-
-		if ( shareContent.length ) {
-			Overlay.setContent( shareContent );
-			shareContent.show();
-			Overlay.show();
-		}
-	} );
-
-	$body.on( 'click', '.menu-item.overlay a', function ( e ) {
-		stopEvent( e );
-		var url = $( this ).attr( 'href' );
-		Overlay.load( url );
-	} );
-
-	$body.on( 'click', '.gallery-item a img', function ( e ) {
-		stopEvent( e );
-	} );
 }
 
 function event_handlers( $container ) {
@@ -116,11 +94,7 @@ function event_handlers( $container ) {
 		var destination = $( this ).val();
 
 		if ( typeof destination !== "undefined" && destination !== "#" ) {
-			if ( typeof Barba !== "undefined" && Barba.hasOwnProperty( "Pjax" ) ) {
-				Barba.Pjax.goTo( destination );
-			} else {
-				window.location.href = destination;
-			}
+            window.location.href = destination;
 		}
 	} );
 }
@@ -130,37 +104,6 @@ Noah = new pixelgradeTheme();
 $( document ).ready( function () {
 
 	var $body = $( 'body' );
-
-	if ( ! $body.is( '.customizer-preview' ) && typeof $body.data( 'ajaxloading' ) !== "undefined" ) {
-
-		Noah.Ajax = new AjaxLoading();
-
-		Noah.Ajax.ev.on( 'beforeOut', function ( ev, container ) {
-			Noah.Navbar.close();
-			show_page_mask();
-		} );
-
-		Noah.Ajax.ev.on( 'afterOut', function ( ev, container ) {
-			$( 'html' ).addClass( 'no-transitions' );
-		} );
-
-		Noah.Ajax.ev.on( 'afterIn', function ( ev, container ) {
-
-			var $container = $( container );
-
-			$container.css( 'top', 100 );
-
-			reload_js( 'related-posts.js' );
-
-			setTimeout( function () {
-				$( 'html' ).removeClass( 'no-transitions' );
-				$container.css( 'top', '' );
-				handle_new_content( $container );
-				hide_page_mask();
-			} );
-
-		} );
-	}
 
 	Noah.Hero = new Hero();
 	Noah.Navbar = new Navbar();
