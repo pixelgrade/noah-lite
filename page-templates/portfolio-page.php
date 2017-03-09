@@ -81,7 +81,7 @@ get_header(); ?>
                             <?php the_content();
 
                             wp_link_pages( array(
-                                'before' => '<div class="c-article__page-links  page-links">' . esc_html__( 'Pages:', 'noah' ),
+                                'before' => '<div class="c-article__page-links  page-links">' . esc_html__( 'Pages:', 'noah-lite' ),
                                 'after'  => '</div>',
                             ) ); ?>
                         </div>
@@ -111,7 +111,7 @@ get_header(); ?>
 	                        <div class="u-content-background">
 		                        <section class="c-archive-loop  u-full-width  u-portfolio_sides_spacing  u-content-bottom-spacing">
 			                        <div class="o-wrapper u-portfolio_grid_width">
-				                        <div <?php noah_portfolio_class( '', $location ); ?>>
+				                        <div <?php noahlite_portfolio_class( '', $location ); ?>>
 
 					                        <?php while ( $projects->have_posts() ) : $projects->the_post();
 						                        get_template_part( 'template-parts/project/content', 'jetpack-portfolio' );
@@ -122,7 +122,7 @@ get_header(); ?>
 		                        </section>
 	                        </div>
 
-                            <?php noah_the_older_projects_button( $projects ); ?>
+                            <?php noahlite_the_older_projects_button( $projects ); ?>
 
                         </div>
 

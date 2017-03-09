@@ -18,9 +18,9 @@ $location = pixelgrade_get_location( 'post single' );
 		<?php the_title( '<h1 class="c-page-header__title  entry-title"><span>', '</span></h1>' ); ?>
 
 		<div class="c-page-header__meta h7">
-			<?php noah_posted_on(); ?>
+			<?php noahlite_posted_on(); ?>
 
-			<span class="c-page-header__taxonomy  u-color-accent cats"><?php noah_the_first_category(); ?></span>
+			<span class="c-page-header__taxonomy  u-color-accent cats"><?php noahlite_the_first_category(); ?></span>
 
 		</div><!-- .entry-meta -->
 	</header><!-- .c-page-header -->
@@ -30,7 +30,7 @@ $location = pixelgrade_get_location( 'post single' );
 		<?php the_content();
 
 		wp_link_pages( array(
-			'before' => '<div class="c-article__page-links  page-links">' . esc_html__( 'Pages:', 'noah' ),
+			'before' => '<div class="c-article__page-links  page-links">' . esc_html__( 'Pages:', 'noah-lite' ),
 			'after'  => '</div>',
 		) ); ?>
 
@@ -39,9 +39,9 @@ $location = pixelgrade_get_location( 'post single' );
 	<footer class="entry-footer  u-content-width">
 		<div>
 
-		<?php noah_single_entry_footer(); ?>
+		<?php noahlite_single_entry_footer(); ?>
 
-		<?php noah_the_post_navigation(); ?>
+		<?php noahlite_the_post_navigation(); ?>
 
 		</div>
 	</footer><!-- .entry-footer -->

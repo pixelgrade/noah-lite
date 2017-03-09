@@ -67,7 +67,7 @@ get_header(); ?>
 	                <div class="u-content-background">
 		                <section class="c-archive-loop  u-full-width  u-portfolio_sides_spacing  u-content-bottom-spacing">
 			                <div class="o-wrapper u-portfolio_grid_width">
-				                <div <?php noah_portfolio_class( '', $location ); ?>>
+				                <div <?php noahlite_portfolio_class( '', $location ); ?>>
 
 					                <?php while ( $projects->have_posts() ) : $projects->the_post();
 						                get_template_part( 'template-parts/project/content', 'jetpack-portfolio' );

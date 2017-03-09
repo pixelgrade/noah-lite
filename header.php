@@ -21,11 +21,10 @@
 <?php
 /**
  * The `body_class()` function is required. WordPress core and our theme should add or remove classes through this hook
- * The `pixelgrade_body_attributes()` is of our own making. It does what `body_class()` does, but for attributes
  */?>
-<body <?php body_class(); ?> <?php pixelgrade_body_attributes(); ?>>
+<body <?php body_class(); ?>>
 <div id="barba-wrapper" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'noah' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'noah-lite' ); ?></a>
 	<div id="content" class="site-content barba-container js-header-height-padding-top">
 		<header id="masthead" <?php pixelgrade_header_class(); ?> role="banner">
 			<div class="u-header_sides_spacing">

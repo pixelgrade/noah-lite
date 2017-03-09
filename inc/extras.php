@@ -14,25 +14,17 @@
  *
  * @return array
  */
-function noah_body_classes( $classes ) {
+function noahlite_body_classes( $classes ) {
 
 	$classes[] = 'body';
 	$classes[] = 'u-content-background';
 
-	if ( get_theme_mod( 'noah_header_position', 'static' ) == 'static' ) {
-		$classes[] = 'u-static-header';
-	}
+	$classes[] = 'u-static-header';
 
-	if ( get_theme_mod( 'noah_footer_layout' ) == 'stacked' ) {
-		$classes[] = 'u-footer-layout-stacked';
-	}
-
-	if ( get_theme_mod( 'noah_header_width' ) == 'full' ) {
-		$classes[] = 'u-full-width-header';
-	}
+	$classes[] = 'u-full-width-header';
 
 	if ( is_singular( 'jetpack-portfolio' ) ) {
-		$classes[] = noah_get_single_project_class();
+		$classes[] = noahlite_get_single_project_class();
 	}
 
 	if ( is_customize_preview() ) {
@@ -45,7 +37,7 @@ function noah_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'noah_body_classes', 10, 1 );
+add_filter( 'body_class', 'noahlite_body_classes', 10, 1 );
 
 /**
  * Display the classes for the portfolio wrapper.
@@ -53,9 +45,9 @@ add_filter( 'body_class', 'noah_body_classes', 10, 1 );
  * @param string|array $class Optional. One or more classes to add to the class list.
  * @param string|array $location Optional. The place (template) where the classes are displayed. This is a hint for filters.
  */
-function noah_portfolio_class( $class = '', $location = '' ) {
+function noahlite_portfolio_class( $class = '', $location = '' ) {
 	// Separates classes with a single space, collates classes
-	echo 'class="' . join( ' ', noah_get_portfolio_class( $class, $location ) ) . '"';
+	echo 'class="' . join( ' ', noahlite_get_portfolio_class( $class, $location ) ) . '"';
 }
 
 /**
@@ -66,20 +58,14 @@ function noah_portfolio_class( $class = '', $location = '' ) {
  *
  * @return array Array of classes.
  */
-function noah_get_portfolio_class( $class = '', $location = '' ) {
+function noahlite_get_portfolio_class( $class = '', $location = '' ) {
 
 	$classes = array();
 
 	$classes[] = 'o-grid';
 	$classes[] = 'c-gallery c-gallery--portfolio';
 	// layout
-	$grid_layout       = get_theme_mod( 'noah_portfolio_grid_layout', 'packed' );
-	$grid_layout_class = 'c-gallery--' . $grid_layout;
-	$classes[]         = $grid_layout_class;
-
-	if ( $grid_layout != 'regular' ) {
-		$classes[] = 'js-masonry';
-	}
+	$classes[]  = 'c-gallery--regular';
 
 	// items per row
 	$columns        = 3;
@@ -88,14 +74,8 @@ function noah_get_portfolio_class( $class = '', $location = '' ) {
 
 	$columns_class = 'o-grid--' . $columns . 'col-@desk o-grid--' . $columns_at_lap . 'col-@lap o-grid--' . $columns_at_pad . 'col-@pad';
 	// title position
-	$title_position       = get_theme_mod( 'noah_portfolio_items_title_position', 'below' );
-	$title_position_class = 'c-gallery--title-' . $title_position;
-
-	if ( $title_position == 'overlay' ) {
-		$title_alignment_class = 'c-gallery--title-' . get_theme_mod( 'noah_portfolio_items_title_alignment_overlay', 'middle-center' );
-	} else {
-		$title_alignment_class = 'c-gallery--title-' . get_theme_mod( 'noah_portfolio_items_title_alignment_nearby', 'left' );
-	}
+	$title_position_class = 'c-gallery--title-below';
+	$title_alignment_class = 'c-gallery--title-' . get_theme_mod( 'noahlite_portfolio_items_title_alignment_nearby', 'left' );
 
 	$classes[] = $title_position_class;
 	$classes[] = $title_alignment_class;
@@ -120,7 +100,7 @@ function noah_get_portfolio_class( $class = '', $location = '' ) {
 	 * @param array $class An array of additional classes added to the portfolio wrapper.
 	 * @param string|array $location The place (template) where the classes are displayed.
 	 */
-	$classes = apply_filters( 'noah_portfolio_class', $classes, $class, $location );
+	$classes = apply_filters( 'noahlite_portfolio_class', $classes, $class, $location );
 
 	return array_unique( $classes );
 }
@@ -131,9 +111,9 @@ function noah_get_portfolio_class( $class = '', $location = '' ) {
  * @param string|array $class Optional. One or more classes to add to the class list.
  * @param string|array $location Optional. The place (template) where the classes are displayed. This is a hint for filters.
  */
-function noah_blog_class( $class = '', $location = '' ) {
+function noahlite_blog_class( $class = '', $location = '' ) {
 	// Separates classes with a single space, collates classes
-	echo 'class="' . join( ' ', noah_get_blog_class( $class, $location ) ) . '"';
+	echo 'class="' . join( ' ', noahlite_get_blog_class( $class, $location ) ) . '"';
 }
 
 /**
@@ -144,14 +124,14 @@ function noah_blog_class( $class = '', $location = '' ) {
  *
  * @return array Array of classes.
  */
-function noah_get_blog_class( $class = '', $location = '' ) {
+function noahlite_get_blog_class( $class = '', $location = '' ) {
 
 	$classes = array();
 
 	$classes[] = 'o-grid';
 	$classes[] = 'c-gallery  c-gallery--blog';
 	// layout
-	$grid_layout       = get_theme_mod( 'noah_blog_grid_layout', 'masonry' );
+	$grid_layout       = 'masonry';
 	$grid_layout_class = 'c-gallery--' . $grid_layout;
 	$classes[]         = $grid_layout_class;
 
@@ -166,14 +146,10 @@ function noah_get_blog_class( $class = '', $location = '' ) {
 
 	$columns_class = 'o-grid--' . $columns . 'col-@desk o-grid--' . $columns_at_lap . 'col-@lap o-grid--' . $columns_at_pad . 'col-@pad';
 	// title position
-	$title_position = get_theme_mod( 'noah_blog_items_title_position', 'below' );
+	$title_position = 'below';
 	$title_position_class = 'c-gallery--title-' . $title_position;
+	$title_alignment_class = 'c-gallery--title-left';
 
-	if ( $title_position == 'overlay' ) {
-		$title_alignment_class = 'c-gallery--title-' . get_theme_mod( 'noah_blog_items_title_alignment_overlay', 'middle-center' );
-	} else {
-		$title_alignment_class = 'c-gallery--title-' . get_theme_mod( 'noah_blog_items_title_alignment_nearby', 'left' );
-	}
 
 	$classes[] = $title_position_class;
 	$classes[] = $title_alignment_class;
@@ -198,68 +174,10 @@ function noah_get_blog_class( $class = '', $location = '' ) {
 	 * @param array $class An array of additional classes added to the portfolio wrapper.
 	 * @param string|array $location The place (template) where the classes are displayed.
 	 */
-	$classes = apply_filters( 'noah_blog_class', $classes, $class, $location );
+	$classes = apply_filters( 'noahlite_blog_class', $classes, $class, $location );
 
 	return array_unique( $classes );
 }
-
-/**
- * Add our custom <body> tag data attributes
- *
- * @param array $attributes An array of body attributes.
- *
- * @return array
- */
-function noah_body_attributes( $attributes ) {
-	if ( get_theme_mod( 'noah_use_ajax_loading', false ) ) {
-		$attributes['data-ajaxloading'] = '';
-	}
-
-//	if ( pixelgrade_option( 'main_color' ) ) {
-//		$attributes['data-color'] = pixelgrade_option( 'main_color' );
-//	}
-
-//	$attributes['data-parallax'] = pixelgrade_option( 'parallax_amount' );
-
-	//we use this so we can generate links with post id
-	//right now we use it to change the Edit Post link in the admin bar
-	if ( ( get_theme_mod( 'noah_use_ajax_loading', true ) == 1 ) ) {
-		global $wp_the_query;
-		$current_object = $wp_the_query->get_queried_object();
-
-		if ( ! empty( $current_object->post_type )
-		     && ( $post_type_object = get_post_type_object( $current_object->post_type ) )
-		     && current_user_can( 'edit_post', $current_object->ID )
-		     && $post_type_object->show_ui && $post_type_object->show_in_admin_bar
-		) {
-
-			$attributes['data-curpostid'] = $current_object->ID;
-			if ( isset( $post_type_object->labels ) && isset( $post_type_object->labels->edit_item ) ) {
-				$attributes['data-curpostedit'] = $post_type_object->labels->edit_item;
-			}
-		} elseif ( ! empty( $current_object->taxonomy )
-		           && ( $tax = get_taxonomy( $current_object->taxonomy ) )
-		           && current_user_can( $tax->cap->edit_terms )
-		           && $tax->show_ui
-		) {
-			$attributes['data-curpostid']   = $current_object->term_id;
-			$attributes['data-curtaxonomy'] = $current_object->taxonomy;
-
-			if ( isset( $tax->labels ) && isset( $tax->labels->edit_item ) ) {
-				$attributes['data-curpostedit'] = $tax->labels->edit_item;
-			}
-		} elseif ( is_page_template( 'page-templates/portfolio-archive.php' ) ) {
-			$post_type_object             = get_post_type_object( 'page' );
-			$attributes['data-curpostid'] = $current_object->ID;
-			if ( isset( $post_type_object->labels ) && isset( $post_type_object->labels->edit_item ) ) {
-				$attributes['data-curpostedit'] = $post_type_object->labels->edit_item;
-			}
-		}
-	}
-
-	return $attributes;
-}
-add_filter( 'pixelgrade_body_attributes', 'noah_body_attributes' );
 
 /**
  * Add custom classes for individual posts
@@ -272,7 +190,7 @@ add_filter( 'pixelgrade_body_attributes', 'noah_body_attributes' );
  *
  * @return array
  */
-function noah_post_classes( $classes, $class, $post_id ) {
+function noahlite_post_classes( $classes, $class, $post_id ) {
 	//we first need to know the bigger picture - the location this template part was loaded from
 	$location = pixelgrade_get_location();
 
@@ -316,18 +234,18 @@ function noah_post_classes( $classes, $class, $post_id ) {
 
 	return $classes;
 }
-add_filter( 'post_class', 'noah_post_classes', 10, 3 );
+add_filter( 'post_class', 'noahlite_post_classes', 10, 3 );
 
 /**=== HELPERS ===**/
 
-if ( ! function_exists( 'noah_get_single_project_class' ) ) {
+if ( ! function_exists( 'noahlite_get_single_project_class' ) ) {
 
 	/**
 	 * Returns the layout type based on the amount of content and the number of [gallery] shortcodes
 	 *
 	 * @return string
 	 */
-	function noah_get_single_project_class() {
+	function noahlite_get_single_project_class() {
 		global $post;
 
 		// search for all the [gallery] shortcodes
@@ -357,11 +275,11 @@ if ( ! function_exists( 'noah_get_single_project_class' ) ) {
 
 			// the $remains are blocks of text, the lack of them catalogs our project as a media-only type
 			if ( count( $remains ) < 1 ) {
-				add_action( 'the_content', 'noah_remove_single_project_gallery' );
+				add_action( 'the_content', 'noahlite_remove_single_project_gallery' );
 
 				return 'has-media-only fill-page js-project';
 //			} elseif ( count( $remains ) == 1 ) {
-//				add_action( 'the_content', 'noah_remove_single_project_gallery' );
+//				add_action( 'the_content', 'noahlite_remove_single_project_gallery' );
 //
 //				return 'has-media-and-content fill-page js-project';
 			}
@@ -371,17 +289,17 @@ if ( ! function_exists( 'noah_get_single_project_class' ) ) {
 	}
 }
 
-if ( ! function_exists( 'noah_remove_single_project_gallery' ) ) {
+if ( ! function_exists( 'noahlite_remove_single_project_gallery' ) ) {
 
 	/**
 	 * Hook called only when we have only one gallery shortcode in the content.
-	 * It removes the shortcode and attaches `noah_display_project_gallery` to the `the_noah_gallery` action which outputs the gallery markup in a different place.
+	 * It removes the shortcode and attaches `noahlite_display_project_gallery` to the `the_noahlite_gallery` action which outputs the gallery markup in a different place.
 	 *
 	 * @param $content
 	 *
 	 * @return mixed
 	 */
-	function noah_remove_single_project_gallery( $content ) {
+	function noahlite_remove_single_project_gallery( $content ) {
 
 		if ( 'jetpack-portfolio' === get_post_type() ) {
 
@@ -394,13 +312,13 @@ if ( ! function_exists( 'noah_remove_single_project_gallery' ) ) {
 			}
 
 			//Since we have removed the [gallery] shortcode we need to hook so we output the gallery in a different place
-			add_action( 'the_noah_gallery', 'noah_display_project_gallery', 10, 1 );
+			add_action( 'the_noahlite_gallery', 'noahlite_display_project_gallery', 10, 1 );
 		}
 
 		return wp_kses_post( $content );
 	}
 }
-if ( ! function_exists( 'noah_display_project_gallery' ) ) {
+if ( ! function_exists( 'noahlite_display_project_gallery' ) ) {
 	/**
 	 * Hook called only on projects with one gallery shortcode in the content
 	 *
@@ -408,7 +326,7 @@ if ( ! function_exists( 'noah_display_project_gallery' ) ) {
 	 *
 	 * @return bool
 	 */
-	function noah_display_project_gallery( $post_id ) {
+	function noahlite_display_project_gallery( $post_id ) {
 		$post = get_post( $post_id );
 
 		if ( empty( $post ) || is_wp_error( $post ) ) {
@@ -430,7 +348,7 @@ if ( ! function_exists( 'noah_display_project_gallery' ) ) {
 	}
 }
 
-if ( ! function_exists( 'noah_post_gallery' ) ) {
+if ( ! function_exists( 'noahlite_post_gallery' ) ) {
 	/**
 	 * Responds to the [gallery] shortcode, but not an actual shortcode callback.
 	 *
@@ -439,7 +357,7 @@ if ( ! function_exists( 'noah_post_gallery' ) ) {
 	 *
 	 * @return string The (un)modified $value
 	 */
-	function noah_post_gallery( $value, $attr ) {
+	function noahlite_post_gallery( $value, $attr ) {
 		// Bail if somebody else has done something
 		if ( ! empty( $value ) ) {
 			return $value;
@@ -459,7 +377,7 @@ if ( ! function_exists( 'noah_post_gallery' ) ) {
 		return $value;
 	}
 }
-add_filter( 'post_gallery', 'noah_post_gallery', 1001, 2 );
+add_filter( 'post_gallery', 'noahlite_post_gallery', 1001, 2 );
 
 /**
  * We force that every gallery in a project uses the same settings
@@ -471,7 +389,7 @@ add_filter( 'post_gallery', 'noah_post_gallery', 1001, 2 );
  *
  * @return mixed
  */
-function noah_normalize_gallery_atts( $out, $pairs, $atts, $shortcode ) {
+function noahlite_normalize_gallery_atts( $out, $pairs, $atts, $shortcode ) {
 	if ( intval( $out['columns'] ) <= 3 ) {
 		$out['size'] = 'large';
 	} else {
@@ -480,9 +398,9 @@ function noah_normalize_gallery_atts( $out, $pairs, $atts, $shortcode ) {
 
 	return $out;
 }
-add_filter( 'shortcode_atts_gallery', 'noah_normalize_gallery_atts', 10, 4 );
+add_filter( 'shortcode_atts_gallery', 'noahlite_normalize_gallery_atts', 10, 4 );
 
-if ( ! function_exists( 'noah_categorized_blog' ) ) {
+if ( ! function_exists( 'noahlite_categorized_blog' ) ) {
 
 	/**
 	 * Returns true if a blog has more than 1 category.
@@ -491,8 +409,8 @@ if ( ! function_exists( 'noah_categorized_blog' ) ) {
 	 *
 	 * @return bool
 	 */
-	function noah_categorized_blog() {
-		if ( false === ( $all_the_cool_cats = get_transient( 'noah_categories' ) ) ) {
+	function noahlite_categorized_blog() {
+		if ( false === ( $all_the_cool_cats = get_transient( 'noahlite_categories' ) ) ) {
 			// Create an array of all the categories that are attached to posts.
 			$all_the_cool_cats = get_categories( array(
 				'fields'     => 'ids',
@@ -504,14 +422,14 @@ if ( ! function_exists( 'noah_categorized_blog' ) ) {
 			// Count the number of categories that are attached to the posts.
 			$all_the_cool_cats = count( $all_the_cool_cats );
 
-			set_transient( 'noah_categories', $all_the_cool_cats );
+			set_transient( 'noahlite_categories', $all_the_cool_cats );
 		}
 
 		if ( $all_the_cool_cats > 1 ) {
-			// This blog has more than 1 category so noah_categorized_blog should return true.
+			// This blog has more than 1 category so noahlite_categorized_blog should return true.
 			return true;
 		} else {
-			// This blog has only 1 category so noah_categorized_blog should return false.
+			// This blog has only 1 category so noahlite_categorized_blog should return false.
 			return false;
 		}
 	}
@@ -526,7 +444,7 @@ if ( ! function_exists( 'noah_categorized_blog' ) ) {
  *
  * @return bool
  */
-function noah_remove_att_comments( $open, $post_id ) {
+function noahlite_remove_att_comments( $open, $post_id ) {
 	$post = get_post( $post_id );
 	if ( $post->post_type == 'attachment' ) {
 		return false;
@@ -534,7 +452,7 @@ function noah_remove_att_comments( $open, $post_id ) {
 
 	return $open;
 }
-add_filter( 'comments_open', 'noah_remove_att_comments', 10, 2 );
+add_filter( 'comments_open', 'noahlite_remove_att_comments', 10, 2 );
 
 /**
  * Filter whether comments are open for a given post type.
@@ -546,7 +464,7 @@ add_filter( 'comments_open', 'noah_remove_att_comments', 10, 2 );
  *
  * @return string (Maybe) filtered default status for the given post type.
  */
-function noah_close_comments_for_projects( $status, $post_type, $comment_type ) {
+function noahlite_close_comments_for_projects( $status, $post_type, $comment_type ) {
 	if ( 'jetpack-portfolio' !== $post_type ) {
 		return $status;
 	}
@@ -554,7 +472,7 @@ function noah_close_comments_for_projects( $status, $post_type, $comment_type ) 
 	// You could be more specific here for different comment types if desired
 	return 'closed';
 }
-add_filter( 'get_default_comment_status', 'noah_close_comments_for_projects', 10, 3 );
+add_filter( 'get_default_comment_status', 'noahlite_close_comments_for_projects', 10, 3 );
 
 /**
  * Modifies a relative URL to a URL that points to a certain page number.
@@ -572,7 +490,7 @@ add_filter( 'get_default_comment_status', 'noah_close_comments_for_projects', 10
  *
  * @return string The full link URL for the given page number.
  */
-function noah_paginate_url( $url, $pagenum = 1, $escape = true, $query = null ) {
+function noahlite_paginate_url( $url, $pagenum = 1, $escape = true, $query = null ) {
 	global $wp_rewrite;
 
 	if ( empty( $query ) ) {
@@ -642,26 +560,26 @@ function noah_paginate_url( $url, $pagenum = 1, $escape = true, $query = null ) 
 /**
  * Add styles/classes to the "Styles" drop-down
  */
-function noah_mce_buttons( $buttons ) {
+function noahlite_mce_buttons( $buttons ) {
 	array_unshift( $buttons, 'styleselect' );
 
 	return $buttons;
 }
-add_filter( 'mce_buttons_2', 'noah_mce_buttons' );
+add_filter( 'mce_buttons_2', 'noahlite_mce_buttons' );
 
-function noah_mce_before_init( $settings ) {
+function noahlite_mce_before_init( $settings ) {
 
 	$style_formats = array(
-		array( 'title' => __( 'Intro', 'noah' ), 'selector' => 'p', 'classes' => 'intro' ),
-		array( 'title' => __( 'Dropcap', 'noah' ), 'inline' => 'span', 'classes' => 'dropcap' ),
-		array( 'title' => __( 'Display', 'noah' ), 'inline' => 'span', 'classes' => 'h0' )
+		array( 'title' => __( 'Intro', 'noah-lite' ), 'selector' => 'p', 'classes' => 'intro' ),
+		array( 'title' => __( 'Dropcap', 'noah-lite' ), 'inline' => 'span', 'classes' => 'dropcap' ),
+		array( 'title' => __( 'Display', 'noah-lite' ), 'inline' => 'span', 'classes' => 'h0' )
 	);
 
 	$settings['style_formats'] = json_encode( $style_formats );
 
 	return $settings;
 }
-add_filter( 'tiny_mce_before_init', 'noah_mce_before_init' );
+add_filter( 'tiny_mce_before_init', 'noahlite_mce_before_init' );
 
 /**
  * Generate the Arca Majora 3 font URL
@@ -670,13 +588,13 @@ add_filter( 'tiny_mce_before_init', 'noah_mce_before_init' );
  *
  * @return string
  */
-function noah_arcamajora3_font_url() {
+function noahlite_arcamajora3_font_url() {
 
 	/* Translators: If there are characters in your language that are not
 	* supported by Arca Majora 3, translate this to 'off'. Do not translate
 	* into your own language.
 	*/
-	$arcamajora3 = esc_html_x( 'on', 'Arca Majora 2 font: on or off', 'noah' );
+	$arcamajora3 = esc_html_x( 'on', 'Arca Majora 2 font: on or off', 'noah-lite' );
 	if ( 'off' !== $arcamajora3 ) {
 		return get_template_directory_uri() . '/assets/fonts/arcamajora3/stylesheet.css';
 	}
@@ -691,13 +609,13 @@ function noah_arcamajora3_font_url() {
  *
  * @return string
  */
-function noah_ek_mukta_font_url() {
+function noahlite_ek_mukta_font_url() {
 
 	/* Translators: If there are characters in your language that are not
 	* supported by Ek Mukta, translate this to 'off'. Do not translate
 	* into your own language.
 	*/
-	$ekmukta = esc_html_x( 'on', 'Ek Mukta font: on or off', 'noah' );
+	$ekmukta = esc_html_x( 'on', 'Ek Mukta font: on or off', 'noah-lite' );
 	if ( 'off' !== $ekmukta ) {
 		return str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Ek+Mukta&amp;subset=devanagari,latin-ext' );
 	}
@@ -708,7 +626,7 @@ function noah_ek_mukta_font_url() {
 /**
  * Prints HTML with meta information for the tags.
  */
-function noah_tags_list( $content ) {
+function noahlite_tags_list( $content ) {
 
 	$tags_content = '';
 
@@ -718,7 +636,7 @@ function noah_tags_list( $content ) {
 		$tags_list = get_the_tag_list();
 
 		if ( $tags_list && is_singular( 'post' ) ) {
-			$tags_content .= '<div class="o-inline o-inline-xs tags h6"><span class="tags__title">' . esc_html__( 'Tags', 'noah' ) . '</span><span class="tags-links">' . $tags_list . '</span></div>'; // WPCS: XSS OK.
+			$tags_content .= '<div class="o-inline o-inline-xs tags h6"><span class="tags__title">' . esc_html__( 'Tags', 'noah-lite' ) . '</span><span class="tags-links">' . $tags_list . '</span></div>'; // WPCS: XSS OK.
 		}
 	}
 
@@ -726,13 +644,13 @@ function noah_tags_list( $content ) {
 }
 // add this filter with a priority smaller than sharedaddy - it has 19
 // This way the tags will appear before the share buttons
-add_filter( 'the_content', 'noah_tags_list', 18 );
+add_filter( 'the_content', 'noahlite_tags_list', 18 );
 
 /**
  * Prints HTML with the author bio, before the related posts and after the tags and share buttons
  * We don't use the jetpack_author_bio() function because we want to use our own custom markup, but we respect the content options.
  */
-function noah_author_bio( $content ) {
+function noahlite_author_bio( $content ) {
 
 	$author_bio_content = '';
 
@@ -740,7 +658,7 @@ function noah_author_bio( $content ) {
 	if ( 'post' == get_post_type() ) {
 		// Respect the content options
 		if ( ! function_exists( 'jetpack_author_bio' ) || get_option( 'jetpack_content_author_bio', true ) ) {
-			$author_bio_content .= noah_get_the_author_info_box();
+			$author_bio_content .= noahlite_get_the_author_info_box();
 		}
 	}
 
@@ -748,29 +666,29 @@ function noah_author_bio( $content ) {
 }
 // add this filter with a priority smaller than related posts - it has 40
 // This way the the author biop will appear before the related posts
-add_filter( 'the_content', 'noah_author_bio', 30 );
+add_filter( 'the_content', 'noahlite_author_bio', 30 );
 
-function noah_custom_excerpt_length( $length ) {
+function noahlite_custom_excerpt_length( $length ) {
 	return 35;
 }
-add_filter( 'excerpt_length', 'noah_custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'noahlite_custom_excerpt_length', 999 );
 
-function noah_custom_archive_title( $title ) {
+function noahlite_custom_archive_title( $title ) {
 	if ( is_home() ) {
 		$object = get_queried_object();
 
 		if ( isset( $object->post_title ) ) {
 			$title = $object->post_title;
 		} else {
-			$title = esc_html__( 'News', 'noah' );
+			$title = esc_html__( 'News', 'noah-lite' );
 		}
-	} elseif ( $title == esc_html__( 'Archives', 'noah' ) ) {
-		$title = esc_html__( 'All Projects', 'noah' );
+	} elseif ( $title == esc_html__( 'Archives', 'noah-lite' ) ) {
+		$title = esc_html__( 'All Projects', 'noah-lite' );
 	}
 
 	return $title;
 }
-add_filter( 'get_the_archive_title', 'noah_custom_archive_title', 11 );
+add_filter( 'get_the_archive_title', 'noahlite_custom_archive_title', 11 );
 
 /**
  * Add a data attribute to the menu items depending on the background color
@@ -789,12 +707,12 @@ add_filter( 'get_the_archive_title', 'noah_custom_archive_title', 11 );
  *
  * @return array
  */
-function noah_menu_item_color($atts, $item, $args, $depth) {
+function noahlite_menu_item_color($atts, $item, $args, $depth) {
 	$atts['data-color'] = trim( pixelgrade_hero_get_background_color( $item->object_id ) );
 
 	return $atts;
 }
-add_filter('nav_menu_link_attributes', 'noah_menu_item_color', 10, 4);
+add_filter('nav_menu_link_attributes', 'noahlite_menu_item_color', 10, 4);
 
 /**
  * Get an HTML img element representing an image attachment
@@ -811,7 +729,7 @@ add_filter('nav_menu_link_attributes', 'noah_menu_item_color', 10, 4);
  * @param string|array $attr          Optional. Attributes for the image markup. Default empty.
  * @return string HTML img element or empty string on failure.
  */
-function noah_get_attachment_image($attachment_id, $size = 'thumbnail', $icon = false, $attr = '') {
+function noahlite_get_attachment_image($attachment_id, $size = 'thumbnail', $icon = false, $attr = '') {
 	$html = '';
 	$image = wp_get_attachment_image_src($attachment_id, $size, $icon);
 	if ( $image ) {

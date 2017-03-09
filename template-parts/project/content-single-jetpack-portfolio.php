@@ -36,13 +36,13 @@ $location = pixelgrade_get_location( 'single project jetpack' );
 					<?php the_content(); ?>
 				</div><!-- .entry-content -->
 				<?php wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'noah' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'noah-lite' ),
 					'after'  => '</div>',
 				) ); ?>
 			</div><!-- .entry-content -->
 
 			<div class="c-project__media  js-project-media">
-				<?php do_action( 'the_noah_gallery', get_the_ID() ); ?>
+				<?php do_action( 'the_noahlite_gallery', get_the_ID() ); ?>
 			</div><!-- .c-project__media -->
 		</div><!-- .o-wrapper -->
 	</div><!-- .u-full-width -->

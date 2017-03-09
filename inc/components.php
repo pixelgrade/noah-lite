@@ -6,7 +6,7 @@
  * @since Noah 1.0
  */
 
-function noah_prevent_hero( $is_needed, $location ) {
+function noahlite_prevent_hero( $is_needed, $location ) {
 	//we only have a hero on the portfolio page
 	if ( ! pixelgrade_in_location( 'portfolio-page', $location ) ) {
 		return false;
@@ -19,7 +19,7 @@ function noah_prevent_hero( $is_needed, $location ) {
 
 	return $is_needed;
 }
-add_filter( 'pixelgrade_hero_is_hero_needed', 'noah_prevent_hero', 10, 2 );
+add_filter( 'pixelgrade_hero_is_hero_needed', 'noahlite_prevent_hero', 10, 2 );
 
 /**
  * We want to make sure that we don't mistakenly account for the hero content when we are not using a template where we use it.
@@ -30,7 +30,7 @@ add_filter( 'pixelgrade_hero_is_hero_needed', 'noah_prevent_hero', 10, 2 );
  *
  * @return bool
  */
-function noah_prevent_hero_description( $has_desc, $post ) {
+function noahlite_prevent_hero_description( $has_desc, $post ) {
 	if ( is_page( $post->ID ) && in_array( get_page_template_slug( $post->ID ), array( '', 'default', 'page-templates/split.php' ) ) ) {
 		return false;
 	}
@@ -41,63 +41,7 @@ function noah_prevent_hero_description( $has_desc, $post ) {
 
 	return $has_desc;
 }
-add_filter( 'pixelgrade_hero_has_description', 'noah_prevent_hero_description', 10, 2 );
-
-/**
- * Display the attributes for the body element.
- *
- * @param string|array $attribute One or more attributes to add to the attributes list.
- */
-function pixelgrade_body_attributes( $attribute = '' ) {
-	//get the attributes
-	$attributes = pixelgrade_get_body_attributes( $attribute );
-
-	//generate a string attributes array, like array( 'rel="test"', 'href="boom"' )
-	$full_attributes = array();
-	foreach ($attributes as $name => $value ) {
-		//we really don't want numeric keys as attributes names
-		if ( ! empty( $name ) && ! is_numeric( $name ) ) {
-			//if we get an array as value we will add them comma separated
-			if ( ! empty( $value ) && is_array( $value ) ) {
-				$value = join( ', ', $value );
-			}
-
-			//if we receive an empty array entry (but with a key) we will treat it like an attribute without value (i.e. itemprop)
-			if ( empty( $value ) ) {
-				$full_attributes[] = $name;
-			} else {
-				$full_attributes[] = $name . '="' . esc_attr( $value ) . '"';
-			}
-		}
-	}
-
-	if ( ! empty( $full_attributes ) ) {
-		echo join( ' ', $full_attributes );
-	}
-}
-
-function pixelgrade_get_body_attributes( $attribute = array() ) {
-	$attributes = array();
-
-	if ( ! empty( $attribute ) ) {
-		$attributes = array_merge( $attributes, $attribute );
-	} else {
-		// Ensure that we always coerce class to being an array.
-		$attribute = array();
-	}
-
-	/**
-	 * Filters the list of body attributes for the current post or page.
-	 *
-	 * @since 2.8.0
-	 *
-	 * @param array $attributes An array of body attributes.
-	 * @param array $attribute  An array of additional attributes added to the body.
-	 */
-	$attributes = apply_filters( 'pixelgrade_body_attributes', $attributes, $attribute );
-
-	return array_unique( $attributes );
-}
+add_filter( 'pixelgrade_hero_has_description', 'noahlite_prevent_hero_description', 10, 2 );
 
 /**
  * Display the classes for a element.

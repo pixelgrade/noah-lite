@@ -207,7 +207,7 @@
         },
 
         onPrevEnter: function() {
-            this.controls[ 'cursor' ].removeClass( "c-controls__cursor--remove" ).text( noah_js_strings.prev_slide );
+            this.controls[ 'cursor' ].removeClass( "c-controls__cursor--remove" ).text( noahlite_js_strings.prev_slide );
         },
 
         onNextClick: function( e ) {
@@ -248,7 +248,7 @@
         },
 
         onNextEnter: function() {
-            this.controls[ 'cursor' ].removeClass( "c-controls__cursor--remove" ).text( noah_js_strings.next_slide );
+            this.controls[ 'cursor' ].removeClass( "c-controls__cursor--remove" ).text( noahlite_js_strings.next_slide );
         },
 
         renderSlides_: function() {
