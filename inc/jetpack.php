@@ -77,3 +77,6 @@ function noahlite_filter_theme_page_templates( $page_templates ) {
 	return $page_templates;
 }
 add_filter( 'theme_page_templates', 'noahlite_filter_theme_page_templates', 20, 1 );
+
+// Disable Jetpack Carousel for single images
+add_filter( 'jp_carousel_maybe_disable_single_images', '__return_true' );
