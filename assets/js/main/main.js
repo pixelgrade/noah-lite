@@ -5,6 +5,12 @@ Noah.init = function() {
 	Noah.Hero = new Hero();
 	Noah.Navbar = new Navbar();
 
+	Noah.Parallax = new Parallax( '.c-hero__background, .c-hero__image, .c-hero__map', {
+		bleed: 20,
+		scale: 1.2,
+		container: '.c-hero__background'
+	} );
+
 	Noah.eventHandlers();
 	Noah.handleContent();
 	Noah.adjustLayout();
@@ -19,7 +25,7 @@ Noah.adjustLayout = function() {
 
 	Noah.Navbar.destroy();
 
-	if ( below( 'lap' ) ) {
+	if ( Util.below( 'lap' ) ) {
 		Noah.Navbar.init();
 		Noah.Navbar.onChange();
 	}
@@ -32,22 +38,26 @@ Noah.adjustLayout = function() {
 	$updatable.css( 'paddingTop', '' );
 	$updatable.css( 'paddingTop', headerHeight );
 
-	Noah.Hero.refresh()
+	Noah.Hero.refresh();
 };
 
 Noah.handleContent = function( $container ) {
 	$container = typeof $container !== "undefined" ? $container : $( 'body' );
 
-	unwrapImages( $container.find( '.entry-content' ) );
-	wrapCommentActions( $container );
-	handleVideos( $container );
-	handleCustomCSS( $container );
+	Util.unwrapImages( $container.find( '.entry-content' ) );
+	Util.wrapCommentActions( $container );
+	Util.handleVideos( $container );
 
 	$container.find( '.js-taxonomy-dropdown' ).resizeselect();
-	Slider.init( $container.find( '.c-hero__slider' ) );
-
 	$container.find( '.c-hero__background' ).rellax();
 
+	Noah.handleImages( $container );
+	Noah.handleGalleries( $container );
+	Noah.eventHandlers( $container );
+	Noah.adjustLayout();
+};
+
+Noah.handleImages = function( $container ) {
 	// add every image on the page the .is-loaded class
 	// after the image has actually loaded
 	$container.find( 'img' ).each( function( i, obj ) {
@@ -56,9 +66,9 @@ Noah.handleContent = function( $container ) {
 			$each.addClass( 'is-loaded' );
 		} );
 	} );
+};
 
-	Noah.eventHandlers( $container );
-
+Noah.handleGalleries = function( $container ) {
 	var NoahGallery = new Gallery( $container );
 
 	$( window ).on( 'scroll', function() {
@@ -74,8 +84,6 @@ Noah.handleContent = function( $container ) {
 			NoahGallery.show( $gallery );
 		}
 	}
-
-	Noah.adjustLayout();
 };
 
 Noah.eventHandlers = function( $container ) {
@@ -99,6 +107,3 @@ Noah.eventHandlers = function( $container ) {
 $( document ).ready( function() {
 	Noah.init();
 } );
-
-$.fn.rellax.defaults.bleed = 20;
-$.fn.rellax.defaults.scale = 1.2;

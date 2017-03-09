@@ -1,6 +1,5 @@
 var Hero = function() {
 
-
 	this.refresh = function() {
 		this.scrolled = null;
 		this.hasHero = $( 'body' ).is( '.has-hero' );
@@ -9,7 +8,6 @@ var Hero = function() {
 		this.borderWidth = parseInt( $( '.c-border' ).css( 'borderTopWidth' ), 10 );
 
 		$( '.site-header, .c-navbar__label, .c-navbar__zone--middle' ).css( 'top', this.heroHeight );
-
 	};
 
 	this.refresh();
@@ -17,11 +15,9 @@ var Hero = function() {
 
 Hero.prototype.update = function( lastScroll ) {
 
-	if ( ! this.hasHero ) {
+	if ( ! this.hasHero || typeof lastScroll === "undefined" ) {
 		return;
 	}
-
-	lastScroll = typeof lastScroll === "undefined" ? $( window ).scrollTop() : lastScroll;
 
 	if ( this.scrolled == null || ! this.scrolled && lastScroll > this.heroHeight ) {
 		this.scrolled = true;

@@ -13,13 +13,13 @@
     left: 0;
 }
 
-@import "navbar/burger";
+@import "burger";
 
 @include below(lap) {
-    @import "navbar/mobile";
+    @import "mobile";
 }
 
 @include above(lap) {
-    @import "navbar/desktop";
-    @import "navbar/dropdown";
+    @import "desktop";
+    @import "dropdown";
 }

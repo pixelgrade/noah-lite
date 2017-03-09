@@ -18,7 +18,6 @@
  *   4.4 - Hero Area
  *   4.5 - Gallery Grid
  *   4.6 - Page Mask
- *   4.7 - Page Overlay
  *   4.8 - Page Header
  *   4.9 - Post Navigation
  *   4.10 - Scroll Arrow
@@ -99,7 +98,6 @@
  * 4.0 - Components
  *   4.1 - Branding
  */
-@import "../../components/header/scss/main";
 @import "components/branding";
 
 /**
@@ -115,7 +113,6 @@
 /**
  *   4.4 - Hero Area
  */
-@import "../../components/hero/scss/main";
 @import "components/hero";
 
 /**
@@ -151,17 +148,8 @@
 /**
  *   4.11 - Navigation Bar
  */
+@import "components/navbar-component/main";
 @import "components/navbar";
-
-/**
- *   4.12 - Slider
- */
-@import "components/slider";
-
-/**
- *   4.13 - Slideshow
- */
-//@import "components/slideshow";
 
 /**
  *   4.14 - Author Box
@@ -181,7 +169,6 @@
 /**
  *   4.17 - Footer
  */
-@import "../../components/footer/scss/main";
 @import "components/footer";
 
 /**
@@ -225,11 +212,6 @@
  *   6.2 - jQuery.rellax.js
  */
 @import "vendor/rellax";
-
-/**
- *   6.3 - jQuery.slick.js
- */
-@import "vendor/slick";
 
 /**
  * 7.0 - Utility
