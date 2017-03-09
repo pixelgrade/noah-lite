@@ -58,36 +58,25 @@ gulp.task('typeline-config', 'Creates SCSS variable from typeline-config.json', 
 	           }))
 });
 
-gulp.task('styles', 'Compiles Sass and uses autoprefixer', ['styles-components'], function() {
+function handleError(err, res) {
+	log(c.red('Sass failed to compile'));
+	log(c.red('> ') + err.file.split('/')[err.file.split('/').length - 1] + ' ' + c.underline('line ' + err.line) + ': ' + err.message);
+}
 
-    function handleError(err, res) {
-        log(c.red('Sass failed to compile'));
-        log(c.red('> ') + err.file.split('/')[err.file.split('/').length - 1] + ' ' + c.underline('line ' + err.line) + ': ' + err.message);
-    }
+gulp.task('styles-admin', 'Compiles Sass and uses autoprefixer', function() {
 
-    return gulp.src('assets/scss/*.scss')
-//        .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
-        .pipe(prefix("last 3 versions", "> 1%"))
-//        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('.'));
+	return gulp.src('assets/scss/admin/*.scss')
+	           .pipe(sass({outputStyle: 'nested'}).on('error', handleError))
+	           .pipe(prefix("last 3 versions", "> 1%"))
+	           .pipe(gulp.dest('./assets/css/admin'));
 });
 
-gulp.task('styles-components', 'Compiles Sass and uses autoprefixer', ['typeline-config'], function() {
+gulp.task('styles', 'Compiles Sass and uses autoprefixer', ['typeline-config', 'styles-admin'], function() {
 
-    function handleError(err, res) {
-        log(c.red('Sass failed to compile'));
-        log(c.red('> ') + err.file.split('/')[err.file.split('/').length - 1] + ' ' + c.underline('line ' + err.line) + ': ' + err.message);
-    }
-
-    return gulp.src('components/**/*.scss')
-        .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
+    return gulp.src('assets/scss/*.scss')
+        .pipe(sass({outputStyle: 'nested'}).on('error', handleError))
         .pipe(prefix("last 3 versions", "> 1%"))
-        .pipe(rename(function (path) {
-            path.dirname = path.dirname.replace( '/scss', '' ); //Remove the scss directory at the end
-            path.dirname += "/css"; //Append the css subdirectory to the path; see http://stackoverflow.com/questions/31358552/gulp-write-output-files-to-subfolder-relative-of-src-path
-        }))
-        .pipe(gulp.dest('./components'));
+        .pipe(gulp.dest('.'));
 });
 
 // -----------------------------------------------------------------------------
