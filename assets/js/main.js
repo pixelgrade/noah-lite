@@ -491,15 +491,7 @@ Noah.init = function() {
 	Noah.Hero = new Hero();
 	Noah.Navbar = new Navbar();
 
-	Noah.Parallax = new Parallax( '.c-hero__background, .c-hero__image, .c-hero__map', {
-		bleed: 20,
-		scale: 1.2,
-		container: '.c-hero__background'
-	} );
-
-	Noah.eventHandlers();
 	Noah.handleContent();
-	Noah.adjustLayout();
 };
 
 Noah.update = function() {
@@ -581,8 +573,8 @@ Noah.eventHandlers = function( $container ) {
 	$( window ).on( resizeEvent, Noah.adjustLayout );
 
 	$container.find( '.js-taxonomy-dropdown' ).on( 'change' ).change( function() {
-
 		var destination = $( this ).val();
+		console.log(destination);
 
 		if ( typeof destination !== "undefined" && destination !== "#" ) {
 			window.location.href = destination;
