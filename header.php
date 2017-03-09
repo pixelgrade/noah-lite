@@ -26,7 +26,7 @@
 <div id="barba-wrapper" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'noah-lite' ); ?></a>
 	<div id="content" class="site-content barba-container js-header-height-padding-top">
-		<header id="masthead" <?php pixelgrade_header_class(); ?> role="banner">
+		<header id="masthead" <?php noahlite_header_class(); ?> role="banner">
 			<div class="u-header_sides_spacing">
 				<div class="o-wrapper  u-container-width  c-navbar__wrapper">
 

@@ -9,7 +9,7 @@
  */
 
 //let the template parts know about our location
-$location = pixelgrade_set_location( 'single project jetpack' );
+$location = noahlite_set_location( 'single project jetpack' );
 
 get_header(); ?>
 
@@ -55,7 +55,7 @@ get_header(); ?>
             <div class="u-content-bottom-spacing">
                 <?php
                 //We are displaying the loop so we need the proper location
-                $location = pixelgrade_set_location( 'portfolio jetpack' );
+                $location = noahlite_set_location( 'portfolio jetpack' );
 
                 $projects = new WP_Query( array(
 	                'post_type' => 'jetpack-portfolio',
@@ -89,7 +89,7 @@ get_header(); ?>
                 wp_reset_postdata();
 
                 //Set the previous location back
-                $location = pixelgrade_set_location( 'single project jetpack' ); ?>
+                $location = noahlite_set_location( 'single project jetpack' ); ?>
 
             </div><!-- .u-content-bottom-spacing -->
 

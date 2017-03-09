@@ -10,7 +10,7 @@
 
 //let the template parts know about our location
 $location = 'archive portfolio jetpack';
-pixelgrade_set_location( $location );
+noahlite_set_location( $location );
 
 get_header(); ?>
 

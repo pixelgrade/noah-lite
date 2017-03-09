@@ -192,10 +192,10 @@ function noahlite_get_blog_class( $class = '', $location = '' ) {
  */
 function noahlite_post_classes( $classes, $class, $post_id ) {
 	//we first need to know the bigger picture - the location this template part was loaded from
-	$location = pixelgrade_get_location();
+	$location = noahlite_get_location();
 
-	if ( is_post_type_archive( 'post' ) || is_author() || is_home() || is_search() || is_post_type_archive( 'jetpack-portfolio' ) || pixelgrade_in_location( 'portfolio jetpack', $location )
-	     || pixelgrade_in_location( 'archive category', $location ) || pixelgrade_in_location( 'archive tag', $location )
+	if ( is_post_type_archive( 'post' ) || is_author() || is_home() || is_search() || is_post_type_archive( 'jetpack-portfolio' ) || noahlite_in_location( 'portfolio jetpack', $location )
+	     || noahlite_in_location( 'archive category', $location ) || noahlite_in_location( 'archive tag', $location )
 	) {
 		$classes[] = 'c-gallery__item';
 
@@ -226,7 +226,7 @@ function noahlite_post_classes( $classes, $class, $post_id ) {
 		}
 
 		$classes[] = 'c-gallery__item--' . ( $is_landscape ? 'landscape' : 'portrait' );
-	} elseif ( is_singular( 'jetpack-portfolio' ) || pixelgrade_in_location( 'project jetpack', $location ) ) {
+	} elseif ( is_singular( 'jetpack-portfolio' ) || noahlite_in_location( 'project jetpack', $location ) ) {
 		$classes[] = 'c-project';
 	} else {
 		$classes[] = 'c-article';
@@ -708,7 +708,7 @@ add_filter( 'get_the_archive_title', 'noahlite_custom_archive_title', 11 );
  * @return array
  */
 function noahlite_menu_item_color($atts, $item, $args, $depth) {
-	$atts['data-color'] = trim( pixelgrade_hero_get_background_color( $item->object_id ) );
+	$atts['data-color'] = trim( noahlite_hero_get_background_color( $item->object_id ) );
 
 	return $atts;
 }

@@ -7,7 +7,7 @@
  */
 
 //we first need to know the bigger picture - the location this template part was loaded from
-$location = pixelgrade_get_location( 'page' );
+$location = noahlite_get_location( 'page' );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

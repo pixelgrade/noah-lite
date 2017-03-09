@@ -245,9 +245,9 @@ endif;
  * @param string|array $class One or more classes to add to the class list.
  * @param string $location The place (template) where the classes are displayed. This is a hint for filters.
  */
-function pixelgrade_header_class( $class = '', $location = '' ) {
+function noahlite_header_class( $class = '', $location = '' ) {
 	// Separates classes with a single space, collates classes for header element
-	echo 'class="' . join( ' ', pixelgrade_get_header_class( $class, $location ) ) . '"';
+	echo 'class="' . join( ' ', noahlite_get_header_class( $class, $location ) ) . '"';
 }
 
 /**
@@ -258,7 +258,7 @@ function pixelgrade_header_class( $class = '', $location = '' ) {
  *
  * @return array Array of classes.
  */
-function pixelgrade_get_header_class( $class = '', $location = '' ) {
+function noahlite_get_header_class( $class = '', $location = '' ) {
 	$classes = array();
 
 	$classes[] = 'site-header';
@@ -281,7 +281,7 @@ function pixelgrade_get_header_class( $class = '', $location = '' ) {
 	 * @param array $classes An array of header classes.
 	 * @param array $class   An array of additional classes added to the header.
 	 */
-	$classes = apply_filters( 'pixelgrade_header_class', $classes, $class, $location );
+	$classes = apply_filters( 'noahlite_header_class', $classes, $class, $location );
 
 	return array_unique( $classes );
 }
@@ -291,8 +291,8 @@ function pixelgrade_get_header_class( $class = '', $location = '' ) {
  *
  * @return false|object
  */
-function pixelgrade_header_get_the_left_menu() {
-	return wp_nav_menu( apply_filters( 'pixelgrade_header_primary_left_nav_args', array(
+function noahlite_header_get_the_left_menu() {
+	return wp_nav_menu( apply_filters( 'noahlite_header_primary_left_nav_args', array(
 		'theme_location'  => 'primary-left',
 		'menu_id'         => 'menu-1',
 		'container'       => 'nav',
@@ -307,8 +307,8 @@ function pixelgrade_header_get_the_left_menu() {
  *
  * @return false|object
  */
-function pixelgrade_header_get_the_right_menu() {
-	return wp_nav_menu( apply_filters( 'pixelgrade_header_primary_right_nav_args', array(
+function noahlite_header_get_the_right_menu() {
+	return wp_nav_menu( apply_filters( 'noahlite_header_primary_right_nav_args', array(
 		'theme_location'  => 'primary-right',
 		'menu_id'         => 'menu-2',
 		'container'       => 'nav',
@@ -319,55 +319,6 @@ function pixelgrade_header_get_the_right_menu() {
 }
 
 /**
- * Display the classes for the footer element.
- *
- * @param string|array $class One or more classes to add to the class list.
- * @param string $location The place (template) where the classes are displayed. This is a hint for filters.
- */
-function pixelgrade_footer_class( $class = '', $location = '' ) {
-	// Separates classes with a single space, collates classes for footer element
-	echo 'class="' . join( ' ', pixelgrade_get_footer_class( $class, $location ) ) . '"';
-}
-
-/**
- * Retrieve the classes for the footer element as an array.
- *
- * @param string|array $class One or more classes to add to the class list.
- * @param string $location The place (template) where the classes are displayed. This is a hint for filters.
- *
- * @return array Array of classes.
- */
-function pixelgrade_get_footer_class( $class = '', $location = '' ) {
-	$classes = array();
-
-	$classes[] = 'c-footer';
-	$classes[] = 'u-container-sides-spacings';
-	$classes[] = 'u-content_container_margin_top';
-
-	if ( ! empty( $class ) ) {
-		if ( ! is_array( $class ) ) {
-			$class = preg_split( '#\s+#', $class );
-		}
-		$classes = array_merge( $classes, $class );
-	} else {
-		// Ensure that we always coerce class to being an array.
-		$class = array();
-	}
-
-	$classes = array_map( 'esc_attr', $classes );
-
-	/**
-	 * Filters the list of CSS footer classes for the current post or page
-	 *
-	 * @param array $classes An array of footer classes.
-	 * @param array $class   An array of additional classes added to the footer.
-	 */
-	$classes = apply_filters( 'pixelgrade_footer_class', $classes, $class, $location );
-
-	return array_unique( $classes );
-}
-
-/**
  * Return the CSS class corresponding to the set height of the hero.
  *
  * @param string|array $location Optional. The place (template) where this is needed.
@@ -375,7 +326,7 @@ function pixelgrade_get_footer_class( $class = '', $location = '' ) {
  *
  * @return bool
  */
-function pixelgrade_hero_get_height( $location = '', $post = null ) {
+function noahlite_hero_get_height( $location = '', $post = null ) {
 	// We might be on a page set as a page for posts and the $post will be the first post in the loop
 	// So we check first
 	if ( empty( $post ) && is_home() ) {
@@ -392,7 +343,7 @@ function pixelgrade_hero_get_height( $location = '', $post = null ) {
 	}
 
 	//handle the map hero separately
-	if ( pixelgrade_in_location( 'map', $location ) ) {
+	if ( noahlite_in_location( 'map', $location ) ) {
 		$hero_height = trim( get_post_meta( $post->ID, '_hero_map_height', true ) );
 	} else {
 		$hero_height = trim( get_post_meta( $post->ID, '_hero_height', true ) );
@@ -412,7 +363,7 @@ function pixelgrade_hero_get_height( $location = '', $post = null ) {
  * @param int $id (default: null)
  * @param int $opacity (default: 100)
  */
-function pixelgrade_hero_the_background_image ($id = null, $opacity = 100 ) {
+function noahlite_hero_the_background_image ($id = null, $opacity = 100 ) {
 
 	// @todo move this in the loop function
 	//if we have no ID then use the post thumbnail, if present
@@ -438,16 +389,16 @@ function pixelgrade_hero_the_background_image ($id = null, $opacity = 100 ) {
 	$image_full_size = wp_get_attachment_image_src( $id, 'full-size' );
 
 	//the responsive image
-	$image_markup = '<img class="c-hero__image" itemprop="image" src="' . esc_url( $image_full_size[0] ) . '" alt="' . esc_attr( pixelgrade_hero_get_img_alt( $id ) ) . '" '. $opacity . '>';
+	$image_markup = '<img class="c-hero__image" itemprop="image" src="' . esc_url( $image_full_size[0] ) . '" alt="' . esc_attr( noahlite_hero_get_img_alt( $id ) ) . '" '. $opacity . '>';
 	$output .= wp_image_add_srcset_and_sizes( $image_markup, $image_meta, $id ) . PHP_EOL;
 
 	//allow others to make changes
-	$output = apply_filters( 'pixelgrade_hero_the_background_image', $output, $id, $opacity );
+	$output = apply_filters( 'noahlite_hero_the_background_image', $output, $id, $opacity );
 
 	echo $output;
 }
 
-function pixelgrade_hero_get_img_alt( $image ) {
+function noahlite_hero_get_img_alt( $image ) {
 	$img_alt = trim( strip_tags( get_post_meta( $image, '_wp_attachment_image_alt', true ) ) );
 	return $img_alt;
 }

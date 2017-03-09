@@ -20,8 +20,8 @@
 		$has_left_menu   = has_nav_menu( 'primary-left' );
 		$has_right_menu  = has_nav_menu( 'primary-right' );
 
-		$menu_left_markup = pixelgrade_header_get_the_left_menu();
-		$menu_right_markup = pixelgrade_header_get_the_right_menu();
+		$menu_left_markup = noahlite_header_get_the_left_menu();
+		$menu_right_markup = noahlite_header_get_the_right_menu();
 
 		// Setup the classes for the various areas
 		// First the left area
@@ -44,24 +44,24 @@
 		 * @link http://pixelgrade.github.io/guides/components/header
 		 * They try to automatically adapt to the existence or non-existence of navbar components: the menus and the logo.
 		 *
-		 * Also note that you can make use of the fact that we've used the pixelgrade_css_class() function to
-		 * output the classes for each zone. You can use the `pixelgrade_css_class` filter and depending on
+		 * Also note that you can make use of the fact that we've used the noahlite_css_class() function to
+		 * output the classes for each zone. You can use the `noahlite_css_class` filter and depending on
 		 * the location received act accordingly.
 		 */ ?>
 
-		<div <?php pixelgrade_css_class( $zone_left_classes, 'header navbar zone left' ); ?>>
+		<div <?php noahlite_css_class( $zone_left_classes, 'header navbar zone left' ); ?>>
 			<?php if ( $has_left_menu ) {
 				echo $menu_left_markup;
 			} elseif ( $has_right_menu ) { ?>
-				<div <?php pixelgrade_css_class( 'header nav', 'header navbar zone left' ); ?>>
+				<div <?php noahlite_css_class( 'header nav', 'header navbar zone left' ); ?>>
 					<?php get_template_part( 'template-parts/header/branding' ); ?>
 				</div>
 			<?php } ?>
 		</div><!-- .c-navbar__zone .c-navbar__zone--left -->
 
-		<div <?php pixelgrade_css_class( $zone_middle_classes, 'header navbar zone middle' ); ?>>
+		<div <?php noahlite_css_class( $zone_middle_classes, 'header navbar zone middle' ); ?>>
 			<?php if ( $has_left_menu || ! ( $has_left_menu || $has_right_menu ) ) { ?>
-				<div <?php pixelgrade_css_class( 'header nav', 'header navbar zone middle' ); ?>>
+				<div <?php noahlite_css_class( 'header nav', 'header navbar zone middle' ); ?>>
 					<?php get_template_part( 'template-parts/header/branding' ); ?>
 				</div>
 			<?php } else {
@@ -70,7 +70,7 @@
 			?>
 		</div><!-- .c-navbar__zone .c-navbar__zone--middle -->
 
-		<div <?php pixelgrade_css_class( $zone_right_classes, 'header navbar zone right' ); ?>>
+		<div <?php noahlite_css_class( $zone_right_classes, 'header navbar zone right' ); ?>>
 			<?php if ( $has_left_menu ) {
 				echo $menu_right_markup;
 			} ?>

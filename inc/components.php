@@ -8,7 +8,7 @@
 
 function noahlite_prevent_hero( $is_needed, $location ) {
 	//we only have a hero on the portfolio page
-	if ( ! pixelgrade_in_location( 'portfolio-page', $location ) ) {
+	if ( ! noahlite_in_location( 'portfolio-page', $location ) ) {
 		return false;
 	}
 
@@ -19,7 +19,7 @@ function noahlite_prevent_hero( $is_needed, $location ) {
 
 	return $is_needed;
 }
-add_filter( 'pixelgrade_hero_is_hero_needed', 'noahlite_prevent_hero', 10, 2 );
+add_filter( 'noahlite_hero_is_hero_needed', 'noahlite_prevent_hero', 10, 2 );
 
 /**
  * We want to make sure that we don't mistakenly account for the hero content when we are not using a template where we use it.
@@ -41,7 +41,7 @@ function noahlite_prevent_hero_description( $has_desc, $post ) {
 
 	return $has_desc;
 }
-add_filter( 'pixelgrade_hero_has_description', 'noahlite_prevent_hero_description', 10, 2 );
+add_filter( 'noahlite_hero_has_description', 'noahlite_prevent_hero_description', 10, 2 );
 
 /**
  * Display the classes for a element.
@@ -51,9 +51,9 @@ add_filter( 'pixelgrade_hero_has_description', 'noahlite_prevent_hero_descriptio
  * @param string $prefix Optional. Prefix to prepend to all of the provided classes
  * @param string $suffix Optional. Suffix to append to all of the provided classes
  */
-function pixelgrade_css_class( $class = '', $location = '', $prefix = '', $suffix = '' ) {
+function noahlite_css_class( $class = '', $location = '', $prefix = '', $suffix = '' ) {
 	// Separates classes with a single space, collates classes for element
-	echo 'class="' . join( ' ', pixelgrade_get_css_class( $class, $location ) ) . '"';
+	echo 'class="' . join( ' ', noahlite_get_css_class( $class, $location ) ) . '"';
 }
 
 /**
@@ -66,7 +66,7 @@ function pixelgrade_css_class( $class = '', $location = '', $prefix = '', $suffi
  *
  * @return array Array of classes.
  */
-function pixelgrade_get_css_class( $class = '', $location = '', $prefix = '', $suffix = '' ) {
+function noahlite_get_css_class( $class = '', $location = '', $prefix = '', $suffix = '' ) {
 	$classes = array();
 
 	if ( ! empty( $class ) ) {
@@ -103,41 +103,41 @@ function pixelgrade_get_css_class( $class = '', $location = '', $prefix = '', $s
 	 * @param array $class   An array of additional classes added to the header.
 	 * @param string|array $location   The place (template) where the classes are displayed.
 	 */
-	$classes = apply_filters( 'pixelgrade_css_class', $classes, $class, $location, $prefix, $suffix );
+	$classes = apply_filters( 'noahlite_css_class', $classes, $class, $location, $prefix, $suffix );
 
 	return array_unique( $classes );
 }
 
-function pixelgrade_get_location( $default = '', $force = true ) {
-	$location = get_query_var( 'pixelgrade_location' );
+function noahlite_get_location( $default = '', $force = true ) {
+	$location = get_query_var( 'noahlite_location' );
 
 	if ( empty( $location ) ) {
 		$location = $default;
 
 		//we will force the query var to have the default value, in case it was empty
 		if ( true === $force ) {
-			//DO NOT put the second parameter of pixelgrade_set_location() to 'true' because you will cause an infinite loop!!!
-			$location = pixelgrade_set_location( $default );
+			//DO NOT put the second parameter of noahlite_set_location() to 'true' because you will cause an infinite loop!!!
+			$location = noahlite_set_location( $default );
 		}
 	}
 
-	return pixelgrade_standardize_location( $location );
+	return noahlite_standardize_location( $location );
 }
 
-function pixelgrade_set_location( $location = '', $merge = false ) {
+function noahlite_set_location( $location = '', $merge = false ) {
 	//In case one wants to add to the current location, not replace it
 	if ( true === $merge ) {
 		//The current location is already standardized
-		$current_location = pixelgrade_get_location();
-		$location = pixelgrade_standardize_location( $location );
+		$current_location = noahlite_get_location();
+		$location = noahlite_standardize_location( $location );
 
 		$location = array_merge( $current_location, $location );
 	}
 
 	//Make sure we have a standardized (Array) location
-	$location = pixelgrade_standardize_location( $location );
+	$location = noahlite_standardize_location( $location );
 
-	set_query_var( 'pixelgrade_location', $location );
+	set_query_var( 'noahlite_location', $location );
 
 	//allow others to chain this
 	return $location;
@@ -152,12 +152,12 @@ function pixelgrade_set_location( $location = '', $merge = false ) {
  *
  * @return bool
  */
-function pixelgrade_in_location( $search, $location, $and = true ) {
+function noahlite_in_location( $search, $location, $and = true ) {
 	// First make sure that we have a standard location format (i.e. array with each location)
-	$location = pixelgrade_standardize_location( $location );
+	$location = noahlite_standardize_location( $location );
 
 	// Also make sure that $search is standard
-	$search = pixelgrade_standardize_location( $search );
+	$search = noahlite_standardize_location( $search );
 
 	// Bail if either of them is empty
 	if ( empty( $location ) || empty( $search ) ) {
@@ -200,7 +200,7 @@ function pixelgrade_in_location( $search, $location, $and = true ) {
  *
  * @return array|string
  */
-function pixelgrade_standardize_location( $location ) {
+function noahlite_standardize_location( $location ) {
 
 	if ( is_string( $location ) ) {
 		//the location might be a space separated series of hints
@@ -231,7 +231,7 @@ function pixelgrade_standardize_location( $location ) {
  *
  * @return array
  */
-function pixelgrade_array_insert_after( $array, $key, $insert ) {
+function noahlite_array_insert_after( $array, $key, $insert ) {
 	$keys = array_keys( $array );
 	$index = array_search( $key, $keys );
 	$pos = false === $index ? count( $array ) : $index + 1;

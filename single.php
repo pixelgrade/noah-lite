@@ -9,7 +9,7 @@
  */
 
 //let the template parts know about our location
-$location = pixelgrade_set_location( 'single post' );
+$location = noahlite_set_location( 'single post' );
 
 get_header(); ?>
 

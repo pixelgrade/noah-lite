@@ -9,7 +9,7 @@
  */
 
 //let the template parts know about our location
-$location = pixelgrade_set_location( 'archive' );
+$location = noahlite_set_location( 'archive' );
 
 get_header(); ?>
 

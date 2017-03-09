@@ -67,7 +67,7 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 		 * First, it's the image size we want to use for the logo thumbnails
 		 * Second, the 2 classes we want to use for the "Display Header Text" Customizer logic
 		 */
-		add_theme_support( 'custom-logo', apply_filters( 'pixelgrade_header_site_logo', array(
+		add_theme_support( 'custom-logo', apply_filters( 'noahlite_header_site_logo', array(
 			'height'      => 600,
 			'width'       => 1360,
 			'flex-height' => true,

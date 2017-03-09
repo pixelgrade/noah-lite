@@ -9,7 +9,7 @@
  */
 
 //let the template parts know about our location
-$location = pixelgrade_set_location( 'archive portfolio portfolio-tag jetpack' );
+$location = noahlite_set_location( 'archive portfolio portfolio-tag jetpack' );
 
 get_header(); ?>
 

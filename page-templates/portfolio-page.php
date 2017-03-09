@@ -6,7 +6,7 @@
  */
 
 //let the template parts know about our location
-$location = pixelgrade_set_location( 'page portfolio-page' );
+$location = noahlite_set_location( 'page portfolio-page' );
 
 get_header(); ?>
 
@@ -26,7 +26,7 @@ get_header(); ?>
 							<div class="c-hero__slide">
 
 								<div class="c-hero__background  c-hero__layer">
-									<?php pixelgrade_hero_the_background_image( get_post_thumbnail_id() ); // Output the background image of the hero ?>
+									<?php noahlite_hero_the_background_image( get_post_thumbnail_id() ); // Output the background image of the hero ?>
 								</div><!-- .c-hero__background -->
 
 								<div class="c-hero__wrapper c-hero__layer">
@@ -61,7 +61,7 @@ get_header(); ?>
 
                     <?php
                     //We are displaying the loop so we need the proper location
-                    $location = pixelgrade_set_location( 'portfolio jetpack' );
+                    $location = noahlite_set_location( 'portfolio jetpack' );
 
                     // in case this is a static front page
                     if ( get_query_var('page') ) {
@@ -108,7 +108,7 @@ get_header(); ?>
                     wp_reset_postdata();
 
                     //Set the previous location back
-                    $location = pixelgrade_set_location( 'page portfolio-page' ); ?>
+                    $location = noahlite_set_location( 'page portfolio-page' ); ?>
 
 				</div><!-- .c-article__content -->
 			</article><!-- #post-## -->

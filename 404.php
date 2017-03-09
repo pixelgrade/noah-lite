@@ -14,7 +14,7 @@
  */
 
 //let the template parts know about our location
-$location = pixelgrade_set_location( 'page' );
+$location = noahlite_set_location( 'page' );
 
 get_header(); ?>
 
