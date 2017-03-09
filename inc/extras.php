@@ -43,22 +43,20 @@ add_filter( 'body_class', 'noahlite_body_classes', 10, 1 );
  * Display the classes for the portfolio wrapper.
  *
  * @param string|array $class Optional. One or more classes to add to the class list.
- * @param string|array $location Optional. The place (template) where the classes are displayed. This is a hint for filters.
  */
-function noahlite_portfolio_class( $class = '', $location = '' ) {
+function noahlite_portfolio_class( $class = '' ) {
 	// Separates classes with a single space, collates classes
-	echo 'class="' . join( ' ', noahlite_get_portfolio_class( $class, $location ) ) . '"';
+	echo 'class="' . join( ' ', noahlite_get_portfolio_class( $class ) ) . '"';
 }
 
 /**
  * Retrieve the classes for the portfolio wrapper as an array.
  *
  * @param string|array $class Optional. One or more classes to add to the class list.
- * @param string|array $location Optional. The place (template) where the classes are displayed. This is a hint for filters.
  *
  * @return array Array of classes.
  */
-function noahlite_get_portfolio_class( $class = '', $location = '' ) {
+function noahlite_get_portfolio_class( $class = '' ) {
 
 	$classes = array();
 
@@ -98,33 +96,30 @@ function noahlite_get_portfolio_class( $class = '', $location = '' ) {
 	 *
 	 * @param array $classes An array of header classes.
 	 * @param array $class An array of additional classes added to the portfolio wrapper.
-	 * @param string|array $location The place (template) where the classes are displayed.
 	 */
-	$classes = apply_filters( 'noahlite_portfolio_class', $classes, $class, $location );
+	$classes = apply_filters( 'noahlite_portfolio_class', $classes, $class );
 
 	return array_unique( $classes );
 }
 
 /**
- * Display the classes for the portfolio wrapper.
+ * Display the classes for the blog wrapper.
  *
  * @param string|array $class Optional. One or more classes to add to the class list.
- * @param string|array $location Optional. The place (template) where the classes are displayed. This is a hint for filters.
  */
-function noahlite_blog_class( $class = '', $location = '' ) {
+function noahlite_blog_class( $class = '' ) {
 	// Separates classes with a single space, collates classes
-	echo 'class="' . join( ' ', noahlite_get_blog_class( $class, $location ) ) . '"';
+	echo 'class="' . join( ' ', noahlite_get_blog_class( $class ) ) . '"';
 }
 
 /**
  * Retrieve the classes for the portfolio wrapper as an array.
  *
  * @param string|array $class Optional. One or more classes to add to the class list.
- * @param string|array $location Optional. The place (template) where the classes are displayed. This is a hint for filters.
  *
  * @return array Array of classes.
  */
-function noahlite_get_blog_class( $class = '', $location = '' ) {
+function noahlite_get_blog_class( $class = '' ) {
 
 	$classes = array();
 
@@ -172,9 +167,8 @@ function noahlite_get_blog_class( $class = '', $location = '' ) {
 	 *
 	 * @param array $classes An array of header classes.
 	 * @param array $class An array of additional classes added to the portfolio wrapper.
-	 * @param string|array $location The place (template) where the classes are displayed.
 	 */
-	$classes = apply_filters( 'noahlite_blog_class', $classes, $class, $location );
+	$classes = apply_filters( 'noahlite_blog_class', $classes, $class );
 
 	return array_unique( $classes );
 }
@@ -191,12 +185,12 @@ function noahlite_get_blog_class( $class = '', $location = '' ) {
  * @return array
  */
 function noahlite_post_classes( $classes, $class, $post_id ) {
-	//we first need to know the bigger picture - the location this template part was loaded from
-	$location = noahlite_get_location();
 
-	if ( is_post_type_archive( 'post' ) || is_author() || is_home() || is_search() || is_post_type_archive( 'jetpack-portfolio' ) || noahlite_in_location( 'portfolio jetpack', $location )
-	     || noahlite_in_location( 'archive category', $location ) || noahlite_in_location( 'archive tag', $location )
-	) {
+	if ( is_page( $post_id ) ) {
+		return $classes;
+	}
+
+	if ( is_post_type_archive( 'post' ) || is_author() || is_home() || is_search() || is_post_type_archive( 'jetpack-portfolio' ) || ( 'jetpack-portfolio' == get_post_type( $post_id ) && ! in_the_loop() ) ) {
 		$classes[] = 'c-gallery__item';
 
 		// get info about the width and height of the image
@@ -226,7 +220,7 @@ function noahlite_post_classes( $classes, $class, $post_id ) {
 		}
 
 		$classes[] = 'c-gallery__item--' . ( $is_landscape ? 'landscape' : 'portrait' );
-	} elseif ( is_singular( 'jetpack-portfolio' ) || noahlite_in_location( 'project jetpack', $location ) ) {
+	} elseif ( is_singular( 'jetpack-portfolio' ) && in_the_loop() ) {
 		$classes[] = 'c-project';
 	} else {
 		$classes[] = 'c-article';
@@ -348,37 +342,6 @@ if ( ! function_exists( 'noahlite_display_project_gallery' ) ) {
 	}
 }
 
-if ( ! function_exists( 'noahlite_post_gallery' ) ) {
-	/**
-	 * Responds to the [gallery] shortcode, but not an actual shortcode callback.
-	 *
-	 * @param $value string An empty string if nothing has modified the gallery output, the output html otherwise
-	 * @param $attr  array The shortcode attributes array
-	 *
-	 * @return string The (un)modified $value
-	 */
-	function noahlite_post_gallery( $value, $attr ) {
-		// Bail if somebody else has done something
-		if ( ! empty( $value ) ) {
-			return $value;
-		}
-
-		// If [gallery type="slideshow"] have it behave just like [gallery] but remember the user intent to be first a slideshow
-		if ( ! empty( $attr['type'] ) && 'slideshow' == $attr['type'] ) {
-			//remember that we should start as a slideshow - since we have no other way we will use the fact that it's a wrong value (0) as a hint
-			//the thumbnail gallery should be 3 columns
-			$attr['columns'] = 0;
-			unset( $attr['type'] );
-
-			//now do the regular thing
-			return gallery_shortcode( $attr );
-		}
-
-		return $value;
-	}
-}
-add_filter( 'post_gallery', 'noahlite_post_gallery', 1001, 2 );
-
 /**
  * We force that every gallery in a project uses the same settings
  *
@@ -491,7 +454,8 @@ add_filter( 'get_default_comment_status', 'noahlite_close_comments_for_projects'
  * @return string The full link URL for the given page number.
  */
 function noahlite_paginate_url( $url, $pagenum = 1, $escape = true, $query = null ) {
-	global $wp_rewrite;
+	global /** @var WP_Rewrite $wp_rewrite */
+	$wp_rewrite;
 
 	if ( empty( $query ) ) {
 		global $wp_query;
@@ -689,93 +653,3 @@ function noahlite_custom_archive_title( $title ) {
 	return $title;
 }
 add_filter( 'get_the_archive_title', 'noahlite_custom_archive_title', 11 );
-
-/**
- * Add a data attribute to the menu items depending on the background color
- *
- * @param array $atts {
- *     The HTML attributes applied to the menu item's `<a>` element, empty strings are ignored.
- *
- *     @type string $title  Title attribute.
- *     @type string $target Target attribute.
- *     @type string $rel    The rel attribute.
- *     @type string $href   The href attribute.
- * }
- * @param WP_Post  $item  The current menu item.
- * @param stdClass $args  An object of wp_nav_menu() arguments.
- * @param int      $depth Depth of menu item. Used for padding.
- *
- * @return array
- */
-function noahlite_menu_item_color($atts, $item, $args, $depth) {
-	$atts['data-color'] = trim( noahlite_hero_get_background_color( $item->object_id ) );
-
-	return $atts;
-}
-add_filter('nav_menu_link_attributes', 'noahlite_menu_item_color', 10, 4);
-
-/**
- * Get an HTML img element representing an image attachment
- *
- * While `$size` will accept an array, it is better to register a size with
- * add_image_size() so that a cropped version is generated. It's much more
- * efficient than having to find the closest-sized image and then having the
- * browser scale down the image.
- *
- * @param int          $attachment_id Image attachment ID.
- * @param string|array $size          Optional. Image size. Accepts any valid image size, or an array of width
- *                                    and height values in pixels (in that order). Default 'thumbnail'.
- * @param bool         $icon          Optional. Whether the image should be treated as an icon. Default false.
- * @param string|array $attr          Optional. Attributes for the image markup. Default empty.
- * @return string HTML img element or empty string on failure.
- */
-function noahlite_get_attachment_image($attachment_id, $size = 'thumbnail', $icon = false, $attr = '') {
-	$html = '';
-	$image = wp_get_attachment_image_src($attachment_id, $size, $icon);
-	if ( $image ) {
-		list($src, $width, $height) = $image;
-		$hwstring = image_hwstring($width, $height);
-		$size_class = $size;
-		if ( is_array( $size_class ) ) {
-			$size_class = join( 'x', $size_class );
-		}
-		$attachment = get_post($attachment_id);
-		$default_attr = array(
-			'src'	=> $src,
-			'class'	=> "attachment-$size_class size-$size_class",
-			'alt'	=> trim( strip_tags( get_post_meta( $attachment_id, '_wp_attachment_image_alt', true ) ) ),
-		);
-
-		$attr = wp_parse_args( $attr, $default_attr );
-
-		// Generate 'srcset' and 'sizes' if not already present.
-		if ( empty( $attr['srcset'] ) ) {
-			$image_meta = wp_get_attachment_metadata( $attachment_id );
-
-			if ( is_array( $image_meta ) ) {
-				$size_array = array( absint( $width ), absint( $height ) );
-				$srcset = wp_calculate_image_srcset( $size_array, $src, $image_meta, $attachment_id );
-				$sizes = wp_calculate_image_sizes( $size_array, $src, $image_meta, $attachment_id );
-
-				if ( $srcset && ( $sizes || ! empty( $attr['sizes'] ) ) ) {
-					$attr['srcset'] = $srcset;
-
-					if ( empty( $attr['sizes'] ) ) {
-						$attr['sizes'] = $sizes;
-					}
-				}
-			}
-		}
-
-		// This is a modified version of the core wp_get_attachment_image()
-		// The difference we've skipped the 'wp_get_attachment_image_attributes' filter in order to prevent Jetpack Carousel from messing with it
-		$attr = array_map( 'esc_attr', $attr );
-		$html = rtrim("<img $hwstring");
-		foreach ( $attr as $name => $value ) {
-			$html .= " $name=" . '"' . $value . '"';
-		}
-		$html .= ' />';
-	}
-
-	return $html;
-}

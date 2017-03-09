@@ -8,9 +8,6 @@
  * @since   Noah 1.0.0
  */
 
-//let the template parts know about our location
-$location = noahlite_set_location( 'search' );
-
 get_header(); ?>
 
 	<div id="primary" class="content-area  u-blog_sides_spacing">

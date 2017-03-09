@@ -5,15 +5,14 @@
  * @package Noah
  */
 
-//let the template parts know about our location
-$location = noahlite_set_location( 'page portfolio-page' );
-
 get_header(); ?>
 
 	<div id="primary" data-section-name="<?php echo get_post_field( 'post_name', get_post() ); ?>"  class="content-area  u-side-padding">
 		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php
+			// Start the loop but without a while as we only have one post, tops
+			if ( have_posts() ) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -56,12 +55,11 @@ get_header(); ?>
                                 'after'  => '</div>',
                             ) ); ?>
                         </div>
-                    <?php endif; ?>
+                    <?php endif;
 
-
-                    <?php
-                    //We are displaying the loop so we need the proper location
-                    $location = noahlite_set_location( 'portfolio jetpack' );
+                    // we are done with the post - it is time to begin our custom loop
+                    // to be sure that the main query's in_the_loop is properly set we call have_posts() one more time, just like while would do
+                    have_posts();
 
                     // in case this is a static front page
                     if ( get_query_var('page') ) {
@@ -82,38 +80,35 @@ get_header(); ?>
 	                        <div class="u-content-background">
 		                        <section class="c-archive-loop  u-full-width  u-portfolio_sides_spacing  u-content-bottom-spacing">
 			                        <div class="o-wrapper u-portfolio_grid_width">
-				                        <div <?php noahlite_portfolio_class( '', $location ); ?>>
+				                        <div <?php noahlite_portfolio_class( '' ); ?>>
 
 					                        <?php while ( $projects->have_posts() ) : $projects->the_post();
 						                        get_template_part( 'template-parts/project/content', 'jetpack-portfolio' );
 					                        endwhile; ?>
 
 				                        </div>
-			                        </div>
-		                        </section>
-	                        </div>
+			                        </div><!-- .o-wrapper.u-portfolio_grid_width -->
+		                        </section><!-- .c-archive-loop -->
+	                        </div><!-- .u-content-background -->
 
                             <?php noahlite_the_older_projects_button( $projects ); ?>
 
-                        </div>
+                        </div><!-- .js-header-height-padding-top -->
 
                     <?php else : ?>
 
 	                    <div class="u-content-width">
 		                    <?php get_template_part( 'template-parts/content', 'none' ); ?>
-	                    </div>
+	                    </div><!-- .u-content-width -->
 
                     <?php endif;
 
-                    wp_reset_postdata();
-
-                    //Set the previous location back
-                    $location = noahlite_set_location( 'page portfolio-page' ); ?>
+                    wp_reset_postdata(); ?>
 
 				</div><!-- .c-article__content -->
 			</article><!-- #post-## -->
 
-			<?php endwhile; // End of the loop. ?>
+			<?php endif; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -243,22 +243,20 @@ endif;
  * Display the classes for the header element.
  *
  * @param string|array $class One or more classes to add to the class list.
- * @param string $location The place (template) where the classes are displayed. This is a hint for filters.
  */
-function noahlite_header_class( $class = '', $location = '' ) {
+function noahlite_header_class( $class = '' ) {
 	// Separates classes with a single space, collates classes for header element
-	echo 'class="' . join( ' ', noahlite_get_header_class( $class, $location ) ) . '"';
+	echo 'class="' . join( ' ', noahlite_get_header_class( $class ) ) . '"';
 }
 
 /**
  * Retrieve the classes for the header element as an array.
  *
  * @param string|array $class One or more classes to add to the class list.
- * @param string $location The place (template) where the classes are displayed. This is a hint for filters.
  *
  * @return array Array of classes.
  */
-function noahlite_get_header_class( $class = '', $location = '' ) {
+function noahlite_get_header_class( $class = '' ) {
 	$classes = array();
 
 	$classes[] = 'site-header';
@@ -281,7 +279,7 @@ function noahlite_get_header_class( $class = '', $location = '' ) {
 	 * @param array $classes An array of header classes.
 	 * @param array $class   An array of additional classes added to the header.
 	 */
-	$classes = apply_filters( 'noahlite_header_class', $classes, $class, $location );
+	$classes = apply_filters( 'noahlite_header_class', $classes, $class );
 
 	return array_unique( $classes );
 }
@@ -316,45 +314,6 @@ function noahlite_header_get_the_right_menu() {
 		'fallback_cb'     => false,
 		'echo'            => false,
 	) ) );
-}
-
-/**
- * Return the CSS class corresponding to the set height of the hero.
- *
- * @param string|array $location Optional. The place (template) where this is needed.
- * @param int|WP_Post $post    Optional. Post ID or WP_Post object. Defaults to current post.
- *
- * @return bool
- */
-function noahlite_hero_get_height( $location = '', $post = null ) {
-	// We might be on a page set as a page for posts and the $post will be the first post in the loop
-	// So we check first
-	if ( empty( $post ) && is_home() ) {
-		// find the id of the page for posts
-		$post = get_option( 'page_for_posts' );
-	}
-
-	// First make sure we have a post
-	$post = get_post( $post );
-
-	//bail if we don't have a post to work with
-	if ( empty( $post ) ) {
-		return false;
-	}
-
-	//handle the map hero separately
-	if ( noahlite_in_location( 'map', $location ) ) {
-		$hero_height = trim( get_post_meta( $post->ID, '_hero_map_height', true ) );
-	} else {
-		$hero_height = trim( get_post_meta( $post->ID, '_hero_height', true ) );
-	}
-
-	//by default we show a full-height hero/header
-	if ( empty( $hero_height ) ) {
-		$hero_height = 'c-hero--full';
-	}
-
-	return $hero_height;
 }
 
 /**

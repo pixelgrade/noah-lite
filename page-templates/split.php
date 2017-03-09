@@ -5,9 +5,6 @@
  * @package Noah
  */
 
-//let the template parts know about our location
-$location = noahlite_set_location( 'page split' );
-
 get_header(); ?>
 
     <div id="primary" class="content-area  u-side-padding  u-content-background">

@@ -8,9 +8,6 @@
  * @since   Noah 1.0.0
  */
 
-//let the template parts know about our location
-$location = noahlite_set_location( 'single project jetpack' );
-
 get_header(); ?>
 
 <div id="primary" data-section-name="<?php echo get_post_field( 'post_name', get_post() ); ?>" class="content-area  u-container-sides-spacings  u-content_container_padding_top">
@@ -54,9 +51,6 @@ get_header(); ?>
 
             <div class="u-content-bottom-spacing">
                 <?php
-                //We are displaying the loop so we need the proper location
-                $location = noahlite_set_location( 'portfolio jetpack' );
-
                 $projects = new WP_Query( array(
 	                'post_type' => 'jetpack-portfolio',
 	                'posts_per_page' => -1, //we want all the projects here
@@ -67,7 +61,7 @@ get_header(); ?>
 	                <div class="u-content-background">
 		                <section class="c-archive-loop  u-full-width  u-portfolio_sides_spacing  u-content-bottom-spacing">
 			                <div class="o-wrapper u-portfolio_grid_width">
-				                <div <?php noahlite_portfolio_class( '', $location ); ?>>
+				                <div <?php noahlite_portfolio_class(); ?>>
 
 					                <?php while ( $projects->have_posts() ) : $projects->the_post();
 						                get_template_part( 'template-parts/project/content', 'jetpack-portfolio' );
@@ -86,10 +80,7 @@ get_header(); ?>
 
                 <?php endif;
 
-                wp_reset_postdata();
-
-                //Set the previous location back
-                $location = noahlite_set_location( 'single project jetpack' ); ?>
+                wp_reset_postdata(); ?>
 
             </div><!-- .u-content-bottom-spacing -->
 
@@ -98,10 +89,6 @@ get_header(); ?>
     </div><!-- .js-header-height-padding-top -->
 
 </div><!-- #projectsArchive -->
-
-<?php
-wp_reset_query();
-?>
 
 <?php
 get_sidebar();

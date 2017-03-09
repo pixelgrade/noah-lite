@@ -13,9 +13,6 @@
  * @since   Noah 1.0.0
  */
 
-//let the template parts know about our location
-$location = noahlite_set_location( 'page' );
-
 get_header(); ?>
 
 	<div id="primary" class="content-area  u-container-sides-spacings  u-content-bottom-spacing">

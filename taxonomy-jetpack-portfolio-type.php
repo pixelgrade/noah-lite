@@ -8,9 +8,6 @@
  * @since   Noah 1.0.0
  */
 
-//let the template parts know about our location
-$location = noahlite_set_location( 'archive portfolio portfolio-type jetpack' );
-
 get_header(); ?>
 
 <header class="c-page-header content-area">
@@ -33,7 +30,7 @@ get_header(); ?>
 	<div class="u-content-background">
 		<section class="c-archive-loop  u-full-width  u-portfolio_sides_spacing  u-content-bottom-spacing">
 			<div class="o-wrapper u-portfolio_grid_width">
-				<div <?php noahlite_portfolio_class( '', $location ); ?>>
+				<div <?php noahlite_portfolio_class(); ?>>
 
 					<?php while ( have_posts() ) : the_post();
 						get_template_part( 'template-parts/project/content', 'jetpack-portfolio' );

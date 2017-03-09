@@ -5,12 +5,9 @@
  * @package Noah
  * @since   Noah 1.0.0
  */
-
-//we first need to know the bigger picture - the location this template part was loaded from
-$location = noahlite_get_location( 'portfolio jetpack' );
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class( '', get_the_ID() ) ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="c-card">
 		<div class="c-card__link">
 
@@ -19,9 +16,7 @@ $location = noahlite_get_location( 'portfolio jetpack' );
 				<div class="c-card__frame">
 				<?php
 				// Output the featured image
-				// We don't use get_the_post_thumbnail() because we want to prevent Jetpack Carousel to attach itself to these images
-				$post_thumbnail_id = get_post_thumbnail_id( get_the_ID() );
-				echo noahlite_get_attachment_image( $post_thumbnail_id, 'post-thumbnail' ); ?>
+				echo get_the_post_thumbnail( get_the_ID(), 'post-thumbnail' ); ?>
 				</div><!-- .c-card__frame -->
 			</a>
 			<?php } ?>

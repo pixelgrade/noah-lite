@@ -7,9 +7,6 @@
  * @package Noah
  * @since   Noah 1.0.0
  */
-
-//we first need to know the bigger picture - the location this template part was loaded from
-$location = noahlite_get_location( 'single project jetpack' );
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
