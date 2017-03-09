@@ -18,13 +18,13 @@ get_header(); ?>
 
 			<div class="c-page-header">
 				<h1 class="c-page-header__title h1">
-					<?php printf( __( 'Search results for: %s', 'noah' ), '<span>' . get_search_query() . '</span>' ); ?>
+					<?php printf( __( 'Search results for: %s', 'noah-lite' ), '<span>' . get_search_query() . '</span>' ); ?>
 				</h1>
 			</div>
 
 			<?php if ( have_posts() ) : ?>
 
-				<div <?php noah_blog_class(); ?> id="posts-container">
+				<div <?php noahlite_blog_class(); ?> id="posts-container">
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php

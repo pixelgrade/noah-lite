@@ -17,12 +17,7 @@
 		<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
 		<div class="c-footer__content">
-			<?php
-			get_template_part( 'template-parts/footer/site-info' );
-
-			if ( ! get_theme_mod( 'noah_footer_hide_back_to_top_link' ) ) { ?>
-			<a class="back-to-top" href="#"><?php esc_html_e( 'Back to Top', 'noah' ); ?></a>
-			<?php } ?>
+			<?php get_template_part( 'template-parts/footer/site-info' ); ?>
 		</div><!-- .c-footer__content -->
 	</div><!-- .o-wrapper.u-container-width.content-area -->
 </footer>

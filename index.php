@@ -28,12 +28,12 @@ get_header(); ?>
 						if ( get_option( 'page_for_posts' ) ) {
 							echo get_the_title( get_option( 'page_for_posts' ) );
 						} else {
-							esc_html_e( 'News', 'noah' );
+							esc_html_e( 'News', 'noah-lite' );
 						} ?>
 					</h1>
 					<div class="c-page-header__meta h7">
-						<span><?php _e( 'Show', 'noah' ); ?></span>
-						<span class="c-page-header__taxonomy  u-color-accent"><?php noah_the_taxonomy_dropdown( 'category' ); ?></span>
+						<span><?php _e( 'Show', 'noah-lite' ); ?></span>
+						<span class="c-page-header__taxonomy  u-color-accent"><?php noahlite_the_taxonomy_dropdown( 'category' ); ?></span>
 					</div>
 					<?php if ( term_description() ) {
 						echo term_description();
@@ -43,7 +43,7 @@ get_header(); ?>
 
 			<?php if ( have_posts() ) : /* Start the Loop */ ?>
 
-			<div <?php noah_blog_class(); ?> id="posts-container">
+			<div <?php noahlite_blog_class(); ?> id="posts-container">
 
 				<?php
 				while ( have_posts() ) : the_post();

@@ -9,7 +9,7 @@
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) || 'jetpack-portfolio' === get_post_type()
-	|| noah_is_blog() ) {
+	|| noahlite_is_blog() ) {
 	return;
 } ?>
 

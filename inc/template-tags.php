@@ -7,21 +7,21 @@
  * @package Noah
  */
 
-if ( ! function_exists( 'noah_posted_on' ) ) :
+if ( ! function_exists( 'noahlite_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
-	function noah_posted_on() {
+	function noahlite_posted_on() {
 
-		echo '<span class="posted-on">' . noah_date_link() . '</span>';
+		echo '<span class="posted-on">' . noahlite_date_link() . '</span>';
 	}
 endif;
 
-if ( ! function_exists( 'noah_date_link' ) ) :
+if ( ! function_exists( 'noahlite_date_link' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
-	function noah_date_link() {
+	function noahlite_date_link() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" hidden datetime="%3$s">%4$s</time>';
@@ -37,13 +37,13 @@ if ( ! function_exists( 'noah_date_link' ) ) :
 		// Wrap the time string in a link, and preface it with 'Posted on'.
 		return sprintf(
 		/* translators: %s: post date */
-			__( '<span class="screen-reader-text">Posted on</span> %s', 'noah' ),
+			__( '<span class="screen-reader-text">Posted on</span> %s', 'noah-lite' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 	} #function
 endif;
 
-if ( ! function_exists( 'noah_get_cats_list' ) ) {
+if ( ! function_exists( 'noahlite_get_cats_list' ) ) {
 
 	/**
 	 * Returns HTML with comma separated category links
@@ -54,7 +54,7 @@ if ( ! function_exists( 'noah_get_cats_list' ) ) {
 	 *
 	 * @return string
 	 */
-	function noah_get_cats_list( $post_ID = null ) {
+	function noahlite_get_cats_list( $post_ID = null ) {
 
 		//use the current post ID is none given
 		if ( empty( $post_ID ) ) {
@@ -68,8 +68,8 @@ if ( ! function_exists( 'noah_get_cats_list' ) ) {
 
 		$cats = '';
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'noah' ), '', $post_ID );
-		if ( $categories_list && noah_categorized_blog() ) {
+		$categories_list = get_the_category_list( esc_html__( ', ', 'noah-lite' ), '', $post_ID );
+		if ( $categories_list && noahlite_categorized_blog() ) {
 			$cats = '<span class="cat-links">' . $categories_list . '</span>';
 		}
 
@@ -79,7 +79,7 @@ if ( ! function_exists( 'noah_get_cats_list' ) ) {
 
 }
 
-if ( ! function_exists( 'noah_cats_list' ) ) {
+if ( ! function_exists( 'noahlite_cats_list' ) ) {
 
 	/**
 	 * Prints HTML with comma separated category links
@@ -88,15 +88,15 @@ if ( ! function_exists( 'noah_cats_list' ) ) {
 	 *
 	 * @param int|WP_Post $post_ID Optional. Post ID or post object.
 	 */
-	function noah_cats_list( $post_ID = null ) {
+	function noahlite_cats_list( $post_ID = null ) {
 
-		echo noah_get_cats_list( $post_ID );
+		echo noahlite_get_cats_list( $post_ID );
 
 	} #function
 
 }
 
-if ( ! function_exists( 'noah_the_first_category' ) ) {
+if ( ! function_exists( 'noahlite_the_first_category' ) ) {
 	/**
 	 * Prints an anchor of the first category of post
 	 *
@@ -105,7 +105,7 @@ if ( ! function_exists( 'noah_the_first_category' ) ) {
 	 * @param int|WP_Post $post_ID Optional. Post ID or post object.
 	 * @param string $tag_class Optional. A CSS class that the tag will receive.
 	 */
-	function noah_the_first_category( $post_ID = null, $tag_class = '' ) {
+	function noahlite_the_first_category( $post_ID = null, $tag_class = '' ) {
 
 		$categories = get_the_category();
 
@@ -124,20 +124,20 @@ if ( ! function_exists( 'noah_the_first_category' ) ) {
 	} #function
 }
 
-if ( ! function_exists( 'noah_the_older_projects_button' ) ) {
+if ( ! function_exists( 'noahlite_the_older_projects_button' ) ) {
 	/**
 	 * Prints an anchor to the second page of the jetpack-portfolio archive
 	 */
-	function noah_the_older_projects_button( $query = null ) {
-		$older_posts_link = noah_paginate_url( wp_make_link_relative( get_post_type_archive_link( 'jetpack-portfolio' ) ), 2, false, $query );
+	function noahlite_the_older_projects_button( $query = null ) {
+		$older_posts_link = noahlite_paginate_url( wp_make_link_relative( get_post_type_archive_link( 'jetpack-portfolio' ) ), 2, false, $query );
 
 		if ( ! empty( $older_posts_link ) ) : ?>
 
 			<nav class="navigation posts-navigation" role="navigation">
-				<h2 class="screen-reader-text"><?php esc_html_e( 'Projects navigation', 'noah' ); ?></h2>
+				<h2 class="screen-reader-text"><?php esc_html_e( 'Projects navigation', 'noah-lite' ); ?></h2>
 				<div class="nav-links">
 					<div class="nav-previous">
-						<a href="<?php echo esc_url( $older_posts_link ); ?>"><?php esc_html_e( 'Older projects', 'noah' ); ?></a>
+						<a href="<?php echo esc_url( $older_posts_link ); ?>"><?php esc_html_e( 'Older projects', 'noah-lite' ); ?></a>
 					</div>
 				</div>
 			</nav>
@@ -145,9 +145,9 @@ if ( ! function_exists( 'noah_the_older_projects_button' ) ) {
 	} #function
 }
 
-if ( ! function_exists( 'noah_the_taxonomy_dropdown' ) ) {
+if ( ! function_exists( 'noahlite_the_taxonomy_dropdown' ) ) {
 
-	function noah_the_taxonomy_dropdown( $taxonomy, $selected = '' ) {
+	function noahlite_the_taxonomy_dropdown( $taxonomy, $selected = '' ) {
 		$output = '';
 
 		$id = $taxonomy . '-dropdown';
@@ -171,7 +171,7 @@ if ( ! function_exists( 'noah_the_taxonomy_dropdown' ) ) {
 		if ( empty( $selected ) ) {
 			$selected_attr = 'selected';
 		}
-		$output .= '<option value="' . esc_attr( $archive_link ) . '" ' . esc_attr( $selected_attr ) . '>' . esc_html__( 'Everything', 'noah' ) . '</option>';
+		$output .= '<option value="' . esc_attr( $archive_link ) . '" ' . esc_attr( $selected_attr ) . '>' . esc_html__( 'Everything', 'noah-lite' ) . '</option>';
 
 		foreach ( $terms as $term ) {
 			$selected_attr = '';
@@ -183,52 +183,52 @@ if ( ! function_exists( 'noah_the_taxonomy_dropdown' ) ) {
 		$output .= '</select>';
 
 		// Allow others to have a go at it
-		$output = apply_filters( 'noah_the_taxonomy_dropdown', $output, $taxonomy, $selected );
+		$output = apply_filters( 'noahlite_the_taxonomy_dropdown', $output, $taxonomy, $selected );
 
 		// Display it
 		echo $output;
 	} #function
 }
 
-if ( ! function_exists( 'noah_add_no_js_hook_to_footer' ) ) {
-	function noah_add_no_js_hook_to_footer() { ?>
+if ( ! function_exists( 'noahlite_add_no_js_hook_to_footer' ) ) {
+	function noahlite_add_no_js_hook_to_footer() { ?>
 		<script>
 			document.documentElement.className = document.documentElement.className.replace("no-js", "js");
 		</script>
 		<?php
 	}
 }
-add_action( 'wp_footer', 'noah_add_no_js_hook_to_footer' );
+add_action( 'wp_footer', 'noahlite_add_no_js_hook_to_footer' );
 
 /**
  * Check if we are on blog
  */
-function noah_is_blog() {
+function noahlite_is_blog() {
 	global $post;
 	$posttype = get_post_type( $post );
 
 	return ( ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag() ) && ( $posttype == 'post' ) ) ? true : false;
 }
 
-if ( ! function_exists( 'noah_the_comments_navigation' ) ) :
+if ( ! function_exists( 'noahlite_the_comments_navigation' ) ) :
 	/**
 	 * Display navigation to next/previous comments when applicable.
 	 *
 	 * @since Noah 1.0
 	 */
-	function noah_the_comments_navigation() {
+	function noahlite_the_comments_navigation() {
 		// Are there comments to navigate through?
 		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 			?>
 			<nav class="navigation comment-navigation" role="navigation">
-				<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'noah' ); ?></h2>
+				<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'noah-lite' ); ?></h2>
 				<div class="nav-links">
 					<?php
-					if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'noah' ) ) ) :
+					if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'noah-lite' ) ) ) :
 						printf( '<div class="c-btn nav-previous">%s</div>', $prev_link );
 					endif;
 
-					if ( $next_link = get_next_comments_link( __( 'Newer Comments', 'noah' ) ) ) :
+					if ( $next_link = get_next_comments_link( __( 'Newer Comments', 'noah-lite' ) ) ) :
 						printf( '<div class="c-btn nav-next">%s</div>', $next_link );
 					endif;
 					?>
@@ -973,7 +973,7 @@ function pixelgrade_hero_the_background_video ($id = null, $opacity = 100, $igno
 /**
  * Checks to see if we're on the homepage or not.
  */
-function noah_is_frontpage() {
+function noahlite_is_frontpage() {
 	return ( is_front_page() && ! is_home() );
 }
 
@@ -983,8 +983,8 @@ function noah_is_frontpage() {
  * @param array $args Optional. See get_the_post_navigation() for available arguments.
  *                    Default empty array.
  */
-function noah_the_post_navigation( $args = array() ) {
-	echo noah_get_the_post_navigation( $args );
+function noahlite_the_post_navigation( $args = array() ) {
+	echo noahlite_get_the_post_navigation( $args );
 }
 
 /**
@@ -1002,20 +1002,20 @@ function noah_the_post_navigation( $args = array() ) {
  * }
  * @return string Markup for post links.
  */
-function noah_get_the_post_navigation( $args = array() ) {
+function noahlite_get_the_post_navigation( $args = array() ) {
 	$args = wp_parse_args( $args, array(
 		'prev_text'          => '%title',
 		'next_text'          => '%title',
 		'in_same_term'       => false,
 		'excluded_terms'     => '',
 		'taxonomy'           => 'category',
-		'screen_reader_text' => __( 'Post navigation', 'noah' ),
+		'screen_reader_text' => __( 'Post navigation', 'noah-lite' ),
 	) );
 
 	$navigation = '';
 
 	$previous = get_previous_post_link(
-		'<div class="nav-previous"><span class="h3 nav-previous-title">%link</span>' . '<span class="h7 u-color-accent">' . __( 'Previous', 'noah' ) . '</span></div>',
+		'<div class="nav-previous"><span class="h3 nav-previous-title">%link</span>' . '<span class="h7 u-color-accent">' . __( 'Previous', 'noah-lite' ) . '</span></div>',
 		$args['prev_text'],
 		$args['in_same_term'],
 		$args['excluded_terms'],
@@ -1023,7 +1023,7 @@ function noah_get_the_post_navigation( $args = array() ) {
 	);
 
 	$next = get_next_post_link(
-		'<div class="nav-next"><span class="h3 nav-next-title">%link</span>' . '<span class="h7 u-color-accent">' . __( 'Next', 'noah' ) . '</span></div>',
+		'<div class="nav-next"><span class="h3 nav-next-title">%link</span>' . '<span class="h7 u-color-accent">' . __( 'Next', 'noah-lite' ) . '</span></div>',
 		$args['next_text'],
 		$args['in_same_term'],
 		$args['excluded_terms'],
@@ -1041,7 +1041,7 @@ function noah_get_the_post_navigation( $args = array() ) {
 /*
  * Return the HTML markup of the author bio.
  */
-function noah_get_the_author_info_box() {
+function noahlite_get_the_author_info_box() {
 	$author_details = '';
 
 	$author_details .= '<aside class="c-author" itemscope itemtype="http://schema.org/Person">' . PHP_EOL;
@@ -1058,12 +1058,12 @@ function noah_get_the_author_info_box() {
 
 	$author_details .= '</div><!-- .c-author__avatar -->' . PHP_EOL;
 	$author_details .= '<div class="c-author__details">' . PHP_EOL;
-	$author_details .= '<span class="c-author__label h7">' . esc_html__( 'Posted by', 'noah' ) . '</span>' . PHP_EOL;
+	$author_details .= '<span class="c-author__label h7">' . esc_html__( 'Posted by', 'noah-lite' ) . '</span>' . PHP_EOL;
 	$author_details .= '<p class="c-author__name h2">' . get_the_author() . '</p>' . PHP_EOL;
 	$author_details .= '<p class="c-author__description" itemprop="description">' . get_the_author_meta( 'description' ) . '</p>' . PHP_EOL;
 	$author_details .= '<div class="o-inline o-inline-xs h7">' .PHP_EOL;
-	$author_details .= '<a class="_color-inherit" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author" title="' . esc_attr( sprintf( __( 'View all posts by %s', 'noah' ), get_the_author() ) ) . '">' . esc_html__( 'All posts', 'noah' ) . '</a>' . PHP_EOL;
-	$author_details .= noah_get_author_bio_links();
+	$author_details .= '<a class="_color-inherit" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author" title="' . esc_attr( sprintf( __( 'View all posts by %s', 'noah-lite' ), get_the_author() ) ) . '">' . esc_html__( 'All posts', 'noah-lite' ) . '</a>' . PHP_EOL;
+	$author_details .= noahlite_get_author_bio_links();
 
 	$author_details .= '</div>' . PHP_EOL;
 	$author_details .= '</div><!-- .c-author__details -->' . PHP_EOL;
@@ -1072,26 +1072,26 @@ function noah_get_the_author_info_box() {
 	return $author_details;
 }
 
-if ( ! function_exists( 'noah_entry_footer' ) ) :
+if ( ! function_exists( 'noahlite_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for posts on archives.
 	 */
-	function noah_entry_footer( $post_id ) {
-		edit_post_link( __( 'Edit', 'noah' ), '<span class="edit-link">', '</span>', $post_id );
+	function noahlite_entry_footer( $post_id ) {
+		edit_post_link( __( 'Edit', 'noah-lite' ), '<span class="edit-link">', '</span>', $post_id );
 	}
 endif;
 
 
-if ( ! function_exists( 'noah_single_entry_footer' ) ) :
+if ( ! function_exists( 'noahlite_single_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags, Jetpack likes, shares, related, and comments.
 	 */
-	function noah_single_entry_footer() {
-		edit_post_link( __( 'Edit', 'noah' ), '<span class="edit-link">', '</span>' );
+	function noahlite_single_entry_footer() {
+		edit_post_link( __( 'Edit', 'noah-lite' ), '<span class="edit-link">', '</span>' );
 	} #function
 endif;
 
-if ( ! function_exists( 'noah_get_author_bio_links' ) ) :
+if ( ! function_exists( 'noahlite_get_author_bio_links' ) ) :
 	/**
 	 * Return the markup for the author bio links.
 	 * These are the links/websites added by one to it's Gravatar profile
@@ -1099,7 +1099,7 @@ if ( ! function_exists( 'noah_get_author_bio_links' ) ) :
 	 * @param int|WP_Post $post_id Optional. Post ID or post object.
 	 * @return string The HTML markup of the author bio links list.
 	 */
-	function noah_get_author_bio_links( $post_id = null ) {
+	function noahlite_get_author_bio_links( $post_id = null ) {
 		$post = get_post( $post_id );
 		$markup = '';
 		if ( empty( $post ) ) {

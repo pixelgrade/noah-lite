@@ -861,8 +861,8 @@ $.fn[ 'smartresize' ] = function( fn ) {
 // to make sure it reflects the current page
 function adminBarEditFix( id, editString, taxonomy ) {
     // get the admin ajax url and clean it
-    var baseEditURL = noah_js_strings.ajaxurl.replace( 'admin-ajax.php','post.php' ),
-        baseEditTaxURL = noah_js_strings.ajaxurl.replace( 'admin-ajax.php','edit-tags.php' ),
+    var baseEditURL = noahlite_js_strings.ajaxurl.replace( 'admin-ajax.php','post.php' ),
+        baseEditTaxURL = noahlite_js_strings.ajaxurl.replace( 'admin-ajax.php','edit-tags.php' ),
         $editButton = $( '#wp-admin-bar-edit a' );
 
     if ( ! empty( $editButton ) ) {
@@ -905,7 +905,7 @@ function adminBarEditFix( id, editString, taxonomy ) {
 
     //Plus, we need to change the url of the Customize button to the current url
     var $customizeButton = $( '#wp-admin-bar-customize a' ),
-        baseCustomizeURL = noah_js_strings.ajaxurl.replace( 'admin-ajax.php','customize.php' );
+        baseCustomizeURL = noahlite_js_strings.ajaxurl.replace( 'admin-ajax.php','customize.php' );
     if ( ! empty( $customizeButton ) ) {
         $customizeButton.attr( 'href', baseCustomizeURL + '?url=' + encodeURIComponent( window.location.href ) );
     }

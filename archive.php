@@ -25,7 +25,7 @@ get_header(); ?>
 				?>
 			</header>
 
-			<div <?php noah_blog_class(); ?> id="posts-container">
+			<div <?php noahlite_blog_class(); ?> id="posts-container">
 
 				<?php
 				while ( have_posts() ) : the_post();

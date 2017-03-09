@@ -11,7 +11,7 @@
 	<input class="c-navbar__checkbox" id="menu-toggle" type="checkbox" aria-controls="primary-menu" aria-expanded="false">
 	<label class="c-navbar__label" for="menu-toggle">
 		<span class="c-navbar__label-icon"><?php get_template_part( 'template-parts/header/burger' ); ?></span>
-		<span class="c-navbar__label-text screen-reader-text"><?php esc_html_e( 'Primary Menu', 'noah' ); ?></span>
+		<span class="c-navbar__label-text screen-reader-text"><?php esc_html_e( 'Primary Menu', 'noah-lite' ); ?></span>
 	</label><!-- .c-navbar__label -->
 
 	<div class="c-navbar__content">
@@ -77,8 +77,8 @@
 		</div><!-- .c-navbar__zone .c-navbar__zone--right -->
 	</div><!-- .c-navbar__content -->
 
-	<?php if ( ( noah_is_frontpage() || ( is_home() && is_front_page() ) ) && has_custom_header() ) : ?>
-		<a href="#content" class="menu-scroll-down"><span class="screen-reader-text"><?php _e( 'Scroll down to content', 'noah' ); ?></span></a>
+	<?php if ( ( noahlite_is_frontpage() || ( is_home() && is_front_page() ) ) && has_custom_header() ) : ?>
+		<a href="#content" class="menu-scroll-down"><span class="screen-reader-text"><?php _e( 'Scroll down to content', 'noah-lite' ); ?></span></a>
 	<?php endif; ?>
 
 </div><!-- .c-navbar -->

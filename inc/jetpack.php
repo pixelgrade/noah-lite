@@ -7,11 +7,11 @@
  * @package Noah
  */
 
-function noah_jetpack_setup() {
+function noahlite_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'noah_infinite_scroll_render',
+		'render'    => 'noahlite_infinite_scroll_render',
 		'footer'    => 'page',
 		'footer_widgets' => array(
 			'sidebar-2',
@@ -44,14 +44,14 @@ function noah_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'noah_jetpack_setup', 30 );
+add_action( 'after_setup_theme', 'noahlite_jetpack_setup', 30 );
 
 /**
  * Custom render function for Infinite Scroll.
  *
  * @since Noah 1.2
  */
-function noah_infinite_scroll_render() {
+function noahlite_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :
@@ -60,7 +60,7 @@ function noah_infinite_scroll_render() {
 			get_template_part( 'template-parts/content', get_post_format() );
 		endif;
 	}
-} // end function noah_infinite_scroll_render
+} // end function noahlite_infinite_scroll_render
 
 /**
  * Filter the theme page templates and remove the `page-templates/portfolio-page.php` when no jetpack-portfolio CPT
@@ -69,11 +69,11 @@ function noah_infinite_scroll_render() {
  *
  * @return array (Maybe) modified page templates array.
  */
-function noah_filter_theme_page_templates( $page_templates ) {
+function noahlite_filter_theme_page_templates( $page_templates ) {
 	if ( ! post_type_exists( 'jetpack-portfolio' ) && isset( $page_templates['page-templates/portfolio-page.php'] ) ) {
 		unset( $page_templates['page-templates/portfolio-page.php'] );
 	}
 
 	return $page_templates;
 }
-add_filter( 'theme_page_templates', 'noah_filter_theme_page_templates', 20, 1 );
+add_filter( 'theme_page_templates', 'noahlite_filter_theme_page_templates', 20, 1 );

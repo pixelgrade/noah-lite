@@ -9,11 +9,11 @@
  * First register the widget areas, aka sidebars, following this pattern
  * https://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function noah_widgets_areas() {
+function noahlite_widgets_areas() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Main Sidebar', 'noah' ),
+		'name'          => esc_html__( 'Main Sidebar', 'noah-lite' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Widgets in this area will be shown on all blog posts.', 'noah' ),
+		'description'   => esc_html__( 'Widgets in this area will be shown on all blog posts.', 'noah-lite' ),
 		'before_widget' => '<li id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</li>',
 		'before_title'  => '<h2 class="widgettitle">',
@@ -22,5 +22,5 @@ function noah_widgets_areas() {
 
 
 }
-add_action( 'widgets_init', 'noah_widgets_areas' );
+add_action( 'widgets_init', 'noahlite_widgets_areas' );
 

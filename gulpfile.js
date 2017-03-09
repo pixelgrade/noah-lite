@@ -3,7 +3,7 @@
 // This is not a normal require, because our gulp-help tool (which provides the
 // nice task descriptions on the command-line) requires changing the function
 // signature of gulp tasks to include the task description.
-var theme = 'noah';
+var theme = 'noah-lite';
 var gulp = require('gulp-help')(require('gulp'));
 
 // Gulp / Node utilities
