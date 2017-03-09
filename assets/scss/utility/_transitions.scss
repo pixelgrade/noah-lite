@@ -140,39 +140,3 @@ img:not(.c-slider__image) {
         transition-property: opacity !important;
     }
 }
-
-html.fade-out {
-
-    .site-content {
-        opacity: 0;
-        top: -200px;
-    }
-
-    .js-page-mask {
-        transform: none;
-        transform-origin: 0 100%;
-    }
-}
-
-html.fade-in {
-
-    .site-content {
-        opacity: 1;
-        top: 0;
-    }
-
-    .js-page-mask {
-        transform: scale(1, 0);
-        transform-origin: 0 0;
-    }
-}
-
-html.no-transitions {
-    .site-content,
-    .js-page-mask {
-        transition: none !important;
-    }
-}
-
-
-

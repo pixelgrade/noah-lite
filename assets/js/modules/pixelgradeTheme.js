@@ -1,63 +1,98 @@
+/*!
+ * pixelgradeTheme v1.0.1
+ * Copyright (c) 2017 PixelGrade http://www.pixelgrade.com
+ * Licensed under MIT http://www.opensource.org/licenses/mit-license.php/
+ */
 var pixelgradeTheme = function() {
 
-    var _this = this;
+	var _this = this,
+		windowWidth = window.innerWidth,
+		windowHeight = window.innerHeight,
+		lastScrollY = (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0),
+		orientation = windowWidth > windowHeight ? 'landscape' : 'portrait';
 
-    _this.ev = $({});
+	_this.ev = $( {} );
+	_this.frameRendered = false;
+	_this.debug = false;
 
-    _this.onScroll = function() {
-        _this.latestKnownScrollY = $( window ).scrollTop();
-    };
+	_this.log = function() {
+		console.log.apply(this, arguments)
+	};
 
-    _this.onResize = function() {
-        _this.windowWidth = window.innerWidth;
-        _this.windowHeight = window.innerHeight;
-        _this.orientation = _this.windowWidth > _this.windowHeight ? 'landscape' : 'portrait';
+	_this.getScroll = function() {
+		return lastScrollY;
+	};
 
-        var newOrientation = _this.windowWidth > _this.windowHeight ? 'landscape' : 'portrait';
+	_this.getWindowWidth = function() {
+		return windowWidth;
+	};
 
-        if ( Util.isTouch && newOrientation == _this.orientation ) {
-            return;
-        }
+	_this.getWindowHeight = function() {
+		return windowHeight;
+	};
 
-        _this.orientation = newOrientation;
-    };
+	_this.getOrientation = function() {
+		return orientation;
+	};
 
-    _this.renderLoop = function() {
-        requestAnimationFrame( function() {
-            _this.ev.trigger( 'beforeRender' );
-            _this.renderLoop();
-            _this.ev.trigger( 'afterRender' );
-        });
-    };
+	_this.onScroll = function() {
+		if ( _this.frameRendered === false ) {
+			return;
+		}
+		lastScrollY = (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0);
+		_this.frameRendered = false;
+	};
 
-    _this.eventHandlers = function() {
-        $( document ).ready( _this.onReady );
-        $( window )
-            .scroll( _this.onScroll )
-            .resize( _this.onResize )
-            .smartresize( _this.refresh )
-            .load( _this.onLoad );
-    };
+	_this.onResize = function() {
+		windowWidth = window.innerWidth;
+		windowHeight = window.innerHeight;
 
-    _this.onReady = function() {
-        $( 'html' ).addClass( 'is-ready' );
-    };
+		var newOrientation = windowWidth > windowHeight ? 'landscape' : 'portrait';
 
-    _this.onLoad = function() {
-        $( 'html' ).addClass( 'is-loaded' );
-    };
+		_this.debouncedResize();
 
-    _this.onResize();
-    _this.onScroll();
-    _this.renderLoop();
+		if ( orientation !== newOrientation ) {
+			_this.debouncedOrientationChange();
+		}
+
+		orientation = newOrientation;
+	};
+
+	_this.debouncedResize = Util.debounce(function() {
+		$( window ).trigger( 'pxg:resize' );
+	}, 300);
+
+	_this.debouncedOrientationChange = Util.debounce(function() {
+		$( window ).trigger( 'pxg:orientationchange' );
+	}, 300);
+
+	_this.renderLoop = function() {
+		if ( _this.frameRendered === false ) {
+			_this.ev.trigger( 'render' );
+		}
+		requestAnimationFrame( function() {
+			_this.renderLoop();
+			_this.frameRendered = true;
+			_this.ev.trigger( 'afterRender' );
+		} );
+	};
+
+	_this.eventHandlers = function() {
+		$( document ).ready( _this.onReady );
+		$( window )
+		.on( 'scroll', _this.onScroll )
+		.on( 'resize', _this.onResize )
+		.on( 'load', _this.onLoad );
+	};
+
+	_this.eventHandlers();
+	_this.renderLoop();
 };
 
-pixelgradeTheme.prototype = {
-    init: function() {
-        this.ev.trigger( 'beforeInit' );
+pixelgradeTheme.prototype.onReady = function() {
+	$( 'html' ).addClass( 'is-ready' );
+};
 
-        this.onResize();
-        this.eventHandlers();
-        this.ev.trigger( 'eventHandlers' );
-    }
+pixelgradeTheme.prototype.onLoad = function() {
+	$( 'html' ).addClass( 'is-loaded' );
 };

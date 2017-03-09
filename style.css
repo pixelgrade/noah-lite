@@ -517,11 +517,10 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 .fs-16 {
   font-size: 16px; }
 
-.fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2, .c-overlay .sd-social-text .sd-content.sd-content li,
-.c-overlay .sd-social-icon-text .sd-content.sd-content li {
+.fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2 {
   font-size: 18px; }
 
-.fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .c-overlay .sd-social .sd-title, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
+.fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
   font-size: 23px; }
 
 .fs-24 {
@@ -557,10 +556,9 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     font-size: 14px; }
   .fs-16 {
     font-size: 15px; }
-  .fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2, .c-overlay .sd-social-text .sd-content.sd-content li,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li {
+  .fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2 {
     font-size: 17px; }
-  .fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .c-overlay .sd-social .sd-title, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
+  .fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
     font-size: 21px; }
   .fs-24 {
     font-size: 22px; }
@@ -591,10 +589,9 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     font-size: 13px; }
   .fs-16 {
     font-size: 14px; }
-  .fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2, .c-overlay .sd-social-text .sd-content.sd-content li,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li {
+  .fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2 {
     font-size: 16px; }
-  .fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .c-overlay .sd-social .sd-title, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
+  .fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
     font-size: 20px; }
   .fs-24 {
     font-size: 21px; }
@@ -625,10 +622,9 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     font-size: 12px; }
   .fs-16 {
     font-size: 13px; }
-  .fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2, .c-overlay .sd-social-text .sd-content.sd-content li,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li {
+  .fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2 {
     font-size: 15px; }
-  .fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .c-overlay .sd-social .sd-title, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
+  .fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
     font-size: 19px; }
   .fs-24 {
     font-size: 19px; }
@@ -684,8 +680,7 @@ body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedpo
 .c-author .c-author__description, .c-footer .c-widget__title:after {
   padding-bottom: 24px; }
 
-.h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .c-overlay .sd-social .sd-title:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
-.c-overlay .sd-social-icon-text .sd-content.sd-content li:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+.h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
   padding-bottom: 36px; }
 
 .gallery {
@@ -729,7 +724,7 @@ ul.instagram-pics > li {
 .alignleft,
 .alignright,
 .aligncenter,
-.alignnone, .entry-content figure + p, .c-gallery--footer .c-gallery__item, .gallery.gallery--spacing-large > *, .c-slideshow, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content {
+.alignnone, .entry-content figure + p, .c-gallery--footer .c-gallery__item, .gallery.gallery--spacing-large > *, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content {
   margin-top: 60px; }
 
 .c-gallery__item, .gallery > *,
@@ -766,7 +761,7 @@ ul.instagram-pics > li {
 [class^="embed-"], .alignleft,
 .alignright,
 .aligncenter,
-.alignnone, .c-page-header, .c-slideshow, .comment {
+.alignnone, .c-page-header, .comment {
   margin-bottom: 60px; }
 
 .c-post-navigation__prev, .nav-previous,
@@ -843,8 +838,7 @@ ul.instagram-pics > li {
   .c-gallery--title-above .c-card__content, .c-card__title:after, .c-slider__header .c-page-header, .c-author .c-author__name:after,
   .c-author .c-author__description, .c-footer .c-widget__title:after {
     padding-bottom: 24px; }
-  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .c-overlay .sd-social .sd-title:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
     padding-bottom: 35px; }
   .gallery {
     padding-bottom: 53px; }
@@ -877,7 +871,7 @@ ul.instagram-pics > li {
   .alignleft,
   .alignright,
   .aligncenter,
-  .alignnone, .entry-content figure + p, .c-gallery--footer .c-gallery__item, .gallery.gallery--spacing-large > *, .c-slideshow, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content {
+  .alignnone, .entry-content figure + p, .c-gallery--footer .c-gallery__item, .gallery.gallery--spacing-large > *, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content {
     margin-top: 53px; }
   .c-gallery__item, .gallery > *,
   .gallery.gallery--spacing-xlarge > *, .c-post-navigation, .nav-links, .c-author, .comment-list, body.search .search-form, body #jp-relatedposts {
@@ -904,7 +898,7 @@ ul.instagram-pics > li {
   [class^="embed-"], .alignleft,
   .alignright,
   .aligncenter,
-  .alignnone, .c-page-header, .c-slideshow, .comment {
+  .alignnone, .c-page-header, .comment {
     margin-bottom: 53px; }
   .c-post-navigation__prev, .nav-previous,
   .c-post-navigation__next, .nav-next, .c-author, .comment-list, .tags, body #jp-relatedposts {
@@ -969,8 +963,7 @@ ul.instagram-pics > li {
   .c-gallery--title-above .c-card__content, .c-card__title:after, .c-slider__header .c-page-header, .c-author .c-author__name:after,
   .c-author .c-author__description, .c-footer .c-widget__title:after {
     padding-bottom: 24px; }
-  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .c-overlay .sd-social .sd-title:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
     padding-bottom: 34px; }
   .gallery {
     padding-bottom: 47px; }
@@ -1003,7 +996,7 @@ ul.instagram-pics > li {
   .alignleft,
   .alignright,
   .aligncenter,
-  .alignnone, .entry-content figure + p, .c-gallery--footer .c-gallery__item, .gallery.gallery--spacing-large > *, .c-slideshow, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content {
+  .alignnone, .entry-content figure + p, .c-gallery--footer .c-gallery__item, .gallery.gallery--spacing-large > *, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content {
     margin-top: 47px; }
   .c-gallery__item, .gallery > *,
   .gallery.gallery--spacing-xlarge > *, .c-post-navigation, .nav-links, .c-author, .comment-list, body.search .search-form, body #jp-relatedposts {
@@ -1030,7 +1023,7 @@ ul.instagram-pics > li {
   [class^="embed-"], .alignleft,
   .alignright,
   .aligncenter,
-  .alignnone, .c-page-header, .c-slideshow, .comment {
+  .alignnone, .c-page-header, .comment {
     margin-bottom: 47px; }
   .c-post-navigation__prev, .nav-previous,
   .c-post-navigation__next, .nav-next, .c-author, .comment-list, .tags, body #jp-relatedposts {
@@ -1095,8 +1088,7 @@ ul.instagram-pics > li {
   .c-gallery--title-above .c-card__content, .c-card__title:after, .c-slider__header .c-page-header, .c-author .c-author__name:after,
   .c-author .c-author__description, .c-footer .c-widget__title:after {
     padding-bottom: 23px; }
-  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .c-overlay .sd-social .sd-title:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .c-controls__cursor:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, .slick-dots, body #jp-relatedposts h3.jp-relatedposts-headline:after {
     padding-bottom: 33px; }
   .gallery {
     padding-bottom: 42px; }
@@ -1129,7 +1121,7 @@ ul.instagram-pics > li {
   .alignleft,
   .alignright,
   .aligncenter,
-  .alignnone, .entry-content figure + p, .c-gallery--footer .c-gallery__item, .gallery.gallery--spacing-large > *, .c-slideshow, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content {
+  .alignnone, .entry-content figure + p, .c-gallery--footer .c-gallery__item, .gallery.gallery--spacing-large > *, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content {
     margin-top: 42px; }
   .c-gallery__item, .gallery > *,
   .gallery.gallery--spacing-xlarge > *, .c-post-navigation, .nav-links, .c-author, .comment-list, body.search .search-form, body #jp-relatedposts {
@@ -1156,7 +1148,7 @@ ul.instagram-pics > li {
   [class^="embed-"], .alignleft,
   .alignright,
   .aligncenter,
-  .alignnone, .c-page-header, .c-slideshow, .comment {
+  .alignnone, .c-page-header, .comment {
     margin-bottom: 42px; }
   .c-post-navigation__prev, .nav-previous,
   .c-post-navigation__next, .nav-next, .c-author, .comment-list, .tags, body #jp-relatedposts {
@@ -1197,14 +1189,11 @@ ul.instagram-pics > li {
 .h1,
 .entry-content h1,
 .comment-content h1,
-.entry-footer h1,
-.c-overlay .sd-social .sd-title, h1,
+.entry-footer h1, h1,
 .h2,
 .entry-content h2,
 .comment-content h2,
-.entry-footer h2,
-.c-overlay .sd-social-text .sd-content.sd-content li,
-.c-overlay .sd-social-icon-text .sd-content.sd-content li, h2,
+.entry-footer h2, h2,
 .h3,
 .entry-content h3,
 .comment-content h3,
@@ -1236,14 +1225,11 @@ ul.instagram-pics > li {
   .h1:last-child:after,
   .entry-content h1:last-child:after,
   .comment-content h1:last-child:after,
-  .entry-footer h1:last-child:after,
-  .c-overlay .sd-social .sd-title:last-child:after, h1:last-child:after,
+  .entry-footer h1:last-child:after, h1:last-child:after,
   .h2:last-child:after,
   .entry-content h2:last-child:after,
   .comment-content h2:last-child:after,
-  .entry-footer h2:last-child:after,
-  .c-overlay .sd-social-text .sd-content.sd-content li:last-child:after,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li:last-child:after, h2:last-child:after,
+  .entry-footer h2:last-child:after, h2:last-child:after,
   .h3:last-child:after,
   .entry-content h3:last-child:after,
   .comment-content h3:last-child:after,
@@ -1268,11 +1254,10 @@ ul.instagram-pics > li {
   .c-author__links:last-child:after {
     padding-bottom: 0; }
 
-.h0, .entry-content .h0, .comment-content .h0, .entry-footer .h0, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .c-overlay .sd-social .sd-title {
+.h0, .entry-content .h0, .comment-content .h0, .entry-footer .h0, .h1, .entry-content h1, .comment-content h1, .entry-footer h1 {
   letter-spacing: .174em; }
 
-.h2, .entry-content h2, .comment-content h2, .entry-footer h2, .c-overlay .sd-social-text .sd-content.sd-content li,
-.c-overlay .sd-social-icon-text .sd-content.sd-content li, .h3, .entry-content h3, .comment-content h3, .entry-footer h3 {
+.h2, .entry-content h2, .comment-content h2, .entry-footer h2, .h3, .entry-content h3, .comment-content h3, .entry-footer h3 {
   letter-spacing: .133em; }
 
 .h0[class] {
@@ -1285,29 +1270,24 @@ ul.instagram-pics > li {
   .h0[class]:after {
     margin-top: -0.21335em; }
 
-.h1, .entry-content h1, .comment-content h1, .entry-footer h1, .c-overlay .sd-social .sd-title {
+.h1, .entry-content h1, .comment-content h1, .entry-footer h1 {
   line-height: 1.17391; }
-  .h1:before, .entry-content h1:before, .comment-content h1:before, .entry-footer h1:before, .c-overlay .sd-social .sd-title:before, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .c-overlay .sd-social .sd-title:after {
+  .h1:before, .entry-content h1:before, .comment-content h1:before, .entry-footer h1:before, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after {
     content: "";
     display: block; }
-  .h1:before, .entry-content h1:before, .comment-content h1:before, .entry-footer h1:before, .c-overlay .sd-social .sd-title:before {
+  .h1:before, .entry-content h1:before, .comment-content h1:before, .entry-footer h1:before {
     margin-bottom: -0.20031em; }
-  .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .c-overlay .sd-social .sd-title:after {
+  .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after {
     margin-top: -0.20031em; }
 
-.h2, .entry-content h2, .comment-content h2, .entry-footer h2, .c-overlay .sd-social-text .sd-content.sd-content li,
-.c-overlay .sd-social-icon-text .sd-content.sd-content li {
+.h2, .entry-content h2, .comment-content h2, .entry-footer h2 {
   line-height: 1.16667; }
-  .h2:before, .entry-content h2:before, .comment-content h2:before, .entry-footer h2:before, .c-overlay .sd-social-text .sd-content.sd-content li:before,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li:before, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li:after {
+  .h2:before, .entry-content h2:before, .comment-content h2:before, .entry-footer h2:before, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after {
     content: "";
     display: block; }
-  .h2:before, .entry-content h2:before, .comment-content h2:before, .entry-footer h2:before, .c-overlay .sd-social-text .sd-content.sd-content li:before,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li:before {
+  .h2:before, .entry-content h2:before, .comment-content h2:before, .entry-footer h2:before {
     margin-bottom: -0.19668em; }
-  .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .c-overlay .sd-social-text .sd-content.sd-content li:after,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li:after {
+  .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after {
     margin-top: -0.19668em; }
 
 .h3, .entry-content h3, .comment-content h3, .entry-footer h3 {
@@ -2683,10 +2663,8 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
   height: 100%;
   object-fit: cover; }
 
-.c-hero h1, .c-hero .h1, .c-hero .entry-content h1, .entry-content .c-hero h1, .c-hero .comment-content h1, .comment-content .c-hero h1, .c-hero .entry-footer h1, .entry-footer .c-hero h1, .c-hero .c-overlay .sd-social .sd-title, .c-overlay .sd-social .c-hero .sd-title,
-.c-hero h2, .c-hero .h2, .c-hero .entry-content h2, .entry-content .c-hero h2, .c-hero .comment-content h2, .comment-content .c-hero h2, .c-hero .entry-footer h2, .entry-footer .c-hero h2, .c-hero .c-overlay .sd-social-text .sd-content.sd-content li, .c-overlay .sd-social-text .sd-content.sd-content .c-hero li, .c-hero
-.c-overlay .sd-social-icon-text .sd-content.sd-content li,
-.c-overlay .sd-social-icon-text .sd-content.sd-content .c-hero li,
+.c-hero h1, .c-hero .h1, .c-hero .entry-content h1, .entry-content .c-hero h1, .c-hero .comment-content h1, .comment-content .c-hero h1, .c-hero .entry-footer h1, .entry-footer .c-hero h1,
+.c-hero h2, .c-hero .h2, .c-hero .entry-content h2, .entry-content .c-hero h2, .c-hero .comment-content h2, .comment-content .c-hero h2, .c-hero .entry-footer h2, .entry-footer .c-hero h2,
 .c-hero h3, .c-hero .h3, .c-hero .entry-content h3, .entry-content .c-hero h3, .c-hero .comment-content h3, .comment-content .c-hero h3, .c-hero .entry-footer h3, .entry-footer .c-hero h3,
 .c-hero h4, .c-hero .h4, .c-hero .entry-content h4, .entry-content .c-hero h4, .c-hero .comment-content h4, .comment-content .c-hero h4, .c-hero .entry-footer h4, .entry-footer .c-hero h4, .c-hero .c-controls__cursor,
 .c-hero h5, .c-hero .h5, .c-hero .entry-content h5, .entry-content .c-hero h5, .c-hero .comment-content h5, .comment-content .c-hero h5, .c-hero .entry-footer h5, .entry-footer .c-hero h5,
@@ -2898,189 +2876,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     padding-left: 0; }
 
 /**
- *   4.6 - Page Mask
- */
-.c-mask {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -ms-transform: scale(1, 0);
-      transform: scale(1, 0);
-  -ms-transform-origin: 0 0;
-      transform-origin: 0 0;
-  transition: transform 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  will-change: transform;
-  background-color: white;
-  z-index: 100; }
-
-@keyframes fill {
-  0% {
-    transform: translateZ(0); }
-  100% {
-    transform: scale(1, 0); } }
-
-.c-mask--project {
-  position: absolute;
-  z-index: 200;
-  height: 100vh; }
-
-/**
- *   4.7 - Page Overlay
- */
-/*
-
-    OVERLAY
-    ====
-
-
-    description:
-    ------------
-
-
-    expected markup:
-    ----------------
-    <div class="c-overlay">
-        ...
-    </div>
-
- */
-.c-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 7000;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  background: rgba(0, 0, 0, 0.8);
-  color: #FFFFFF;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  transform: translateZ(0);
-  perspective: 1000px; }
-  @media not screen and (min-width: 64em) {
-    .c-overlay {
-      z-index: 10000; } }
-  .c-overlay.is-visible {
-    opacity: 1;
-    pointer-events: auto; }
-
-.c-overlay__content {
-  margin-top: auto;
-  margin-bottom: auto;
-  opacity: 0;
-  transition: opacity 0.3s; }
-  .c-overlay__content.is-visible {
-    opacity: 1; }
-  .c-overlay__content .c-btn, .c-overlay__content input[type="submit"], .c-overlay__content
-  input[type="button"], .c-overlay__content
-  button[type="submit"], .c-overlay__content .body.body .wpforms-container[class] .wpforms-submit, .body.body .wpforms-container[class] .c-overlay__content .wpforms-submit, .c-overlay__content .posts-navigation .nav-previous, .posts-navigation .c-overlay__content .nav-previous, .c-overlay__content
-  .posts-navigation .nav-next,
-  .posts-navigation .c-overlay__content .nav-next {
-    background: #FFFFFF;
-    color: #000000; }
-  .c-overlay__content .c-page-header__title, .c-overlay__content h1, .c-overlay__content h2, .c-overlay__content h3, .c-overlay__content h4, .c-overlay__content h5, .c-overlay__content h6 {
-    color: inherit; }
-
-.c-overlay__close {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 10000;
-  height: 70px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  padding: 0 2rem;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s;
-  cursor: pointer;
-  color: #FFFFFF; }
-  .admin-bar .c-overlay__close {
-    top: 32px; }
-  .demo-site .c-overlay__close {
-    top: 80px; }
-  .admin-bar.demo-site .c-overlay__close {
-    top: 112px; }
-  @media (max-width: 782px) {
-    .admin-bar .c-overlay__close {
-      top: 46px; }
-    .admin-bar.demo-site .c-overlay__close {
-      top: 126px; } }
-  @media (max-width: 700px) {
-    .admin-bar.demo-site .c-overlay__close {
-      top: 146px; } }
-  @media screen and (max-width: 600px) {
-    .admin-bar .c-overlay__close {
-      position: absolute; } }
-  .c-overlay__close:after {
-    content: "";
-    display: block;
-    width: 15px;
-    height: 15px;
-    background-image: url(assets/images/close.svg);
-    background-position: center center;
-    background-repeat: no-repeat; }
-  .has-overlay .c-overlay__close {
-    opacity: 1;
-    pointer-events: auto; }
-  @media only screen and (min-width: 64em) {
-    .c-overlay__close {
-      height: 90px; } }
-
-.c-overlay .sd-content ul li {
-  margin-left: 10px; }
-
-.c-overlay .sd-social {
-  text-align: center; }
-  .c-overlay .sd-social .sd-title {
-    margin-top: 0; }
-    .c-overlay .sd-social .sd-title:before {
-      display: none; }
-
-.c-overlay .sd-social-icon-text {
-  text-align: left; }
-
-.c-overlay .sd-social-text .sd-content.sd-content li,
-.c-overlay .sd-social-icon-text .sd-content.sd-content li {
-  display: block; }
-  .c-overlay .sd-social-text .sd-content.sd-content li a.sd-button,
-  .c-overlay .sd-social-icon-text .sd-content.sd-content li a.sd-button {
-    font: inherit !important;
-    display: block;
-    color: inherit !important;
-    background: none;
-    border: 0; }
-    .c-overlay .sd-social-text .sd-content.sd-content li a.sd-button:before,
-    .c-overlay .sd-social-icon-text .sd-content.sd-content li a.sd-button:before {
-      font-size: 1em;
-      padding-right: .5em; }
-
-.site-content,
-.c-navbar {
-  transition: -webkit-filter 0.3s;
-  transition: filter 0.3s;
-  transition: filter 0.3s, -webkit-filter 0.3s; }
-  .has-overlay .site-content, .has-overlay
-  .c-navbar {
-    -webkit-filter: blur(6px);
-            filter: blur(6px); }
-
-/**
- *   4.8 - Page Header
+ *   4.6 - Page Header
  */
 .c-page-header {
   position: relative;
@@ -3148,7 +2944,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     margin-bottom: 0; } }
 
 /**
- *   4.9 - Post Navigation
+ *   4.7 - Post Navigation
  */
 .c-post-navigation, .nav-links {
   display: -ms-flexbox;
@@ -3217,7 +3013,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
   margin-left: auto; }
 
 /**
- *   4.10 - Scroll Arrow
+ *   4.8 - Scroll Arrow
  */
 /*
 
@@ -3239,7 +3035,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     margin: auto; }
 
 /**
- *   4.11 - Separator
+ *   4.9 - Separator
  */
 .c-separator {
   position: relative;
@@ -3253,7 +3049,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     background: currentColor; }
 
 /**
- *   4.12 - Site Title
+ *   4.10 - Site Title
  */
 .site-title {
   padding: 0;
@@ -3267,7 +3063,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
   margin: 0; }
 
 /**
- *   4.13 - Navigation Bar
+ *   4.11 - Navigation Bar
  */
 .site-header {
   position: fixed;
@@ -3376,7 +3172,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
   padding-top: 0 !important; }
 
 /**
- *   4.14 - Slider
+ *   4.12 - Slider
  */
 .c-slider {
   position: relative;
@@ -3632,43 +3428,10 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
   background-color: currentColor; }
 
 /**
- *   4.15 - Slideshow
+ *   4.13 - Slideshow
  */
-.c-slideshow {
-  clear: both; }
-  .c-slideshow .gallery {
-    margin-top: 0;
-    margin-bottom: 0; }
-  .has-media-and-content .c-slideshow {
-    width: 100%; }
-  [class*="has-media"] .c-slideshow {
-    margin-bottom: 0; }
-
-@media only screen and (min-width: 30em) {
-  .c-slideshow {
-    position: relative;
-    transition: height 0.8s cubic-bezier(0.645, 0.045, 0.355, 1); }
-    .c-slideshow:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -50vw;
-      right: -50vw;
-      display: block;
-      height: 100%;
-      background-color: inherit; }
-    .c-slideshow .gallery,
-    .c-slideshow .c-slider {
-      position: absolute !important;
-      top: 0;
-      left: 0; }
-    .c-slideshow .gallery {
-      right: 0; }
-    .c-slideshow .gallery-item {
-      will-change: opacity; } }
-
 /**
- *   4.16 - Author Box
+ *   4.14 - Author Box
  */
 /**
  * Style Author Box displayed below post
@@ -3716,7 +3479,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
   display: none !important; }
 
 /**
- *   4.17 - Comments
+ *   4.15 - Comments
  */
 /**
  *
@@ -3856,7 +3619,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
   font-style: normal; }
 
 /**
- *   4.18 - Tags
+ *   4.16 - Tags
  */
 .tags {
   line-height: 2;
@@ -3879,7 +3642,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
   content: ": "; }
 
 /**
- *   4.19 - Footer
+ *   4.17 - Footer
  */
 .c-footer {
   position: relative;
@@ -3912,7 +3675,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
   color: #757575; }
 
 /**
- *   4.20 - Border
+ *   4.18 - Border
  */
 .c-border {
   position: fixed;
@@ -3974,7 +3737,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
       margin-right: 5px !important; } }
 
 /**
- *   4.21 - Widgets
+ *   4.19 - Widgets
  */
 ul.instagram-pics {
   display: -ms-flexbox;
@@ -4397,30 +4160,6 @@ img:not(.c-slider__image) {
   opacity: 1; }
   .page-template-portfolio-page .site-content {
     transition-property: opacity !important; }
-
-html.fade-out .site-content {
-  opacity: 0;
-  top: -200px; }
-
-html.fade-out .js-page-mask {
-  -ms-transform: none;
-      transform: none;
-  -ms-transform-origin: 0 100%;
-      transform-origin: 0 100%; }
-
-html.fade-in .site-content {
-  opacity: 1;
-  top: 0; }
-
-html.fade-in .js-page-mask {
-  -ms-transform: scale(1, 0);
-      transform: scale(1, 0);
-  -ms-transform-origin: 0 0;
-      transform-origin: 0 0; }
-
-html.no-transitions .site-content,
-html.no-transitions .js-page-mask {
-  transition: none !important; }
 
 /**
  *   7.2 - Customify
