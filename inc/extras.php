@@ -31,7 +31,7 @@ function noahlite_body_classes( $classes ) {
 		$classes[] = 'customizer-preview';
 	}
 
-	if ( pixelgrade_hero_is_hero_needed() ) {
+	if ( is_page_template( 'page-templates/portfolio-page.php') && has_post_thumbnail() ) {
 		$classes[] = 'has-hero';
 	}
 

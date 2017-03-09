@@ -15,64 +15,35 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class( 'c-article' ); ?>>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<div <?php pixelgrade_hero_class( '', $location ); pixelgrade_hero_background_color_style( get_the_ID() ); ?>>
+				<?php if ( has_post_thumbnail() ) : ?>
 
-					<div class="c-hero__slider"	<?php pixelgrade_hero_slider_attributes( '', get_the_ID() ); ?>>
+				<div class="c-hero">
 
-						<?php
-						// get all the images/videos/featured projects ids that we will use as slides (we also cover for when there are none)
-						$slides = pixelgrade_hero_get_slides_ids( get_the_ID() );
+					<div class="c-hero__slider">
 
-						// First go through all the attachments (images and/or videos) and add them as slides
-						// the first slide we encounter is obviously the first one
-						$first_slide = true;
-
-						// Loop through each slide ( the first one is kinda special )
-						foreach ( $slides as $key => $attachment_id ) : ?>
-
-							<div class="c-hero__slide" <?php pixelgrade_hero_background_color_style( get_the_ID() ); ?>>
+							<div class="c-hero__slide">
 
 								<div class="c-hero__background  c-hero__layer">
-
-									<?php
-									$hero_image_opacity = get_post_meta( get_the_ID(), '_hero_image_opacity', true );
-									pixelgrade_hero_the_slide_background( $attachment_id, $hero_image_opacity ); // Output the background image of the slide
-									?>
-
+									<?php pixelgrade_hero_the_background_image( get_post_thumbnail_id() ); // Output the background image of the hero ?>
 								</div><!-- .c-hero__background -->
 
-								<?php
-								// we only show the hero description on the first slide
-								if ( true === $first_slide ) :
+								<div class="c-hero__wrapper c-hero__layer">
 
-									$description = '<h1 class="h0">' . get_the_title() . '</h1>';
-									$description_alignment = '';
+									<div class="c-hero__content">
+										<?php the_title( '<h1 class="h0  entry-title">', '</h1>' ); ?>
+									</div><!-- .c-hero__content -->
 
-									if ( ! empty( $description ) ) { ?>
-
-										<div <?php pixelgrade_hero_wrapper_class( $description_alignment ); ?>>
-
-											<div class="c-hero__content">
-												<?php the_title( '<h1 class="h0  entry-title">', '</h1>' ); ?>
-											</div><!-- .c-hero__content -->
-
-										</div><!-- .c-hero__wrapper -->
-
-									<?php }
-
-									// remember that we are done with the first slide
-									$first_slide = false;
-								endif; ?>
+								</div><!-- .c-hero__wrapper -->
 
 							</div><!-- .c-hero__slide -->
-
-						<?php endforeach; ?>
 
 					</div><!-- .c-hero__slider -->
 
 				</div><!-- .c-hero -->
+
+				<?php endif; ?>
 
 				<div class="c-article__content  u-content-background  u-content_container_padding_top  u-container_sides_spacing">
 
