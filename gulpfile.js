@@ -50,6 +50,14 @@ if ( fs.existsSync('./gulpconfig.json') ) {
 // Compiles Sass and runs the CSS through autoprefixer. A separate task will
 // combine the compiled CSS with vendor files and minify the aggregate.
 // -----------------------------------------------------------------------------
+gulp.task('typeline-config', 'Creates SCSS variable from typeline-config.json', function() {
+	return gulp.src('assets/scss/*.scss')
+	           .pipe(jsonToSass({
+		           source: 'inc/integrations/typeline-config.json',
+		           output: 'assets/scss/tools/_typeline-config.scss'
+	           }))
+});
+
 gulp.task('styles', 'Compiles Sass and uses autoprefixer', ['styles-components'], function() {
 
     function handleError(err, res) {
@@ -58,10 +66,6 @@ gulp.task('styles', 'Compiles Sass and uses autoprefixer', ['styles-components']
     }
 
     return gulp.src('assets/scss/*.scss')
-        // .pipe(jsonToSass({
-        //     source: 'inc/integrations/typeline-config.json',
-        //     output: 'assets/scss/tools/_typeline-config.scss'
-        // }))
 //        .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
         .pipe(prefix("last 3 versions", "> 1%"))
@@ -69,7 +73,7 @@ gulp.task('styles', 'Compiles Sass and uses autoprefixer', ['styles-components']
         .pipe(gulp.dest('.'));
 });
 
-gulp.task('styles-components', 'Compiles Sass and uses autoprefixer', function() {
+gulp.task('styles-components', 'Compiles Sass and uses autoprefixer', ['typeline-config'], function() {
 
     function handleError(err, res) {
         log(c.red('Sass failed to compile'));
