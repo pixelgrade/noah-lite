@@ -2398,7 +2398,6 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     display: none; }
 
 .c-card__frame {
-  background-color: currentColor;
   position: relative;
   overflow: hidden; }
   .c-card__frame img {
