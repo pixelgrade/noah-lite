@@ -11,7 +11,7 @@
  */
 ?>
 
-<footer class="c-footer u-container-sides-spacings u-content_container_margin_top">
+<footer class="c-footer u-container-sides-spacings u-content_container_margin_top u-content-background">
 	<div class="o-wrapper u-container-width content-area">
 
 		<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>

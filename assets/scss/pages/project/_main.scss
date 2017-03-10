@@ -26,16 +26,6 @@
     }
 }
 
-body[class*="has-media"] {
-    .c-slideshow {
-        margin: 0;
-    }
-
-    .c-slider {
-        border-bottom-width: 0;
-    }
-}
-
 $project-content-width: 250px;
 
 @include above(pad) {

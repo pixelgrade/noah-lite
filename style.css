@@ -2491,7 +2491,8 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 .c-hero h6, .c-hero .h6, .c-hero .entry-content h6, .entry-content .c-hero h6, .c-hero .comment-content h6, .comment-content .c-hero h6, .c-hero .entry-footer h6, .entry-footer .c-hero h6 {
   color: inherit; }
 
-.c-hero__background {
+.c-hero__background,
+.c-hero__image {
   will-change: transform; }
 
 /**
@@ -3585,12 +3586,6 @@ ul.instagram-pics {
 .has-media-and-content .c-project__content {
   margin-bottom: 4rem; }
 
-body[class*="has-media"] .c-slideshow {
-  margin: 0; }
-
-body[class*="has-media"] .c-slider {
-  border-bottom-width: 0; }
-
 @media only screen and (min-width: 48em) {
   .has-media-and-content .c-project {
     position: relative; }
@@ -3623,8 +3618,6 @@ body[class*="has-media"] .c-slider {
     min-height: calc(100vh - 180px);
     margin-left: 250px;
     padding-left: 3rem; }
-    .has-media-and-content .c-project__media .c-slider__header {
-      margin-left: 0; }
     .has-media-and-content .c-project__media .u-full-width {
       margin-right: 0;
       margin-left: 0; }
@@ -3765,14 +3758,6 @@ body, .c-page-header {
   .is-ready body, .is-ready .c-page-header {
     opacity: 1; }
 
-.c-slideshow {
-  transition: height 1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-
-.c-slider {
-  opacity: 0; }
-  .c-slideshow.is-loaded .c-slider {
-    opacity: 1; }
-
 .u-content-width {
   opacity: 0;
   transition: opacity .3s .3s ease-in-out; }
@@ -3796,10 +3781,10 @@ body.has-media-only .c-slideshow .c-page-header {
 .c-slideshow.is-loaded {
   animation: fade-in .3s ease-in-out forwards; }
 
-img:not(.c-slider__image) {
+img:not(.c-hero__image) {
   transition: opacity 0.3s linear, transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   will-change: opacity, transform; }
-  img:not(.c-slider__image):not(.is-loaded) {
+  img:not(.c-hero__image):not(.is-loaded) {
     opacity: 0 !important;
     transform: scale(1.05) translateZ(0);
     transition: opacity 0.3s linear, transform 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1); }

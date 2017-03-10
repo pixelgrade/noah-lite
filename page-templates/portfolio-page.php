@@ -20,25 +20,17 @@ get_header(); ?>
 
 				<div class="c-hero">
 
-					<div class="c-hero__slider">
+                    <div class="c-hero__background  c-hero__layer">
+                        <?php noahlite_hero_the_background_image( get_post_thumbnail_id() ); // Output the background image of the hero ?>
+                    </div><!-- .c-hero__background -->
 
-							<div class="c-hero__slide">
+                    <div class="c-hero__wrapper c-hero__layer">
 
-								<div class="c-hero__background  c-hero__layer">
-									<?php noahlite_hero_the_background_image( get_post_thumbnail_id() ); // Output the background image of the hero ?>
-								</div><!-- .c-hero__background -->
+                        <div class="c-hero__content">
+                            <?php the_title( '<h1 class="h0  entry-title">', '</h1>' ); ?>
+                        </div><!-- .c-hero__content -->
 
-								<div class="c-hero__wrapper c-hero__layer">
-
-									<div class="c-hero__content">
-										<?php the_title( '<h1 class="h0  entry-title">', '</h1>' ); ?>
-									</div><!-- .c-hero__content -->
-
-								</div><!-- .c-hero__wrapper -->
-
-							</div><!-- .c-hero__slide -->
-
-					</div><!-- .c-hero__slider -->
+                    </div><!-- .c-hero__wrapper -->
 
 				</div><!-- .c-hero -->
 
