@@ -220,7 +220,7 @@ function noahlite_customize_preview_js() {
 	 */
 	$theme = wp_get_theme();
 
-	wp_enqueue_script( 'noah-customize-preview', get_template_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), $theme->get( 'Version' ), true );
+	wp_enqueue_script( 'noah-lite-customize-preview', get_template_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), $theme->get( 'Version' ), true );
 }
 add_action( 'customize_preview_init', 'noahlite_customize_preview_js' );
 

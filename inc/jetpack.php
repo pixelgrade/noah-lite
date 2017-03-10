@@ -31,7 +31,7 @@ function noahlite_jetpack_setup() {
 		'author-bio'         => true, // display or not the author bio: true or false.
 		'masonry'            => '.c-gallery--masonry', // a CSS selector matching the elements that triggers a masonry refresh if the theme is using a masonry layout.
 		'post-details'       => array(
-			'stylesheet'      => 'noah-style', // name of the theme's stylesheet.
+			'stylesheet'      => 'noah-lite-style', // name of the theme's stylesheet.
 			'date'            => '.posted-on', // a CSS selector matching the elements that display the post date.
 			'categories'      => '.cats', // a CSS selector matching the elements that display the post categories.
 			'tags'            => '.tags', // a CSS selector matching the elements that display the post tags.

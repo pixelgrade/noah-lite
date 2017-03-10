@@ -153,14 +153,14 @@ function noahlite_load_assets() {
 	$main_style_deps = array();
 
 	/* Handle the FONTS */
-	wp_enqueue_style( 'noah-fonts-arcamajora3', noahlite_arcamajora3_font_url() );
-	$main_style_deps[] = 'noah-fonts-arcamajora3';
+	wp_enqueue_style( 'noah-lite-fonts-arcamajora3', noahlite_arcamajora3_font_url() );
+	$main_style_deps[] = 'noah-lite-fonts-arcamajora3';
 
-	wp_enqueue_style( 'noah-fonts-ek-mukta', noahlite_ek_mukta_font_url() );
-	$main_style_deps[] = 'noah-fonts-ek-mukta';
+	wp_enqueue_style( 'noah-lite-fonts-ek-mukta', noahlite_ek_mukta_font_url() );
+	$main_style_deps[] = 'noah-lite-fonts-ek-mukta';
 
 	if ( ! is_rtl() ) {
-		wp_enqueue_style( 'noah-style', get_template_directory_uri() . '/style.css', $main_style_deps, $theme->get( 'Version' ) );
+		wp_enqueue_style( 'noah-lite-style', get_template_directory_uri() . '/style.css', $main_style_deps, $theme->get( 'Version' ) );
 	}
 
 	/*
