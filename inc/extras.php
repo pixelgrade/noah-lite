@@ -588,6 +588,29 @@ function noahlite_ek_mukta_font_url() {
 }
 
 /**
+ * Prints HTML with the single post pages.
+ */
+function noahlite_single_post_pages( $content ) {
+
+	$pages_content = '';
+
+	// Hide category and tag text for pages.
+	if ( 'post' == get_post_type() ) {
+		$pages_content = 	wp_link_pages( array(
+			'before' => '<div class="c-article__page-links  page-links">' . esc_html__( 'Pages:', 'noah-lite' ),
+			'after'  => '</div>',
+			'echo'   => 0,
+		) );
+	}
+
+	return $content . $pages_content;
+}
+// add this filter with a priority smaller than tags - it has 18
+// This way the post pages will appear before the tags
+add_filter( 'the_content', 'noahlite_single_post_pages', 16 );
+
+
+/**
  * Prints HTML with meta information for the tags.
  */
 function noahlite_tags_list( $content ) {
