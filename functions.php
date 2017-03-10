@@ -58,7 +58,6 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 		register_nav_menus( array(
 			'primary-left'  => esc_html__( 'Header Left', 'noah-lite' ),
 			'primary-right' => esc_html__( 'Header Right', 'noah-lite' ),
-			'footer_menu' => esc_html__( 'Footer', 'noah-lite' ),
 		) );
 
 		/**
@@ -113,7 +112,7 @@ add_action( 'after_setup_theme', 'noahlite_setup' );
  */
 function noahlite_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Area', 'noah-lite' ),
+		'name'          => esc_html__( 'Footer', 'noah-lite' ),
 		'id'            => 'sidebar-2',
 		'description'   => esc_html__( 'Widgets displayed in the Footer Area of the website.', 'noah-lite' ),
 		'before_widget' => '<div id="%1$s" class="c-gallery__item  c-widget  %2$s"><div class="o-wrapper u-container-width">',
