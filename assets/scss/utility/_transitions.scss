@@ -20,18 +20,6 @@ body {
     @extend %showOnReady;
 }
 
-.c-slideshow {
-    transition: height 1s $easeInOutCubic;
-}
-
-.c-slider {
-    opacity: 0;
-
-    .c-slideshow.is-loaded & {
-        opacity: 1;
-    }
-}
-
 .u-content-width {
     opacity: 0;
     transition: opacity .3s .3s ease-in-out;
@@ -69,7 +57,7 @@ body.has-media-only {
     animation: fade-in .3s ease-in-out forwards;
 }
 
-img:not(.c-slider__image) {
+img:not(.c-hero__image) {
     transition: opacity .3s linear, transform 1s $easeOutCirc;
     will-change: opacity, transform;
 

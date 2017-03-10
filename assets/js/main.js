@@ -491,7 +491,14 @@ Noah.init = function() {
 	Noah.Hero = new Hero();
 	Noah.Navbar = new Navbar();
 
-	Noah.handleContent();
+	Noah.Parallax = new Parallax( '.c-hero__background, .c-hero__image', {
+		bleed: 20,
+		scale: 1.2,
+		container: '.c-hero__background',
+		reloadEvent: resizeEvent
+	} );
+
+	$.Noah = Noah;
 };
 
 Noah.update = function() {
@@ -527,7 +534,8 @@ Noah.handleContent = function( $container ) {
 	Util.handleVideos( $container );
 
 	$container.find( '.js-taxonomy-dropdown' ).resizeselect();
-	$container.find( '.c-hero__background' ).rellax();
+
+	Noah.Parallax.init( $container );
 
 	Noah.handleImages( $container );
 	Noah.handleGalleries( $container );
@@ -582,8 +590,10 @@ Noah.eventHandlers = function( $container ) {
 	} );
 };
 
+Noah.init();
+
 $( document ).ready( function() {
-	Noah.init();
+	Noah.handleContent();
 } );
 
 })( jQuery, window, document );

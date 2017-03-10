@@ -119,7 +119,7 @@
 .c-hero__video {
     width: 100%;
     height: 100%;
-
+    max-width: none;
     object-fit: cover;
 }
 
@@ -135,7 +135,8 @@
 
 }
 
-.c-hero__background {
+.c-hero__background,
+.c-hero__image {
     will-change: transform;
 }
 
