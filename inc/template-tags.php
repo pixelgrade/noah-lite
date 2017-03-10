@@ -469,7 +469,7 @@ if ( ! function_exists( 'noahlite_entry_footer' ) ) :
 	 * Prints HTML with meta information for posts on archives.
 	 */
 	function noahlite_entry_footer( $post_id ) {
-		edit_post_link( __( 'Edit', 'noah-lite' ), '<span class="edit-link">', '</span>', $post_id );
+		edit_post_link( __( 'Edit', 'noah-lite' ), '<p><span class="edit-link">', '</span></p>', $post_id );
 	}
 endif;
 
