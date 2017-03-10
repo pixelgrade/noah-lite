@@ -1,52 +1,106 @@
-/*
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: map-get($zindex, header);
 
-*/
+    width: 100%;
 
-.c-navbar__label {
-    @include wp-offset(top, 0, true);
+    @media screen and (max-width: 600px) {
+        .admin-bar & {
+            margin-top: 0 !important;
+        }
+    }
 }
 
-
-
 .c-navbar {
-
-
+    @extend %heading;
+    @extend .fs-12;
     backface-visibility: hidden;
-
-    transition: all $transition--micro ease-out;
-    transition-property: color, opacity;
+    // in order for customify border-width property to work properly
+    border: 0 solid transparent;
 
     a {
         display: block;
-
         text-decoration: none;
+        color: inherit;
     }
 }
 
-.c-navbar__content {
-    @include wp-offset(top, 0, true);
-}
-
-.c-navbar__zone--left, .c-navbar__zone--right {
-
-    &:after {
-        content: none !important;
-    }
-}
-
+.site-header,
+.c-navbar__label,
 .c-navbar__zone--middle {
-    text-align: center;
+
+    .has-hero:not(.is-scrolled) & {
+        position: absolute;
+        margin-top: 0;
+    }
+
+    .has-hero:not(.u-static-header).is-scrolled & {
+        top: 0 !important;
+    }
+
+    @include below(lap) {
+        .has-hero.is-scrolled & {
+            top: 0 !important;
+        }
+    }
+}
+
+
+.c-navbar__label {
+    z-index: map-get($zindex, header);
+}
+
+.site-header,
+.c-navbar__label,
+.c-navbar__content {
+    @include wp-offset(margin-top, 0, true);
+}
+
+@include below(lap) {
+    @import "mobile";
+}
+
+@import "dropdown";
+
+@include above(lap) {
+    .c-navbar__content {
+        margin-top: 0 !important;
+    }
+
+    .c-navbar__zone--middle {
+        position: static !important;
+        margin-top: 0 !important;
+    }
+
+    .c-navbar__content {
+        height: $header-height;
+        border: 0 solid transparent;
+        border-top-width: 0 !important;
+        padding-top: 0 !important;
+    }
+}
+
+.c-navbar .c-meta__share-link {
+    position: absolute;
+    top: 100%;
+
+    width: 100%;
+    left: 0;
+
+    text-transform: uppercase;
 }
 
 .jetpack-social-navigation.jetpack-social-navigation {
-  @include below(lap) {
     padding-left: 25px;
-  }
 
-  ul {
-    a {
-      @extend .fs-18;
-      padding: rem(6px);
+    ul a {
+        @extend .fs-18;
+        padding: rem(6px);
+
+        @include below(lap) {
+            color: $gray;
+        }
     }
-  }
 }
