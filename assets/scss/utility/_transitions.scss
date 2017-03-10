@@ -57,17 +57,6 @@ body.has-media-only {
     animation: fade-in .3s ease-in-out forwards;
 }
 
-img:not(.c-hero__image) {
-    transition: opacity .3s linear, transform 1s $easeOutCirc;
-    will-change: opacity, transform;
-
-    &:not(.is-loaded) {
-        opacity: 0 !important;
-        transform: scale(1.05) translateZ(0);
-        transition: opacity .3s linear, transform 1s .3s $easeOutCirc;
-    }
-}
-
 .c-hero__content {
     opacity: 0;
     transform: translate3d(0,2rem,0);
