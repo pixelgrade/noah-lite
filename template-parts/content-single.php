@@ -28,12 +28,7 @@
 			the_post_thumbnail();
 		}
 
-		the_content();
-
-		wp_link_pages( array(
-			'before' => '<div class="c-article__page-links  page-links">' . esc_html__( 'Pages:', 'noah-lite' ),
-			'after'  => '</div>',
-		) ); ?>
+		the_content(); ?>
 
 	</div><!-- .entry-content -->
 
