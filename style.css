@@ -2481,6 +2481,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 .c-hero__video {
   width: 100%;
   height: 100%;
+  max-width: none;
   object-fit: cover; }
 
 .c-hero h1, .c-hero .h1, .c-hero .entry-content h1, .entry-content .c-hero h1, .c-hero .comment-content h1, .comment-content .c-hero h1, .c-hero .entry-footer h1, .entry-footer .c-hero h1,
