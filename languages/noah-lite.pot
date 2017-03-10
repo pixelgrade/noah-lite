@@ -1,0 +1,424 @@
+# Copyright (C) 2017 Pixelgrade
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Noah Lite 1.1.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/noah-lite\n"
+"POT-Creation-Date: 2017-03-10 09:48:08+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:23
+msgid "Oups!"
+msgstr ""
+
+#: 404.php:24
+msgid "We can't seem to find the page you're looking for."
+msgstr ""
+
+#: archive-jetpack-portfolio.php:15 taxonomy-jetpack-portfolio-tag.php:15
+#: taxonomy-jetpack-portfolio-type.php:15
+msgid "Projects"
+msgstr ""
+
+#: archive-jetpack-portfolio.php:18 category.php:28 index.php:32
+#: taxonomy-jetpack-portfolio-tag.php:18 taxonomy-jetpack-portfolio-type.php:18
+msgid "Show"
+msgstr ""
+
+#: category.php:24 inc/extras.php:670 index.php:28
+msgid "News"
+msgstr ""
+
+#: comments.php:26
+msgid "Required fields are marked %s"
+msgstr ""
+
+#: comments.php:31 comments.php:73
+msgid "Name"
+msgstr ""
+
+#: comments.php:33 comments.php:75
+msgid "Email"
+msgstr ""
+
+#: comments.php:35 comments.php:77
+msgid "Website"
+msgstr ""
+
+#: comments.php:43
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:67
+msgid "Comments are closed"
+msgstr ""
+
+#: comments.php:74
+msgid "Your name"
+msgstr ""
+
+#: comments.php:76
+msgid "your@email.com"
+msgstr ""
+
+#: comments.php:78
+msgid "Your website"
+msgstr ""
+
+#: comments.php:85
+msgid "Leave a Comment"
+msgstr ""
+
+#: comments.php:86
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: comments.php:86
+msgid "Your message"
+msgstr ""
+
+#: comments.php:88
+msgid "Your email address will not be published."
+msgstr ""
+
+#: functions.php:59
+msgid "Header Left"
+msgstr ""
+
+#: functions.php:60
+msgid "Header Right"
+msgstr ""
+
+#: functions.php:115
+msgid "Footer"
+msgstr ""
+
+#: functions.php:117
+msgid "Widgets displayed in the Footer Area of the website."
+msgstr ""
+
+#: header.php:27
+msgid "Skip to content"
+msgstr ""
+
+#: inc/customizer.php:36
+msgid "View PRO Version"
+msgstr ""
+
+#: inc/customizer.php:39
+msgid ""
+"<div class=\"upsell-container\">\n"
+"\t\t\t\t\t<h2>Need More? Go PRO</h2>\n"
+"\t\t\t\t\t<p>Take it to the next level. See the features below:</p>\n"
+"\t\t\t\t\t<ul class=\"upsell-features\">\n"
+"                            <li>\n"
+"                            \t<h4>Personalize to Match Your Style</h4>\n"
+"                            \t<div class=\"description\">Having different tastes and preferences might be tricky for users, but not with Silk onboard. It has an intuitive and catchy interface which allows you to change <strong>fonts, colors or layout sizes</strong> in a blink of an eye.</div>\n"
+"                            </li>\n"
+"\n"
+"                            <li>\n"
+"                            \t<h4>Featured Posts Slider</h4>\n"
+"                            \t<div class=\"description\">Bring your best stories in the front of the world by adding them into the posts slider. It’s an extra opportunity to grab attention and to refresh some content that is still meaningful. Don’t miss any occasion to increase the value of your stories.</div>\n"
+"                            </li>\n"
+"\n"
+"                            <li>\n"
+"                            \t<h4>Custom Mega Menu</h4>\n"
+"                            \t<div class=\"description\">Showcase the latest posts from a category under menu without losing precious time and money. Highlight those articles you feel proud about with no effort and let people know about your appetite for a topic or another.</div>\n"
+"                            </li>\n"
+"\n"
+"                            <li>\n"
+"                            \t<h4>Premium Customer Support</h4>\n"
+"                            \t<div class=\"description\">You will benefit by priority support from a caring and devoted team, eager to help and to spread happiness. We work hard to provide a flawless experience for those who vote us with trust and choose to be our special clients.</div>\n"
+"                            </li>\n"
+"                            \n"
+"                    </ul> %s </div>"
+msgstr ""
+
+#: inc/customizer.php:64
+msgid "View Noah PRO"
+msgstr ""
+
+#: inc/customizer.php:82
+msgid "Portfolio Grid"
+msgstr ""
+
+#: inc/customizer.php:83
+msgid "Here you can control the portfolio grid's layout and features."
+msgstr ""
+
+#: inc/customizer.php:94
+msgid "Project Details Alignment"
+msgstr ""
+
+#: inc/customizer.php:95
+msgid "Adjust the alignment of your project details like title, author."
+msgstr ""
+
+#: inc/customizer.php:97 inc/customizer.php:144
+msgid "← Left"
+msgstr ""
+
+#: inc/customizer.php:98 inc/customizer.php:145
+msgid "↔ Center"
+msgstr ""
+
+#: inc/customizer.php:99 inc/customizer.php:146
+msgid "→ Right"
+msgstr ""
+
+#: inc/customizer.php:110
+msgid "Main Project Meta"
+msgstr ""
+
+#: inc/customizer.php:111
+msgid "Choose what is the main information you wish to display about a project, besides the title."
+msgstr ""
+
+#: inc/customizer.php:113 inc/customizer.php:161
+msgid "None"
+msgstr ""
+
+#: inc/customizer.php:114
+msgid "Categories"
+msgstr ""
+
+#: inc/customizer.php:115 inc/customizer.php:163
+msgid "Author"
+msgstr ""
+
+#: inc/customizer.php:116 inc/customizer.php:164
+msgid "Date"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+
+#: inc/customizer.php:117 inc/customizer.php:165 inc/extras.php:626
+msgid "Tags"
+msgstr ""
+
+#: inc/customizer.php:118 inc/customizer.php:166
+#: template-parts/project/content-jetpack-portfolio.php:70
+msgid "Comments"
+msgstr ""
+
+#: inc/customizer.php:128
+msgid "Show Title"
+msgstr ""
+
+#: inc/customizer.php:162
+msgid "Category"
+msgstr ""
+
+#: inc/customizer.php:254
+msgid "Upgrade to Noah Pro"
+msgstr ""
+
+#: inc/customizer.php:255
+msgid "Pro"
+msgstr ""
+
+#: inc/extras.php:537
+msgid "Intro"
+msgstr ""
+
+#: inc/extras.php:538
+msgid "Dropcap"
+msgstr ""
+
+#: inc/extras.php:539
+msgid "Display"
+msgstr ""
+
+#. Translators: If there are characters in your language that are not supported
+#. by Arca Majora 3, translate this to 'off'. Do not translate into your own
+#. language.
+
+#: inc/extras.php:561
+msgctxt "Arca Majora 2 font: on or off"
+msgid "on"
+msgstr ""
+
+#. Translators: If there are characters in your language that are not supported
+#. by Ek Mukta, translate this to 'off'. Do not translate into your own
+#. language.
+
+#: inc/extras.php:582
+msgctxt "Ek Mukta font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/extras.php:600 page-templates/portfolio-page.php:46
+#: page-templates/split.php:37 template-parts/content-page.php:20
+#: template-parts/project/content-single-jetpack-portfolio.php:36
+msgid "Pages:"
+msgstr ""
+
+#: inc/extras.php:672
+msgid "Archives"
+msgstr ""
+
+#: inc/extras.php:673
+msgid "All Projects"
+msgstr ""
+
+#. translators: %s: post date
+
+#: inc/template-tags.php:40
+msgid "<span class=\"screen-reader-text\">Posted on</span> %s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+
+#: inc/template-tags.php:71
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:137
+msgid "Projects navigation"
+msgstr ""
+
+#: inc/template-tags.php:140
+msgid "Older projects"
+msgstr ""
+
+#: inc/template-tags.php:174
+msgid "Everything"
+msgstr ""
+
+#: inc/template-tags.php:224
+msgid "Comment navigation"
+msgstr ""
+
+#: inc/template-tags.php:227
+msgid "Older Comments"
+msgstr ""
+
+#: inc/template-tags.php:231
+msgid "Newer Comments"
+msgstr ""
+
+#: inc/template-tags.php:404
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:410
+msgid "Previous"
+msgstr ""
+
+#: inc/template-tags.php:418
+msgid "Next"
+msgstr ""
+
+#: inc/template-tags.php:453
+msgid "Posted by"
+msgstr ""
+
+#: inc/template-tags.php:457
+msgid "View all posts by %s"
+msgstr ""
+
+#: inc/template-tags.php:457
+msgid "All posts"
+msgstr ""
+
+#: inc/template-tags.php:472 inc/template-tags.php:482
+msgid "Edit"
+msgstr ""
+
+#: inc/widgets.php:14
+msgid "Main Sidebar"
+msgstr ""
+
+#: inc/widgets.php:16
+msgid "Widgets in this area will be shown on all blog posts."
+msgstr ""
+
+#: search.php:18
+msgid "Search results for: %s"
+msgstr ""
+
+#: tag.php:19
+msgid "Tag: "
+msgstr ""
+
+#: template-parts/content-none.php:12
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Sorry, but nothing matched your search terms. Please try again with different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:17
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+
+#. translators: %s: Name of current post
+
+#: template-parts/content-page.php:30
+msgid "Edit %s"
+msgstr ""
+
+#: template-parts/footer/site-info.php:12
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: template-parts/footer/site-info.php:12
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: template-parts/footer/site-info.php:14
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: template-parts/navigation/navigation-top.php:14
+msgid "Primary Menu"
+msgstr ""
+
+#: template-parts/navigation/navigation-top.php:81
+msgid "Scroll down to content"
+msgstr ""
+
+#: template-parts/project/content-jetpack-portfolio.php:68
+msgid "No Comments"
+msgstr ""
+
+#: template-parts/project/content-jetpack-portfolio.php:72
+msgid "1 Comment"
+msgstr ""
+#. Theme Name of the plugin/theme
+msgid "Noah Lite"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://pixelgrade.com/themes/noah/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A bold entrance in the challenging digital playground. A photography WordPress theme that creates momentum through witty animations that introduce you in your own journey."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Pixelgrade"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://pixelgrade.com"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Portfolio"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Split"
+msgstr ""
