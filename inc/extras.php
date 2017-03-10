@@ -642,7 +642,7 @@ function noahlite_author_bio( $content ) {
 	$author_bio_content = '';
 
 	// Only show the other bio for posts
-	if ( 'post' == get_post_type() ) {
+	if ( 'post' == get_post_type() && is_single() ) {
 		// Respect the content options
 		if ( ! function_exists( 'jetpack_author_bio' ) || get_option( 'jetpack_content_author_bio', true ) ) {
 			$author_bio_content .= noahlite_get_the_author_info_box();
