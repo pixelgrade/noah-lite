@@ -2,8 +2,8 @@
 /**
  * The template used for displaying project content on archives
  *
- * @package Noah
- * @since   Noah 1.0.0
+ * @package Noah Lite
+ * @since   Noah Lite 1.0.0
  */
 ?>
 

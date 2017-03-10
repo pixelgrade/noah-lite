@@ -2,7 +2,7 @@
 /**
  * This file is responsible for registering sidebar areas and call widgets files
  *
- * @package Noah
+ * @package Noah Lite
  */
 
 /**

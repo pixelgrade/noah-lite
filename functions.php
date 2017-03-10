@@ -4,8 +4,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Noah
- * @since   Noah 1.0.0
+ * @package Noah Lite
+ * @since   Noah Lite 1.0.0
  */
 
 if ( ! function_exists( 'noahlite_setup' ) ) {

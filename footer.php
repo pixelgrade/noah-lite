@@ -6,8 +6,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Noah
- * @since   Noah 1.0.0
+ * @package Noah Lite
+ * @since   Noah Lite 1.0.0
  */
 ?>
 

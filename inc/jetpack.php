@@ -4,7 +4,7 @@
  *
  * See: http://jetpack.me/
  *
- * @package Noah
+ * @package Noah Lite
  */
 
 function noahlite_jetpack_setup() {
@@ -39,7 +39,7 @@ function noahlite_jetpack_setup() {
 		),
 		'featured-images'    => array(
 			'archive'         => true, // enable or not the featured image check for archive pages: true or false.
-			'post'            => false, // we do not display the featured image on single posts
+			'post'            => true, // we do not display the featured image on single posts
 			'page'            => true, // enable or not the featured image check for single pages: true or false.
 		),
 	) );

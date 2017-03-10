@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content
  *
- * @package Noah
+ * @package Noah Lite
  * @since   Noah 1.0
  */
 ?>

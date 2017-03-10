@@ -2,7 +2,7 @@
 /**
  * This file is responsible for adjusting the Pixelgrade Components to this theme's specific needs.
  *
- * @package Noah
+ * @package Noah Lite
  * @since Noah 1.0
  */
 

@@ -2,7 +2,7 @@
 /**
  * Template Name: Split
  *
- * @package Noah
+ * @package Noah Lite
  */
 
 get_header(); ?>

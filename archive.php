@@ -4,8 +4,8 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Noah
- * @since   Noah 1.0.0
+ * @package Noah Lite
+ * @since   Noah Lite 1.0.0
  */
 
 get_header(); ?>

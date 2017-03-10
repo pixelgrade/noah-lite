@@ -2,7 +2,7 @@
 /**
  * Displays footer site info
  *
- * @package Noah
+ * @package Noah Lite
 
  * @since 1.1.1
  */

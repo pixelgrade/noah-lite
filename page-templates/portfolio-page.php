@@ -2,7 +2,7 @@
 /**
  * Template Name: Portfolio
  *
- * @package Noah
+ * @package Noah Lite
  */
 
 get_header(); ?>

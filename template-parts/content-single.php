@@ -4,8 +4,8 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Noah
- * @since   Noah 1.0.0
+ * @package Noah Lite
+ * @since   Noah Lite 1.0.0
  */
 ?>
 
@@ -24,7 +24,11 @@
 
 	<div class="entry-content  u-content-width">
 
-		<?php the_content();
+		<?php if ( has_post_thumbnail( get_the_ID() ) ) {
+			the_post_thumbnail();
+		}
+
+		the_content();
 
 		wp_link_pages( array(
 			'before' => '<div class="c-article__page-links  page-links">' . esc_html__( 'Pages:', 'noah-lite' ),

@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Noah
+ * @package Noah Lite
  */
 
 if ( ! function_exists( 'noahlite_posted_on' ) ) :

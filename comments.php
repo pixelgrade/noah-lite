@@ -6,7 +6,7 @@
  * handled by a callback to wpgrade_comment() which is
  * located in the functions.php file.
  *
- * @package Noah
+ * @package Noah Lite
  * @since   Noah 1.0
  */
 

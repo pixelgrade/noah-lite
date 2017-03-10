@@ -1,7 +1,7 @@
 <?php
 /**
  * The template used when something is not found or no results were found for the search query.
- * @package Noah
+ * @package Noah Lite
  * @since   Noah 1.0
  */
 ?>

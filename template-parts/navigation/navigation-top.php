@@ -2,7 +2,7 @@
 /**
  * Displays top navigation
  *
- * @package Noah
+ * @package Noah Lite
  * @since 1.1.1
  */
 
