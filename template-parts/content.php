@@ -30,6 +30,11 @@
 					</div>
 				<?php }
 
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'noah-lite' ),
+					'after'  => '</div>',
+				) );
+
 				noahlite_entry_footer( get_the_ID() );
 				?></div><!-- .c-card__content -->
 		</div><!-- .c-card__link -->
