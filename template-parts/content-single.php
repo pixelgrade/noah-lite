@@ -24,9 +24,9 @@
 
 	<div class="entry-content  u-content-width">
 
-		<?php if ( has_post_thumbnail( get_the_ID() ) ) {
-			the_post_thumbnail();
-		}
+		<?php if ( has_post_thumbnail( get_the_ID() ) ) { ?>
+			<div class="aligncenter"><?php the_post_thumbnail(); ?></div>
+		<?php }
 
 		the_content();
 
