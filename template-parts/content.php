@@ -9,7 +9,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class() ?>>
 
-		<div class="c-card__link">
+	<div class="c-card">
+        <div class="c-card__link">
 			<?php if ( has_post_thumbnail( get_the_ID() ) ) { ?>
 			<a class="c-card__content-link" href="<?php the_permalink(); ?>">
 				<div class="c-card__frame">
@@ -33,5 +34,6 @@
 				?></div><!-- .c-card__content -->
 		</div><!-- .c-card__link -->
 		<span class="c-card__badge u-color-accent"></span>
+    </div>
 
 </article><!-- #post-XX -->
