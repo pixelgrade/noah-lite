@@ -2,7 +2,6 @@
 .c-gallery {
     @extend %mt--xl;
     @extend %ml--xl;
-    //@extend %pt-xl;
 
     &.c-gallery--blog,
     &.c-gallery--footer {
@@ -198,14 +197,9 @@
 
 .gallery {
     @extend .o-grid;
-    @extend %pb-l;
-    @extend %pt-l;
+    @extend %pb-xl;
+    @extend %pt-xl;
     clear: both;
-
-    .c-slideshow & {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
 }
 
 
@@ -296,4 +290,21 @@
         @extend %mt-xl;
         @extend %pl-xl;
     }
+}
+
+.tiled-gallery[class] {
+    @extend %mt-xl;
+    @extend %mb-xl;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    + [class*="gallery"][class] {
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+.gallery.gallery:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }

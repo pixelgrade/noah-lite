@@ -131,7 +131,7 @@ add_action( 'widgets_init', 'noahlite_widgets_init' );
  * @global int $content_width
  */
 function noahlite_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'noahlite_content_width', 1080, 0 );
+	$GLOBALS['content_width'] = apply_filters( 'noahlite_content_width', 1280, 0 );
 }
 
 add_action( 'after_setup_theme', 'noahlite_content_width', 0 );
