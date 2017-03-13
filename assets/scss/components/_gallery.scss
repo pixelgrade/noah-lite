@@ -251,7 +251,8 @@
     }
 }
 
-.gallery.gallery--spacing-small {
+.gallery.gallery-columns-8,
+.gallery.gallery-columns-9 {
     @extend %ml--s;
     @extend %mt--s;
 
@@ -261,7 +262,8 @@
     }
 }
 
-.gallery.gallery--spacing-medium {
+.gallery.gallery-columns-6,
+.gallery.gallery-columns-7 {
     @extend %ml--m;
     @extend %mt--m;
 
@@ -271,7 +273,8 @@
     }
 }
 
-.gallery.gallery--spacing-large {
+.gallery.gallery-columns-4,
+.gallery.gallery-columns-5 {
     @extend %ml--l;
     @extend %mt--l;
 
@@ -281,8 +284,7 @@
     }
 }
 
-.gallery,
-.gallery.gallery--spacing-xlarge {
+.gallery {
     @extend %ml--xl;
     @extend %mt--xl;
 
