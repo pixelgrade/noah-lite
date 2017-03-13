@@ -1,15 +1,15 @@
 /*
 Theme Name: Noah Lite
-Theme URI: http://pixelgrade.com/themes/noah/
+Theme URI: https://pixelgrade.com/themes/noah/
 Author: Pixelgrade
-Author URI: http://pixelgrade.com
+Author URI: https://pixelgrade.com
 Description: A bold entrance in the challenging digital playground. A photography WordPress theme that creates momentum through witty animations that introduce you in your own journey.
-Version: 1.1.1
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: noah-lite
 Domain Path: /languages/
-Tags: portfolio, photography, translation-ready, theme-options, footer-widgets, featured-images, custom-menu, custom-colors, custom-background, grid-layout, two-columns, three-columns, four-columns, blog 
+Tags: portfolio, photography, blog, translation-ready, theme-options, footer-widgets, featured-images, custom-menu, custom-logo, custom-colors, custom-background, grid-layout, two-columns, three-columns, four-columns, editor-style, sticky-post
 
 This theme, like WordPress, is licensed under the GPL v2 or later.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -3992,6 +3992,7 @@ body.has-media-only .c-slideshow .c-page-header {
   100% {
     opacity: 1; } }
 
+<<<<<<< HEAD
 .site-content img:not(.c-hero__image) {
   transition: opacity 0.3s linear, transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   will-change: opacity, transform; }
@@ -3999,6 +4000,10 @@ body.has-media-only .c-slideshow .c-page-header {
     opacity: 0 !important;
     transform: scale(1.05) translateZ(0);
     transition: opacity 0.3s linear, transform 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+=======
+.c-slideshow.is-loaded {
+  animation: fade-in .3s ease-in-out forwards; }
+>>>>>>> 205a99c1acb671012f4074998348cb78eeab1e0b
 
 .c-hero__content {
   opacity: 0;
@@ -4476,9 +4481,6 @@ img {
   .slick-next,
   .slick-dots {
     height: 70px; } }
-
-.c-project .sharedaddy {
-  display: none; }
 
 .search-form {
   display: -ms-flexbox;

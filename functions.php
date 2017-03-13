@@ -58,7 +58,6 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 		register_nav_menus( array(
 			'primary-left'  => esc_html__( 'Header Left', 'noah-lite' ),
 			'primary-right' => esc_html__( 'Header Right', 'noah-lite' ),
-			'footer_menu' => esc_html__( 'Footer', 'noah-lite' ),
 		) );
 
 		/**
@@ -113,7 +112,7 @@ add_action( 'after_setup_theme', 'noahlite_setup' );
  */
 function noahlite_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Area', 'noah-lite' ),
+		'name'          => esc_html__( 'Footer', 'noah-lite' ),
 		'id'            => 'sidebar-2',
 		'description'   => esc_html__( 'Widgets displayed in the Footer Area of the website.', 'noah-lite' ),
 		'before_widget' => '<div id="%1$s" class="c-gallery__item  c-widget  %2$s"><div class="o-wrapper u-container-width">',
@@ -154,36 +153,22 @@ function noahlite_load_assets() {
 	$main_style_deps = array();
 
 	/* Handle the FONTS */
-	wp_enqueue_style( 'noah-fonts-arcamajora3', noahlite_arcamajora3_font_url() );
-	$main_style_deps[] = 'noah-fonts-arcamajora3';
+	wp_enqueue_style( 'noah-lite-fonts-arcamajora3', noahlite_arcamajora3_font_url() );
+	$main_style_deps[] = 'noah-lite-fonts-arcamajora3';
 
-	wp_enqueue_style( 'noah-fonts-ek-mukta', noahlite_ek_mukta_font_url() );
-	$main_style_deps[] = 'noah-fonts-ek-mukta';
+	wp_enqueue_style( 'noah-lite-fonts-ek-mukta', noahlite_ek_mukta_font_url() );
+	$main_style_deps[] = 'noah-lite-fonts-ek-mukta';
 
 	if ( ! is_rtl() ) {
-		wp_enqueue_style( 'noah-style', get_template_directory_uri() . '/style.css', $main_style_deps, $theme->get( 'Version' ) );
+		wp_enqueue_style( 'noah-lite-style', get_template_directory_uri() . '/style.css', $main_style_deps, $theme->get( 'Version' ) );
 	}
 
 	/*
 	 * NOW THE SCRIPTS
 	 */
-	$main_script_deps = array( 'jquery', 'imagesloaded', 'masonry' );
+	wp_enqueue_script( 'noah-lite-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_register_script( 'noah-tweenmax', '//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js', array(), '1.19.0' );
-	$main_script_deps[] = 'noah-tweenmax';
-
-	wp_register_script( 'noah-tweenmax-scrollto', '//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/ScrollToPlugin.min.js', array(), '1.19.0' );
-	$main_script_deps[] = 'noah-tweenmax-scrollto';
-
-	wp_enqueue_script( 'noah-scripts', get_template_directory_uri() . '/assets/js/main.js', $main_script_deps, $theme->get( 'Version' ), true );
-
-	$translation_array = array(
-		'prev_slide'   => esc_html__( 'Prev', 'noah-lite' ),
-		'next_slide'   => esc_html__( 'Next', 'noah-lite' ),
-		'close_slider' => esc_html__( 'X', 'noah-lite' ),
-		'ajaxurl'      => admin_url( 'admin-ajax.php' ),
-	);
-	wp_localize_script( 'noah-scripts', 'noahlite_js_strings', $translation_array );
+	wp_enqueue_script( 'noah-lite-scripts', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery', 'imagesloaded', 'masonry' ), $theme->get( 'Version' ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

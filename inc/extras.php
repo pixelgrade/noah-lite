@@ -595,7 +595,7 @@ function noahlite_single_post_pages( $content ) {
 	$pages_content = '';
 
 	// Hide category and tag text for pages.
-	if ( 'post' == get_post_type() ) {
+	if ( 'post' == get_post_type() && is_single() ) {
 		$pages_content = 	wp_link_pages( array(
 			'before' => '<div class="c-article__page-links  page-links">' . esc_html__( 'Pages:', 'noah-lite' ),
 			'after'  => '</div>',
@@ -618,7 +618,7 @@ function noahlite_tags_list( $content ) {
 	$tags_content = '';
 
 	// Hide category and tag text for pages.
-	if ( 'post' == get_post_type() ) {
+	if ( 'post' == get_post_type() && is_single() ) {
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list();
 
@@ -642,7 +642,7 @@ function noahlite_author_bio( $content ) {
 	$author_bio_content = '';
 
 	// Only show the other bio for posts
-	if ( 'post' == get_post_type() ) {
+	if ( 'post' == get_post_type() && is_single() ) {
 		// Respect the content options
 		if ( ! function_exists( 'jetpack_author_bio' ) || get_option( 'jetpack_content_author_bio', true ) ) {
 			$author_bio_content .= noahlite_get_the_author_info_box();
