@@ -53,11 +53,7 @@ body.has-media-only {
     100% { opacity: 1 }
 }
 
-.c-slideshow.is-loaded {
-    animation: fade-in .3s ease-in-out forwards;
-}
-
-img:not(.c-hero__image) {
+.site-content img:not(.c-hero__image) {
     transition: opacity .3s linear, transform 1s $easeOutCirc;
     will-change: opacity, transform;
 

@@ -3992,13 +3992,10 @@ body.has-media-only .c-slideshow .c-page-header {
   100% {
     opacity: 1; } }
 
-.c-slideshow.is-loaded {
-  animation: fade-in .3s ease-in-out forwards; }
-
-img:not(.c-hero__image) {
+.site-content img:not(.c-hero__image) {
   transition: opacity 0.3s linear, transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   will-change: opacity, transform; }
-  img:not(.c-hero__image):not(.is-loaded) {
+  .site-content img:not(.c-hero__image):not(.is-loaded) {
     opacity: 0 !important;
     transform: scale(1.05) translateZ(0);
     transition: opacity 0.3s linear, transform 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1); }
