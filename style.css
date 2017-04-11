@@ -4038,6 +4038,7 @@ body.search .search-form {
  *   6.1 - Gridable WP Plugin
  */
 .gridable--row {
+  margin-left: 0;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap; }
   .gridable--row p:empty {
@@ -4063,6 +4064,12 @@ body.search .search-form {
         flex-basis: 100%;
     width: 100%;
     margin-left: 0; } }
+
+[class*="col-"] {
+  width: auto;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  max-width: none; }
 
 /**
  *   6.2 - jQuery.rellax.js
