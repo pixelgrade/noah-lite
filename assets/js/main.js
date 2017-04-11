@@ -176,9 +176,10 @@ Navbar.prototype.init = function() {
 	$( '.js-share-clone' ).remove();
 
 	this.$navbar = $( '.c-navbar' );
-	this.$logo = $( '.c-navbar__zone--middle' );
-	this.$share = $( '.c-meta__share-link' );
-	this.$clone = this.$logo.clone().css( 'overflow', 'hidden' );
+	this.$logo = $( '.header.nav' ).parent();
+	this.$share = $( '.c-meta__share-link:not(.c-meta__share-link--desktop)' );
+	this.$clone = this.$logo.clone().css( 'overflow', 'hidden' ).addClass( 'mobile-logo-clone' );
+	this.$clone.find( 'img' ).addClass( 'is-loaded' );
 
 	if ( Util.below( 'pad' ) || (
 	                            Util.below( 'lap' ) && Util.isTouch && window.innerWidth > window.innerHeight
@@ -203,7 +204,7 @@ Navbar.prototype.update = function( lastScroll ) {
 
 	lastScroll = typeof lastScroll === "undefined" ? $( window ).scrollTop() : lastScroll;
 
-	if ( ! this.initialized || typeof this.$target === "undefined" || lastScroll < 0 ) {
+	if ( ! this.initialized || typeof this.$target === "undefined" || lastScroll < 0 || ! $( 'body' ).hasClass( 'single-jetpack-portfolio' ) ) {
 		return;
 	}
 

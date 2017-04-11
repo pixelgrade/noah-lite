@@ -88,6 +88,8 @@ $nav-mobile-color: #000000 !default;
 }
 
 .c-navbar__content {
+    z-index: 10;
+
     padding: 25px;
     padding-top: $header-height;
     margin-top: 0 !important;
@@ -120,6 +122,16 @@ $nav-mobile-color: #000000 !default;
             left: 0;
         }
     }
+}
+
+.c-navbar__zone--middle.mobile-logo-clone { z-index: 1; }
+
+.mobile-logo-clone .c-meta__share-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 1;
 }
 
 .c-navbar__label {
@@ -159,4 +171,13 @@ $nav-mobile-color: #000000 !default;
         align-items: center;
         justify-content: center;
     }
+}
+
+
+.custom-logo-link + a {
+    margin-top: 12px;
+}
+
+.mobile-logo-clone {
+	position: static;
 }
