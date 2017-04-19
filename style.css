@@ -815,6 +815,9 @@ ul.instagram-pics > li {
 .c-gallery, .gallery {
   margin-left: -90px; }
 
+.tags-links a {
+  margin-right: 12px; }
+
 .entry-content ul li:before, .comment-content ul li:before, .entry-footer ul li:before, .entry-content ol li:before, .comment-content ol li:before, .entry-footer ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
   margin-right: 12px; }
 
@@ -971,6 +974,8 @@ ul.instagram-pics > li {
     margin-left: -53px; }
   .c-gallery, .gallery {
     margin-left: -64px; }
+  .tags-links a {
+    margin-right: 12px; }
   .entry-content ul li:before, .comment-content ul li:before, .entry-footer ul li:before, .entry-content ol li:before, .comment-content ol li:before, .entry-footer ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
     margin-right: 12px; }
   .o-inline-s > *, .c-card__badge, .c-navbar--dropdown .sub-menu .menu-item:after,
@@ -1122,6 +1127,8 @@ ul.instagram-pics > li {
     margin-left: -47px; }
   .c-gallery, .gallery {
     margin-left: -49px; }
+  .tags-links a {
+    margin-right: 12px; }
   .entry-content ul li:before, .comment-content ul li:before, .entry-footer ul li:before, .entry-content ol li:before, .comment-content ol li:before, .entry-footer ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
     margin-right: 12px; }
   .o-inline-s > *, .c-card__badge, .c-navbar--dropdown .sub-menu .menu-item:after,
@@ -1273,6 +1280,8 @@ ul.instagram-pics > li {
     margin-left: -42px; }
   .c-gallery, .gallery {
     margin-left: -40px; }
+  .tags-links a {
+    margin-right: 12px; }
   .entry-content ul li:before, .comment-content ul li:before, .entry-footer ul li:before, .entry-content ol li:before, .comment-content ol li:before, .entry-footer ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
     margin-right: 12px; }
   .o-inline-s > *, .c-card__badge, .c-navbar--dropdown .sub-menu .menu-item:after,
