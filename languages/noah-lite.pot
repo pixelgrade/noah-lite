@@ -334,14 +334,6 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: inc/widgets.php:14
-msgid "Main Sidebar"
-msgstr ""
-
-#: inc/widgets.php:16
-msgid "Widgets in this area will be shown on all blog posts."
-msgstr ""
-
 #: search.php:18
 msgid "Search results for: %s"
 msgstr ""

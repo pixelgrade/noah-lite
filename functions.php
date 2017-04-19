@@ -187,11 +187,6 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
- * Load widgets logic
- */
-require get_template_directory() . '/inc/widgets.php';
-
-/**
  * Load Jetpack compatibility file.
  * http://jetpack.me/
  */
