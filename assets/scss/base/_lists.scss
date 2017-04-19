@@ -33,10 +33,30 @@
 
 /* Unordered Lists */
 %ul {
+    padding-left: 20px;
+    list-style: initial;
 
+    & > li {
+        list-style: initial;
+    }
 }
 
 /* Ordered Lists */
 %ol {
+    padding-left: 20px;
+    list-style: decimal;
 
+    & > li {
+        list-style: decimal;
+    }
+}
+
+%ul,
+%ol {
+    %ul,
+    %ol {
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
