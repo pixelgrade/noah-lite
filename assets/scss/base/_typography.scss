@@ -87,26 +87,6 @@ body {
     }
 }
 
-%ul {
-    li:before {
-        @extend %mr-xs;
-        content: "\2022";
-    }
-}
-
-%ol {
-    counter-reset: list-counter;
-
-    li {
-        counter-increment: list-counter;
-
-        &:before {
-            @extend %mr-xs;
-            content: counter(list-counter) ".";
-        }
-    }
-}
-
 b,
 strong {
     font-weight: 700;

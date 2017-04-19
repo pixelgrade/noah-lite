@@ -613,9 +613,6 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
 .wpforms-container[class] .wpforms-field-container {
   margin-left: -36px; }
 
-.mce-content-body ul li:before, .entry-footer ul li:before, .mce-content-body ol li:before, .entry-footer ol li:before {
-  margin-right: 12px; }
-
 @media only screen and (max-width: 760px) {
   ._hero_content_description {
     padding: 35px; }
@@ -656,9 +653,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   .nf-field .list-checkbox-wrap .nf-field-element li label, .nf-field-container.label-right .checkbox-wrap .nf-field-label {
     margin-left: 12px; }
   .wpforms-container[class] .wpforms-field-container {
-    margin-left: -35px; }
-  .mce-content-body ul li:before, .entry-footer ul li:before, .mce-content-body ol li:before, .entry-footer ol li:before {
-    margin-right: 12px; } }
+    margin-left: -35px; } }
 
 @media only screen and (max-width: 560px) {
   ._hero_content_description {
@@ -700,9 +695,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   .nf-field .list-checkbox-wrap .nf-field-element li label, .nf-field-container.label-right .checkbox-wrap .nf-field-label {
     margin-left: 12px; }
   .wpforms-container[class] .wpforms-field-container {
-    margin-left: -34px; }
-  .mce-content-body ul li:before, .entry-footer ul li:before, .mce-content-body ol li:before, .entry-footer ol li:before {
-    margin-right: 12px; } }
+    margin-left: -34px; } }
 
 @media only screen and (max-width: 400px) {
   ._hero_content_description {
@@ -744,9 +737,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   .nf-field .list-checkbox-wrap .nf-field-element li label, .nf-field-container.label-right .checkbox-wrap .nf-field-label {
     margin-left: 12px; }
   .wpforms-container[class] .wpforms-field-container {
-    margin-left: -33px; }
-  .mce-content-body ul li:before, .entry-footer ul li:before, .mce-content-body ol li:before, .entry-footer ol li:before {
-    margin-right: 12px; } }
+    margin-left: -33px; } }
 
 .mce-content-body blockquote, .entry-footer blockquote {
   line-height: 1.30435;
@@ -1266,16 +1257,6 @@ body {
 
 .mce-content-body ul ul:before, .entry-footer ul ul:before, .mce-content-body ul ul:after, .entry-footer ul ul:after, .mce-content-body ul ol:before, .entry-footer ul ol:before, .mce-content-body ul ol:after, .entry-footer ul ol:after, .mce-content-body ul dl:before, .entry-footer ul dl:before, .mce-content-body ul dl:after, .entry-footer ul dl:after, .mce-content-body ol ul:before, .entry-footer ol ul:before, .mce-content-body ol ul:after, .entry-footer ol ul:after, .mce-content-body ol ol:before, .entry-footer ol ol:before, .mce-content-body ol ol:after, .entry-footer ol ol:after, .mce-content-body ol dl:before, .entry-footer ol dl:before, .mce-content-body ol dl:after, .entry-footer ol dl:after, .mce-content-body dl ul:before, .entry-footer dl ul:before, .mce-content-body dl ul:after, .entry-footer dl ul:after, .mce-content-body dl ol:before, .entry-footer dl ol:before, .mce-content-body dl ol:after, .entry-footer dl ol:after, .mce-content-body dl dl:before, .entry-footer dl dl:before, .mce-content-body dl dl:after, .entry-footer dl dl:after {
   content: none; }
-
-.mce-content-body ul li:before, .entry-footer ul li:before {
-  content: "\2022"; }
-
-.mce-content-body ol, .entry-footer ol {
-  counter-reset: list-counter; }
-  .mce-content-body ol li, .entry-footer ol li {
-    counter-increment: list-counter; }
-    .mce-content-body ol li:before, .entry-footer ol li:before {
-      content: counter(list-counter) "."; }
 
 b,
 strong {

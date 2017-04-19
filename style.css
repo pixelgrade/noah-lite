@@ -52,6 +52,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  *   5.1 - Jetpack Portfolio Page
  *   5.2 - Portfolio Page Template
  *   5.3 - Split Page Template
+ *   5.4 - Search Page Template
+ *   5.3 - Single
  * 6.0 - Vendor
  *   6.1 - Gridable WP Plugin
  *   6.2 - jQuery.rellax.js
@@ -813,7 +815,10 @@ ul.instagram-pics > li {
 .c-gallery, .gallery {
   margin-left: -90px; }
 
-.entry-content ul li:before, .comment-content ul li:before, .entry-footer ul li:before, .entry-content ol li:before, .comment-content ol li:before, .entry-footer ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
+.tags-links a {
+  margin-right: 12px; }
+
+.o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
   margin-right: 12px; }
 
 .o-inline-s > *, .c-card__badge, .c-navbar--dropdown .sub-menu .menu-item:after,
@@ -969,7 +974,9 @@ ul.instagram-pics > li {
     margin-left: -53px; }
   .c-gallery, .gallery {
     margin-left: -64px; }
-  .entry-content ul li:before, .comment-content ul li:before, .entry-footer ul li:before, .entry-content ol li:before, .comment-content ol li:before, .entry-footer ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
+  .tags-links a {
+    margin-right: 12px; }
+  .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
     margin-right: 12px; }
   .o-inline-s > *, .c-card__badge, .c-navbar--dropdown .sub-menu .menu-item:after,
   .c-navbar--dropdown .children .menu-item:after {
@@ -1120,7 +1127,9 @@ ul.instagram-pics > li {
     margin-left: -47px; }
   .c-gallery, .gallery {
     margin-left: -49px; }
-  .entry-content ul li:before, .comment-content ul li:before, .entry-footer ul li:before, .entry-content ol li:before, .comment-content ol li:before, .entry-footer ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
+  .tags-links a {
+    margin-right: 12px; }
+  .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
     margin-right: 12px; }
   .o-inline-s > *, .c-card__badge, .c-navbar--dropdown .sub-menu .menu-item:after,
   .c-navbar--dropdown .children .menu-item:after {
@@ -1271,7 +1280,9 @@ ul.instagram-pics > li {
     margin-left: -42px; }
   .c-gallery, .gallery {
     margin-left: -40px; }
-  .entry-content ul li:before, .comment-content ul li:before, .entry-footer ul li:before, .entry-content ol li:before, .comment-content ol li:before, .entry-footer ol li:before, .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
+  .tags-links a {
+    margin-right: 12px; }
+  .o-inline-xs > *, .tagcloud > *, #content .sd-content ul > * {
     margin-right: 12px; }
   .o-inline-s > *, .c-card__badge, .c-navbar--dropdown .sub-menu .menu-item:after,
   .c-navbar--dropdown .children .menu-item:after {
@@ -1509,7 +1520,24 @@ a {
       margin-bottom: 0; }
 
 /* Unordered Lists */
+.entry-content ul, .comment-content ul, .entry-footer ul {
+  padding-left: 20px;
+  list-style: initial; }
+  .entry-content ul > li, .comment-content ul > li, .entry-footer ul > li {
+    list-style: initial; }
+
 /* Ordered Lists */
+.entry-content ol, .comment-content ol, .entry-footer ol {
+  padding-left: 20px;
+  list-style: decimal; }
+  .entry-content ol > li, .comment-content ol > li, .entry-footer ol > li {
+    list-style: decimal; }
+
+.entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0; }
+
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -1888,16 +1916,6 @@ body {
 
 .entry-content ul ul:before, .comment-content ul ul:before, .entry-footer ul ul:before, .entry-content ul ul:after, .comment-content ul ul:after, .entry-footer ul ul:after, .entry-content ul ol:before, .comment-content ul ol:before, .entry-footer ul ol:before, .entry-content ul ol:after, .comment-content ul ol:after, .entry-footer ul ol:after, .entry-content ul dl:before, .comment-content ul dl:before, .entry-footer ul dl:before, .entry-content ul dl:after, .comment-content ul dl:after, .entry-footer ul dl:after, .entry-content ol ul:before, .comment-content ol ul:before, .entry-footer ol ul:before, .entry-content ol ul:after, .comment-content ol ul:after, .entry-footer ol ul:after, .entry-content ol ol:before, .comment-content ol ol:before, .entry-footer ol ol:before, .entry-content ol ol:after, .comment-content ol ol:after, .entry-footer ol ol:after, .entry-content ol dl:before, .comment-content ol dl:before, .entry-footer ol dl:before, .entry-content ol dl:after, .comment-content ol dl:after, .entry-footer ol dl:after, .entry-content dl ul:before, .comment-content dl ul:before, .entry-footer dl ul:before, .entry-content dl ul:after, .comment-content dl ul:after, .entry-footer dl ul:after, .entry-content dl ol:before, .comment-content dl ol:before, .entry-footer dl ol:before, .entry-content dl ol:after, .comment-content dl ol:after, .entry-footer dl ol:after, .entry-content dl dl:before, .comment-content dl dl:before, .entry-footer dl dl:before, .entry-content dl dl:after, .comment-content dl dl:after, .entry-footer dl dl:after {
   content: none; }
-
-.entry-content ul li:before, .comment-content ul li:before, .entry-footer ul li:before {
-  content: "\2022"; }
-
-.entry-content ol, .comment-content ol, .entry-footer ol {
-  counter-reset: list-counter; }
-  .entry-content ol li, .comment-content ol li, .entry-footer ol li {
-    counter-increment: list-counter; }
-    .entry-content ol li:before, .comment-content ol li:before, .entry-footer ol li:before {
-      content: counter(list-counter) "."; }
 
 b,
 strong {
@@ -3958,6 +3976,9 @@ body.search .search-form {
     width: 100%; }
 
 /**
+ *   5.5 - Single page
+ */
+/**
  * 6.0 - Vendor
  *   6.1 - Gridable WP Plugin
  */
@@ -4436,6 +4457,13 @@ generate utility classes that forces a certain width to the element the classes 
 @media not screen and (min-width: 80em) {
   .u-mq-above-desk {
     display: none; } }
+
+.u-cf:after,
+.u-clearfix:after,
+.entry-content:after {
+  content: " ";
+  display: table;
+  clear: both; }
 
 /**
  * 8.0 - Overwrites

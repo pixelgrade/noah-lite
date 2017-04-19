@@ -69,6 +69,7 @@ $font-blockquote: (
 );
 
 // Spacings
+$gutter-xxs:     1 * $baseline-unit;
 $gutter-xs:     1 * $baseline-unit;
 $gutter-s:      2 * $baseline-unit;
 $gutter-m:      3 * $baseline-unit;
@@ -169,6 +170,7 @@ $typeline-config-sets: (
                 '%ml--xl':  -$gutter-xl,
             ),
             margin-right: (
+                '%mr-xxs':   $gutter-xxs,
                 '%mr-xs':   $gutter-xs,
                 '%mr-s':    $gutter-s,
                 '%mr-m':    $gutter-m,
