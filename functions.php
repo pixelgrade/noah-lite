@@ -158,9 +158,7 @@ function noahlite_load_assets() {
 	wp_enqueue_style( 'noah-lite-fonts-ek-mukta', noahlite_ek_mukta_font_url() );
 	$main_style_deps[] = 'noah-lite-fonts-ek-mukta';
 
-	if ( ! is_rtl() ) {
-		wp_enqueue_style( 'noah-lite-style', get_template_directory_uri() . '/style.css', $main_style_deps, $theme->get( 'Version' ) );
-	}
+	wp_enqueue_style( 'noah-lite-style', get_template_directory_uri() . '/style.css', $main_style_deps, $theme->get( 'Version' ) );
 
 	/*
 	 * NOW THE SCRIPTS
