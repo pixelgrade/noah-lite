@@ -2471,11 +2471,22 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 
 .c-card__frame {
   position: relative;
-  overflow: hidden; }
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-property: transform, opacity;
+  will-change: transform, opacity; }
   .c-card__frame img {
-    display: block;
-    transition: opacity 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    will-change: transform, opacity; }
+    display: block; }
+  .c-card.is-visible .c-card__frame {
+    opacity: 1; }
+
+.u-card-thumbnail-background {
+  transition: background-color 0s 1s linear, pointer-events 0s .3s linear; }
+  .c-gallery__item:not(.c-gallery__item--no-image) .c-card:not(.is-visible) .u-card-thumbnail-background {
+    background-color: transparent !important;
+    pointer-events: none; }
 
 .c-card__frame-hover {
   opacity: 0;
@@ -2485,9 +2496,6 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
       display: none; } }
 
 .c-card__link:hover .c-card__frame-hover {
-  opacity: 1; }
-
-.c-gallery:not(.c-gallery--title-overlay) .c-card__link:hover .c-card__frame {
   opacity: 1; }
 
 .c-card__badge {
@@ -2517,6 +2525,9 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     right: 0;
     border-left: 10px solid transparent;
     border-right: none; }
+
+#content .c-gallery__item--no-image .c-card__content {
+  opacity: 1; }
 
 /**
  *   4.4 - Hero Area
@@ -2692,9 +2703,13 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
   position: relative;
   padding-top: 100%;
   right: auto; }
-  @media not screen and (min-width: 48em) {
-    .c-gallery--regular .c-card__frame {
-      padding-top: 0 !important; } }
+  .c-gallery--regular .c-card__frame:after {
+    content: "";
+    display: block;
+    padding-top: 100%; }
+    @media not screen and (min-width: 48em) {
+      .c-gallery--regular .c-card__frame:after {
+        padding-top: 0 !important; } }
 
 .c-gallery--regular .c-card__link,
 .c-gallery--masonry .c-card__link {
@@ -2785,6 +2800,9 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 
 .gallery {
   clear: both; }
+  .c-slideshow .gallery {
+    padding-top: 0;
+    padding-bottom: 0; }
 
 @media only screen and (min-width: 48em) {
   .gallery-columns-2 > :nth-child(-n+2) {
@@ -4101,7 +4119,7 @@ body.has-media-only .c-slideshow .c-page-header {
   transition: opacity 0.3s linear, transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   will-change: opacity, transform; }
   .site-content img:not(.c-hero__image):not(.is-loaded) {
-    opacity: 0 !important;
+    opacity: 0;
     transform: scale(1.05) translateZ(0);
     transition: opacity 0.3s linear, transform 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1); }
 

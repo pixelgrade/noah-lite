@@ -1,5 +1,5 @@
 /*!
- * pixelgradeTheme v1.0.1
+ * pixelgradeTheme v1.0.3
  * Copyright (c) 2017 PixelGrade http://www.pixelgrade.com
  * Licensed under MIT http://www.opensource.org/licenses/mit-license.php/
  */
@@ -15,8 +15,14 @@ var pixelgradeTheme = function() {
 	_this.frameRendered = false;
 	_this.debug = false;
 
-	_this.log = function() {
-		console.log.apply(this, arguments)
+	_this.update = function() {
+
+	};
+
+	_this.onScroll = function() {
+		if ( _this.frameRendered === false ) {
+			return;
+		}
 	};
 
 	_this.getScroll = function() {
@@ -71,6 +77,7 @@ var pixelgradeTheme = function() {
 			_this.ev.trigger( 'render' );
 		}
 		requestAnimationFrame( function() {
+			_this.update();
 			_this.renderLoop();
 			_this.frameRendered = true;
 			_this.ev.trigger( 'afterRender' );

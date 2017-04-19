@@ -92,8 +92,14 @@
         padding-top: 100%;
         right: auto;
 
-        @include below(pad) {
-            padding-top: 0 !important;
+        &:after {
+            content: "";
+            display: block;
+            padding-top: 100%;
+
+            @include below(pad) {
+                padding-top: 0 !important;
+            }
         }
     }
 }
@@ -200,6 +206,11 @@
     @extend %pb-xl;
     @extend %pt-xl;
     clear: both;
+
+    .c-slideshow & {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 
 

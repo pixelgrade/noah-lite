@@ -58,7 +58,7 @@ body.has-media-only {
     will-change: opacity, transform;
 
     &:not(.is-loaded) {
-        opacity: 0 !important;
+        opacity: 0;
         transform: scale(1.05) translateZ(0);
         transition: opacity .3s linear, transform 1s .3s $easeOutCirc;
     }
