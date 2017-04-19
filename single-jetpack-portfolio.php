@@ -50,6 +50,7 @@ get_header(); ?>
         </header><!-- .page-header -->
 
         <div class="u-content-bottom-spacing">
+
             <?php
             $projects = new WP_Query( array(
                 'post_type' => 'jetpack-portfolio',
@@ -83,9 +84,7 @@ get_header(); ?>
             wp_reset_postdata(); ?>
 
         </div><!-- .u-content-bottom-spacing -->
-
     </div><!-- .content-area -->
-
 </div><!-- #projectsArchive -->
 
 <?php get_footer();
