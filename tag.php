@@ -16,8 +16,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="c-page-header">
-				<h1 class="c-page-header__title h1"><?php single_tag_title( esc_html__('Tag: ', 'noah-lite') ); ?></h1>
-
+				<?php the_archive_title( '<h1 class="c-page-header__title h1">', '</h1>' ); ?>
 				<?php if ( tag_description() ) : // Show an optional tag description ?>
 				<div class="c-page-header__meta h7"><?php echo tag_description(); ?></div>
 				<?php endif; ?>
