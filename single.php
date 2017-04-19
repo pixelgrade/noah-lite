@@ -14,15 +14,14 @@ get_header(); ?>
 		<div class="o-wrapper  u-container-width   u-content-bottom-spacing">
 			<main id="main" class="o-wrapper  site-main" role="main">
 
-				<?php while ( have_posts() ) : the_post();
-
+				<?php
+				while ( have_posts() ) : the_post();
 					get_template_part( 'template-parts/content', 'single' );
 
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) {
 						comments_template();
 					}
-
 				endwhile; // End of the loop. ?>
 
 			</main><!-- #main -->
