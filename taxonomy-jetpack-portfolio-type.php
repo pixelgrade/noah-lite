@@ -51,6 +51,4 @@ get_header(); ?>
 
 <?php the_posts_navigation(); ?>
 
-<?php
-get_sidebar();
-get_footer(); ?>
+<?php get_footer();

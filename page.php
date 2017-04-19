@@ -34,7 +34,7 @@ get_header(); ?>
 			endwhile; // End of the loop. ?>
 
 			</main><!-- #main -->
-		</div>
+		</div><!-- .o-wrapper -->
 	</div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php get_footer();
