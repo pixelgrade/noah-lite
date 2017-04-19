@@ -185,6 +185,7 @@ gulp.task('build', 'Remove unneeded files and folders from the build folder', ['
         '.codeclimate.yml',
         'tests',
         'circle.yml',
+        'assets/scss',
         'inc/integrations' // since we are not using typeline with Customify there is no need to keep the json config
     ];
 
