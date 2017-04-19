@@ -18,7 +18,6 @@ get_header(); ?>
 	<div id="primary" class="content-area  u-container-sides-spacings">
 		<div class="o-wrapper  u-container-width">
 			<main id="main" class="o-wrapper  site-main" role="main">
-
 				<div class="c-page-header">
 					<h1 class="c-page-header__title h0"><?php _e( 'Oups!', 'noah-lite'); ?></h1>
 					<p class="c-page-header__meta h4"><?php _e( "We can't seem to find the page you're looking for.", 'noah-lite'); ?></p>

@@ -170,6 +170,7 @@ gulp.task('build', 'Remove unneeded files and folders from the build folder', ['
         'build',
         'css',
         '.idea',
+        '.editorconfig',
         '**/.svn*',
         '**/*.css.map',
         '**/.sass*',

@@ -19,12 +19,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 		the_custom_logo();
 	} ?>
 
-    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-		<?php if ( is_front_page() && is_home() ) : ?>
-            <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-		<?php else : ?>
-            <p class="site-title h1"><?php bloginfo( 'name' ); ?></p>
-		<?php endif; ?>
-    </a>
-    <p class="site-description site-description-text"><?php bloginfo( 'description' ) /* WPCS: xss ok. */ ?></p>
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+	<?php if ( is_front_page() && is_home() ) : ?>
+		<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+	<?php else : ?>
+		<p class="site-title h1"><?php bloginfo( 'name' ); ?></p>
+	<?php endif; ?>
+	</a>
+	<p class="site-description site-description-text"><?php bloginfo( 'description' ) /* WPCS: xss ok. */ ?></p>
 </div><!-- .c-branding -->
