@@ -95,11 +95,10 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 		remove_theme_support( 'post-formats' );
 
 		/**
+		 * Enqueue the custom Google Fonts and self-hosted ones
 		 * Add editor custom style to make it look more like the frontend
-		 * Also enqueue the custom Google Fonts and self-hosted ones
 		 */
-		add_editor_style( array( 'editor-style.css' ) );
-		add_editor_style( noahlite_ek_mukta_font_url() );
+		add_editor_style( array( noahlite_ek_mukta_font_url(), 'editor-style.css' ) );
 
 	}
 } // noahlite_setup
