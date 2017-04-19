@@ -190,7 +190,7 @@ function noahlite_post_classes( $classes, $class, $post_id ) {
 		return $classes;
 	}
 
-	if ( is_post_type_archive( 'post' ) || is_author() || is_home() || is_search() || is_post_type_archive( 'jetpack-portfolio' ) || ( 'jetpack-portfolio' == get_post_type( $post_id ) && ! in_the_loop() ) ) {
+	if ( is_category() || is_tag() || is_date() || is_author() || is_author() || is_home() || is_search() || is_post_type_archive( 'jetpack-portfolio' ) || is_category() || is_tag() || ( 'jetpack-portfolio' == get_post_type( $post_id ) && ! in_the_loop() ) ) {
 		$classes[] = 'c-gallery__item';
 
 		// get info about the width and height of the image

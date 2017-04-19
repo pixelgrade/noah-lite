@@ -16,14 +16,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="c-page-header">
-					<h1 class="c-page-header__title h1">
-						<?php
-                        if ( get_option( 'page_for_posts' ) ) {
-                            echo get_the_title( get_option( 'page_for_posts' ) );
-                        } else {
-	                        esc_html_e( 'News', 'noah-lite' );
-                        } ?>
-					</h1>
+					<?php the_archive_title( '<h1 class="c-page-header__title h1">', '</h1>' ); ?>
 					<div class="c-page-header__meta h7">
 						<span><?php _e( 'Show', 'noah-lite' ); ?></span>
 						<span class="c-page-header__taxonomy  u-color-accent"><?php noahlite_the_taxonomy_dropdown( 'category', get_query_var( 'category_name' ) )?></span>
