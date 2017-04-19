@@ -8,7 +8,7 @@
 .u-content-width {
 
     // Content Width Elements
-    > :not([class*="gallery"]) {
+    > :not([class*="gallery"]):not([class*="align"]) {
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;

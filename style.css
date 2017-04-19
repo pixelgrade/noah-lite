@@ -672,9 +672,6 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 .c-navbar--dropdown .children .menu-item {
   padding-right: 24px; }
 
-.alignleft {
-  padding-right: 60px; }
-
 .u-header_sides_spacing,
 .u-container_sides_spacing,
 .u-portfolio_sides_spacing, .u-slideshow-sides-spacings,
@@ -711,7 +708,7 @@ ul.instagram-pics > li {
 .gallery.gallery-columns-7 > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
   padding-left: 36px; }
 
-.alignright, .c-gallery--footer .c-gallery__item, .gallery.gallery-columns-4 > *,
+.c-gallery--footer .c-gallery__item, .gallery.gallery-columns-4 > *,
 .gallery.gallery-columns-5 > * {
   padding-left: 60px; }
 
@@ -794,6 +791,9 @@ ul.instagram-pics > li {
 .children .comment, .children .comment.depth-1, .children .comment.depth-2, .children .comment.depth-3, .children .comment.depth-4, .gridable--col, .c-navbar ul {
   margin-left: 36px; }
 
+.alignright {
+  margin-left: 60px; }
+
 .pingback .edit-link,
 .trackback .edit-link,
 .comment-links, ul.instagram-pics {
@@ -827,6 +827,9 @@ ul.instagram-pics > li {
 
 .comment .avatar, .o-split__img, .c-navbar li, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post > .jp-relatedposts-post-a {
   margin-right: 36px; }
+
+.alignleft {
+  margin-right: 60px; }
 
 .o-split:before {
   margin-right: -36px; }
@@ -864,8 +867,6 @@ ul.instagram-pics > li {
   .c-post-navigation__prev, .nav-previous, .c-post-navigation__next span, .nav-next span, .c-navbar--dropdown .sub-menu .menu-item,
   .c-navbar--dropdown .children .menu-item {
     padding-right: 24px; }
-  .alignleft {
-    padding-right: 53px; }
   .u-header_sides_spacing,
   .u-container_sides_spacing,
   .u-portfolio_sides_spacing, .u-slideshow-sides-spacings,
@@ -894,7 +895,7 @@ ul.instagram-pics > li {
   .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ul dl, .comment-content ul dl, .entry-footer ul dl, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol, .entry-content ol dl, .comment-content ol dl, .entry-footer ol dl, .entry-content dl ul, .comment-content dl ul, .entry-footer dl ul, .entry-content dl ol, .comment-content dl ol, .entry-footer dl ol, .entry-content dl dl, .comment-content dl dl, .entry-footer dl dl, .gallery.gallery-columns-6 > *,
   .gallery.gallery-columns-7 > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
     padding-left: 35px; }
-  .alignright, .c-gallery--footer .c-gallery__item, .gallery.gallery-columns-4 > *,
+  .c-gallery--footer .c-gallery__item, .gallery.gallery-columns-4 > *,
   .gallery.gallery-columns-5 > * {
     padding-left: 53px; }
   .c-gallery__item, .gallery > *, .u-header_sides_spacing,
@@ -958,6 +959,8 @@ ul.instagram-pics > li {
     margin-left: 12px; }
   .children .comment, .children .comment.depth-1, .children .comment.depth-2, .children .comment.depth-3, .children .comment.depth-4, .gridable--col, .c-navbar ul {
     margin-left: 35px; }
+  .alignright {
+    margin-left: 53px; }
   .pingback .edit-link,
   .trackback .edit-link,
   .comment-links, ul.instagram-pics {
@@ -983,6 +986,8 @@ ul.instagram-pics > li {
     margin-right: 24px; }
   .comment .avatar, .o-split__img, .c-navbar li, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post > .jp-relatedposts-post-a {
     margin-right: 35px; }
+  .alignleft {
+    margin-right: 53px; }
   .o-split:before {
     margin-right: -35px; }
   .c-navbar--dropdown .sub-menu,
@@ -1017,8 +1022,6 @@ ul.instagram-pics > li {
   .c-post-navigation__prev, .nav-previous, .c-post-navigation__next span, .nav-next span, .c-navbar--dropdown .sub-menu .menu-item,
   .c-navbar--dropdown .children .menu-item {
     padding-right: 24px; }
-  .alignleft {
-    padding-right: 47px; }
   .u-header_sides_spacing,
   .u-container_sides_spacing,
   .u-portfolio_sides_spacing, .u-slideshow-sides-spacings,
@@ -1047,7 +1050,7 @@ ul.instagram-pics > li {
   .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ul dl, .comment-content ul dl, .entry-footer ul dl, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol, .entry-content ol dl, .comment-content ol dl, .entry-footer ol dl, .entry-content dl ul, .comment-content dl ul, .entry-footer dl ul, .entry-content dl ol, .comment-content dl ol, .entry-footer dl ol, .entry-content dl dl, .comment-content dl dl, .entry-footer dl dl, .gallery.gallery-columns-6 > *,
   .gallery.gallery-columns-7 > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
     padding-left: 34px; }
-  .alignright, .c-gallery--footer .c-gallery__item, .gallery.gallery-columns-4 > *,
+  .c-gallery--footer .c-gallery__item, .gallery.gallery-columns-4 > *,
   .gallery.gallery-columns-5 > * {
     padding-left: 47px; }
   .c-gallery__item, .gallery > *, .u-header_sides_spacing,
@@ -1111,6 +1114,8 @@ ul.instagram-pics > li {
     margin-left: 12px; }
   .children .comment, .children .comment.depth-1, .children .comment.depth-2, .children .comment.depth-3, .children .comment.depth-4, .gridable--col, .c-navbar ul {
     margin-left: 34px; }
+  .alignright {
+    margin-left: 47px; }
   .pingback .edit-link,
   .trackback .edit-link,
   .comment-links, ul.instagram-pics {
@@ -1136,6 +1141,8 @@ ul.instagram-pics > li {
     margin-right: 24px; }
   .comment .avatar, .o-split__img, .c-navbar li, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post > .jp-relatedposts-post-a {
     margin-right: 34px; }
+  .alignleft {
+    margin-right: 47px; }
   .o-split:before {
     margin-right: -34px; }
   .c-navbar--dropdown .sub-menu,
@@ -1170,8 +1177,6 @@ ul.instagram-pics > li {
   .c-post-navigation__prev, .nav-previous, .c-post-navigation__next span, .nav-next span, .c-navbar--dropdown .sub-menu .menu-item,
   .c-navbar--dropdown .children .menu-item {
     padding-right: 23px; }
-  .alignleft {
-    padding-right: 42px; }
   .u-header_sides_spacing,
   .u-container_sides_spacing,
   .u-portfolio_sides_spacing, .u-slideshow-sides-spacings,
@@ -1200,7 +1205,7 @@ ul.instagram-pics > li {
   .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ul dl, .comment-content ul dl, .entry-footer ul dl, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol, .entry-content ol dl, .comment-content ol dl, .entry-footer ol dl, .entry-content dl ul, .comment-content dl ul, .entry-footer dl ul, .entry-content dl ol, .comment-content dl ol, .entry-footer dl ol, .entry-content dl dl, .comment-content dl dl, .entry-footer dl dl, .gallery.gallery-columns-6 > *,
   .gallery.gallery-columns-7 > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
     padding-left: 33px; }
-  .alignright, .c-gallery--footer .c-gallery__item, .gallery.gallery-columns-4 > *,
+  .c-gallery--footer .c-gallery__item, .gallery.gallery-columns-4 > *,
   .gallery.gallery-columns-5 > * {
     padding-left: 42px; }
   .c-gallery__item, .gallery > *, .u-header_sides_spacing,
@@ -1264,6 +1269,8 @@ ul.instagram-pics > li {
     margin-left: 12px; }
   .children .comment, .children .comment.depth-1, .children .comment.depth-2, .children .comment.depth-3, .children .comment.depth-4, .gridable--col, .c-navbar ul {
     margin-left: 33px; }
+  .alignright {
+    margin-left: 42px; }
   .pingback .edit-link,
   .trackback .edit-link,
   .comment-links, ul.instagram-pics {
@@ -1289,6 +1296,8 @@ ul.instagram-pics > li {
     margin-right: 23px; }
   .comment .avatar, .o-split__img, .c-navbar li, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post > .jp-relatedposts-post-a {
     margin-right: 33px; }
+  .alignleft {
+    margin-right: 42px; }
   .o-split:before {
     margin-right: -33px; }
   .c-navbar--dropdown .sub-menu,
@@ -1948,12 +1957,6 @@ small {
 /**
  *   2.2 - Image Alignment
  */
-p .alignleft {
-  padding-left: 0 !important; }
-
-p .alignright {
-  padding-right: 0 !important; }
-
 p .alignleft,
 p .alignright,
 p .aligncenter,
@@ -1972,15 +1975,15 @@ p .alignnone {
 .alignnone img {
   display: block; }
 
-.alignleft.alignleft,
-.alignright.alignright {
+.entry-content .alignleft, .entry-content
+.alignright {
   max-width: 50%; }
 
-.alignleft {
+.alignleft.alignleft {
   float: left;
   clear: left; }
 
-.alignright {
+.alignright.alignright {
   float: right;
   clear: right; }
 
@@ -4106,7 +4109,7 @@ body.has-media-only .c-slideshow .c-page-header {
 /**
  *   7.2 - Customify
  */
-.u-content-width > :not([class*="gallery"]) {
+.u-content-width > :not([class*="gallery"]):not([class*="align"]) {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto; }

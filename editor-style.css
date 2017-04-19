@@ -561,9 +561,6 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
 ._hero_content_description {
   padding: 36px; }
 
-.alignleft {
-  padding-right: 60px; }
-
 .body.body .content-area label:after {
   padding-bottom: 12px; }
 
@@ -572,9 +569,6 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
 
 .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
   padding-left: 36px; }
-
-.alignright {
-  padding-left: 60px; }
 
 .wpcf7-form-control-wrap span, .wpforms-container[class] .wpforms-field-row-block input + label, .nf-field .list-radio-wrap .nf-field-element,
 .nf-field .list-checkbox-wrap .nf-field-element, .wp-caption-text {
@@ -610,22 +604,24 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
 .nf-field .list-checkbox-wrap .nf-field-element li label, .nf-field-container.label-right .checkbox-wrap .nf-field-label {
   margin-left: 12px; }
 
+.alignright {
+  margin-left: 60px; }
+
 .wpforms-container[class] .wpforms-field-container {
   margin-left: -36px; }
+
+.alignleft {
+  margin-right: 60px; }
 
 @media only screen and (max-width: 760px) {
   ._hero_content_description {
     padding: 35px; }
-  .alignleft {
-    padding-right: 53px; }
   .body.body .content-area label:after {
     padding-bottom: 12px; }
   .h0:after, .mce-content-body .h0:after, .entry-footer .h0:after, .h1:after, .mce-content-body h1:after, .entry-footer h1:after, .h2:after, .mce-content-body h2:after, .entry-footer h2:after, .h3:after, .mce-content-body h3:after, .entry-footer h3:after, .h4:after, .mce-content-body h4:after, .entry-footer h4:after, .h5:after, .mce-content-body h5:after, .entry-footer h5:after, .h6:after, .mce-content-body h6:after, .entry-footer h6:after, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
     padding-bottom: 35px; }
   .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
     padding-left: 35px; }
-  .alignright {
-    padding-left: 53px; }
   .wpcf7-form-control-wrap span, .wpforms-container[class] .wpforms-field-row-block input + label, .nf-field .list-radio-wrap .nf-field-element,
   .nf-field .list-checkbox-wrap .nf-field-element, .wp-caption-text {
     margin-top: 12px; }
@@ -652,22 +648,22 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   .wpforms-container[class] .wpforms-field-checkbox li input + label, .nf-field .list-radio-wrap .nf-field-element li label,
   .nf-field .list-checkbox-wrap .nf-field-element li label, .nf-field-container.label-right .checkbox-wrap .nf-field-label {
     margin-left: 12px; }
+  .alignright {
+    margin-left: 53px; }
   .wpforms-container[class] .wpforms-field-container {
-    margin-left: -35px; } }
+    margin-left: -35px; }
+  .alignleft {
+    margin-right: 53px; } }
 
 @media only screen and (max-width: 560px) {
   ._hero_content_description {
     padding: 34px; }
-  .alignleft {
-    padding-right: 47px; }
   .body.body .content-area label:after {
     padding-bottom: 12px; }
   .h0:after, .mce-content-body .h0:after, .entry-footer .h0:after, .h1:after, .mce-content-body h1:after, .entry-footer h1:after, .h2:after, .mce-content-body h2:after, .entry-footer h2:after, .h3:after, .mce-content-body h3:after, .entry-footer h3:after, .h4:after, .mce-content-body h4:after, .entry-footer h4:after, .h5:after, .mce-content-body h5:after, .entry-footer h5:after, .h6:after, .mce-content-body h6:after, .entry-footer h6:after, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
     padding-bottom: 34px; }
   .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
     padding-left: 34px; }
-  .alignright {
-    padding-left: 47px; }
   .wpcf7-form-control-wrap span, .wpforms-container[class] .wpforms-field-row-block input + label, .nf-field .list-radio-wrap .nf-field-element,
   .nf-field .list-checkbox-wrap .nf-field-element, .wp-caption-text {
     margin-top: 12px; }
@@ -694,22 +690,22 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   .wpforms-container[class] .wpforms-field-checkbox li input + label, .nf-field .list-radio-wrap .nf-field-element li label,
   .nf-field .list-checkbox-wrap .nf-field-element li label, .nf-field-container.label-right .checkbox-wrap .nf-field-label {
     margin-left: 12px; }
+  .alignright {
+    margin-left: 47px; }
   .wpforms-container[class] .wpforms-field-container {
-    margin-left: -34px; } }
+    margin-left: -34px; }
+  .alignleft {
+    margin-right: 47px; } }
 
 @media only screen and (max-width: 400px) {
   ._hero_content_description {
     padding: 33px; }
-  .alignleft {
-    padding-right: 42px; }
   .body.body .content-area label:after {
     padding-bottom: 12px; }
   .h0:after, .mce-content-body .h0:after, .entry-footer .h0:after, .h1:after, .mce-content-body h1:after, .entry-footer h1:after, .h2:after, .mce-content-body h2:after, .entry-footer h2:after, .h3:after, .mce-content-body h3:after, .entry-footer h3:after, .h4:after, .mce-content-body h4:after, .entry-footer h4:after, .h5:after, .mce-content-body h5:after, .entry-footer h5:after, .h6:after, .mce-content-body h6:after, .entry-footer h6:after, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
     padding-bottom: 33px; }
   .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
     padding-left: 33px; }
-  .alignright {
-    padding-left: 42px; }
   .wpcf7-form-control-wrap span, .wpforms-container[class] .wpforms-field-row-block input + label, .nf-field .list-radio-wrap .nf-field-element,
   .nf-field .list-checkbox-wrap .nf-field-element, .wp-caption-text {
     margin-top: 12px; }
@@ -736,8 +732,12 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   .wpforms-container[class] .wpforms-field-checkbox li input + label, .nf-field .list-radio-wrap .nf-field-element li label,
   .nf-field .list-checkbox-wrap .nf-field-element li label, .nf-field-container.label-right .checkbox-wrap .nf-field-label {
     margin-left: 12px; }
+  .alignright {
+    margin-left: 42px; }
   .wpforms-container[class] .wpforms-field-container {
-    margin-left: -33px; } }
+    margin-left: -33px; }
+  .alignleft {
+    margin-right: 42px; } }
 
 .mce-content-body blockquote, .entry-footer blockquote {
   line-height: 1.30435;
@@ -1286,12 +1286,6 @@ small {
   line-height: 0.9;
   padding-right: 0.1em; }
 
-p .alignleft {
-  padding-left: 0 !important; }
-
-p .alignright {
-  padding-right: 0 !important; }
-
 p .alignleft,
 p .alignright,
 p .aligncenter,
@@ -1310,15 +1304,15 @@ p .alignnone {
 .alignnone img {
   display: block; }
 
-.alignleft.alignleft,
-.alignright.alignright {
+.entry-content .alignleft, .entry-content
+.alignright {
   max-width: 50%; }
 
-.alignleft {
+.alignleft.alignleft {
   float: left;
   clear: left; }
 
-.alignright {
+.alignright.alignright {
   float: right;
   clear: right; }
 
