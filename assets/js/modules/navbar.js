@@ -50,12 +50,13 @@ var Navbar = function() {
 
 Navbar.prototype.onChange = function() {
 	var $body = $( 'body' );
+	$body.attr( 'style', '' );
 
 	if ( this.$handle.prop( 'checked' ) ) {
 		$body.width( $body.width() );
 		$body.css( 'overflow', 'hidden' );
 	} else {
-		$body.css( 'overflow', '' );
+		$body.attr( 'style', '' );
 	}
 };
 
