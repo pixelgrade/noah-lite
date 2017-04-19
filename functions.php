@@ -112,7 +112,7 @@ add_action( 'after_setup_theme', 'noahlite_setup' );
 function noahlite_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer', 'noah-lite' ),
-		'id'            => 'sidebar-2',
+		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Widgets displayed in the Footer Area of the website.', 'noah-lite' ),
 		'before_widget' => '<div id="%1$s" class="c-gallery__item  c-widget  %2$s"><div class="o-wrapper u-container-width">',
 		'after_widget'  => '</div></div>',

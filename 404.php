@@ -24,7 +24,7 @@ get_header(); ?>
 					<p class="c-page-header__meta h4"><?php _e( "We can't seem to find the page you're looking for.", 'noah-lite'); ?></p>
 				</div>
 			</main><!-- #main -->
-		</div>
+		</div><!-- .o-wrapper -->
 	</div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php get_footer();
