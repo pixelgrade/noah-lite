@@ -52,6 +52,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  *   5.1 - Jetpack Portfolio Page
  *   5.2 - Portfolio Page Template
  *   5.3 - Split Page Template
+ *   5.4 - Search Page Template
+ *   5.3 - Single
  * 6.0 - Vendor
  *   6.1 - Gridable WP Plugin
  *   6.2 - jQuery.rellax.js
@@ -3958,6 +3960,9 @@ body.search .search-form {
     width: 100%; }
 
 /**
+ *   5.5 - Single page
+ */
+/**
  * 6.0 - Vendor
  *   6.1 - Gridable WP Plugin
  */
@@ -4436,6 +4441,13 @@ generate utility classes that forces a certain width to the element the classes 
 @media not screen and (min-width: 80em) {
   .u-mq-above-desk {
     display: none; } }
+
+.u-cf:after,
+.u-clearfix:after,
+.entry-content:after {
+  content: " ";
+  display: table;
+  clear: both; }
 
 /**
  * 8.0 - Overwrites

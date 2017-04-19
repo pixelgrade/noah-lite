@@ -30,6 +30,8 @@
  *   5.1 - Jetpack Portfolio Page
  *   5.2 - Portfolio Page Template
  *   5.3 - Split Page Template
+ *   5.4 - Search Page Template
+ *   5.3 - Single
  * 6.0 - Vendor
  *   6.1 - Gridable WP Plugin
  *   6.2 - jQuery.rellax.js
@@ -201,6 +203,10 @@
  *   5.4 - Search Results Page
  */
 @import "pages/search";
+/**
+ *   5.5 - Single page
+ */
+@import "pages/single";
 
 /**
  * 6.0 - Vendor
@@ -230,6 +236,7 @@
 @import "utility/misc";
 @import "utility/widths";
 @import "utility/mq";
+@import "utility/clearfix";
 
 /**
  * 8.0 - Overwrites
