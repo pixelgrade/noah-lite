@@ -84,8 +84,8 @@ Navbar.prototype.init = function() {
 		$( '.c-navbar__label' ).hide();
 	}
 
-	if ( below( 'pad' ) || (
-            below( 'lap' ) && Util.isTouch && window.innerWidth > window.innerHeight
+	if ( Util.below( 'pad' ) || (
+            Util.below( 'lap' ) && Util.isTouch && window.innerWidth > window.innerHeight
         ) && this.$share.length ) {
         this.$target = this.$clone.wrapInner( "<div class='c-navbar__slide'></div>" ).children();
         this.$share.clone().addClass( 'js-share-clone' ).appendTo( this.$target );

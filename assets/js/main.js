@@ -119,8 +119,8 @@ Navbar.prototype.init = function() {
 		$( '.c-navbar__label' ).hide();
 	}
 
-	if ( below( 'pad' ) || (
-            below( 'lap' ) && Util.isTouch && window.innerWidth > window.innerHeight
+	if ( Util.below( 'pad' ) || (
+            Util.below( 'lap' ) && Util.isTouch && window.innerWidth > window.innerHeight
         ) && this.$share.length ) {
         this.$target = this.$clone.wrapInner( "<div class='c-navbar__slide'></div>" ).children();
         this.$share.clone().addClass( 'js-share-clone' ).appendTo( this.$target );
@@ -212,14 +212,14 @@ var pixelgradeTheme = function() {
 	_this.frameRendered = false;
 	_this.debug = false;
 
-	_this.update = function() {
-
+	_this.log = function() {
+		if ( _this.debug ) {
+			console.log.apply( this, arguments );
+		}
 	};
 
-	_this.onScroll = function() {
-		if ( _this.frameRendered === false ) {
-			return;
-		}
+	_this.update = function() {
+
 	};
 
 	_this.getScroll = function() {
@@ -547,7 +547,6 @@ Noah.eventHandlers = function( $container ) {
 
 	$container.find( '.js-taxonomy-dropdown' ).on( 'change' ).change( function() {
 		var destination = $( this ).val();
-		console.log(destination);
 
 		if ( typeof destination !== "undefined" && destination !== "#" ) {
 			window.location.href = destination;

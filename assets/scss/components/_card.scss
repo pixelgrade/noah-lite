@@ -101,26 +101,12 @@
     display: block;
     overflow: hidden;
 
-    opacity: 0;
-    transition: opacity $transition--macro $easeInOutCirc;
-    transition-property: transform, opacity;
-    will-change: transform, opacity;
-
     img {
         display: block;
     }
 
     .c-card.is-visible & {
         opacity: 1;
-    }
-}
-
-.u-card-thumbnail-background {
-    transition: background-color 0s 1s linear, pointer-events 0s .3s linear;
-
-	.c-gallery__item:not(.c-gallery__item--no-image) .c-card:not(.is-visible) & {
-        background-color: transparent !important;
-        pointer-events: none;
     }
 }
 

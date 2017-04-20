@@ -114,7 +114,6 @@ Noah.eventHandlers = function( $container ) {
 
 	$container.find( '.js-taxonomy-dropdown' ).on( 'change' ).change( function() {
 		var destination = $( this ).val();
-		console.log(destination);
 
 		if ( typeof destination !== "undefined" && destination !== "#" ) {
 			window.location.href = destination;

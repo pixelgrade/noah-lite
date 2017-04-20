@@ -15,14 +15,14 @@ var pixelgradeTheme = function() {
 	_this.frameRendered = false;
 	_this.debug = false;
 
-	_this.update = function() {
-
+	_this.log = function() {
+		if ( _this.debug ) {
+			console.log.apply( this, arguments );
+		}
 	};
 
-	_this.onScroll = function() {
-		if ( _this.frameRendered === false ) {
-			return;
-		}
+	_this.update = function() {
+
 	};
 
 	_this.getScroll = function() {

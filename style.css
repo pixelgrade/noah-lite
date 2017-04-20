@@ -2472,21 +2472,11 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 .c-card__frame {
   position: relative;
   display: block;
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition-property: transform, opacity;
-  will-change: transform, opacity; }
+  overflow: hidden; }
   .c-card__frame img {
     display: block; }
   .c-card.is-visible .c-card__frame {
     opacity: 1; }
-
-.u-card-thumbnail-background {
-  transition: background-color 0s 1s linear, pointer-events 0s .3s linear; }
-  .c-gallery__item:not(.c-gallery__item--no-image) .c-card:not(.is-visible) .u-card-thumbnail-background {
-    background-color: transparent !important;
-    pointer-events: none; }
 
 .c-card__frame-hover {
   opacity: 0;
@@ -2701,7 +2691,6 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 
 .c-gallery--regular .c-card__frame {
   position: relative;
-  padding-top: 100%;
   right: auto; }
   .c-gallery--regular .c-card__frame:after {
     content: "";
@@ -4131,43 +4120,6 @@ body.has-media-only .c-slideshow .c-page-header {
   html.is-loaded .c-hero__content {
     opacity: 1;
     transform: translateZ(0); }
-
-.c-card .c-card__frame,
-.c-card .c-card__content,
-.c-card .c-card__badge {
-  opacity: 0;
-  -ms-transform: translate(0, 50px);
-      transform: translate(0, 50px);
-  will-change: opacity, transform; }
-
-.c-card .c-card__frame {
-  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-  will-change: opacity; }
-
-.c-card .c-card__content,
-.c-card .c-card__badge {
-  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition-property: opacity, transform;
-  will-change: opacity, transform; }
-
-.c-card.is-visible .c-card__frame,
-.c-card.is-visible .c-card__content,
-.c-card.is-visible .c-card__badge {
-  opacity: 1;
-  -ms-transform: none;
-      transform: none; }
-
-.u-no-transition {
-  transition: none !important; }
-
-.site-content {
-  position: relative;
-  transition: top 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition-property: top, opacity;
-  top: 0;
-  opacity: 1; }
-  .page-template-portfolio-page .site-content {
-    transition-property: opacity !important; }
 
 /**
  *   7.2 - Customify
