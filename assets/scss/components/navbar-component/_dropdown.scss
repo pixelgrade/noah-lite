@@ -52,12 +52,13 @@ $dropdown-width:        15em        !default;
 
     .sub-menu,
     .children {
-        .menu-item {
+        .menu-item,
+        .page_item {
             width: 100%;
             margin: 0;
         }
 
-        [class*="has-children"]:after {
+        [class*="children"]:after {
             right: 10px;
 
             border-top-color: inherit;
