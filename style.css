@@ -3236,9 +3236,10 @@ and the top and bottom ones rotate to form an X
       margin-top: 0 !important; } }
 
 .c-navbar {
+  height: 100px;
+  border: 0 solid transparent;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  border: 0 solid transparent; }
+          backface-visibility: hidden; }
   .c-navbar a {
     display: block;
     text-decoration: none;
@@ -4603,7 +4604,8 @@ p:empty {
   width: 100%; }
 
 .site-content {
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 .sticky {
   position: relative; }

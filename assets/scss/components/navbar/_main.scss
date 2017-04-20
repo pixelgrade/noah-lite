@@ -16,9 +16,12 @@
 .c-navbar {
     @extend %heading;
     @extend .fs-12;
-    backface-visibility: hidden;
+	height: 100px;
+
     // in order for customify border-width property to work properly
     border: 0 solid transparent;
+
+    backface-visibility: hidden;
 
     a {
         display: block;
