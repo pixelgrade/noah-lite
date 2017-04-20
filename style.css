@@ -3440,6 +3440,12 @@ and the top and bottom ones rotate to form an X
       .jetpack-social-navigation.jetpack-social-navigation ul a {
         color: #757575; } }
 
+.c-navbar__checkbox:checked ~ .c-navbar__label {
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  width: calc(100% - 75px);
+  background: linear-gradient(to bottom, #fbfbfb 0%, #fefefe 79%, rgba(255, 255, 255, 0) 100%); }
+
 /**
  *   4.14 - Author Box
  */
