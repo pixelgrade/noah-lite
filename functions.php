@@ -98,7 +98,7 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 		 * Enqueue the custom Google Fonts and self-hosted ones
 		 * Add editor custom style to make it look more like the frontend
 		 */
-		add_editor_style( array( noahlite_ek_mukta_font_url(), 'editor-style.css' ) );
+		add_editor_style( array( noahlite_ek_mukta_font_url(), noahlite_josefin_sans_font_url(), 'editor-style.css' ) );
 
 	}
 } // noahlite_setup
