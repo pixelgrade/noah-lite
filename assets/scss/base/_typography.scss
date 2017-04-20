@@ -3,9 +3,6 @@ $line-height:       1.5                 !default;
 $editor-style:      false               !default;
 $content-class:     ".entry-content"    !default;
 
-//@include font-face("Arca Majora", "assets/fonts/ArcaMajora3-Bold", 400);
-// @include font-face("Arca Majora", "assets/fonts/ArcaMajora3-Heavy", 700);
-
 %font-body {
     font-family: unquote(map-get($font-body, font-family));
 }

@@ -546,21 +546,21 @@ function noahlite_mce_before_init( $settings ) {
 add_filter( 'tiny_mce_before_init', 'noahlite_mce_before_init' );
 
 /**
- * Generate the Arca Majora 3 font URL
+ * Generate the Josefin Sans font URL
  *
  * @since Noah 1.0
  *
  * @return string
  */
-function noahlite_arcamajora3_font_url() {
+function noahlite_josefin_sans_font_url() {
 
 	/* Translators: If there are characters in your language that are not
-	* supported by Arca Majora 3, translate this to 'off'. Do not translate
+	* supported by Josefin Sans, translate this to 'off'. Do not translate
 	* into your own language.
 	*/
-	$arcamajora3 = esc_html_x( 'on', 'Arca Majora 2 font: on or off', 'noah-lite' );
-	if ( 'off' !== $arcamajora3 ) {
-		return get_template_directory_uri() . '/assets/fonts/arcamajora3/stylesheet.css';
+	$josefin_sans = esc_html_x( 'on', 'Josefin Sans font: on or off', 'noah-lite' );
+	if ( 'off' !== $josefin_sans ) {
+		return str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Josefin+Sans:700&amp;subset=latin-ext' );
 	}
 
 	return '';

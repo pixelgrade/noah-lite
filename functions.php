@@ -152,8 +152,8 @@ function noahlite_load_assets() {
 	$main_style_deps = array();
 
 	/* Handle the FONTS */
-	wp_enqueue_style( 'noah-lite-fonts-arcamajora3', noahlite_arcamajora3_font_url() );
-	$main_style_deps[] = 'noah-lite-fonts-arcamajora3';
+	wp_enqueue_style( 'noah-lite-fonts-josefin-sans', noahlite_josefin_sans_font_url() );
+	$main_style_deps[] = 'noah-lite-fonts-josefin-sans';
 
 	wp_enqueue_style( 'noah-lite-fonts-ek-mukta', noahlite_ek_mukta_font_url() );
 	$main_style_deps[] = 'noah-lite-fonts-ek-mukta';
