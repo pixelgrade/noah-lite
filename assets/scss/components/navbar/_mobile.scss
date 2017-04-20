@@ -106,22 +106,6 @@ $nav-mobile-color: #000000 !default;
     font-size: 16px;
     text-transform: none;
     letter-spacing: initial;
-
-    .c-navbar__zone--middle {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-
-        display: none;
-        width: 100%;
-
-        transition: left $transition--macro ease-in-out;
-
-        .c-navbar__checkbox:checked ~ * & {
-            left: 0;
-        }
-    }
 }
 
 .c-navbar__zone--middle.mobile-logo-clone { z-index: 1; }
@@ -139,10 +123,6 @@ $nav-mobile-color: #000000 !default;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.c-navbar__content > .c-navbar__zone--middle {
-    display: none;
-}
-
 .c-navbar__slide {
     display: flex;
     flex-direction: column;
@@ -156,7 +136,7 @@ $nav-mobile-color: #000000 !default;
     transform: translateZ(0);
 }
 
-.c-navbar__zone--middle {
+.c-navbar__zone.has-logo {
     position: absolute;
     top: 0;
     left: 0;

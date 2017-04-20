@@ -3337,16 +3337,6 @@ and the top and bottom ones rotate to form an X
     font-size: 16px;
     text-transform: none;
     letter-spacing: initial; }
-    .c-navbar__zone .c-navbar__zone--middle {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      display: none;
-      width: 100%;
-      transition: left 0.3s ease-in-out; }
-      .c-navbar__checkbox:checked ~ * .c-navbar__zone .c-navbar__zone--middle {
-        left: 0; }
   .c-navbar__zone--middle.mobile-logo-clone {
     z-index: 1; }
   .mobile-logo-clone .c-meta__share-link {
@@ -3360,8 +3350,6 @@ and the top and bottom ones rotate to form an X
   .c-navbar__label {
     z-index: 8000;
     -webkit-tap-highlight-color: transparent; }
-  .c-navbar__content > .c-navbar__zone--middle {
-    display: none; }
   .c-navbar__slide {
     display: -ms-flexbox;
     display: flex;
@@ -3375,7 +3363,7 @@ and the top and bottom ones rotate to form an X
     width: 100%;
     height: 100%;
     transform: translateZ(0); }
-  .c-navbar__zone--middle {
+  .c-navbar__zone.has-logo {
     position: absolute;
     top: 0;
     left: 0;
@@ -3383,7 +3371,7 @@ and the top and bottom ones rotate to form an X
     display: none;
     width: 100%;
     height: 100%; }
-    .c-navbar > .c-navbar__zone--middle {
+    .c-navbar > .c-navbar__zone.has-logo {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-align: center;
@@ -3459,7 +3447,7 @@ and the top and bottom ones rotate to form an X
 .c-navbar__checkbox:checked ~ .c-navbar__label {
   -ms-flex-pack: start;
       justify-content: flex-start;
-  width: calc(100% - 75px);
+  width: calc(100% - 100px);
   background: linear-gradient(to bottom, #fbfbfb 0%, #fefefe 79%, rgba(255, 255, 255, 0) 100%); }
 
 /**
