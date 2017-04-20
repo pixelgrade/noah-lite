@@ -39,7 +39,8 @@
     }
 
     .sub-menu .menu-item,
-    .children .menu-item {
+    .children .menu-item,
+    .children .page_item {
         @extend %pt-xs;
         @extend %pb-xs;
         @extend %pr-s;
@@ -61,7 +62,8 @@
             padding-top: 0;
             padding-bottom: 0;
 
-            .menu-item {
+            .menu-item,
+            .page_item {
                 padding: 0;
             }
         }
@@ -73,3 +75,5 @@
         }
     }
 }
+
+.page_item_has_children > .children:after { content: none; }
