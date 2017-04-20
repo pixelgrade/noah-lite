@@ -21,7 +21,15 @@
 		$has_right_menu  = has_nav_menu( 'primary-right' );
 
 		$menu_left_markup = noahlite_header_get_the_left_menu();
+		// In case we have a fallback, we need to adjust
+		if ( ! empty( $menu_left_markup ) ) {
+			$has_left_menu = true;
+		}
 		$menu_right_markup = noahlite_header_get_the_right_menu();
+		// In case we have a fallback, we need to adjust
+		if ( ! empty( $menu_right_markup ) ) {
+			$has_right_menu = true;
+		}
 
 		// Setup the classes for the various areas
 		// First the left area

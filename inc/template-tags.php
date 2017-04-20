@@ -295,7 +295,7 @@ function noahlite_header_get_the_left_menu() {
 		'menu_id'         => 'menu-1',
 		'container'       => 'nav',
 		'container_class' => '',
-		'fallback_cb'     => false,
+		'fallback_cb'     => 'wp_page_menu', // at least one of the menus needs to have this fallback
 		'echo'            => false,
 	) ) );
 }
