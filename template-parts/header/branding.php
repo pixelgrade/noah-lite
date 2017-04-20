@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 	<?php if ( is_front_page() && is_home() ) : ?>
-		<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+		<h1 class="site-title h1"><?php bloginfo( 'name' ); ?></h1>
 	<?php else : ?>
 		<p class="site-title h1"><?php bloginfo( 'name' ); ?></p>
 	<?php endif; ?>

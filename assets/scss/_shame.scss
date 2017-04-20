@@ -53,8 +53,7 @@ img {
 
 .c-navbar__label,
 .c-scroll-arrow[class][class],
-.c-navbar__middle,
-.c-navbar__middle .c-meta__share-link,
+[class*="c-navbar__zone"].mobile-logo-clone,
 .slick-prev,
 .slick-next,
 .slick-dots {
