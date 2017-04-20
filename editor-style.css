@@ -1063,7 +1063,7 @@ pre {
 .h7,
 .mce-content-body cite,
 .entry-footer cite {
-  font-family: "Arca Majora", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: .154em; }
@@ -1185,7 +1185,7 @@ pre {
 .c-btn, input[type="submit"],
 input[type="button"],
 button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
-  font-family: "Arca Majora", sans-serif; }
+  font-family: "Josefin Sans", sans-serif; }
 
 html {
   font-size: 75%;

@@ -243,7 +243,7 @@ msgstr ""
 #. language.
 
 #: inc/extras.php:561
-msgctxt "Arca Majora 2 font: on or off"
+msgctxt "Josefin Slab font: on or off"
 msgid "on"
 msgstr ""
 
