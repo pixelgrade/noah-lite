@@ -3441,6 +3441,13 @@ and the top and bottom ones rotate to form an X
     margin-top: 0;
     padding-top: 0; } }
 
+.page_item,
+.menu-item {
+  word-break: normal;
+  -ms-hyphens: none;
+  -webkit-hyphens: none;
+  hyphens: none; }
+
 .page_item_has_children > .children:after {
   content: none; }
 
@@ -3449,7 +3456,8 @@ and the top and bottom ones rotate to form an X
     margin-top: 0 !important; }
   .c-navbar__zone--middle {
     position: static !important;
-    margin-top: 0 !important; }
+    margin-top: 0 !important;
+    max-width: 50%; }
   .c-navbar__content {
     height: 90px;
     border: 0 solid transparent;

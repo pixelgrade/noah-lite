@@ -76,4 +76,13 @@
     }
 }
 
+.page_item,
+.menu-item {
+	word-break: normal;
+	-ms-hyphens: none;
+	-moz-hyphens: none;
+	-webkit-hyphens: none;
+	hyphens: none;
+}
+
 .page_item_has_children > .children:after { content: none; }
