@@ -734,14 +734,14 @@ ul.instagram-pics > li {
 .gallery.gallery-columns-6 > *,
 .gallery.gallery-columns-7 > *, .pingback + .pingback,
 .trackback + .pingback, .pingback + .trackback,
-.trackback + .trackback, .tags, .widget_rss li + li {
+.trackback + .trackback, .tags, .widget_rss li + li, .slideshow-window[class] {
   margin-top: 36px; }
 
 .alignleft,
 .alignright,
 .aligncenter,
 .alignnone, .entry-content figure + p, .c-gallery--footer .c-gallery__item, .gallery.gallery-columns-4 > *,
-.gallery.gallery-columns-5 > *, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content {
+.gallery.gallery-columns-5 > *, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content, .c-slideshow {
   margin-top: 60px; }
 
 .c-gallery__item, .gallery > *, .tiled-gallery[class], .c-post-navigation, .nav-links, .c-author, .comment-list, body.search .search-form, body #jp-relatedposts {
@@ -773,14 +773,14 @@ ul.instagram-pics > li {
 .entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
   margin-bottom: 24px; }
 
-.entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+.entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post, .slideshow-window[class] {
   margin-bottom: 36px; }
 
 [class*="embed-"],
 [class^="embed-"], .alignleft,
 .alignright,
 .aligncenter,
-.alignnone, .c-page-header, .comment {
+.alignnone, .c-page-header, .comment, .c-slideshow {
   margin-bottom: 60px; }
 
 .tiled-gallery[class], .c-post-navigation__prev, .nav-previous,
@@ -922,13 +922,13 @@ ul.instagram-pics > li {
   .gallery.gallery-columns-6 > *,
   .gallery.gallery-columns-7 > *, .pingback + .pingback,
   .trackback + .pingback, .pingback + .trackback,
-  .trackback + .trackback, .tags, .widget_rss li + li {
+  .trackback + .trackback, .tags, .widget_rss li + li, .slideshow-window[class] {
     margin-top: 35px; }
   .alignleft,
   .alignright,
   .aligncenter,
   .alignnone, .entry-content figure + p, .c-gallery--footer .c-gallery__item, .gallery.gallery-columns-4 > *,
-  .gallery.gallery-columns-5 > *, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content {
+  .gallery.gallery-columns-5 > *, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content, .c-slideshow {
     margin-top: 53px; }
   .c-gallery__item, .gallery > *, .tiled-gallery[class], .c-post-navigation, .nav-links, .c-author, .comment-list, body.search .search-form, body #jp-relatedposts {
     margin-top: 64px; }
@@ -951,13 +951,13 @@ ul.instagram-pics > li {
     margin-bottom: 12px; }
   .entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
     margin-bottom: 24px; }
-  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post, .slideshow-window[class] {
     margin-bottom: 35px; }
   [class*="embed-"],
   [class^="embed-"], .alignleft,
   .alignright,
   .aligncenter,
-  .alignnone, .c-page-header, .comment {
+  .alignnone, .c-page-header, .comment, .c-slideshow {
     margin-bottom: 53px; }
   .tiled-gallery[class], .c-post-navigation__prev, .nav-previous,
   .c-post-navigation__next, .nav-next, .c-author, .comment-list, .tags, body #jp-relatedposts {
@@ -1082,13 +1082,13 @@ ul.instagram-pics > li {
   .gallery.gallery-columns-6 > *,
   .gallery.gallery-columns-7 > *, .pingback + .pingback,
   .trackback + .pingback, .pingback + .trackback,
-  .trackback + .trackback, .tags, .widget_rss li + li {
+  .trackback + .trackback, .tags, .widget_rss li + li, .slideshow-window[class] {
     margin-top: 34px; }
   .alignleft,
   .alignright,
   .aligncenter,
   .alignnone, .entry-content figure + p, .c-gallery--footer .c-gallery__item, .gallery.gallery-columns-4 > *,
-  .gallery.gallery-columns-5 > *, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content {
+  .gallery.gallery-columns-5 > *, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content, .c-slideshow {
     margin-top: 47px; }
   .c-gallery__item, .gallery > *, .tiled-gallery[class], .c-post-navigation, .nav-links, .c-author, .comment-list, body.search .search-form, body #jp-relatedposts {
     margin-top: 49px; }
@@ -1111,13 +1111,13 @@ ul.instagram-pics > li {
     margin-bottom: 12px; }
   .entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
     margin-bottom: 24px; }
-  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post, .slideshow-window[class] {
     margin-bottom: 34px; }
   [class*="embed-"],
   [class^="embed-"], .alignleft,
   .alignright,
   .aligncenter,
-  .alignnone, .c-page-header, .comment {
+  .alignnone, .c-page-header, .comment, .c-slideshow {
     margin-bottom: 47px; }
   .tiled-gallery[class], .c-post-navigation__prev, .nav-previous,
   .c-post-navigation__next, .nav-next, .c-author, .comment-list, .tags, body #jp-relatedposts {
@@ -1242,13 +1242,13 @@ ul.instagram-pics > li {
   .gallery.gallery-columns-6 > *,
   .gallery.gallery-columns-7 > *, .pingback + .pingback,
   .trackback + .pingback, .pingback + .trackback,
-  .trackback + .trackback, .tags, .widget_rss li + li {
+  .trackback + .trackback, .tags, .widget_rss li + li, .slideshow-window[class] {
     margin-top: 33px; }
   .alignleft,
   .alignright,
   .aligncenter,
   .alignnone, .entry-content figure + p, .c-gallery--footer .c-gallery__item, .gallery.gallery-columns-4 > *,
-  .gallery.gallery-columns-5 > *, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content {
+  .gallery.gallery-columns-5 > *, .comment, .comment-body + .comment-respond, .c-gallery--footer + .c-footer__content, #content .sd-content, .c-slideshow {
     margin-top: 42px; }
   .c-gallery__item, .gallery > *, .tiled-gallery[class], .c-post-navigation, .nav-links, .c-author, .comment-list, body.search .search-form, body #jp-relatedposts {
     margin-top: 40px; }
@@ -1271,13 +1271,13 @@ ul.instagram-pics > li {
     margin-bottom: 12px; }
   .entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
     margin-bottom: 23px; }
-  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, body.search .search-form label, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post, .slideshow-window[class] {
     margin-bottom: 33px; }
   [class*="embed-"],
   [class^="embed-"], .alignleft,
   .alignright,
   .aligncenter,
-  .alignnone, .c-page-header, .comment {
+  .alignnone, .c-page-header, .comment, .c-slideshow {
     margin-bottom: 42px; }
   .tiled-gallery[class], .c-post-navigation__prev, .nav-previous,
   .c-post-navigation__next, .nav-next, .c-author, .comment-list, .tags, body #jp-relatedposts {
@@ -2471,11 +2471,12 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 
 .c-card__frame {
   position: relative;
+  display: block;
   overflow: hidden; }
   .c-card__frame img {
-    display: block;
-    transition: opacity 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    will-change: transform, opacity; }
+    display: block; }
+  .c-card.is-visible .c-card__frame {
+    opacity: 1; }
 
 .c-card__frame-hover {
   opacity: 0;
@@ -2485,9 +2486,6 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
       display: none; } }
 
 .c-card__link:hover .c-card__frame-hover {
-  opacity: 1; }
-
-.c-gallery:not(.c-gallery--title-overlay) .c-card__link:hover .c-card__frame {
   opacity: 1; }
 
 .c-card__badge {
@@ -2517,6 +2515,9 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     right: 0;
     border-left: 10px solid transparent;
     border-right: none; }
+
+#content .c-gallery__item--no-image .c-card__content {
+  opacity: 1; }
 
 /**
  *   4.4 - Hero Area
@@ -2690,11 +2691,14 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 
 .c-gallery--regular .c-card__frame {
   position: relative;
-  padding-top: 100%;
   right: auto; }
-  @media not screen and (min-width: 48em) {
-    .c-gallery--regular .c-card__frame {
-      padding-top: 0 !important; } }
+  .c-gallery--regular .c-card__frame:after {
+    content: "";
+    display: block;
+    padding-top: 100%; }
+    @media not screen and (min-width: 48em) {
+      .c-gallery--regular .c-card__frame:after {
+        padding-top: 0 !important; } }
 
 .c-gallery--regular .c-card__link,
 .c-gallery--masonry .c-card__link {
@@ -2785,6 +2789,11 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 
 .gallery {
   clear: both; }
+  .c-slideshow .gallery {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0; }
 
 @media only screen and (min-width: 48em) {
   .gallery-columns-2 > :nth-child(-n+2) {
@@ -3229,9 +3238,10 @@ and the top and bottom ones rotate to form an X
       margin-top: 0 !important; } }
 
 .c-navbar {
+  height: 100px;
+  border: 0 solid transparent;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  border: 0 solid transparent; }
+          backface-visibility: hidden; }
   .c-navbar a {
     display: block;
     text-decoration: none;
@@ -4030,6 +4040,7 @@ body.search .search-form {
  *   6.1 - Gridable WP Plugin
  */
 .gridable--row {
+  margin-left: 0;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap; }
   .gridable--row p:empty {
@@ -4055,6 +4066,12 @@ body.search .search-form {
         flex-basis: 100%;
     width: 100%;
     margin-left: 0; } }
+
+[class*="col-"] {
+  width: auto;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  max-width: none; }
 
 /**
  *   6.2 - jQuery.rellax.js
@@ -4097,14 +4114,6 @@ body.has-media-only .c-slideshow .c-page-header {
   100% {
     opacity: 1; } }
 
-.site-content img:not(.c-hero__image) {
-  transition: opacity 0.3s linear, transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  will-change: opacity, transform; }
-  .site-content img:not(.c-hero__image):not(.is-loaded) {
-    opacity: 0 !important;
-    transform: scale(1.05) translateZ(0);
-    transition: opacity 0.3s linear, transform 1s 0.3s cubic-bezier(0.075, 0.82, 0.165, 1); }
-
 .c-hero__content {
   opacity: 0;
   transform: translate3d(0, 2rem, 0);
@@ -4113,43 +4122,6 @@ body.has-media-only .c-slideshow .c-page-header {
   html.is-loaded .c-hero__content {
     opacity: 1;
     transform: translateZ(0); }
-
-.c-card .c-card__frame,
-.c-card .c-card__content,
-.c-card .c-card__badge {
-  opacity: 0;
-  -ms-transform: translate(0, 50px);
-      transform: translate(0, 50px);
-  will-change: opacity, transform; }
-
-.c-card .c-card__frame {
-  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-  will-change: opacity; }
-
-.c-card .c-card__content,
-.c-card .c-card__badge {
-  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition-property: opacity, transform;
-  will-change: opacity, transform; }
-
-.c-card.is-visible .c-card__frame,
-.c-card.is-visible .c-card__content,
-.c-card.is-visible .c-card__badge {
-  opacity: 1;
-  -ms-transform: none;
-      transform: none; }
-
-.u-no-transition {
-  transition: none !important; }
-
-.site-content {
-  position: relative;
-  transition: top 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition-property: top, opacity;
-  top: 0;
-  opacity: 1; }
-  .page-template-portfolio-page .site-content {
-    transition-property: opacity !important; }
 
 /**
  *   7.2 - Customify
@@ -4633,7 +4605,8 @@ p:empty {
   width: 100%; }
 
 .site-content {
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 .sticky {
   position: relative; }

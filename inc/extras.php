@@ -219,7 +219,11 @@ function noahlite_post_classes( $classes, $class, $post_id ) {
 			$classes[] = 'u-span-landscape';
 		}
 
-		$classes[] = 'c-gallery__item--' . ( $is_landscape ? 'landscape' : 'portrait' );
+		if ( has_post_thumbnail() ) {
+		    $classes[] = 'c-gallery__item--' . ( $is_landscape ? 'landscape' : 'portrait' );
+        } else {
+            $classes[] = 'c-gallery__item--no-image';
+        }
 	} elseif ( is_singular( 'jetpack-portfolio' ) && in_the_loop() ) {
 		$classes[] = 'c-project';
 	} else {

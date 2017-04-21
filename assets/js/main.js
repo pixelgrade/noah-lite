@@ -1,74 +1,5 @@
 (function( $, window, document, undefined ) {
 
-var Gallery = function( $container ) {
-	var _this = this;
-
-	_this.galleries = [];
-
-	_this.show = function( $gallery ) {
-
-		$gallery.find( '.c-card' ).each( function( i, obj ) {
-			var $this = $( obj );
-
-			if ( typeof $this.data( 'is-visible' ) !== "undefined" && $this.data( 'is-visible' ) ) {
-				return;
-			}
-
-			$this.data( 'is-visible', true );
-
-			setTimeout( function() {
-
-				$this.imagesLoaded( function() {
-					$this.addClass( 'is-visible' );
-				} );
-
-			}, i * 100 );
-		} );
-
-	};
-
-	$container = typeof $container !== "undefined" ? $container : $( 'body' );
-
-	$container.find( '.c-gallery' ).each( function( i, obj ) {
-		var $gallery = $( obj );
-
-		if ( ! $gallery.children().length ) {
-			return;
-		}
-
-		_this.galleries.push( $gallery );
-
-		$gallery.imagesLoaded( function() {
-			refresh( $gallery );
-		} );
-
-		$( window ).resize( function() {
-			refresh( $gallery );
-		} );
-	} );
-
-	function refresh( $gallery ) {
-
-		if ( ! $gallery.is( '.js-masonry' ) ) {
-			return;
-		}
-
-		var minWidth = $gallery.children()[0].getBoundingClientRect().width;
-
-		$gallery.children().each( function() {
-			var width = this.getBoundingClientRect().width;
-
-			if ( width < minWidth ) {
-				minWidth = width;
-			}
-		} );
-
-		$gallery.masonry( {
-			isAnimated: false,
-			columnWidth: minWidth
-		} );
-	}
-};
 var Hero = function() {
 
 	this.refresh = function() {
@@ -181,12 +112,19 @@ Navbar.prototype.init = function() {
 	this.$clone = this.$logo.clone().css( 'overflow', 'hidden' ).addClass( 'mobile-logo-clone' );
 	this.$clone.find( 'img' ).addClass( 'is-loaded' );
 
-	if ( Util.below( 'pad' ) || (
-	                            Util.below( 'lap' ) && Util.isTouch && window.innerWidth > window.innerHeight
-	                            ) && this.$share.length ) {
-		this.$target = this.$clone.wrapInner( "<div class='c-navbar__slide'></div>" ).children();
-		this.$share.clone().addClass( 'js-share-clone' ).appendTo( this.$target );
+	if ( ! $( '.c-navbar__zone' ).filter( function() {
+		var $obj = $( this );
+		return ! $obj.hasClass( 'c-navbar__zone--branding' ) && !! $obj.children().length;
+	} ).length ) {
+		$( '.c-navbar__label' ).hide();
 	}
+
+	if ( Util.below( 'pad' ) || (
+            Util.below( 'lap' ) && Util.isTouch && window.innerWidth > window.innerHeight
+        ) && this.$share.length ) {
+        this.$target = this.$clone.wrapInner( "<div class='c-navbar__slide'></div>" ).children();
+        this.$share.clone().addClass( 'js-share-clone' ).appendTo( this.$target );
+    }
 
 	this.$share.clone().addClass( 'js-share-clone h5' ).appendTo( '.js-share-target' );
 
@@ -258,7 +196,7 @@ Parallax.prototype.enable = function() {
 };
 
 /*!
- * pixelgradeTheme v1.0.1
+ * pixelgradeTheme v1.0.3
  * Copyright (c) 2017 PixelGrade http://www.pixelgrade.com
  * Licensed under MIT http://www.opensource.org/licenses/mit-license.php/
  */
@@ -275,7 +213,13 @@ var pixelgradeTheme = function() {
 	_this.debug = false;
 
 	_this.log = function() {
-		console.log.apply(this, arguments)
+		if ( _this.debug ) {
+			console.log.apply( this, arguments );
+		}
+	};
+
+	_this.update = function() {
+
 	};
 
 	_this.getScroll = function() {
@@ -330,6 +274,7 @@ var pixelgradeTheme = function() {
 			_this.ev.trigger( 'render' );
 		}
 		requestAnimationFrame( function() {
+			_this.update();
 			_this.renderLoop();
 			_this.frameRendered = true;
 			_this.ev.trigger( 'afterRender' );
@@ -500,15 +445,22 @@ Noah.init = function() {
 		reloadEvent: resizeEvent
 	} );
 
+	Noah.update = function() {
+		Noah.Hero.update( Noah.getScroll() );
+		Noah.Navbar.update( Noah.getScroll() );
+	};
+
+	Noah.handleContent();
+	Noah.adjustLayout();
+
+	// expose pixelgradeTheme API
 	$.Noah = Noah;
 };
 
-Noah.update = function() {
-	Noah.Hero.update();
-	Noah.Navbar.update();
-};
+$( document ).ready( Noah.init );
 
 Noah.adjustLayout = function() {
+	Noah.log( "Noah.adjustLayout" );
 
 	Noah.Navbar.destroy();
 
@@ -516,6 +468,13 @@ Noah.adjustLayout = function() {
 		Noah.Navbar.init();
 		Noah.Navbar.onChange();
 	}
+
+	$( '.c-hero' ).each( function( i, obj ) {
+		var $hero = $( obj ),
+			heroHeight = $hero.css( 'minHeight', '' ).css( 'height' );
+
+		$hero.css( 'minHeight', heroHeight );
+	});
 
 	// use header height as spacing measure for specific elements
 	var $updatable = $( '.js-header-height-padding-top' ),
@@ -526,9 +485,13 @@ Noah.adjustLayout = function() {
 	$updatable.css( 'paddingTop', headerHeight );
 
 	Noah.Hero.refresh();
+
+	$( window ).trigger( 'rellax' );
 };
 
 Noah.handleContent = function( $container ) {
+	Noah.log( "Noah.handleContent" );
+
 	$container = typeof $container !== "undefined" ? $container : $( 'body' );
 
 	Util.unwrapImages( $container.find( '.entry-content' ) );
@@ -540,7 +503,6 @@ Noah.handleContent = function( $container ) {
 	Noah.Parallax.init( $container );
 
 	Noah.handleImages( $container );
-	Noah.handleGalleries( $container );
 	Noah.eventHandlers( $container );
 	Noah.adjustLayout();
 };
@@ -548,29 +510,31 @@ Noah.handleContent = function( $container ) {
 Noah.handleImages = function( $container ) {
 	// add every image on the page the .is-loaded class
 	// after the image has actually loaded
-	$container.find( 'img' ).each( function( i, obj ) {
+	$container.find( '.c-card, img' ).each( function( i, obj ) {
 		var $each = $( obj );
 		$each.imagesLoaded( function() {
 			$each.addClass( 'is-loaded' );
 		} );
 	} );
-};
 
-Noah.handleGalleries = function( $container ) {
-	var NoahGallery = new Gallery( $container );
+	$container.find('.gallery').each(function( i, obj ) {
+		var $each = $( obj );
+		$each.wrap( '<div class="c-slideshow">' );
+		$each.wrap( '<div class="u-full-width u-container-sides-spacings">' );
+		$each.wrap( '<div class="o-wrapper u-container-width">' );
+	});
 
-	$( window ).on( 'scroll', function() {
-		$.each( NoahGallery.galleries, showGalleries );
-	} );
+	$container.find( '.js-taxonomy-dropdown' ).resizeselect();
 
-	$.each( NoahGallery.galleries, showGalleries );
+	Noah.Parallax.init( $container );
 
-	function showGalleries( i, obj ) {
-		var $gallery = $( obj );
+	Noah.eventHandlers( $container );
 
-		if ( Noah.getScroll() + Noah.getWindowHeight() * 3 / 4 > $gallery.offset().top ) {
-			NoahGallery.show( $gallery );
-		}
+	if ( $( 'body' ).is( '.single-jetpack-portfolio' ) ) {
+		var $target = $container.find( '.js-share-target' );
+
+		$container.find( '.js-share-clone' ).remove();
+		$container.find( '.c-meta__share-link' ).clone().addClass( 'js-share-clone h4' ).appendTo( $target );
 	}
 };
 
@@ -584,7 +548,6 @@ Noah.eventHandlers = function( $container ) {
 
 	$container.find( '.js-taxonomy-dropdown' ).on( 'change' ).change( function() {
 		var destination = $( this ).val();
-		console.log(destination);
 
 		if ( typeof destination !== "undefined" && destination !== "#" ) {
 			window.location.href = destination;
@@ -592,16 +555,10 @@ Noah.eventHandlers = function( $container ) {
 	} );
 };
 
-Noah.init();
-
-$( document ).ready( function() {
-	Noah.handleContent();
-} );
-
 })( jQuery, window, document );
 
 /*!
- * jQuery Rellax Plugin v0.3.5
+ * jQuery Rellax Plugin v0.3.6.1
  * Examples and documentation at http://pixelgrade.github.io/rellax/
  * Copyright (c) 2016 PixelGrade http://www.pixelgrade.com
  * Licensed under MIT http://www.opensource.org/licenses/mit-license.php/
@@ -772,13 +729,12 @@ $( document ).ready( function() {
 			amount: 0.5,
 			bleed: 0,
 			scale: 1,
-			container: "[data-rellax-container]",
-			reloadEvent: "ontouchstart" in window && "onorientationchange" in window ? "orientationchange" : "resize"
+			container: "[data-rellax-container]"
 		};
 
 		var $window = $( window ),
-			windowWidth = window.innerWidth,
-			windowHeight = window.innerHeight ,
+			windowWidth = window.screen.width || window.innerWidth,
+			windowHeight = window.screen.height || window.innerHeight ,
 			lastScrollY = (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0),
 			frameRendered = true,
 			elements = [];
@@ -822,11 +778,14 @@ $( document ).ready( function() {
 		}
 
 		function badRestart() {
+			windowWidth = window.innerWidth;
+			windowHeight = window.innerHeight;
 			setHeights();
 			resetAll();
 			reloadAll();
 			prepareAll();
 			updateAll( true );
+			console.log('rellax:restart');
 			$( window ).trigger( 'rellax:restart' );
 		}
 
@@ -853,11 +812,6 @@ $( document ).ready( function() {
 				render();
 			});
 
-			$window.on( 'resize', function() {
-				windowWidth = window.innerWidth;
-				windowHeight = window.innerHeight;
-			});
-
 			$window.on( 'scroll', function() {
 				if ( frameRendered === true ) {
 					lastScrollY = (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0);
@@ -865,12 +819,11 @@ $( document ).ready( function() {
 				frameRendered = false;
 			});
 
-			$window.on( 'rellax ' + $.fn.rellax.defaults.reloadEvent, restart );
+			$window.on( 'rellax', restart );
 
 		}
 
 		bindEvents();
-
 	}
 )( jQuery, window, document );
 
