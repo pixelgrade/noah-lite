@@ -114,7 +114,7 @@ Navbar.prototype.init = function() {
 
 	if ( ! $( '.c-navbar__zone' ).filter( function() {
 		var $obj = $( this );
-		return ! $obj.is( '.c-navbar__zone--branding' ) && !! $obj.children().length;
+		return ! $obj.hasClass( 'c-navbar__zone--branding' ) && !! $obj.children().length;
 	} ).length ) {
 		$( '.c-navbar__label' ).hide();
 	}
