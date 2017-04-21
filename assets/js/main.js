@@ -519,6 +519,7 @@ Noah.handleImages = function( $container ) {
 
 	$container.find('.gallery').each(function( i, obj ) {
 		var $each = $( obj );
+		$each.wrap( '<div class="c-slideshow">' );
 		$each.wrap( '<div class="u-full-width u-container-sides-spacings">' );
 		$each.wrap( '<div class="o-wrapper u-container-width">' );
 	});
