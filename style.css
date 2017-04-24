@@ -4162,7 +4162,9 @@ body.has-media-only .c-slideshow .c-page-header {
 .u-content-background {
   background: #FFFFFF; }
 
-.u-color-accent {
+a,
+.u-color-accent,
+.c-slider__header .c-meta__share-link:hover {
   color: #BF493D; }
 
 .u-static-header .site-header {

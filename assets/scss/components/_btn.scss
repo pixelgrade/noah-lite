@@ -52,7 +52,6 @@ $btn-radius:          0                     !default;
 
     transition: background-color $transition--micro ease-in-out;
 
-
     @if ($btn-border-width != 0) {
         border: $btn-border-width $btn-border-style $btn-border-color;
     } @else {

@@ -39,7 +39,9 @@
     background: #FFFFFF;
 }
 
-.u-color-accent {
+a,
+.u-color-accent,
+.c-slider__header .c-meta__share-link:hover {
     color: $accent;
 }
 
