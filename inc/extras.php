@@ -347,7 +347,7 @@ if ( ! function_exists( 'noahlite_display_project_gallery' ) ) {
 }
 
 /**
- * We force that every gallery in a project uses the same settings
+ * We force that every gallery in a project or blog post uses the same settings and behaves the same.
  *
  * @param $out
  * @param $pairs
@@ -357,12 +357,10 @@ if ( ! function_exists( 'noahlite_display_project_gallery' ) ) {
  * @return mixed
  */
 function noahlite_normalize_gallery_atts( $out, $pairs, $atts, $shortcode ) {
-	if ( 'jetpack-portfolio' === get_post_type() ) {
-		if ( intval( $out['columns'] ) <= 3 ) {
-			$out['size'] = 'large';
-		} else {
-			$out['size'] = 'medium';
-		}
+	if ( intval( $out['columns'] ) <= 3 ) {
+		$out['size'] = 'large';
+	} else {
+		$out['size'] = 'medium';
 	}
 
 	return $out;
