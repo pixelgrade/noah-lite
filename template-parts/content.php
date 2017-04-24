@@ -31,7 +31,7 @@
 					$category .= '</ul>' . PHP_EOL;
 				}
 
-				echo '<div class="c-card__meta h7">' . $category . "</div>";
+				echo '<div class="c-card__meta h6">' . $category . "</div>";
 
 				if ( get_theme_mod( 'noahlite_blog_items_title_visibility', true ) ) { ?>
 					<h2 class="c-card__title h2"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -48,7 +48,7 @@
 					'after'  => '</div>',
 				) );
 
-				echo '<div class="c-card__footer h7"><span class="posted-on">' . noahlite_date_link() . '</span></div>';
+				echo '<div class="c-card__footer h6"><span class="posted-on">' . noahlite_date_link() . '</span></div>';
 
 				noahlite_entry_footer( get_the_ID() );
 				?></div><!-- .c-card__content -->
