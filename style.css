@@ -4164,8 +4164,21 @@ body.has-media-only .c-slideshow .c-page-header {
 
 a,
 .u-color-accent,
-.c-slider__header .c-meta__share-link:hover {
+.c-slider__header .c-meta__share-link:hover,
+h3, .h3, .entry-content h3, .comment-content h3, .entry-footer h3, .u-color-accent.u-color-accent,
+.entry-content cite,
+.h4.c-project__more-title,
+.entry-content h4.c-project__more-title,
+.comment-content h4.c-project__more-title,
+.entry-footer h4.c-project__more-title,
+body.search .c-page-header__title span {
   color: #BF493D; }
+
+.c-footer a {
+  color: #000000; }
+
+.c-footer {
+  color: #757575; }
 
 .u-static-header .site-header {
   position: absolute !important;

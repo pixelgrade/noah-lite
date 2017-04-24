@@ -41,9 +41,15 @@
 
 a,
 .u-color-accent,
-.c-slider__header .c-meta__share-link:hover {
-    color: $accent;
-}
+.c-slider__header .c-meta__share-link:hover,
+h3, .h3, .u-color-accent.u-color-accent,
+.entry-content cite,
+.h4.c-project__more-title,
+body.search .c-page-header__title span { color: $accent; }
+
+.c-footer a { color: #000000; }
+
+.c-footer { color: $gray; }
 
 .u-slideshow-sides-spacings,
 .u-container-sides-spacings,
