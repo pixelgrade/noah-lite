@@ -187,6 +187,7 @@ gulp.task('build', 'Remove unneeded files and folders from the build folder', ['
         'tests',
         'circle.yml',
         'assets/scss',
+        '.labels',
         'inc/integrations' // since we are not using typeline with Customify there is no need to keep the json config
     ];
 
