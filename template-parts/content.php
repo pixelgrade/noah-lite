@@ -48,6 +48,8 @@
 					'after'  => '</div>',
 				) );
 
+				echo '<div class="c-card__footer h7"><span class="posted-on">' . noahlite_date_link() . '</span></div>';
+
 				noahlite_entry_footer( get_the_ID() );
 				?></div><!-- .c-card__content -->
 		</div><!-- .c-card__link -->
