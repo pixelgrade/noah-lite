@@ -353,10 +353,12 @@ if ( ! function_exists( 'noahlite_display_project_gallery' ) ) {
  * @return mixed
  */
 function noahlite_normalize_gallery_atts( $out, $pairs, $atts, $shortcode ) {
-	if ( intval( $out['columns'] ) <= 3 ) {
-		$out['size'] = 'large';
-	} else {
-		$out['size'] = 'medium';
+	if ( 'jetpack-portfolio' === get_post_type() ) {
+		if ( intval( $out['columns'] ) <= 3 ) {
+			$out['size'] = 'large';
+		} else {
+			$out['size'] = 'medium';
+		}
 	}
 
 	return $out;
