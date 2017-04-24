@@ -1612,19 +1612,17 @@ button {
 .body.body .content-area select[name] {
   display: block;
   height: auto;
-  padding: 0.5em 0;
-  border: 0;
+  padding: .5em .9em;
+  border: 1px solid #252525;
+  border-radius: 0;
   font: inherit;
   background: transparent;
-  box-shadow: currentColor 0 1px 0;
-  border-radius: 0;
   color: inherit;
   -webkit-appearance: none;
   -moz-appearance: none; }
   .body.body .content-area input:focus:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="file"]),
   .body.body .content-area textarea:focus,
   .body.body .content-area select:focus {
-    border: 0;
     outline: 0; }
 
 ::-webkit-input-placeholder {
@@ -2399,6 +2397,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
   background-color: #000000;
   text-transform: uppercase;
   padding: 0.9em 2em 0.8em 2.1em;
+  transition: background-color 0.15s ease-in-out;
   border: 1px solid #000000; }
   .c-btn, input[type="submit"],
   input[type="button"],
@@ -2416,6 +2415,17 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     text-decoration: none;
     /* [4] */
     color: #FFFFFF; }
+  .c-btn:hover, input[type="submit"]:hover,
+  input[type="button"]:hover,
+  button[type="submit"]:hover, .body.body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous:hover,
+  .posts-navigation .nav-next:hover, .c-btn:active, input[type="submit"]:active,
+  input[type="button"]:active,
+  button[type="submit"]:active, .body.body .wpforms-container[class] .wpforms-submit:active, .posts-navigation .nav-previous:active,
+  .posts-navigation .nav-next:active, .c-btn:focus, input[type="submit"]:focus,
+  input[type="button"]:focus,
+  button[type="submit"]:focus, .body.body .wpforms-container[class] .wpforms-submit:focus, .posts-navigation .nav-previous:focus,
+  .posts-navigation .nav-next:focus {
+    background-color: #333333; }
 
 .c-btn--inverse {
   color: #000000;
@@ -3649,6 +3659,9 @@ and the top and bottom ones rotate to form an X
   .comment-form > :last-child,
   .comment-form .form-submit {
     margin-bottom: 0; }
+  .comment-form label + input,
+  .comment-form label + textarea {
+    margin-top: 2px; }
 
 .comment-form-author,
 .comment-form-email {
