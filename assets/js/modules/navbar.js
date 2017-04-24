@@ -77,12 +77,19 @@ Navbar.prototype.init = function() {
 	this.$clone = this.$logo.clone().css( 'overflow', 'hidden' ).addClass( 'mobile-logo-clone' );
 	this.$clone.find( 'img' ).addClass( 'is-loaded' );
 
-	if ( Util.below( 'pad' ) || (
-	                            Util.below( 'lap' ) && Util.isTouch && window.innerWidth > window.innerHeight
-	                            ) && this.$share.length ) {
-		this.$target = this.$clone.wrapInner( "<div class='c-navbar__slide'></div>" ).children();
-		this.$share.clone().addClass( 'js-share-clone' ).appendTo( this.$target );
+	if ( ! $( '.c-navbar__zone' ).filter( function() {
+		var $obj = $( this );
+		return ! $obj.hasClass( 'c-navbar__zone--branding' ) && !! $obj.children().length;
+	} ).length ) {
+		$( '.c-navbar__label' ).hide();
 	}
+
+	if ( Util.below( 'pad' ) || (
+            Util.below( 'lap' ) && Util.isTouch && window.innerWidth > window.innerHeight
+        ) && this.$share.length ) {
+        this.$target = this.$clone.wrapInner( "<div class='c-navbar__slide'></div>" ).children();
+        this.$share.clone().addClass( 'js-share-clone' ).appendTo( this.$target );
+    }
 
 	this.$share.clone().addClass( 'js-share-clone h5' ).appendTo( '.js-share-target' );
 

@@ -127,6 +127,7 @@ p:empty {
 
 .site-content {
     overflow: hidden;
+	position: relative;
 }
 
 .sticky {
@@ -331,3 +332,14 @@ body #jp-relatedposts {
 .js-share-target:empty {
     display: none;
 }
+
+.c-slideshow {
+	@extend %mt-l;
+	@extend %mb-l;
+}
+
+.slideshow-window[class] {
+	@extend %mt-m;
+	@extend %mb-m;
+}
+

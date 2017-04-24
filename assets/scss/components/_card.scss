@@ -96,14 +96,17 @@
 }
 
 .c-card__frame {
-    //background-color: currentColor;
     position: relative;
+
+    display: block;
     overflow: hidden;
 
     img {
         display: block;
-        transition: opacity $transition--macro $easeInOutCirc;
-        will-change: transform, opacity;
+    }
+
+    .c-card.is-visible & {
+        opacity: 1;
     }
 }
 
@@ -117,10 +120,6 @@
 }
 
 .c-card__link:hover .c-card__frame-hover {
-    opacity: 1;
-}
-
-.c-gallery:not(.c-gallery--title-overlay) .c-card__link:hover .c-card__frame {
     opacity: 1;
 }
 
@@ -162,4 +161,12 @@
         border-left: 10px solid transparent;
         border-right: none;
     }
+}
+
+.c-gallery__item--no-image {
+
+    #content & .c-card__content {
+        opacity: 1;
+    }
+
 }

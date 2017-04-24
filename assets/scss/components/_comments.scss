@@ -141,6 +141,11 @@
     .form-submit {
         margin-bottom: 0;
     }
+
+	label + input,
+	label + textarea {
+		margin-top: 2px;
+	}
 }
 
 .comment-form-author,

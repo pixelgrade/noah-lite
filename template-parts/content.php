@@ -10,14 +10,15 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class() ?>>
 
 	<div class="c-card">
-        <div class="c-card__link">
-			<?php if ( has_post_thumbnail( get_the_ID() ) ) { ?>
-			<a class="c-card__content-link" href="<?php the_permalink(); ?>">
-				<div class="c-card__frame">
-					<?php the_post_thumbnail(); ?>
-				</div>
-			</a>
-			<?php } ?>
+		<div class="c-card__link">
+
+            <div class="u-card-thumbnail-background">
+                <div class="c-card__frame">
+                    <a class="c-card__content-link" href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail(); ?>
+                    </a>
+                </div>
+            </div>
 
 			<div class="c-card__content"><?php
 				if ( get_theme_mod( 'noahlite_blog_items_title_visibility', true ) ) { ?>

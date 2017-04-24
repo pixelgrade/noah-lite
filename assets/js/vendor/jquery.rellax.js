@@ -1,5 +1,5 @@
 /*!
- * jQuery Rellax Plugin v0.3.5
+ * jQuery Rellax Plugin v0.3.6.1
  * Examples and documentation at http://pixelgrade.github.io/rellax/
  * Copyright (c) 2016 PixelGrade http://www.pixelgrade.com
  * Licensed under MIT http://www.opensource.org/licenses/mit-license.php/
@@ -170,13 +170,12 @@
 			amount: 0.5,
 			bleed: 0,
 			scale: 1,
-			container: "[data-rellax-container]",
-			reloadEvent: "ontouchstart" in window && "onorientationchange" in window ? "orientationchange" : "resize"
+			container: "[data-rellax-container]"
 		};
 
 		var $window = $( window ),
-			windowWidth = window.innerWidth,
-			windowHeight = window.innerHeight ,
+			windowWidth = window.screen.width || window.innerWidth,
+			windowHeight = window.screen.height || window.innerHeight ,
 			lastScrollY = (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0),
 			frameRendered = true,
 			elements = [];
@@ -220,11 +219,14 @@
 		}
 
 		function badRestart() {
+			windowWidth = window.innerWidth;
+			windowHeight = window.innerHeight;
 			setHeights();
 			resetAll();
 			reloadAll();
 			prepareAll();
 			updateAll( true );
+			console.log('rellax:restart');
 			$( window ).trigger( 'rellax:restart' );
 		}
 
@@ -251,11 +253,6 @@
 				render();
 			});
 
-			$window.on( 'resize', function() {
-				windowWidth = window.innerWidth;
-				windowHeight = window.innerHeight;
-			});
-
 			$window.on( 'scroll', function() {
 				if ( frameRendered === true ) {
 					lastScrollY = (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0);
@@ -263,11 +260,10 @@
 				frameRendered = false;
 			});
 
-			$window.on( 'rellax ' + $.fn.rellax.defaults.reloadEvent, restart );
+			$window.on( 'rellax', restart );
 
 		}
 
 		bindEvents();
-
 	}
 )( jQuery, window, document );
