@@ -21,6 +21,18 @@
             </div>
 
 			<div class="c-card__content"><?php
+				$categories = get_the_terms( get_the_ID(), 'category' );
+				$category   = "";
+				if ( ! is_wp_error( $categories ) && ! empty( $categories ) ) {
+					$category .= '<ul class="o-inline o-inline-xs">' . PHP_EOL;
+					foreach ( $categories as $this_category ) {
+						$category .= '<li><a href="' . esc_url( get_category_link( $this_category->term_id ) ) . '">' . $this_category->name . '</a></li>' . PHP_EOL;
+					};
+					$category .= '</ul>' . PHP_EOL;
+				}
+
+				echo '<div class="c-card__meta h7">' . $category . "</div>";
+
 				if ( get_theme_mod( 'noahlite_blog_items_title_visibility', true ) ) { ?>
 					<h2 class="c-card__title h2"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				<?php }
