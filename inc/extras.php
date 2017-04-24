@@ -66,7 +66,7 @@ function noahlite_get_portfolio_class( $class = '' ) {
 	$classes[]  = 'c-gallery--regular';
 
 	// items per row
-	$columns        = 3;
+	$columns        = 4;
 	$columns_at_lap = $columns >= 5 ? $columns - 1 : $columns;
 	$columns_at_pad = $columns_at_lap >= 4 ? $columns_at_lap - 1 : $columns_at_lap;
 

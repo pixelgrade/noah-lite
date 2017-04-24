@@ -14,7 +14,11 @@
 
 	<div class="entry-content  u-content-width  u-content-bottom-spacing">
 
-		<?php the_content();
+		<?php if ( has_post_thumbnail( get_the_ID() ) ) { ?>
+			<div class="entry-featured  aligncenter"><?php the_post_thumbnail(); ?></div>
+		<?php }
+
+		the_content();
 
 		wp_link_pages( array(
 			'before' => '<div class="c-article__page-links  page-links">' . esc_html__( 'Pages:', 'noah-lite' ),

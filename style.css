@@ -4532,6 +4532,7 @@ img {
   height: auto;
   padding: 0;
   padding-right: 1.4em;
+  border: 0;
   box-shadow: none;
   background: url("assets/images/select-arrow.svg") no-repeat right center;
   background-position: right calc(50% - 0.1em);
