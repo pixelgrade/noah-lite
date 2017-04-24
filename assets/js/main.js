@@ -432,32 +432,39 @@ var Util = {
 var noop = function() {};
 
 var Noah = new pixelgradeTheme(),
-	resizeEvent = 'ontouchstart' in window && 'onorientationchange' in window ? 'pxg:orientationchange' : 'pxg:resize';
+	resizeEvent = "ontouchstart" in window && "onorientationchange" in window ? "pxg:orientationchange" : "pxg:resize";
 
 Noah.init = function() {
-	Noah.Hero = new Hero();
-	Noah.Navbar = new Navbar();
 
-	Noah.Parallax = new Parallax( '.c-hero__background, .c-hero__image', {
+	var $body = $( 'body' );
+
+	if ( ! $body.is( '.customizer-preview' ) && typeof $body.data( 'ajaxloading' ) !== "undefined" ) {
+		Noah.initializeAjax();
+	}
+
+	Noah.Parallax = new Parallax( '.c-hero__background', {
 		bleed: 20,
 		scale: 1.2,
-		container: '.c-hero__background',
-		reloadEvent: resizeEvent
+		container: '.c-hero__background-mask'
 	} );
 
-	Noah.update = function() {
-		Noah.Hero.update( Noah.getScroll() );
-		Noah.Navbar.update( Noah.getScroll() );
-	};
+	Noah.Parallax.disabled = "ontouchstart" in window && "onorientationchange" in window;
 
-	Noah.handleContent();
-	Noah.adjustLayout();
+	Noah.Hero = new Hero();
+	Noah.Navbar = new Navbar();
 
 	// expose pixelgradeTheme API
 	$.Noah = Noah;
 };
 
-$( document ).ready( Noah.init );
+Noah.update = function() {
+	Noah.Hero.update( Noah.getScroll() );
+	Noah.Navbar.update( Noah.getScroll() );
+
+	if ( typeof Noah.Gallery !== "undefined" ) {
+		Noah.Gallery.update( Noah.getScroll() + Noah.getWindowHeight() * 3 / 4 );
+	}
+};
 
 Noah.adjustLayout = function() {
 	Noah.log( "Noah.adjustLayout" );
@@ -554,6 +561,16 @@ Noah.eventHandlers = function( $container ) {
 		}
 	} );
 };
+
+Noah.init();
+
+$(document).ready(function() {
+	Noah.handleContent();
+	Noah.adjustLayout();
+	Noah.eventHandlers();
+	Noah.update();
+	Noah.fadeIn();
+});
 
 })( jQuery, window, document );
 
@@ -679,7 +696,7 @@ Noah.eventHandlers = function( $container ) {
 					scale = 1 + ( this.options.scale - 1 ) * progress,
 					scaleTransform = scale >= 1 ? 'scale(' + scale + ')' : '';
 
-				if ( this.parent === undefined && this.$parent.length ) {
+				if ( this.parent === undefined ) {
 					move *= -1;
 				}
 
@@ -785,7 +802,6 @@ Noah.eventHandlers = function( $container ) {
 			reloadAll();
 			prepareAll();
 			updateAll( true );
-			console.log('rellax:restart');
 			$( window ).trigger( 'rellax:restart' );
 		}
 

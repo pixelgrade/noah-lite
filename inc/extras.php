@@ -199,26 +199,6 @@ function noahlite_post_classes( $classes, $class, $post_id ) {
 		// if the image is landscape double its width
 		$is_landscape = $image_data[1] > $image_data[2];
 
-		$is_featured = null;
-		if ( taxonomy_exists( 'jetpack-portfolio-tag' ) ) {
-			$is_featured = has_term( 'featured', 'jetpack-portfolio-tag' );
-		}
-
-		// again, if the images if featured double its width
-		$is_featured = has_term( 'featured', 'tag' );
-
-		if ( $is_featured && $is_landscape ) {
-			$classes[] = 'u-span-full';
-		}
-
-		if ( $is_featured && ! $is_landscape ) {
-			$classes[] = 'u-span2';
-		}
-
-		if ( ! $is_featured && $is_landscape ) {
-			$classes[] = 'u-span-landscape';
-		}
-
 		if ( has_post_thumbnail() ) {
 		    $classes[] = 'c-gallery__item--' . ( $is_landscape ? 'landscape' : 'portrait' );
         } else {

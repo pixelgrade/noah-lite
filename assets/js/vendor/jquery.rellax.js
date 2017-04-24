@@ -120,7 +120,7 @@
 					scale = 1 + ( this.options.scale - 1 ) * progress,
 					scaleTransform = scale >= 1 ? 'scale(' + scale + ')' : '';
 
-				if ( this.parent === undefined && this.$parent.length ) {
+				if ( this.parent === undefined ) {
 					move *= -1;
 				}
 
@@ -226,7 +226,6 @@
 			reloadAll();
 			prepareAll();
 			updateAll( true );
-			console.log('rellax:restart');
 			$( window ).trigger( 'rellax:restart' );
 		}
 
