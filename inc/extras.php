@@ -347,7 +347,7 @@ if ( ! function_exists( 'noahlite_display_project_gallery' ) ) {
 }
 
 /**
- * We force that every gallery in a project uses the same settings
+ * We force that every gallery in a project or blog post uses the same settings and behaves the same.
  *
  * @param $out
  * @param $pairs
