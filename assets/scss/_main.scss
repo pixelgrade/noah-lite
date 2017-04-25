@@ -31,7 +31,8 @@
  *   5.2 - Portfolio Page Template
  *   5.3 - Split Page Template
  *   5.4 - Search Page Template
- *   5.3 - Single
+ *   5.5 - Single Page
+ *   5.6 - Blog Page
  * 6.0 - Vendor
  *   6.1 - Gridable WP Plugin
  *   6.2 - jQuery.rellax.js
@@ -205,6 +206,10 @@
 @import "pages/search";
 /**
  *   5.5 - Single page
+ */
+@import "pages/single";
+/**
+ *   5.6 - Blog page
  */
 @import "pages/single";
 
