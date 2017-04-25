@@ -49,53 +49,66 @@ get_header(); ?>
                         </div>
                     <?php endif;
 
-                    // we are done with the post - it is time to begin our custom loop
-                    // to be sure that the main query's in_the_loop is properly set we call have_posts() one more time, just like while would do
-                    have_posts();
+                    // We need to make sure we haven't ended up here without Jetpack being activated
+                    if ( post_type_exists( 'jetpack-portfolio') && class_exists( 'Jetpack_Portfolio' ) ) :
 
-                    // in case this is a static front page
-                    if ( get_query_var('page') ) {
-	                    $paged = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
-                    } else {
-	                    $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-                    }
+	                    // we are done with the post - it is time to begin our custom loop
+	                    // to be sure that the main query's in_the_loop is properly set we call have_posts() one more time, just like `while` would do
+	                    have_posts();
 
-                    $projects = new WP_Query( array(
-	                    'post_type' => 'jetpack-portfolio',
-	                    'posts_per_page' => get_option( Jetpack_Portfolio::OPTION_READING_SETTING, '10' ),
-                    ) );
+	                    // in case this is a static front page
+	                    if ( get_query_var('page') ) {
+		                    $paged = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
+	                    } else {
+		                    $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+	                    }
 
-                    if ( $projects->have_posts() ) : ?>
+	                    $projects = new WP_Query( array(
+		                    'post_type' => 'jetpack-portfolio',
+		                    'posts_per_page' => get_option( Jetpack_Portfolio::OPTION_READING_SETTING, '10' ),
+		                    'paged' => $paged,
+	                    ) );
 
-                        <div class="js-header-height-padding-top">
+	                    if ( $projects->have_posts() ) : ?>
 
-	                        <div class="u-content-background">
-		                        <section class="c-archive-loop  u-full-width  u-portfolio_sides_spacing  u-content-bottom-spacing">
-			                        <div class="o-wrapper u-portfolio_grid_width">
-				                        <div <?php noahlite_portfolio_class( '' ); ?>>
+	                        <div class="js-header-height-padding-top">
 
-					                        <?php while ( $projects->have_posts() ) : $projects->the_post();
-						                        get_template_part( 'template-parts/project/content', 'jetpack-portfolio' );
-					                        endwhile; ?>
+		                        <div class="u-content-background">
+			                        <section class="c-archive-loop  u-full-width  u-portfolio_sides_spacing  u-content-bottom-spacing">
+				                        <div class="o-wrapper u-portfolio_grid_width">
+					                        <div <?php noahlite_portfolio_class( '' ); ?>>
 
-				                        </div>
-			                        </div><!-- .o-wrapper.u-portfolio_grid_width -->
-		                        </section><!-- .c-archive-loop -->
-	                        </div><!-- .u-content-background -->
+						                        <?php while ( $projects->have_posts() ) : $projects->the_post();
+							                        get_template_part( 'template-parts/project/content', 'jetpack-portfolio' );
+						                        endwhile; ?>
 
-                            <?php noahlite_the_older_projects_button( $projects ); ?>
+					                        </div>
+				                        </div><!-- .o-wrapper.u-portfolio_grid_width -->
+			                        </section><!-- .c-archive-loop -->
+		                        </div><!-- .u-content-background -->
 
-                        </div><!-- .js-header-height-padding-top -->
+	                            <?php noahlite_the_older_projects_button( $projects ); ?>
 
-                    <?php else : ?>
+	                        </div><!-- .js-header-height-padding-top -->
 
-	                    <div class="u-content-width">
-		                    <?php get_template_part( 'template-parts/content', 'none' ); ?>
-	                    </div><!-- .u-content-width -->
+	                    <?php else : ?>
 
-                    <?php endif;
+		                    <div class="u-content-width">
+			                    <?php get_template_part( 'template-parts/content', 'none' ); ?>
+		                    </div><!-- .u-content-width -->
 
-                    wp_reset_postdata(); ?>
+	                    <?php endif;
+
+	                    wp_reset_postdata();
+
+                    else : ?>
+
+					<div class="o-wrapper  u-content-width u-content-bottom-spacing">
+						<p>&nbsp;</p>
+						<p><strong><?php esc_html_e( 'You need to make sure that Jetpack is installed and activated before you work with projects!', 'noah-lite'); ?></strong></p>
+					</div>
+
+                    <?php endif; ?>
 
 				</div><!-- .c-article__content -->
 			</article><!-- #post-## -->
