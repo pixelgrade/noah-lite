@@ -582,7 +582,6 @@ $(document).ready(function() {
 	Noah.adjustLayout();
 	Noah.eventHandlers();
 	Noah.update();
-	Noah.fadeIn();
 });
 
 })( jQuery, window, document );

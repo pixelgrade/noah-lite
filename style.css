@@ -4116,9 +4116,9 @@ body.search .search-form {
  * 7.0 - Utility
  *   7.1 - Transitions
  */
-body, .c-page-header {
+.c-page-header {
   transition: opacity .3s ease-in-out; }
-  html:not(.is-ready) body, html:not(.is-ready) .c-page-header {
+  html:not(.is-ready) .c-page-header {
     opacity: 0 !important; }
 
 .u-content-width {
@@ -4158,7 +4158,7 @@ body.has-media-only .c-slideshow .c-page-header {
   html:not(.is-loaded) .c-hero__image {
     -ms-transform: scale(1.05);
         transform: scale(1.05);
-    opacity: 0; }
+    opacity: 0 !important; }
 
 /**
  *   7.2 - Customify

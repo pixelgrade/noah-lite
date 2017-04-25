@@ -14,10 +14,6 @@
     }
 }
 
-body {
-    @extend %showOnReady;
-}
-
 .u-content-width {
     opacity: 0;
     transition: opacity .3s .3s ease-in-out;
@@ -71,6 +67,6 @@ body.has-media-only {
 
 	html:not(.is-loaded) & {
 		transform: scale(1.05);
-		opacity: 0;
+		opacity: 0 !important;
 	}
 }
