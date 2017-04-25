@@ -1,23 +1,17 @@
 %showOnLoad {
-    opacity: 0;
     transition: opacity .3s ease-in-out;
 
-    .is-loaded & {
-        opacity: 1;
+    html:not(.is-loaded) & {
+        opacity: 0 !important;
     }
 }
 
 %showOnReady {
-    opacity: 0;
     transition: opacity .3s ease-in-out;
 
-    .is-ready & {
-        opacity: 1;
+    html:not(.is-ready) & {
+        opacity: 0 !important;
     }
-}
-
-body {
-    @extend %showOnReady;
 }
 
 .u-content-width {
@@ -63,4 +57,16 @@ body.has-media-only {
         opacity: 1;
         transform: translateZ(0);
     }
+}
+
+.c-hero__image {
+	transform: translateZ(0);
+	transition: transform 1s $easeOutCirc, opacity .3s linear;
+	transition-property: transform, opacity;
+	will-change: transform, opacity;
+
+	html:not(.is-loaded) & {
+		transform: scale(1.05);
+		opacity: 0 !important;
+	}
 }

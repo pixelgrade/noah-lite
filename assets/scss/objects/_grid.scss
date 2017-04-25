@@ -79,14 +79,15 @@ $mybreakpoints: (lap, desk);
         }
 
         @for $i from 2 through 9 {
-            .c-gallery--packed.o-grid--#{$i}col-\@#{$breakpoint} > .u-span2,
+
+            .c-gallery--packed.o-grid--#{$i}col-\@#{$breakpoint} > .c-gallery__item--landscape,
             .c-gallery--packed.o-grid--#{$i}col-\@#{$breakpoint} > .c-gallery__item--portrait.jetpack-portfolio-tag-featured {
                 width: percentage(2/$i);
             }
 
-            .c-gallery--packed.o-grid--#{$i}col-\@#{$breakpoint} > .u-span-full {
-                width: 100%;
-            }
+			.c-gallery--packed.o-grid--#{$i}col-\@#{$breakpoint} > .c-gallery__item--landscape.jetpack-portfolio-tag-featured {
+				width: percentage(min(4, $i)/$i);
+			}
         }
     }
 }
