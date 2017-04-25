@@ -55,7 +55,11 @@ get_header(); ?>
 
 			</div><!-- #posts-container -->
 
+			<?php
+			$is_infinite = class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' );
+			if ( false === $is_infinite ) : ?>
 			<?php the_posts_navigation(); ?>
+			<?php endif; ?>
 
 			<?php else : ?>
 

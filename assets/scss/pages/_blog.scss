@@ -1,0 +1,30 @@
+.c-gallery--blog {
+	.infinite-scroll & {
+		@extend %mb-l;
+
+		.post {
+			opacity: 0;
+			transition: opacity .3s ease-in;
+
+			&.is--loaded { opacity: 1; }
+		}
+	}
+
+	.infinite-scroll.infinity-end & { margin-bottom: 0; }
+}
+
+#infinite-handle {
+	@extend %pt-m;
+
+	position: absolute;
+	top: 100% !important;
+	left: 50% !important;
+
+	display: block;
+	width: auto;
+
+	transform: translateX(-50%);
+
+	span { @extend .c-btn; }
+	button { text-transform: uppercase; }
+}
