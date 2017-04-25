@@ -2635,12 +2635,6 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     -ms-flex-item-align: end;
         align-self: flex-end; }
 
-<<<<<<< HEAD
-.c-hero__image,
-.c-hero__video {
-  width: 100%;
-  height: 100%;
-=======
 .c-hero__background-mask {
   overflow: hidden; }
 
@@ -2648,7 +2642,6 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 .c-hero__video {
   min-width: 100%;
   min-height: 100%;
->>>>>>> 74995a1... Add another wrapper to hero for fluid intro transition - see #272 #278
   max-width: none;
   width: auto;
   height: auto; }
@@ -3518,35 +3511,11 @@ and the top and bottom ones rotate to form an X
       .jetpack-social-navigation.jetpack-social-navigation ul a {
         color: #757575; } }
 
-<<<<<<< HEAD
 .c-navbar__checkbox:checked ~ .c-navbar__label {
   -ms-flex-pack: start;
       justify-content: flex-start;
   width: calc(100% - 100px);
   background: linear-gradient(to bottom, #fbfbfb 0%, #fefefe 79%, rgba(255, 255, 255, 0) 100%); }
-=======
-@media only screen and (min-width: 30em) {
-  .c-slideshow {
-    position: relative; }
-    .c-slideshow:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -50vw;
-      right: -50vw;
-      display: block;
-      height: 100%;
-      background-color: inherit; }
-    .c-slideshow .gallery,
-    .c-slideshow .c-slider {
-      position: absolute !important;
-      top: 0;
-      left: 0; }
-    .c-slideshow .gallery {
-      right: 0; }
-    .c-slideshow .gallery-item {
-      will-change: opacity; } }
->>>>>>> 8bc074d... Slideshow performance (#284)
 
 /**
  *   4.14 - Author Box
@@ -4152,14 +4121,6 @@ body, .c-page-header {
   html:not(.is-ready) body, html:not(.is-ready) .c-page-header {
     opacity: 0 !important; }
 
-<<<<<<< HEAD
-=======
-.c-slider {
-  opacity: 0; }
-  .c-slideshow.is-loaded .c-slider {
-    opacity: 1; }
-
->>>>>>> 8bc074d... Slideshow performance (#284)
 .u-content-width {
   opacity: 0;
   transition: opacity .3s .3s ease-in-out; }
@@ -4189,69 +4150,6 @@ body.has-media-only .c-slideshow .c-page-header {
     opacity: 1;
     transform: translateZ(0); }
 
-<<<<<<< HEAD
-=======
-.c-card .c-card__frame,
-.c-card .c-card__content,
-.c-card .c-card__badge {
-  opacity: 0;
-  -ms-transform: translate(0, 50px);
-      transform: translate(0, 50px);
-  will-change: opacity, transform; }
-
-.c-card .c-card__frame {
-  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-  will-change: opacity; }
-
-.c-card .c-card__content,
-.c-card .c-card__badge {
-  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition-property: opacity, transform;
-  will-change: opacity, transform; }
-
-.c-card.is-visible .c-card__frame,
-.c-card.is-visible .c-card__content,
-.c-card.is-visible .c-card__badge {
-  opacity: 1;
-  -ms-transform: none;
-      transform: none; }
-
-.u-no-transition {
-  transition: none !important; }
-
-.site-content {
-  position: relative;
-  transition: top 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition-property: top, opacity;
-  top: 0;
-  opacity: 1; }
-  .page-template-portfolio-page .site-content {
-    transition-property: opacity !important; }
-
-html.fade-out .site-content {
-  opacity: 0;
-  top: -200px; }
-
-html.fade-out .js-page-mask {
-  -ms-transform: none;
-      transform: none;
-  -ms-transform-origin: 0 100%;
-      transform-origin: 0 100%; }
-
-html.fade-in .site-content {
-  opacity: 1;
-  top: 0; }
-
-html.fade-in .js-page-mask {
-  -ms-transform: scale(1, 0);
-      transform: scale(1, 0);
-  -ms-transform-origin: 0 0;
-      transform-origin: 0 0; }
-
-html.no-transitions .site-content,
-html.no-transitions .js-page-mask {
-  transition: none !important; }
-
 .c-hero__image {
   transform: translateZ(0);
   transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.3s linear;
@@ -4262,7 +4160,6 @@ html.no-transitions .js-page-mask {
         transform: scale(1.05);
     opacity: 0; }
 
->>>>>>> 94c8a0f... Bring back the zoom in transition for the hero image - closes #278
 /**
  *   7.2 - Customify
  */
