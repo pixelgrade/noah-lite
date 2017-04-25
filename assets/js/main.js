@@ -436,12 +436,6 @@ var Noah = new pixelgradeTheme(),
 
 Noah.init = function() {
 
-	var $body = $( 'body' );
-
-	if ( ! $body.is( '.customizer-preview' ) && typeof $body.data( 'ajaxloading' ) !== "undefined" ) {
-		Noah.initializeAjax();
-	}
-
 	Noah.Parallax = new Parallax( '.c-hero__background', {
 		bleed: 20,
 		scale: 1.2,
