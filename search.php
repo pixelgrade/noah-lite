@@ -35,9 +35,11 @@ get_header(); ?>
 				</div>
 				<?php the_posts_navigation(); ?>
 
-			<?php else :
-				get_template_part( 'template-parts/content', 'none' );
-			endif; ?>
+			<?php else : ?>
+				<div class="u-content-width">
+					<?php get_template_part( 'template-parts/content', 'none' ); ?>
+				</div>
+			<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

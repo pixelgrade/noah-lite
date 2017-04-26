@@ -1,6 +1,7 @@
 .gridable--row {
     margin-left: 0;
     flex-wrap: nowrap;
+	overflow: visible;
 
     p:empty {
         display: none;
@@ -38,6 +39,12 @@
         flex-basis: 100%;
         width: 100%;
         margin-left: 0;
+    }
+}
+
+@include above(small) {
+    .gridable--col[class] {
+        padding-top: 0;
     }
 }
 

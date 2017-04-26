@@ -40,7 +40,7 @@ get_header(); ?>
 			<?php the_posts_navigation(); ?>
 
 			<?php else : ?>
-				<div class="u-content-width">
+				<div class="u-content-width entry-content">
 					<?php get_template_part( 'template-parts/content', 'none' ); ?>
 				</div>
 			<?php endif; ?>

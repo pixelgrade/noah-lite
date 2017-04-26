@@ -13,7 +13,7 @@ get_header(); ?>
 <div id="primary" class="content-area  u-blog_sides_spacings">
 	<main id="main" class="o-wrapper  u-blog_grid_width  site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+			<?php if ( have_posts() ) : ?>
 
 			<header class="c-page-header">
 				<?php the_archive_title( '<h1 class="c-page-header__title h1">', '</h1>' ); ?>
@@ -21,7 +21,7 @@ get_header(); ?>
 				<div class="c-page-header__meta h7"><?php echo tag_description(); ?></div>
 				<?php endif; ?>
 
-			</header><!-- .archive-header -->
+				</header><!-- .archive-header -->
 
 			<div <?php noahlite_blog_class(); ?> id="posts-container">
 
@@ -38,14 +38,12 @@ get_header(); ?>
 
 			</div><!-- #posts-container -->
 
-			<?php the_posts_navigation(); ?>
+				<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
-
-		<div class="u-content-width">
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-		</div>
-
+			<div class="u-content-width entry-content">
+				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			</div>
 		<?php endif; ?>
 	</main><!-- #main -->
 </div><!-- #primary -->
