@@ -194,6 +194,10 @@ button[type="submit"] {
             padding-right: 0;
             @extend %pl-m;
         }
+
+		.wpforms-field-label {
+			margin-bottom: 0;
+		}
     }
 
     .wpforms-field-row-block {
@@ -332,6 +336,7 @@ button[type="submit"] {
     }
 
     .nf-field-label {
+		@extend %pb-xs;
         @extend %ml-xs;
         padding-left: 0;
     }
@@ -339,14 +344,14 @@ button[type="submit"] {
 
 .nf-form-layout .half {
     nf-fields-wrap {
+        @extend %ml--s;
         display: flex;
         flex-wrap: wrap;
-        margin-left: -$gutter--huge;
     }
 
     nf-field {
+		@extend %pl-s;
         flex-basis: 50%;
-        padding-left: $gutter--huge;
 
         &:last-child {
             flex-basis: 100%;

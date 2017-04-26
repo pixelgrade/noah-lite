@@ -682,7 +682,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 .u-blog_sides_spacing {
   padding-right: 90px; }
 
-.body.body .content-area label:after, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
+.body.body .content-area label:after, .nf-field-container.label-right .checkbox-wrap .nf-field-label, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
 .c-navbar--dropdown .children, .c-navbar--dropdown .sub-menu .menu-item,
 .c-navbar--dropdown .children .menu-item,
 .c-navbar--dropdown .children .page_item, .c-author .c-author__label:after, .comment-author .fn:after, .comment-content, .calendar_wrap table caption:after, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title:after,
@@ -690,11 +690,11 @@ body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedpo
 body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:after {
   padding-bottom: 12px; }
 
-.c-gallery--title-above .c-card__content, .c-card__title:after, .c-author .c-author__name:after,
+.h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .c-gallery--title-above .c-card__content, .c-card__title:after, .c-author .c-author__name:after,
 .c-author .c-author__description, .c-footer .c-widget__title:after {
   padding-bottom: 24px; }
 
-.h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+.h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .logged-in-as:after, .gridable--col:not(:last-child), body #jp-relatedposts h3.jp-relatedposts-headline:after {
   padding-bottom: 36px; }
 
 .gallery, .c-footer, .u-content-bottom-spacing {
@@ -703,7 +703,7 @@ body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedpo
 ul.instagram-pics > li {
   padding-left: 12px; }
 
-.gallery.gallery-columns-8 > *,
+.nf-form-layout .half nf-field, .gallery.gallery-columns-8 > *,
 .gallery.gallery-columns-9 > *, .c-post-navigation__prev span, .nav-previous span, .c-post-navigation__next, .nav-next, .c-navbar--dropdown .sub-menu .menu-item,
 .c-navbar--dropdown .children .menu-item,
 .c-navbar--dropdown .children .page_item {
@@ -804,7 +804,7 @@ ul.instagram-pics > li {
 .comment-links, ul.instagram-pics {
   margin-left: -12px; }
 
-.gallery.gallery-columns-8,
+.nf-form-layout .half nf-fields-wrap, .gallery.gallery-columns-8,
 .gallery.gallery-columns-9, .c-navbar--dropdown .sub-menu,
 .c-navbar--dropdown .children {
   margin-left: -24px; }
@@ -881,23 +881,23 @@ ul.instagram-pics > li {
   .u-container-sides-spacings,
   .u-blog_sides_spacing {
     padding-right: 64px; }
-  .body.body .content-area label:after, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
+  .body.body .content-area label:after, .nf-field-container.label-right .checkbox-wrap .nf-field-label, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
   .c-navbar--dropdown .children, .c-navbar--dropdown .sub-menu .menu-item,
   .c-navbar--dropdown .children .menu-item,
   .c-navbar--dropdown .children .page_item, .c-author .c-author__label:after, .comment-author .fn:after, .comment-content, .calendar_wrap table caption:after, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title:after,
   body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-excerpt:after,
   body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:after {
     padding-bottom: 12px; }
-  .c-gallery--title-above .c-card__content, .c-card__title:after, .c-author .c-author__name:after,
+  .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .c-gallery--title-above .c-card__content, .c-card__title:after, .c-author .c-author__name:after,
   .c-author .c-author__description, .c-footer .c-widget__title:after {
     padding-bottom: 24px; }
-  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .logged-in-as:after, .gridable--col:not(:last-child), body #jp-relatedposts h3.jp-relatedposts-headline:after {
     padding-bottom: 35px; }
   .gallery, .c-footer, .u-content-bottom-spacing {
     padding-bottom: 64px; }
   ul.instagram-pics > li {
     padding-left: 12px; }
-  .gallery.gallery-columns-8 > *,
+  .nf-form-layout .half nf-field, .gallery.gallery-columns-8 > *,
   .gallery.gallery-columns-9 > *, .c-post-navigation__prev span, .nav-previous span, .c-post-navigation__next, .nav-next, .c-navbar--dropdown .sub-menu .menu-item,
   .c-navbar--dropdown .children .menu-item,
   .c-navbar--dropdown .children .page_item {
@@ -975,7 +975,7 @@ ul.instagram-pics > li {
   .trackback .edit-link,
   .comment-links, ul.instagram-pics {
     margin-left: -12px; }
-  .gallery.gallery-columns-8,
+  .nf-form-layout .half nf-fields-wrap, .gallery.gallery-columns-8,
   .gallery.gallery-columns-9, .c-navbar--dropdown .sub-menu,
   .c-navbar--dropdown .children {
     margin-left: -24px; }
@@ -1041,23 +1041,23 @@ ul.instagram-pics > li {
   .u-container-sides-spacings,
   .u-blog_sides_spacing {
     padding-right: 49px; }
-  .body.body .content-area label:after, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
+  .body.body .content-area label:after, .nf-field-container.label-right .checkbox-wrap .nf-field-label, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
   .c-navbar--dropdown .children, .c-navbar--dropdown .sub-menu .menu-item,
   .c-navbar--dropdown .children .menu-item,
   .c-navbar--dropdown .children .page_item, .c-author .c-author__label:after, .comment-author .fn:after, .comment-content, .calendar_wrap table caption:after, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title:after,
   body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-excerpt:after,
   body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:after {
     padding-bottom: 12px; }
-  .c-gallery--title-above .c-card__content, .c-card__title:after, .c-author .c-author__name:after,
+  .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .c-gallery--title-above .c-card__content, .c-card__title:after, .c-author .c-author__name:after,
   .c-author .c-author__description, .c-footer .c-widget__title:after {
     padding-bottom: 24px; }
-  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .logged-in-as:after, .gridable--col:not(:last-child), body #jp-relatedposts h3.jp-relatedposts-headline:after {
     padding-bottom: 34px; }
   .gallery, .c-footer, .u-content-bottom-spacing {
     padding-bottom: 49px; }
   ul.instagram-pics > li {
     padding-left: 12px; }
-  .gallery.gallery-columns-8 > *,
+  .nf-form-layout .half nf-field, .gallery.gallery-columns-8 > *,
   .gallery.gallery-columns-9 > *, .c-post-navigation__prev span, .nav-previous span, .c-post-navigation__next, .nav-next, .c-navbar--dropdown .sub-menu .menu-item,
   .c-navbar--dropdown .children .menu-item,
   .c-navbar--dropdown .children .page_item {
@@ -1135,7 +1135,7 @@ ul.instagram-pics > li {
   .trackback .edit-link,
   .comment-links, ul.instagram-pics {
     margin-left: -12px; }
-  .gallery.gallery-columns-8,
+  .nf-form-layout .half nf-fields-wrap, .gallery.gallery-columns-8,
   .gallery.gallery-columns-9, .c-navbar--dropdown .sub-menu,
   .c-navbar--dropdown .children {
     margin-left: -24px; }
@@ -1201,23 +1201,23 @@ ul.instagram-pics > li {
   .u-container-sides-spacings,
   .u-blog_sides_spacing {
     padding-right: 40px; }
-  .body.body .content-area label:after, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
+  .body.body .content-area label:after, .nf-field-container.label-right .checkbox-wrap .nf-field-label, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
   .c-navbar--dropdown .children, .c-navbar--dropdown .sub-menu .menu-item,
   .c-navbar--dropdown .children .menu-item,
   .c-navbar--dropdown .children .page_item, .c-author .c-author__label:after, .comment-author .fn:after, .comment-content, .calendar_wrap table caption:after, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title:after,
   body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-excerpt:after,
   body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:after {
     padding-bottom: 12px; }
-  .c-gallery--title-above .c-card__content, .c-card__title:after, .c-author .c-author__name:after,
+  .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .c-gallery--title-above .c-card__content, .c-card__title:after, .c-author .c-author__name:after,
   .c-author .c-author__description, .c-footer .c-widget__title:after {
     padding-bottom: 23px; }
-  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .logged-in-as:after, .gridable--col:not(:last-child), body #jp-relatedposts h3.jp-relatedposts-headline:after {
     padding-bottom: 33px; }
   .gallery, .c-footer, .u-content-bottom-spacing {
     padding-bottom: 40px; }
   ul.instagram-pics > li {
     padding-left: 12px; }
-  .gallery.gallery-columns-8 > *,
+  .nf-form-layout .half nf-field, .gallery.gallery-columns-8 > *,
   .gallery.gallery-columns-9 > *, .c-post-navigation__prev span, .nav-previous span, .c-post-navigation__next, .nav-next, .c-navbar--dropdown .sub-menu .menu-item,
   .c-navbar--dropdown .children .menu-item,
   .c-navbar--dropdown .children .page_item {
@@ -1295,7 +1295,7 @@ ul.instagram-pics > li {
   .trackback .edit-link,
   .comment-links, ul.instagram-pics {
     margin-left: -12px; }
-  .gallery.gallery-columns-8,
+  .nf-form-layout .half nf-fields-wrap, .gallery.gallery-columns-8,
   .gallery.gallery-columns-9, .c-navbar--dropdown .sub-menu,
   .c-navbar--dropdown .children {
     margin-left: -23px; }
@@ -1741,6 +1741,8 @@ button[type="submit"], form .body.body .wpforms-container[class] .wpforms-submit
       padding-top: 0;
       padding-bottom: 0;
       padding-right: 0; }
+    .wpforms-container[class] .wpforms-field-container .wpforms-field-label {
+      margin-bottom: 0; }
   .wpforms-container[class] .wpforms-field-radio li,
   .wpforms-container[class] .wpforms-field-checkbox li {
     display: -ms-flexbox;
@@ -1838,13 +1840,11 @@ button[type="submit"], form .body.body .wpforms-container[class] .wpforms-submit
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -7.5rem; }
+      flex-wrap: wrap; }
 
 .nf-form-layout .half nf-field {
   -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  padding-left: 7.5rem; }
+      flex-basis: 50%; }
   .nf-form-layout .half nf-field:last-child {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%; }
@@ -4098,12 +4098,6 @@ body.search .site-main {
   .gridable--col[class] {
     padding-top: 0; } }
 
-[class*="col-"] {
-  width: auto;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
-  max-width: none; }
-
 /**
  *   6.2 - jQuery.rellax.js
  */
@@ -4166,7 +4160,7 @@ body.has-media-only .c-slideshow .c-page-header {
 /**
  *   7.2 - Customify
  */
-.u-content-width > :not([class*="gallery"]):not([class*="align"]) {
+.u-content-width > :not([class*="gallery"]):not([class*=" align"]):not([class^="align"]) {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto; }

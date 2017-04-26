@@ -28,6 +28,10 @@
     &:first-child {
         margin-left: 0;
     }
+
+	&:not(:last-child) {
+		@extend %pb-m;
+	}
 }
 
 @include below(small) {
@@ -46,10 +50,4 @@
     .gridable--col[class] {
         padding-top: 0;
     }
-}
-
-[class*="col-"] {
-    width: auto;
-    flex-basis: auto;
-    max-width: none;
 }

@@ -34,11 +34,18 @@
     }
 }
 
-.h4, .h5, .h6, .h7 {
+.h4 {
 
     &:after {
         @extend %pb-m;
     }
+}
+
+.h5, .h6, .h7 {
+
+	&:after {
+		@extend %pb-s;
+	}
 }
 
 .h0[class] {
