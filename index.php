@@ -62,11 +62,9 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<?php else : ?>
-
-			<div class="u-content-width">
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
-			</div>
-
+				<div class="u-content-width  entry-content">
+					<?php get_template_part( 'template-parts/content', 'none' ); ?>
+				</div>
 			<?php endif; ?>
 
 		</main><!-- #main -->

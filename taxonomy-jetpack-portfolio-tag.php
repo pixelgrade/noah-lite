@@ -25,7 +25,7 @@ get_header(); ?>
 
 </header><!-- .archive-header -->
 
-<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
 	<div class="u-content-background">
 		<section class="c-archive-loop  u-full-width  u-portfolio_sides_spacing  u-content-bottom-spacing">
@@ -36,18 +36,18 @@ get_header(); ?>
 						get_template_part( 'template-parts/project/content', 'jetpack-portfolio' );
 					endwhile; ?>
 
-				</div>
-			</div><!-- .o-wrapper -->
-		</section><!-- .c-archive-loop -->
-	</div><!-- .u-content-background -->
+						</div>
+					</div><!-- .o-wrapper -->
+				</section><!-- .c-archive-loop -->
+			</div><!-- .u-content-background -->
 
-<?php else : ?>
+		<?php else : ?>
+			<div class="u-content-width entry-content">
+				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			</div>
+		<?php endif; ?>
 
-	<div class="u-content-width">
-		<?php get_template_part( 'template-parts/content', 'none' ); ?>
-	</div><!-- .u-content-width -->
-
-<?php endif; ?>
+	</div>
 
 <?php the_posts_navigation(); ?>
 

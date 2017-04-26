@@ -78,21 +78,9 @@ img {
     align-items: stretch;
     width: 100%;
 
-    > label {
-        display: flex !important;
-        flex-grow: 1;
-        align-items: stretch;
-        padding: 0 !important;
-        margin-right: 0.25em !important;
-
-        input {
-            height: auto !important;
-        }
-    }
-
-    > input {
-        margin: 0 !important;
-    }
+	.search-submit {
+		flex-shrink: 0;
+	}
 }
 
 .u-full-width {

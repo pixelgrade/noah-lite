@@ -93,9 +93,11 @@ get_header(); ?>
 
 	                    <?php else : ?>
 
-		                    <div class="u-content-width">
-			                    <?php get_template_part( 'template-parts/content', 'none' ); ?>
-		                    </div><!-- .u-content-width -->
+							<div class="u-content-bottom-spacing  js-header-height-padding-top">
+								<div class="u-content-width entry-content">
+									<?php get_template_part( 'template-parts/content', 'none' ); ?>
+		                        </div><!-- .u-content-width -->
+							</div>
 
 	                    <?php endif;
 
