@@ -1,4 +1,6 @@
 .gridable--row {
+	@extend %mt-m;
+	@extend %mb-m;
     margin-left: 0;
     flex-wrap: nowrap;
 	overflow: visible;
@@ -20,6 +22,10 @@
     overflow: visible;
     flex-shrink: 1;
 
+	&:not(:first-child) {
+		@extend %pt-m;
+	}
+
     figure {
         @extend %mb-s;
         margin-top: 0;
@@ -29,8 +35,11 @@
         margin-left: 0;
     }
 
-	&:not(:last-child) {
-		@extend %pb-m;
+	@include above(lap) {
+
+		&:not(:first-child) {
+			padding-top: 0;
+		}
 	}
 }
 

@@ -138,6 +138,40 @@ button[type="submit"] {
     display: block;
 }
 
+.wpcf7-form-control-wrap {
+	@extend %mb-m;
+}
+
+.wpcf7-custom {
+    @extend %ml--m;
+    display: flex;
+    flex-wrap: wrap;
+
+    &[class] > * {
+        margin: 0;
+        padding: 0;
+    }
+
+    &[class][class] > * {
+        @extend %pl-m;
+        flex-basis: 100%;
+    }
+
+    &[class][class] > .wpcf7-half {
+        flex-basis: 50%;
+    }
+
+    &[class][class] > .wpcf7-response-output {
+        order: -1;
+        border-width: 0;
+    }
+
+    &[class][class][class] > .wpcf7-response-output {
+        @extend %bl-xs;
+        @extend %pl-s;
+    }
+}
+
 .u-content-width > div.wpcf7 {
     margin-left: auto;
     margin-right: auto;
@@ -238,15 +272,27 @@ button[type="submit"] {
     }
 }
 
-.wpforms-container.half {
+.body[class][class][class] .wpforms-error {
+    @extend %mb-xs;
 
-    .wpforms-field {
-        flex-basis: 50%;
+    &:before, &:after {
+        content: none;
+        font: inherit;
     }
+}
 
-    .wpforms-field-textarea {
-        flex-basis: 100%;
-    }
+@include above(small) {
+
+	.wpforms-container.half {
+
+		.wpforms-field {
+			flex-basis: 50%;
+		}
+
+		.wpforms-field-textarea {
+			flex-basis: 100%;
+		}
+	}
 }
 
 
@@ -342,21 +388,30 @@ button[type="submit"] {
     }
 }
 
+
 .nf-form-layout .half {
-    nf-fields-wrap {
-        @extend %ml--s;
-        display: flex;
-        flex-wrap: wrap;
-    }
+	nf-fields-wrap {
+		@extend %ml--s;
+	}
 
-    nf-field {
+	nf-field {
 		@extend %pl-s;
-        flex-basis: 50%;
+	}
 
-        &:last-child {
-            flex-basis: 100%;
-        }
-    }
+	@include above(small) {
+		nf-fields-wrap {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		nf-field {
+			flex-basis: 50%;
+
+			&:last-child {
+				flex-basis: 100%;
+			}
+		}
+	}
 }
 
 .nf-form-fields-required {

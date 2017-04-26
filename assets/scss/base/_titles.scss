@@ -44,7 +44,7 @@
 .h5, .h6, .h7 {
 
 	&:after {
-		@extend %pb-s;
+		@extend %pb-xs;
 	}
 }
 
