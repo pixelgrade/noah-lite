@@ -2,7 +2,7 @@
 .screen-reader-text,
 .entry__content:empty,
 .entry__media:empty {
-    display: none;
+    display: none !important;
 }
 
 img {
