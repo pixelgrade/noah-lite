@@ -14,5 +14,5 @@
 		<?php echo _x( 'Search for:', 'label', 'noah' ); ?>
 	</label>
 	<input type="search" id="<?php echo $unique_id; ?>" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'noah' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-	<button type="submit" class="search-submit"><?php echo _x( 'Search', 'submit button', 'noah' ); ?></button>
+	<button type="submit" class="search-submit"><?php _ex( 'Search', 'submit button', 'noah' ); ?></button>
 </form>

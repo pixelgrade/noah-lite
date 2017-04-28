@@ -82,8 +82,6 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 		 * to output valid HTML5.
 		 */
 		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
 			'comment-list',
 			'gallery',
 			'caption',
@@ -163,9 +161,9 @@ function noahlite_load_assets() {
 	/*
 	 * NOW THE SCRIPTS
 	 */
-	wp_enqueue_script( 'noah-lite-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'noah-lite-skip-link-focus-fix', get_stylesheet_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'noah-lite-scripts', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery', 'imagesloaded', 'masonry' ), $theme->get( 'Version' ), true );
+	wp_enqueue_script( 'noah-lite-scripts', get_stylesheet_uri() . '/assets/js/main.js', array( 'jquery', 'imagesloaded', 'masonry' ), $theme->get( 'Version' ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

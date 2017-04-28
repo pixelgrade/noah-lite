@@ -503,7 +503,7 @@ if ( ! function_exists( 'noahlite_get_author_bio_links' ) ) :
 			$markup .= '<div class="c-author__links o-inline o-inline-s u-color-accent">' . PHP_EOL;
 			foreach ( $profile['entry'][0]['urls'] as $link ) {
 				if ( ! empty( $link['value'] ) && ! empty( $link['title'] ) ) {
-					$markup .= '<a class="c-author__social-link" href="' . esc_url( $link['value'] ) . '" target="_blank">' . $link['title'] . '</a>' . PHP_EOL;
+					$markup .= '<a class="c-author__social-link" href="' . esc_url( $link['value'] ) . '" target="_blank">' . esc_html( $link['title'] ) . '</a>' . PHP_EOL;
 				}
 			}
 			$markup .= '</div><!-- .c-author__links -->' . PHP_EOL;

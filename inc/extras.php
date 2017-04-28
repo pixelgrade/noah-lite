@@ -271,7 +271,7 @@ if ( ! function_exists( 'noahlite_remove_single_project_gallery' ) ) {
 
 	/**
 	 * Hook called only when we have only one gallery shortcode in the content.
-	 * It removes the shortcode and attaches `noahlite_display_project_gallery` to the `the_noahlite_gallery` action which outputs the gallery markup in a different place.
+	 * It removes the shortcode and attaches `noahlite_display_project_gallery` to the `noahlite_gallery` action which outputs the gallery markup in a different place.
 	 *
 	 * @param $content
 	 *
@@ -290,7 +290,7 @@ if ( ! function_exists( 'noahlite_remove_single_project_gallery' ) ) {
 			}
 
 			//Since we have removed the [gallery] shortcode we need to hook so we output the gallery in a different place
-			add_action( 'the_noahlite_gallery', 'noahlite_display_project_gallery', 10, 1 );
+			add_action( 'noahlite_gallery', 'noahlite_display_project_gallery', 10, 1 );
 		}
 
 		return wp_kses_post( $content );
@@ -640,7 +640,7 @@ function noahlite_author_bio( $content ) {
 add_filter( 'the_content', 'noahlite_author_bio', 30 );
 
 function noahlite_custom_excerpt_length( $length ) {
-	return 35;
+	return is_admin() ? $length : 35;
 }
 add_filter( 'excerpt_length', 'noahlite_custom_excerpt_length', 999 );
 

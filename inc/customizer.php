@@ -141,9 +141,9 @@ add_action( 'customize_register', 'noahlite_customize_register', 11, 1 );
  */
 function noahlite_sanitize_items_title_alignment_nearby( $input ) {
 	$valid = array(
-		'left'   => esc_html__( '← Left', 'noah-lite' ),
-		'center' => esc_html__( '↔ Center', 'noah-lite' ),
-		'right'  => esc_html__( '→ Right', 'noah-lite' ),
+		'left'   => esc_html__( '&larr; Left', 'noah-lite' ),
+		'center' => esc_html__( '&harr; Center', 'noah-lite' ),
+		'right'  => esc_html__( '&rarr; Right', 'noah-lite' ),
 	);
 
 	if ( array_key_exists( $input, $valid ) ) {
