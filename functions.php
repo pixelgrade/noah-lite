@@ -191,8 +191,3 @@ require get_template_directory() . '/inc/jetpack.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Customization for the used Pixelgrade Components
- */
-require get_template_directory() . '/inc/components.php';
