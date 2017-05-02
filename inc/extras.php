@@ -670,3 +670,65 @@ function noahlite_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'noahlite_pingback_header' );
+
+/**
+ * Display the classes for a element.
+ *
+ * @param string|array $class Optional. One or more classes to add to the class list.
+ * @param string $prefix Optional. Prefix to prepend to all of the provided classes
+ * @param string $suffix Optional. Suffix to append to all of the provided classes
+ */
+function noahlite_css_class( $class = '', $prefix = '', $suffix = '' ) {
+	// Separates classes with a single space, collates classes for element
+	echo 'class="' . join( ' ', noahlite_get_css_class( $class ) ) . '"';
+}
+
+/**
+ * Retrieve the classes for a element as an array.
+ *
+ * @param string|array $class Optional. One or more classes to add to the class list.
+ * @param string $prefix Optional. Prefix to prepend to all of the provided classes
+ * @param string $suffix Optional. Suffix to append to all of the provided classes
+ *
+ * @return array Array of classes.
+ */
+function noahlite_get_css_class( $class = '', $prefix = '', $suffix = '' ) {
+	$classes = array();
+
+	if ( ! empty( $class ) ) {
+		if ( ! is_array( $class ) ) {
+			$class = preg_split( '#\s+#', $class );
+		}
+
+		//if we have a prefix then we need to add it to every class
+		if ( ! empty( $prefix ) && is_string( $prefix ) ) {
+			foreach ( $class as $key => $value ) {
+				$class[ $key ] = $prefix . $value;
+			}
+		}
+
+		//if we have a suffix then we need to add it to every class
+		if ( ! empty( $suffix ) && is_string( $suffix ) ) {
+			foreach ( $class as $key => $value ) {
+				$class[ $key ] = $value . $suffix;
+			}
+		}
+
+		$classes = array_merge( $classes, $class );
+	} else {
+		// Ensure that we always coerce class to being an array.
+		$class = array();
+	}
+
+	$classes = array_map( 'esc_attr', $classes );
+
+	/**
+	 * Filters the list of CSS header classes for the current post or page
+	 *
+	 * @param array $classes An array of header classes.
+	 * @param array $class   An array of additional classes added to the header.
+	 */
+	$classes = apply_filters( 'noahlite_css_class', $classes, $class, $prefix, $suffix );
+
+	return array_unique( $classes );
+}

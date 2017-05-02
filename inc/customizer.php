@@ -2,7 +2,7 @@
 /**
  * Noah Lite Theme Customizer.
  *
- * @package noah
+ * @package Noah Lite
  */
 
 /**
