@@ -70,11 +70,11 @@ if ( post_password_required() ) {
 
 		$fields = array(
 			'author' => '<p class="comment-form-author">' . '<label for="author">' . esc_html__( 'Name', 'noah-lite' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-				'<input id="author" placeholder="' . esc_html__( 'Your name', 'noah-lite' ) . '" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $aria_req . $html_req . ' /></p>',
+				'<input id="author" placeholder="' . esc_attr__( 'Your name', 'noah-lite' ) . '" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $aria_req . $html_req . ' /></p>',
 			'email'  => '<p class="comment-form-email"><label for="email">' . esc_html__( 'Email', 'noah-lite' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-				'<input id="email" placeholder="' . esc_html__( 'your@email.com', 'noah-lite' ) . '" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></p>',
+				'<input id="email" placeholder="' . esc_attr__( 'your@email.com', 'noah-lite' ) . '" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></p>',
 			'url'    => '<p class="comment-form-url"><label for="url">' . esc_html__( 'Website', 'noah-lite' ) . '</label> ' .
-				'<input id="url" placeholder="' . esc_html__( 'Your website', 'noah-lite' ) . '" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="200" /></p>',
+				'<input id="url" placeholder="' . esc_attr__( 'Your website', 'noah-lite' ) . '" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="200" /></p>',
 		);
 
 		$args = array(
@@ -82,7 +82,7 @@ if ( post_password_required() ) {
 			'title_reply_before'   	=> '<h3 class="h4 comment-reply-title" id="reply-title">',
 			'title_reply_after'    	=> '</h3>',
 			'title_reply'          	=> esc_html__( 'Leave a Comment', 'noah-lite' ),
-			'comment_field'        	=> '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun', 'noah-lite' ) . '</label> <textarea placeholder="' . esc_html__( 'Your message', 'noah-lite' ) . '" id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p>',
+			'comment_field'        	=> '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun', 'noah-lite' ) . '</label> <textarea placeholder="' . esc_attr__( 'Your message', 'noah-lite' ) . '" id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p>',
 			'comment_notes_before'  => '',
 			'comment_notes_after'  	=> '<p class="comment-notes"><span id="email-notes">' . esc_html__( 'Your email address will not be published.', 'noah-lite' ) . '</span>'. ( $req ? $required_text : '' ) . '</p>',
 		);
