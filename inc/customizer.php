@@ -47,7 +47,7 @@ function noahlite_customize_register( $wp_customize ) {
 
                             <li>
                             	<h4>Featured Posts Slider</h4>
-                            	<div class="description">Bring your best stories in the front of the world by adding them into the posts slider. It’s an extra opportunity to grab attention and to refresh some content that is still meaningful. Don’t miss any occasion to increase the value of your stories.</div>
+                            	<div class="description">Bring your best stories in the front of the world by adding them into the posts slider. It\'s an extra opportunity to grab attention and to refresh some content that is still meaningful. Don\'t miss any occasion to increase the value of your stories.</div>
                             </li>
 
                             <li>
@@ -94,9 +94,9 @@ function noahlite_customize_register( $wp_customize ) {
 		'label'   => esc_html__( 'Project Details Alignment', 'noah-lite' ),
 		'desc'    => esc_html__( 'Adjust the alignment of your project details like title, author.', 'noah-lite' ),
 		'choices' => array(
-			'left'   => esc_html__( '← Left', 'noah-lite' ),
-			'center' => esc_html__( '↔ Center', 'noah-lite' ),
-			'right'  => esc_html__( '→ Right', 'noah-lite' ),
+			'left'   => esc_html__( '&larr; Left', 'noah-lite' ),
+			'center' => esc_html__( '&harr; Center', 'noah-lite' ),
+			'right'  => esc_html__( '&rarr; Right', 'noah-lite' ),
 		),
 		'section' => 'noahlite_portfolio_options',
 	) );

@@ -156,14 +156,14 @@ function noahlite_load_assets() {
 	wp_enqueue_style( 'noah-lite-fonts-ek-mukta', noahlite_ek_mukta_font_url() );
 	$main_style_deps[] = 'noah-lite-fonts-ek-mukta';
 
-	wp_enqueue_style( 'noah-lite-style', get_template_directory_uri() . '/style.css', $main_style_deps, $theme->get( 'Version' ) );
+	wp_enqueue_style( 'noah-lite-style', get_stylesheet_uri(), $main_style_deps, $theme->get( 'Version' ) );
 
 	/*
 	 * NOW THE SCRIPTS
 	 */
-	wp_enqueue_script( 'noah-lite-skip-link-focus-fix', get_stylesheet_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'noah-lite-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'noah-lite-scripts', get_stylesheet_uri() . '/assets/js/main.js', array( 'jquery', 'imagesloaded', 'masonry' ), $theme->get( 'Version' ), true );
+	wp_enqueue_script( 'noah-lite-scripts', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery', 'imagesloaded', 'masonry' ), $theme->get( 'Version' ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
