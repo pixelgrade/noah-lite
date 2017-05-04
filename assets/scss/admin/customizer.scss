@@ -2,8 +2,7 @@
 #accordion-section-noahlite_style_presets h3:before,
 #accordion-section-noahlite_colors h3:before,
 #accordion-section-noahlite_fonts h3:before,
-#accordion-section-noahlite_style_view_pro h3:before,
-a.badge-silk-pro {
+#accordion-section-noahlite_style_view_pro h3:before {
     position: relative;
     top: 2px;
     float: right;
@@ -25,47 +24,6 @@ a.badge-silk-pro {
 
     -webkit-font-smoothing: subpixel-antialiased !important;
 }
-
-// Title
-a.badge-silk-pro {
-	float: none;
-    margin: 0;
-
-    &:hover {
-        background-color: #00a0d2 !important;
-    }
-}
-
-// Dismiss Text
-.upsell_link_details {
-    position: relative;
-    left: 6px;
-    top: 2px;
-    display: inline-block;
-    font-size: 10px;
-    color: #5C5C5C;
-
-    a {
-        color: #5C5C5C !important;
-        text-decoration: underline !important;
-
-        &:hover {
-            color: #00a0d2 !important;
-        }
-    }
- }
-
- // Dismissed?
- .upsell_links_dismissed {
-    .badge-silk-pro,
-    .upsell_link_details,
-    #accordion-section-noahlite_style_presets,
-    #accordion-section-noahlite_colors,
-    #accordion-section-noahlite_fonts {
-        display: none !important;
-    }
- }
-
 
 // Content Styling for Pro Sections
 #accordion-section-noahlite_style_presets,
@@ -110,7 +68,7 @@ a.badge-silk-pro {
 ul.upsell-features {
     li {
         margin-bottom: 20px;
-        
+
         .description {
             font-size: 13px;
         }
@@ -138,5 +96,5 @@ ul.upsell-features {
         -webkit-font-smoothing: subpixel-antialiased !important;
     }
 
- 
+
 }

@@ -42,17 +42,22 @@ function noahlite_customize_register( $wp_customize ) {
 					<ul class="upsell-features">
                             <li>
                             	<h4>Personalize to Match Your Style</h4>
-                            	<div class="description">Having different tastes and preferences might be tricky for users, but not with Silk onboard. It has an intuitive and catchy interface which allows you to change <strong>fonts, colors or layout sizes</strong> in a blink of an eye.</div>
+                            	<div class="description">Having different tastes and preferences might be tricky for users, but not with Noah onboard. It has an intuitive and catchy interface which allows you to change <strong>fonts, colors or layout sizes</strong> in a blink of an eye.</div>
                             </li>
 
                             <li>
-                            	<h4>Featured Posts Slider</h4>
-                            	<div class="description">Bring your best stories in the front of the world by adding them into the posts slider. It\'s an extra opportunity to grab attention and to refresh some content that is still meaningful. Don\'t miss any occasion to increase the value of your stories.</div>
+                            	<h4>Galleries Slideshows</h4>
+                            	<div class="description">Beautifull zoom-in transitions from grid based gallery to slideshow.</div>
                             </li>
 
                             <li>
-                            	<h4>Custom Mega Menu</h4>
-                            	<div class="description">Showcase the latest posts from a category under menu without losing precious time and money. Highlight those articles you feel proud about with no effort and let people know about your appetite for a topic or another.</div>
+                            	<h4>Thrilling Page Transitions</h4>
+                            	<div class="description">The whole experience is packed into a fascinating journey that engages in an experiment that goes beyond what\'s ordinary and familiar.</div>
+                            </li>
+                            
+                            <li>
+                            	<h4>Home Page Slideshow</h4>
+                            	<div class="description">Bring your best photos or videos in the front of the world by adding them into a front page slideshow.</div>
                             </li>
 
                             <li>
@@ -229,39 +234,11 @@ add_action( 'customize_preview_init', 'noahlite_customize_preview_js' );
  */
 function noahlite_customizer_assets() {
 	wp_enqueue_style( 'noahlite_customizer_style', get_template_directory_uri() . '/assets/css/admin/customizer.css', null, '1.0.4', false );
-
-	wp_enqueue_script( 'noahlite_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'jquery' ), '1.0.4', false );
-
-	// uncomment this to put back your dismiss notice
-	// update_user_meta( get_current_user_id(), 'noahlite_upgrade_dismissed_notice', 0 );
-	if ( isset( $_GET['noah-upgrade-dismiss'] ) && check_admin_referer( 'noah-upgrade-dismiss-' . get_current_user_id() ) ) {
-		update_user_meta( get_current_user_id(), 'noahlite_upgrade_dismissed_notice', 'forever' );
-		return;
-	}
-
-	$dismiss_user = get_user_meta( get_current_user_id(), 'noahlite_upgrade_dismissed_notice', true );
-	if ( $dismiss_user === 'forever' ) {
-		return;
-	} elseif ( empty( $dismiss_user ) || ( is_numeric( $dismiss_user ) && $dismiss_user < 2  ) ) {
-
-		$value = $dismiss_user + 1;
-		update_user_meta( get_current_user_id(), 'noahlite_upgrade_dismissed_notice', $value );
-		return;
-	}
-
-	$localized_strings = array(
-		'upsell_link'     => noahlite_get_pro_link(),
-		'upsell_label'    => esc_html__( 'Upgrade to Noah Pro', 'noah-lite' ),
-		'pro_badge_label' => esc_html__( 'Pro', 'noah-lite' ) . '<span class="star"></span>',
-		'dismiss_link' => esc_url( wp_nonce_url( add_query_arg( 'noah-upgrade-dismiss', 'forever' ), 'noah-upgrade-dismiss-' . get_current_user_id() ) )
-	);
-
-	wp_localize_script( 'noahlite_customizer', 'noahCustomizerObject', $localized_strings );
 }
 add_action( 'customize_controls_enqueue_scripts', 'noahlite_customizer_assets' );
 
 /**
- * Generate a link to the noah Lite info page.
+ * Generate a link to the Noah Lite info page.
  */
 function noahlite_get_pro_link() {
 	return 'https://pixelgrade.com/themes/noah?utm_source=noah-lite-clients&utm_medium=customizer&utm_campaign=noah-lite#go-pro';
