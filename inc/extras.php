@@ -253,76 +253,11 @@ if ( ! function_exists( 'noahlite_get_single_project_class' ) ) {
 
 			// the $remains are blocks of text, the lack of them catalogs our project as a media-only type
 			if ( count( $remains ) < 1 ) {
-				add_action( 'the_content', 'noahlite_remove_single_project_gallery' );
-
 				return 'has-media-only fill-page js-project';
-//			} elseif ( count( $remains ) == 1 ) {
-//				add_action( 'the_content', 'noahlite_remove_single_project_gallery' );
-//
-//				return 'has-media-and-content fill-page js-project';
 			}
 		}
 
 		return 'has-mixed-content';
-	}
-}
-
-if ( ! function_exists( 'noahlite_remove_single_project_gallery' ) ) {
-
-	/**
-	 * Hook called only when we have only one gallery shortcode in the content.
-	 * It removes the shortcode and attaches `noahlite_display_project_gallery` to the `noahlite_gallery` action which outputs the gallery markup in a different place.
-	 *
-	 * @param $content
-	 *
-	 * @return mixed
-	 */
-	function noahlite_remove_single_project_gallery( $content ) {
-
-		if ( 'jetpack-portfolio' === get_post_type() ) {
-
-			// get the gallery shortcode
-			$content = preg_replace( '/' . get_shortcode_regex( array( 'gallery' ) ) . '/', '', $content );
-
-			//Make sure we don't pass a null
-			if ( empty( $content ) ) {
-				$content = '';
-			}
-
-			//Since we have removed the [gallery] shortcode we need to hook so we output the gallery in a different place
-			add_action( 'noahlite_gallery', 'noahlite_display_project_gallery', 10, 1 );
-		}
-
-		return wp_kses_post( $content );
-	}
-}
-if ( ! function_exists( 'noahlite_display_project_gallery' ) ) {
-	/**
-	 * Hook called only on projects with one gallery shortcode in the content
-	 *
-	 * @param int|false $post_id
-	 *
-	 * @return bool
-	 */
-	function noahlite_display_project_gallery( $post_id ) {
-		$post = get_post( $post_id );
-
-		if ( empty( $post ) || is_wp_error( $post ) ) {
-			return false;
-		}
-
-		// get the gallery shortcode
-		preg_match_all( '/' . get_shortcode_regex( array( 'gallery' ) ) . '/', $post->post_content, $matches, PREG_SET_ORDER );
-
-		if ( empty( $matches[0] ) ) {
-			return false;
-		}
-
-		$shortcode = $matches[0][0];
-
-		echo do_shortcode( $shortcode );
-
-		return true;
 	}
 }
 

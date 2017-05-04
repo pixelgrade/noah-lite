@@ -37,10 +37,6 @@
 					'after'  => '</div>',
 				) ); ?>
 			</div><!-- .entry-content -->
-
-			<div class="c-project__media  js-project-media">
-				<?php do_action( 'noahlite_gallery', get_the_ID() ); ?>
-			</div><!-- .c-project__media -->
 		</div><!-- .o-wrapper -->
 	</div><!-- .u-full-width -->
 
