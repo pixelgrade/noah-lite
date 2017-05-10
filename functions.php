@@ -98,6 +98,102 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 		 */
 		add_editor_style( array( noahlite_ek_mukta_font_url(), noahlite_josefin_sans_font_url(), 'editor-style.css' ) );
 
+	    add_theme_support('starter-content', [
+	    	// Starter content defined here
+	    	 'widgets' => array(
+		        'sidebar-1' => array(
+		            'text_about' => array( 'text', array(
+						'title' => _x( 'About Me', 'noah-lite' ),
+						'text' => _x( 'This may be a good place to introduce yourself and your site or include some credits.', 'noah-lite' ),
+					) ),
+		        ),
+		    ),
+
+	    	// Static front page set to Home, posts page set to Blog
+	        'options' => [
+	            'show_on_front'  => 'page',
+	            'page_on_front'  => '{{portfolio}}',
+	            'page_for_posts' => '{{blog}}',
+	            'blogdescription' => ' ',
+
+	            // Not Currently Working
+	            'jetpack_portfolio' => 1,
+	        ],
+
+	    	// Starter pages to include
+	        'posts' => [
+	            'home',
+		        'portfolio' => array(
+			            'post_type' => 'page',
+			            'post_title' => 'Works',
+			            'post_content' => '<p>Welcome to your site! This is your homepage, which is what most visitors will see when they come to your site for the first time.</p>',
+			            'template' => 'page-templates/portfolio-page.php',
+		        ),
+	            'about',
+	            'contact',
+	            'blog',
+
+                // Create Custom Projects
+                // Not currently working on Preview until Save & Publish
+				'project_1' => array(
+					'post_type' => 'jetpack-portfolio',
+					'post_title' => 'Sample Project 1',
+					'post_content' => 'Project Content',
+					'thumbnail' => '{{image-shamim}}',
+				),
+				'project_2' => array(
+					'post_type' => 'jetpack-portfolio',
+					'post_title' => 'Sample Project 2',
+					'post_content' => 'Project Content',
+					'thumbnail' => '{{image-averie}}',
+				),
+				'project_3' => array(
+					'post_type' => 'jetpack-portfolio',
+					'post_title' => 'Sample Project 3',
+					'post_content' => 'Project Content',
+					'thumbnail' => '{{image-rowan}}',
+				),
+	        ],
+
+	        // Set Menu Items
+    		'nav_menus' => array(
+				'primary-left' => array(
+					'name' => __( 'Left Menu', 'noah-lite' ),
+					'items' => array(
+						'page_works' => array(
+							'type' => 'post_type',
+							'object' => 'page',
+							'object_id' => '{{portfolio}}',
+						),
+						'page_about',
+					),
+				),
+				'primary-right' => array(
+					'name' => __( 'Right Menu', 'noah-lite' ),
+					'items' => array(
+						'page_blog',
+						'page_contact',
+					),
+				),
+			),
+
+    		// Register Three Attachments to be used on Projects
+			'attachments' => array(
+				'image-shamim' => array(
+					'post_title' => _x( 'Shamim', 'Theme starter content', 'noah-lite' ),
+					'file' => 'assets/images/shamim.jpg',
+				),
+				'image-averie' => array(
+					'post_title' => _x( 'Averie', 'Theme starter content', 'noah-lite' ),
+					'file' => 'assets/images/averie.jpg',
+				),
+				'image-rowan' => array(
+					'post_title' => _x( 'Rowan', 'Theme starter content', 'noah-lite' ),
+					'file' => 'assets/images/rowan.jpg',
+				),
+			),
+	    ]);
+
 	}
 } // noahlite_setup
 add_action( 'after_setup_theme', 'noahlite_setup' );

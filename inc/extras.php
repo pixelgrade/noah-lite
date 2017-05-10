@@ -22,6 +22,8 @@ function noahlite_body_classes( $classes ) {
 	$classes[] = 'u-static-header';
 
 	$classes[] = 'u-full-width-header';
+	
+	$classes[] = 'u-footer-layout-stacked';
 
 	if ( is_singular( 'jetpack-portfolio' ) ) {
 		$classes[] = noahlite_get_single_project_class();
