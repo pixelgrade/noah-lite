@@ -66,9 +66,9 @@ function noahlite_get_portfolio_class( $class = '' ) {
 	$classes[]  = 'c-gallery--regular';
 
 	// items per row
-	$columns        = 4;
-	$columns_at_lap = $columns >= 5 ? $columns - 1 : $columns;
-	$columns_at_pad = $columns_at_lap >= 4 ? $columns_at_lap - 1 : $columns_at_lap;
+	$columns        = 3;
+	$columns_at_lap = $columns >= 3 ? $columns - 1 : $columns;
+	$columns_at_pad = $columns_at_lap >= 2 ? $columns_at_lap - 1 : $columns_at_lap;
 
 	$columns_class = 'o-grid--' . $columns . 'col-@desk o-grid--' . $columns_at_lap . 'col-@lap o-grid--' . $columns_at_pad . 'col-@pad';
 	// title position
