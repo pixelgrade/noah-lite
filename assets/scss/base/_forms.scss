@@ -14,21 +14,20 @@ button {
     display: block;
     // max-width: 100%;
     height: auto;
-    padding: 0.5em 0;
-    border: 0;
+    padding: .5em .9em;
+
+    border: 1px solid $dark;
+    border-radius: 0;
 
     font: inherit;
 
     background: transparent;
-    box-shadow: currentColor 0 1px 0;
-    border-radius: 0;
     color: inherit;
 
     -webkit-appearance: none;
     -moz-appearance: none;
 
     &:focus {
-        border: 0;
         outline: 0;
     }
 }
@@ -63,7 +62,7 @@ button {
 %textarea,
 %select {
     width: 100%;
-    // max-width: none;
+    max-width: 100%;
 }
 
 %button {
@@ -92,7 +91,7 @@ button[type="submit"] {
     @extend %button;
 }
 
-.body.body .content-area {
+.body.body.body .content-area {
 
     label {
         @extend %label;
@@ -137,6 +136,37 @@ button[type="submit"] {
 .wpcf7-form-control-wrap,
 .wpcf7-form-control-wrap span {
     display: block;
+}
+
+.wpcf7-custom {
+    @extend %ml--m;
+    display: flex;
+    flex-wrap: wrap;
+
+    &[class] > * {
+        margin: 0;
+        padding: 0;
+    }
+
+    &[class][class] > * {
+        @extend %pl-m;
+        @extend %mb-m;
+        flex-basis: 100%;
+    }
+
+    &[class][class] > .wpcf7-half {
+        flex-basis: 50%;
+    }
+
+    &[class][class] > .wpcf7-response-output {
+        order: -1;
+        border-width: 0;
+    }
+
+    &[class][class][class] > .wpcf7-response-output {
+        @extend %bl-xs;
+        @extend %pl-s;
+    }
 }
 
 .u-content-width > div.wpcf7 {
@@ -204,7 +234,8 @@ button[type="submit"] {
     }
 
 
-   .body.body & .wpforms-submit {
+   .body & .wpforms-submit,
+   .body & .wpforms-submit:hover {
         @extend %button;
     }
 
@@ -232,6 +263,15 @@ button[type="submit"] {
         label {
             @include reset-font();
         }
+    }
+}
+
+.body[class][class][class] .wpforms-error {
+    @extend %mb-xs;
+
+    &:before, &:after {
+        content: none;
+        font: inherit;
     }
 }
 
@@ -281,7 +321,6 @@ button[type="submit"] {
 }
 
 .nf-field {
-    @extend %mb-m;
 
     .checkbox-wrap .nf-field-label label {
         @include reset-font();
@@ -317,6 +356,10 @@ button[type="submit"] {
     .nf-static {
         padding: 0;
     }
+}
+
+.nf-field-container > :last-child {
+    @extend %mb-m;
 }
 
 .nf-field-container.label-above .nf-field-label {
