@@ -103,9 +103,9 @@ $nav-mobile-color: #000000 !default;
 }
 
 .c-navbar__zone {
-    font-size: 16px;
-    text-transform: none;
-    letter-spacing: initial;
+    font-size: 11px;
+    // text-transform: none;
+    letter-spacing: 1px;
 }
 
 .c-navbar__zone--middle.mobile-logo-clone { z-index: 1; }
