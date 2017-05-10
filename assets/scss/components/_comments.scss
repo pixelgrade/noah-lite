@@ -41,7 +41,7 @@
 .trackback .edit-link,
 .comment-links {
     @extend %ml--xs;
-    @extend .fs-12;
+    @extend %fs-12;
     color: $gray;
 
     a {
@@ -87,7 +87,7 @@
         display: block;
         @include baseline();
         @extend %heading;
-        @extend .fs-13;
+        @extend %fs-13;
         letter-spacing: .154em;
 
         &:after {
@@ -161,7 +161,7 @@
 .logged-in-as {
     @include baseline();
     @extend %mt--xs;
-    @extend .fs-12;
+    @extend %fs-12;
     color: $gray;
     margin-bottom: 0;
 

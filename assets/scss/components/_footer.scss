@@ -1,6 +1,7 @@
 .c-footer {
     position: relative;
     z-index: 1000;
+    -webkit-font-smoothing: antialiased;
 
     .c-widget {
         &:first-child:nth-last-child(3) {
@@ -52,7 +53,7 @@
 
 .c-footer__content {
     @extend %heading;
-    @extend .fs-10;
+    @extend %fs-10;
     color: $gray;
 
     .c-gallery--footer + & {

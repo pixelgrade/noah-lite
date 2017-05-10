@@ -1,6 +1,6 @@
 %blockquote {
-    @extend .fs-23;
-    @include baseline(30/23, 0.68);
+    @extend %fs-26;
+    @include baseline(30/26, 0.68);
     font-family: unquote(map-get($font-blockquote, font-family));
     font-style: italic;
 

@@ -45,7 +45,7 @@ $breakpoints: (
 // typography settings
 $content-class:         ".entry-content, .comment-content"    !default;
 
-$font-size:             14px;
+$font-size:             15px;
 $line-height:           1.71429;
 
 $font-headings: (
@@ -80,19 +80,22 @@ $typeline-config-sets: (
     typography: (
         rules: (
             font-size: (
-                '.fs-10': 10px,
-                '.fs-11': 11px,
-                '.fs-12': 12px,
-                '.fs-13': 13px,
-                '.fs-15': 15px,
-                '.fs-16': 16px,
-                '.fs-18': 18px,
-                '.fs-23': 23px,
-                '.fs-24': 24px,
-                '.fs-25': 25px,
-                '.fs-36': 36px,
-                '.fs-60': 60px,
-                '.fs-90': 90px,
+                '%fs-10': 12px,
+                '%fs-11': 12px,
+                '%fs-12': 13px,
+                '%fs-13': 13px,
+                '%fs-14': 14px,
+                '%fs-15': 15px,
+                '%fs-16': 16px,
+                '%fs-18': 18px,
+                '%fs-23': 23px,
+                '%fs-24': 24px,
+                '%fs-25': 25px,
+                '%fs-26': 26px,
+                '%fs-36': 36px,
+                '%fs-60': 60px,
+                '%fs-90': 90px,
+                '%fs-120': 120px,
             )
         )
     ),

@@ -32,7 +32,7 @@ $btn-radius:          0                     !default;
  */
 .c-btn {
     @extend %font-headings;
-    @extend .fs-13;
+    @extend %fs-13;
     letter-spacing: .154em;
 
     display: inline-block; /* [1] */
@@ -50,7 +50,6 @@ $btn-radius:          0                     !default;
     text-transform: uppercase;
     padding: 0.9em 2em 0.8em 2.1em;
 
-    transition: background-color $transition--micro ease-in-out;
 
     @if ($btn-border-width != 0) {
         border: $btn-border-width $btn-border-style $btn-border-color;
@@ -69,12 +68,6 @@ $btn-radius:          0                     !default;
         text-decoration: none; /* [4] */
         color: $btn-color;
     }
-
-	&:hover,
-	&:active,
-	&:focus {
-		background-color: #333333;
-	}
 
 }
 

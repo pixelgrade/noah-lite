@@ -479,7 +479,7 @@ function noahlite_josefin_sans_font_url() {
 	*/
 	$josefin_sans = esc_html_x( 'on', 'Josefin Sans font: on or off', 'noah-lite' );
 	if ( 'off' !== $josefin_sans ) {
-		return str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Josefin+Sans:700&amp;subset=latin-ext' );
+		return str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&amp;subset=latin-ext' );
 	}
 
 	return '';

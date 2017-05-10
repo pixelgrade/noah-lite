@@ -72,7 +72,7 @@ ul.instagram-pics {
     @extend %heading;
     @extend .o-inline;
     @extend .o-inline-xs;
-    @extend .fs-11;
+    @extend %fs-11;
 
     > *:before {
         content: "#";
@@ -94,7 +94,7 @@ ul.instagram-pics {
 
         caption {
             @extend %heading;
-            @extend .fs-12;
+            @extend %fs-12;
             @include baseline();
 
             &:after {

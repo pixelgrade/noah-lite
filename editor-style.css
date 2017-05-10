@@ -427,150 +427,93 @@ img[height] {
 figure {
   margin: 0; }
 
-.fs-10, .h7, .mce-content-body cite, .entry-footer cite {
-  font-size: 10px; }
-
-.fs-11, .h6, .mce-content-body h6, .entry-footer h6 {
-  font-size: 11px; }
-
-.fs-12, .body.body .content-area label, .h5, .mce-content-body h5, .entry-footer h5 {
+.body.body .content-area label, .h5, .mce-content-body h5, .entry-footer h5, .h6, .mce-content-body h6, .entry-footer h6, .h7, .mce-content-body cite, .entry-footer cite {
   font-size: 12px; }
 
-.fs-13, .h4, .mce-content-body h4, .entry-footer h4, .c-btn, input[type="submit"],
+.h4, .mce-content-body h4, .entry-footer h4, .c-btn, input[type="submit"],
 input[type="button"],
 button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   font-size: 13px; }
 
-.fs-15, .h3, .mce-content-body h3, .entry-footer h3 {
+.h3, .mce-content-body h3, .entry-footer h3 {
   font-size: 15px; }
 
-.fs-16 {
-  font-size: 16px; }
-
-.fs-18, .h2, .mce-content-body h2, .entry-footer h2 {
+.h2, .mce-content-body h2, .entry-footer h2 {
   font-size: 18px; }
 
-.fs-23, .mce-content-body blockquote, .entry-footer blockquote, .h1, .mce-content-body h1, .entry-footer h1 {
+.h1, .mce-content-body h1, .entry-footer h1 {
   font-size: 23px; }
 
-.fs-24 {
-  font-size: 24px; }
+.mce-content-body blockquote, .entry-footer blockquote {
+  font-size: 26px; }
 
-.fs-25 {
-  font-size: 25px; }
-
-.fs-36 {
-  font-size: 36px; }
-
-.fs-60, .h0[class] {
+.h0[class] {
   font-size: 60px; }
 
-.fs-90 {
-  font-size: 90px; }
-
 @media only screen and (max-width: 760px) {
-  .fs-10, .h7, .mce-content-body cite, .entry-footer cite {
-    font-size: 9px; }
-  .fs-11, .h6, .mce-content-body h6, .entry-footer h6 {
-    font-size: 10px; }
-  .fs-12, .body.body .content-area label, .h5, .mce-content-body h5, .entry-footer h5 {
+  .body.body .content-area label, .h5, .mce-content-body h5, .entry-footer h5, .h6, .mce-content-body h6, .entry-footer h6, .h7, .mce-content-body cite, .entry-footer cite {
     font-size: 11px; }
-  .fs-13, .h4, .mce-content-body h4, .entry-footer h4, .c-btn, input[type="submit"],
+  .h4, .mce-content-body h4, .entry-footer h4, .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     font-size: 12px; }
-  .fs-15, .h3, .mce-content-body h3, .entry-footer h3 {
+  .h3, .mce-content-body h3, .entry-footer h3 {
     font-size: 14px; }
-  .fs-16 {
-    font-size: 15px; }
-  .fs-18, .h2, .mce-content-body h2, .entry-footer h2 {
+  .h2, .mce-content-body h2, .entry-footer h2 {
     font-size: 17px; }
-  .fs-23, .mce-content-body blockquote, .entry-footer blockquote, .h1, .mce-content-body h1, .entry-footer h1 {
+  .h1, .mce-content-body h1, .entry-footer h1 {
     font-size: 21px; }
-  .fs-24 {
-    font-size: 22px; }
-  .fs-25 {
-    font-size: 23px; }
-  .fs-36 {
-    font-size: 32px; }
-  .fs-60, .h0[class] {
-    font-size: 50px; }
-  .fs-90 {
-    font-size: 74px; } }
+  .mce-content-body blockquote, .entry-footer blockquote {
+    font-size: 24px; }
+  .h0[class] {
+    font-size: 50px; } }
 
 @media only screen and (max-width: 560px) {
-  .fs-10, .h7, .mce-content-body cite, .entry-footer cite {
-    font-size: 9px; }
-  .fs-11, .h6, .mce-content-body h6, .entry-footer h6 {
-    font-size: 10px; }
-  .fs-12, .body.body .content-area label, .h5, .mce-content-body h5, .entry-footer h5 {
+  .body.body .content-area label, .h5, .mce-content-body h5, .entry-footer h5, .h6, .mce-content-body h6, .entry-footer h6, .h7, .mce-content-body cite, .entry-footer cite {
     font-size: 11px; }
-  .fs-13, .h4, .mce-content-body h4, .entry-footer h4, .c-btn, input[type="submit"],
+  .h4, .mce-content-body h4, .entry-footer h4, .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     font-size: 11px; }
-  .fs-15, .h3, .mce-content-body h3, .entry-footer h3 {
+  .h3, .mce-content-body h3, .entry-footer h3 {
     font-size: 13px; }
-  .fs-16 {
-    font-size: 14px; }
-  .fs-18, .h2, .mce-content-body h2, .entry-footer h2 {
+  .h2, .mce-content-body h2, .entry-footer h2 {
     font-size: 16px; }
-  .fs-23, .mce-content-body blockquote, .entry-footer blockquote, .h1, .mce-content-body h1, .entry-footer h1 {
+  .h1, .mce-content-body h1, .entry-footer h1 {
     font-size: 20px; }
-  .fs-24 {
-    font-size: 21px; }
-  .fs-25 {
-    font-size: 21px; }
-  .fs-36 {
-    font-size: 29px; }
-  .fs-60, .h0[class] {
-    font-size: 43px; }
-  .fs-90 {
-    font-size: 63px; } }
+  .mce-content-body blockquote, .entry-footer blockquote {
+    font-size: 22px; }
+  .h0[class] {
+    font-size: 43px; } }
 
 @media only screen and (max-width: 400px) {
-  .fs-10, .h7, .mce-content-body cite, .entry-footer cite {
-    font-size: 8px; }
-  .fs-11, .h6, .mce-content-body h6, .entry-footer h6 {
-    font-size: 9px; }
-  .fs-12, .body.body .content-area label, .h5, .mce-content-body h5, .entry-footer h5 {
+  .body.body .content-area label, .h5, .mce-content-body h5, .entry-footer h5, .h6, .mce-content-body h6, .entry-footer h6, .h7, .mce-content-body cite, .entry-footer cite {
     font-size: 10px; }
-  .fs-13, .h4, .mce-content-body h4, .entry-footer h4, .c-btn, input[type="submit"],
+  .h4, .mce-content-body h4, .entry-footer h4, .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     font-size: 11px; }
-  .fs-15, .h3, .mce-content-body h3, .entry-footer h3 {
+  .h3, .mce-content-body h3, .entry-footer h3 {
     font-size: 12px; }
-  .fs-16 {
-    font-size: 13px; }
-  .fs-18, .h2, .mce-content-body h2, .entry-footer h2 {
+  .h2, .mce-content-body h2, .entry-footer h2 {
     font-size: 15px; }
-  .fs-23, .mce-content-body blockquote, .entry-footer blockquote, .h1, .mce-content-body h1, .entry-footer h1 {
+  .h1, .mce-content-body h1, .entry-footer h1 {
     font-size: 19px; }
-  .fs-24 {
-    font-size: 19px; }
-  .fs-25 {
-    font-size: 20px; }
-  .fs-36 {
-    font-size: 27px; }
-  .fs-60, .h0[class] {
-    font-size: 37px; }
-  .fs-90 {
-    font-size: 54px; } }
+  .mce-content-body blockquote, .entry-footer blockquote {
+    font-size: 21px; }
+  .h0[class] {
+    font-size: 37px; } }
 
 ._hero_content_description {
   padding: 36px; }
 
-.body.body .content-area label:after, .nf-field-container.label-right .checkbox-wrap .nf-field-label, .h5:after, .mce-content-body h5:after, .entry-footer h5:after, .h6:after, .mce-content-body h6:after, .entry-footer h6:after, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
+.body.body .content-area label:after {
   padding-bottom: 12px; }
 
-.h0:after, .mce-content-body .h0:after, .entry-footer .h0:after, .h1:after, .mce-content-body h1:after, .entry-footer h1:after, .h2:after, .mce-content-body h2:after, .entry-footer h2:after, .h3:after, .mce-content-body h3:after, .entry-footer h3:after, .h4:after, .mce-content-body h4:after, .entry-footer h4:after {
+.h0:after, .mce-content-body .h0:after, .entry-footer .h0:after, .h1:after, .mce-content-body h1:after, .entry-footer h1:after, .h2:after, .mce-content-body h2:after, .entry-footer h2:after, .h3:after, .mce-content-body h3:after, .entry-footer h3:after, .h4:after, .mce-content-body h4:after, .entry-footer h4:after, .h5:after, .mce-content-body h5:after, .entry-footer h5:after, .h6:after, .mce-content-body h6:after, .entry-footer h6:after, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
   padding-bottom: 36px; }
 
-.wpcf7-custom[class][class][class] > .wpcf7-response-output, .nf-form-layout .half nf-field {
-  padding-left: 24px; }
-
-.wpcf7-custom[class][class] > *, .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
+.wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
   padding-left: 36px; }
 
 .wpcf7-form-control-wrap span, .wpforms-container[class] .wpforms-field-row-block input + label, .nf-field .list-radio-wrap .nf-field-element,
@@ -587,13 +530,13 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   margin-top: 60px; }
 
 .wpforms-container[class] .wpforms-field-radio .wpforms-field-label,
-.wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .body[class][class][class] .wpforms-error {
+.wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label {
   margin-bottom: 12px; }
 
 .mce-content-body blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required {
   margin-bottom: 24px; }
 
-.mce-content-body blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .wpcf7-form-control-wrap, .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .entry-footer pre, .mce-content-body p:not(:last-child), .entry-footer p:not(:last-child), .mce-content-body address:not(:last-child), .entry-footer address:not(:last-child), .mce-content-body ul:not(:last-child), .entry-footer ul:not(:last-child), .mce-content-body ol:not(:last-child), .entry-footer ol:not(:last-child), .mce-content-body dl:not(:last-child), .entry-footer dl:not(:last-child) {
+.mce-content-body blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .entry-footer pre, .mce-content-body p:not(:last-child), .entry-footer p:not(:last-child), .mce-content-body address:not(:last-child), .entry-footer address:not(:last-child), .mce-content-body ul:not(:last-child), .entry-footer ul:not(:last-child), .mce-content-body ol:not(:last-child), .entry-footer ol:not(:last-child), .mce-content-body dl:not(:last-child), .entry-footer dl:not(:last-child) {
   margin-bottom: 36px; }
 
 .alignleft,
@@ -610,28 +553,20 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
 .alignright {
   margin-left: 60px; }
 
-.nf-form-layout .half nf-fields-wrap {
-  margin-left: -24px; }
-
-.wpcf7-custom, .wpforms-container[class] .wpforms-field-container {
+.wpforms-container[class] .wpforms-field-container {
   margin-left: -36px; }
 
 .alignleft {
   margin-right: 60px; }
 
-.wpcf7-custom[class][class][class] > .wpcf7-response-output {
-  border-left-width: 12px; }
-
 @media only screen and (max-width: 760px) {
   ._hero_content_description {
     padding: 35px; }
-  .body.body .content-area label:after, .nf-field-container.label-right .checkbox-wrap .nf-field-label, .h5:after, .mce-content-body h5:after, .entry-footer h5:after, .h6:after, .mce-content-body h6:after, .entry-footer h6:after, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
+  .body.body .content-area label:after {
     padding-bottom: 12px; }
-  .h0:after, .mce-content-body .h0:after, .entry-footer .h0:after, .h1:after, .mce-content-body h1:after, .entry-footer h1:after, .h2:after, .mce-content-body h2:after, .entry-footer h2:after, .h3:after, .mce-content-body h3:after, .entry-footer h3:after, .h4:after, .mce-content-body h4:after, .entry-footer h4:after {
+  .h0:after, .mce-content-body .h0:after, .entry-footer .h0:after, .h1:after, .mce-content-body h1:after, .entry-footer h1:after, .h2:after, .mce-content-body h2:after, .entry-footer h2:after, .h3:after, .mce-content-body h3:after, .entry-footer h3:after, .h4:after, .mce-content-body h4:after, .entry-footer h4:after, .h5:after, .mce-content-body h5:after, .entry-footer h5:after, .h6:after, .mce-content-body h6:after, .entry-footer h6:after, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
     padding-bottom: 35px; }
-  .wpcf7-custom[class][class][class] > .wpcf7-response-output, .nf-form-layout .half nf-field {
-    padding-left: 24px; }
-  .wpcf7-custom[class][class] > *, .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
+  .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
     padding-left: 35px; }
   .wpcf7-form-control-wrap span, .wpforms-container[class] .wpforms-field-row-block input + label, .nf-field .list-radio-wrap .nf-field-element,
   .nf-field .list-checkbox-wrap .nf-field-element, .wp-caption-text {
@@ -644,11 +579,11 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   .alignnone, .entry-content figure + p {
     margin-top: 53px; }
   .wpforms-container[class] .wpforms-field-radio .wpforms-field-label,
-  .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .body[class][class][class] .wpforms-error {
+  .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label {
     margin-bottom: 12px; }
   .mce-content-body blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required {
     margin-bottom: 24px; }
-  .mce-content-body blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .wpcf7-form-control-wrap, .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .entry-footer pre, .mce-content-body p:not(:last-child), .entry-footer p:not(:last-child), .mce-content-body address:not(:last-child), .entry-footer address:not(:last-child), .mce-content-body ul:not(:last-child), .entry-footer ul:not(:last-child), .mce-content-body ol:not(:last-child), .entry-footer ol:not(:last-child), .mce-content-body dl:not(:last-child), .entry-footer dl:not(:last-child) {
+  .mce-content-body blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .entry-footer pre, .mce-content-body p:not(:last-child), .entry-footer p:not(:last-child), .mce-content-body address:not(:last-child), .entry-footer address:not(:last-child), .mce-content-body ul:not(:last-child), .entry-footer ul:not(:last-child), .mce-content-body ol:not(:last-child), .entry-footer ol:not(:last-child), .mce-content-body dl:not(:last-child), .entry-footer dl:not(:last-child) {
     margin-bottom: 35px; }
   .alignleft,
   .alignright,
@@ -661,25 +596,19 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     margin-left: 12px; }
   .alignright {
     margin-left: 53px; }
-  .nf-form-layout .half nf-fields-wrap {
-    margin-left: -24px; }
-  .wpcf7-custom, .wpforms-container[class] .wpforms-field-container {
+  .wpforms-container[class] .wpforms-field-container {
     margin-left: -35px; }
   .alignleft {
-    margin-right: 53px; }
-  .wpcf7-custom[class][class][class] > .wpcf7-response-output {
-    border-left-width: 12px; } }
+    margin-right: 53px; } }
 
 @media only screen and (max-width: 560px) {
   ._hero_content_description {
     padding: 34px; }
-  .body.body .content-area label:after, .nf-field-container.label-right .checkbox-wrap .nf-field-label, .h5:after, .mce-content-body h5:after, .entry-footer h5:after, .h6:after, .mce-content-body h6:after, .entry-footer h6:after, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
+  .body.body .content-area label:after {
     padding-bottom: 12px; }
-  .h0:after, .mce-content-body .h0:after, .entry-footer .h0:after, .h1:after, .mce-content-body h1:after, .entry-footer h1:after, .h2:after, .mce-content-body h2:after, .entry-footer h2:after, .h3:after, .mce-content-body h3:after, .entry-footer h3:after, .h4:after, .mce-content-body h4:after, .entry-footer h4:after {
+  .h0:after, .mce-content-body .h0:after, .entry-footer .h0:after, .h1:after, .mce-content-body h1:after, .entry-footer h1:after, .h2:after, .mce-content-body h2:after, .entry-footer h2:after, .h3:after, .mce-content-body h3:after, .entry-footer h3:after, .h4:after, .mce-content-body h4:after, .entry-footer h4:after, .h5:after, .mce-content-body h5:after, .entry-footer h5:after, .h6:after, .mce-content-body h6:after, .entry-footer h6:after, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
     padding-bottom: 34px; }
-  .wpcf7-custom[class][class][class] > .wpcf7-response-output, .nf-form-layout .half nf-field {
-    padding-left: 24px; }
-  .wpcf7-custom[class][class] > *, .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
+  .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
     padding-left: 34px; }
   .wpcf7-form-control-wrap span, .wpforms-container[class] .wpforms-field-row-block input + label, .nf-field .list-radio-wrap .nf-field-element,
   .nf-field .list-checkbox-wrap .nf-field-element, .wp-caption-text {
@@ -692,11 +621,11 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   .alignnone, .entry-content figure + p {
     margin-top: 47px; }
   .wpforms-container[class] .wpforms-field-radio .wpforms-field-label,
-  .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .body[class][class][class] .wpforms-error {
+  .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label {
     margin-bottom: 12px; }
   .mce-content-body blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required {
     margin-bottom: 24px; }
-  .mce-content-body blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .wpcf7-form-control-wrap, .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .entry-footer pre, .mce-content-body p:not(:last-child), .entry-footer p:not(:last-child), .mce-content-body address:not(:last-child), .entry-footer address:not(:last-child), .mce-content-body ul:not(:last-child), .entry-footer ul:not(:last-child), .mce-content-body ol:not(:last-child), .entry-footer ol:not(:last-child), .mce-content-body dl:not(:last-child), .entry-footer dl:not(:last-child) {
+  .mce-content-body blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .entry-footer pre, .mce-content-body p:not(:last-child), .entry-footer p:not(:last-child), .mce-content-body address:not(:last-child), .entry-footer address:not(:last-child), .mce-content-body ul:not(:last-child), .entry-footer ul:not(:last-child), .mce-content-body ol:not(:last-child), .entry-footer ol:not(:last-child), .mce-content-body dl:not(:last-child), .entry-footer dl:not(:last-child) {
     margin-bottom: 34px; }
   .alignleft,
   .alignright,
@@ -709,25 +638,19 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     margin-left: 12px; }
   .alignright {
     margin-left: 47px; }
-  .nf-form-layout .half nf-fields-wrap {
-    margin-left: -24px; }
-  .wpcf7-custom, .wpforms-container[class] .wpforms-field-container {
+  .wpforms-container[class] .wpforms-field-container {
     margin-left: -34px; }
   .alignleft {
-    margin-right: 47px; }
-  .wpcf7-custom[class][class][class] > .wpcf7-response-output {
-    border-left-width: 12px; } }
+    margin-right: 47px; } }
 
 @media only screen and (max-width: 400px) {
   ._hero_content_description {
     padding: 33px; }
-  .body.body .content-area label:after, .nf-field-container.label-right .checkbox-wrap .nf-field-label, .h5:after, .mce-content-body h5:after, .entry-footer h5:after, .h6:after, .mce-content-body h6:after, .entry-footer h6:after, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
+  .body.body .content-area label:after {
     padding-bottom: 12px; }
-  .h0:after, .mce-content-body .h0:after, .entry-footer .h0:after, .h1:after, .mce-content-body h1:after, .entry-footer h1:after, .h2:after, .mce-content-body h2:after, .entry-footer h2:after, .h3:after, .mce-content-body h3:after, .entry-footer h3:after, .h4:after, .mce-content-body h4:after, .entry-footer h4:after {
+  .h0:after, .mce-content-body .h0:after, .entry-footer .h0:after, .h1:after, .mce-content-body h1:after, .entry-footer h1:after, .h2:after, .mce-content-body h2:after, .entry-footer h2:after, .h3:after, .mce-content-body h3:after, .entry-footer h3:after, .h4:after, .mce-content-body h4:after, .entry-footer h4:after, .h5:after, .mce-content-body h5:after, .entry-footer h5:after, .h6:after, .mce-content-body h6:after, .entry-footer h6:after, .h7:after, .mce-content-body cite:after, .entry-footer cite:after {
     padding-bottom: 33px; }
-  .wpcf7-custom[class][class][class] > .wpcf7-response-output, .nf-form-layout .half nf-field {
-    padding-left: 23px; }
-  .wpcf7-custom[class][class] > *, .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
+  .wpforms-container[class] .wpforms-field-container .wpforms-field, .mce-content-body ul ul, .entry-footer ul ul, .mce-content-body ul ol, .entry-footer ul ol, .mce-content-body ul dl, .entry-footer ul dl, .mce-content-body ol ul, .entry-footer ol ul, .mce-content-body ol ol, .entry-footer ol ol, .mce-content-body ol dl, .entry-footer ol dl, .mce-content-body dl ul, .entry-footer dl ul, .mce-content-body dl ol, .entry-footer dl ol, .mce-content-body dl dl, .entry-footer dl dl {
     padding-left: 33px; }
   .wpcf7-form-control-wrap span, .wpforms-container[class] .wpforms-field-row-block input + label, .nf-field .list-radio-wrap .nf-field-element,
   .nf-field .list-checkbox-wrap .nf-field-element, .wp-caption-text {
@@ -740,11 +663,11 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   .alignnone, .entry-content figure + p {
     margin-top: 42px; }
   .wpforms-container[class] .wpforms-field-radio .wpforms-field-label,
-  .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .body[class][class][class] .wpforms-error {
+  .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label {
     margin-bottom: 12px; }
   .mce-content-body blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required {
     margin-bottom: 23px; }
-  .mce-content-body blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .wpcf7-form-control-wrap, .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .entry-footer pre, .mce-content-body p:not(:last-child), .entry-footer p:not(:last-child), .mce-content-body address:not(:last-child), .entry-footer address:not(:last-child), .mce-content-body ul:not(:last-child), .entry-footer ul:not(:last-child), .mce-content-body ol:not(:last-child), .entry-footer ol:not(:last-child), .mce-content-body dl:not(:last-child), .entry-footer dl:not(:last-child) {
+  .mce-content-body blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .wpforms-container[class] .wpforms-field, .nf-field, .mce-content-body pre, .entry-footer pre, .mce-content-body p:not(:last-child), .entry-footer p:not(:last-child), .mce-content-body address:not(:last-child), .entry-footer address:not(:last-child), .mce-content-body ul:not(:last-child), .entry-footer ul:not(:last-child), .mce-content-body ol:not(:last-child), .entry-footer ol:not(:last-child), .mce-content-body dl:not(:last-child), .entry-footer dl:not(:last-child) {
     margin-bottom: 33px; }
   .alignleft,
   .alignright,
@@ -757,26 +680,22 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     margin-left: 12px; }
   .alignright {
     margin-left: 42px; }
-  .nf-form-layout .half nf-fields-wrap {
-    margin-left: -23px; }
-  .wpcf7-custom, .wpforms-container[class] .wpforms-field-container {
+  .wpforms-container[class] .wpforms-field-container {
     margin-left: -33px; }
   .alignleft {
-    margin-right: 42px; }
-  .wpcf7-custom[class][class][class] > .wpcf7-response-output {
-    border-left-width: 12px; } }
+    margin-right: 42px; } }
 
 .mce-content-body blockquote, .entry-footer blockquote {
-  line-height: 1.30435;
+  line-height: 1.15385;
   font-family: "Times", serif;
   font-style: italic; }
   .mce-content-body blockquote:before, .entry-footer blockquote:before, .mce-content-body blockquote:after, .entry-footer blockquote:after {
     content: "";
     display: block; }
   .mce-content-body blockquote:before, .entry-footer blockquote:before {
-    margin-bottom: -0.31217em; }
+    margin-bottom: -0.23692em; }
   .mce-content-body blockquote:after, .entry-footer blockquote:after {
-    margin-top: -0.31217em; }
+    margin-top: -0.23692em; }
   .mce-content-body blockquote p, .entry-footer blockquote p {
     font: inherit; }
 
@@ -808,17 +727,19 @@ button {
 .body.body .content-area select[name] {
   display: block;
   height: auto;
-  padding: .5em .9em;
-  border: 1px solid currentColor;
-  border-radius: 0;
+  padding: 0.5em 0;
+  border: 0;
   font: inherit;
   background: transparent;
+  box-shadow: currentColor 0 1px 0;
+  border-radius: 0;
   color: inherit;
   -webkit-appearance: none;
   -moz-appearance: none; }
   .body.body .content-area input:focus:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="file"]),
   .body.body .content-area textarea:focus,
   .body.body .content-area select:focus {
+    border: 0;
     outline: 0; }
 
 ::-webkit-input-placeholder {
@@ -895,25 +816,6 @@ button[type="submit"], form .body.body .wpforms-container[class] .wpforms-submit
 .wpcf7-form-control-wrap span {
   display: block; }
 
-.wpcf7-custom {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .wpcf7-custom[class] > * {
-    margin: 0;
-    padding: 0; }
-  .wpcf7-custom[class][class] > * {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%; }
-  .wpcf7-custom[class][class] > .wpcf7-half {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%; }
-  .wpcf7-custom[class][class] > .wpcf7-response-output {
-    -ms-flex-order: -1;
-        order: -1;
-    border-width: 0; }
-
 .u-content-width > div.wpcf7 {
   margin-left: auto;
   margin-right: auto; }
@@ -955,8 +857,6 @@ button[type="submit"], form .body.body .wpforms-container[class] .wpforms-submit
       padding-top: 0;
       padding-bottom: 0;
       padding-right: 0; }
-    .wpforms-container[class] .wpforms-field-container .wpforms-field-label {
-      margin-bottom: 0; }
   .wpforms-container[class] .wpforms-field-radio li,
   .wpforms-container[class] .wpforms-field-checkbox li {
     display: -ms-flexbox;
@@ -978,17 +878,13 @@ button[type="submit"], form .body.body .wpforms-container[class] .wpforms-submit
       .wpforms-container[class] .wpforms-field-checkbox li label:after {
         display: none; }
 
-.body[class][class][class] .wpforms-error:before, .body[class][class][class] .wpforms-error:after {
-  content: none;
-  font: inherit; }
+.wpforms-container.half .wpforms-field {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%; }
 
-@media only screen and (min-width: 30em) {
-  .wpforms-container.half .wpforms-field {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%; }
-  .wpforms-container.half .wpforms-field-textarea {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%; } }
+.wpforms-container.half .wpforms-field-textarea {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%; }
 
 .label-above .field-wrap > *,
 .label-below .field-wrap > * {
@@ -1054,18 +950,20 @@ button[type="submit"], form .body.body .wpforms-container[class] .wpforms-submit
 .nf-field-container.label-right .checkbox-wrap .nf-field-label {
   padding-left: 0; }
 
-@media only screen and (min-width: 30em) {
-  .nf-form-layout .half nf-fields-wrap {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-  .nf-form-layout .half nf-field {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%; }
-    .nf-form-layout .half nf-field:last-child {
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%; } }
+.nf-form-layout .half nf-fields-wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -7.5rem; }
+
+.nf-form-layout .half nf-field {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-left: 7.5rem; }
+  .nf-form-layout .half nf-field:last-child {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; }
 
 a {
   color: #757575;
@@ -1112,7 +1010,7 @@ pre {
 .mce-content-body cite,
 .entry-footer cite {
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .154em; }
   .body.body .content-area label:last-child:after,
@@ -1237,11 +1135,10 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
 
 html {
   font-size: 75%;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased; }
+  text-rendering: optimizeLegibility; }
 
 body {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.71429;
   color: #252525;
   overflow-wrap: break-word;
@@ -1255,7 +1152,8 @@ body {
 .mce-content-body p, .entry-footer p,
 .mce-content-body address,
 .entry-footer address {
-  line-height: 1.71429; }
+  line-height: 1.71429;
+  -webkit-font-smoothing: antialiased; }
   .mce-content-body p:before, .entry-footer p:before, .mce-content-body p:after, .entry-footer p:after,
   .mce-content-body address:before,
   .entry-footer address:before,
@@ -1411,7 +1309,6 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
   background-color: #000000;
   text-transform: uppercase;
   padding: 0.9em 2em 0.8em 2.1em;
-  transition: background-color 0.15s ease-in-out;
   border: 1px solid #000000; }
   .c-btn, input[type="submit"],
   input[type="button"],
@@ -1425,14 +1322,6 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit {
     text-decoration: none;
     /* [4] */
     color: #FFFFFF; }
-  .c-btn:hover, input[type="submit"]:hover,
-  input[type="button"]:hover,
-  button[type="submit"]:hover, .body.body .wpforms-container[class] .wpforms-submit:hover, .c-btn:active, input[type="submit"]:active,
-  input[type="button"]:active,
-  button[type="submit"]:active, .body.body .wpforms-container[class] .wpforms-submit:active, .c-btn:focus, input[type="submit"]:focus,
-  input[type="button"]:focus,
-  button[type="submit"]:focus, .body.body .wpforms-container[class] .wpforms-submit:focus {
-    background-color: #333333; }
 
 .c-btn--inverse {
   color: #000000;

@@ -1,6 +1,6 @@
 /*
 Theme Name: Noah Lite
-Theme URI: https://demos.pixelgrade.com/noah-lite/
+Theme URI: https://pixelgrade.com/themes/noah-lite/
 Author: Pixelgrade
 Author URI: https://pixelgrade.com
 Description: A bold entrance in the challenging digital playground. A photography WordPress theme that creates momentum through witty animations that introduce you in your own journey.
@@ -496,148 +496,112 @@ figure {
  * 2.0 - Base Styles
  *   2.1 - Typography
  */
-.fs-10, .h7, .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, .c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
-  font-size: 10px; }
-
-.fs-11, .h6, .entry-content h6, .comment-content h6, .entry-footer h6, .tagcloud, #content .sd-content ul li a {
-  font-size: 11px; }
-
-.fs-12, .h5, .entry-content h5, .comment-content h5, .entry-footer h5, .body.body .content-area label, .c-navbar, .pingback .edit-link,
-.trackback .edit-link,
-.comment-links, .logged-in-as, .calendar_wrap table caption {
+.c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
   font-size: 12px; }
 
-.fs-13, .h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-btn, input[type="submit"],
+.h5, .entry-content h5, .comment-content h5, .entry-footer h5, .h6, .entry-content h6, .comment-content h6, .entry-footer h6, .h7, .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, .body.body .content-area label, .tagcloud, #content .sd-content ul li a {
+  font-size: 12px; }
+
+.c-navbar, .pingback .edit-link,
+.trackback .edit-link,
+.comment-links, .logged-in-as, .calendar_wrap table caption {
+  font-size: 13px; }
+
+.h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-btn, input[type="submit"],
 input[type="button"],
 button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .posts-navigation .nav-previous,
 .posts-navigation .nav-next, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
   font-size: 13px; }
 
-.fs-15, .h3, .entry-content h3, .comment-content h3, .entry-footer h3, body #jp-relatedposts h3.jp-relatedposts-headline {
+.h3, .entry-content h3, .comment-content h3, .entry-footer h3, body #jp-relatedposts h3.jp-relatedposts-headline {
   font-size: 15px; }
 
-.fs-16 {
-  font-size: 16px; }
-
-.fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2, .jetpack-social-navigation.jetpack-social-navigation ul a {
+.h2, .entry-content h2, .comment-content h2, .entry-footer h2, .jetpack-social-navigation.jetpack-social-navigation ul a {
   font-size: 18px; }
 
-.fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
+.h1, .entry-content h1, .comment-content h1, .entry-footer h1 {
   font-size: 23px; }
 
-.fs-24 {
-  font-size: 24px; }
+.entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
+  font-size: 26px; }
 
-.fs-25 {
-  font-size: 25px; }
-
-.fs-36 {
-  font-size: 36px; }
-
-.fs-60, .h0[class] {
+.h0[class] {
   font-size: 60px; }
 
-.fs-90 {
-  font-size: 90px; }
-
 @media only screen and (max-width: 760px) {
-  .fs-10, .h7, .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, .c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
-    font-size: 9px; }
-  .fs-11, .h6, .entry-content h6, .comment-content h6, .entry-footer h6, .tagcloud, #content .sd-content ul li a {
-    font-size: 10px; }
-  .fs-12, .h5, .entry-content h5, .comment-content h5, .entry-footer h5, .body.body .content-area label, .c-navbar, .pingback .edit-link,
+  .c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
+    font-size: 11px; }
+  .h5, .entry-content h5, .comment-content h5, .entry-footer h5, .h6, .entry-content h6, .comment-content h6, .entry-footer h6, .h7, .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, .body.body .content-area label, .tagcloud, #content .sd-content ul li a {
+    font-size: 11px; }
+  .c-navbar, .pingback .edit-link,
   .trackback .edit-link,
   .comment-links, .logged-in-as, .calendar_wrap table caption {
-    font-size: 11px; }
-  .fs-13, .h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-btn, input[type="submit"],
+    font-size: 12px; }
+  .h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .posts-navigation .nav-previous,
   .posts-navigation .nav-next, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
     font-size: 12px; }
-  .fs-15, .h3, .entry-content h3, .comment-content h3, .entry-footer h3, body #jp-relatedposts h3.jp-relatedposts-headline {
+  .h3, .entry-content h3, .comment-content h3, .entry-footer h3, body #jp-relatedposts h3.jp-relatedposts-headline {
     font-size: 14px; }
-  .fs-16 {
-    font-size: 15px; }
-  .fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2, .jetpack-social-navigation.jetpack-social-navigation ul a {
+  .h2, .entry-content h2, .comment-content h2, .entry-footer h2, .jetpack-social-navigation.jetpack-social-navigation ul a {
     font-size: 17px; }
-  .fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
+  .h1, .entry-content h1, .comment-content h1, .entry-footer h1 {
     font-size: 21px; }
-  .fs-24 {
-    font-size: 22px; }
-  .fs-25 {
-    font-size: 23px; }
-  .fs-36 {
-    font-size: 32px; }
-  .fs-60, .h0[class] {
-    font-size: 50px; }
-  .fs-90 {
-    font-size: 74px; } }
+  .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
+    font-size: 24px; }
+  .h0[class] {
+    font-size: 50px; } }
 
 @media only screen and (max-width: 560px) {
-  .fs-10, .h7, .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, .c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
-    font-size: 9px; }
-  .fs-11, .h6, .entry-content h6, .comment-content h6, .entry-footer h6, .tagcloud, #content .sd-content ul li a {
-    font-size: 10px; }
-  .fs-12, .h5, .entry-content h5, .comment-content h5, .entry-footer h5, .body.body .content-area label, .c-navbar, .pingback .edit-link,
+  .c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
+    font-size: 11px; }
+  .h5, .entry-content h5, .comment-content h5, .entry-footer h5, .h6, .entry-content h6, .comment-content h6, .entry-footer h6, .h7, .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, .body.body .content-area label, .tagcloud, #content .sd-content ul li a {
+    font-size: 11px; }
+  .c-navbar, .pingback .edit-link,
   .trackback .edit-link,
   .comment-links, .logged-in-as, .calendar_wrap table caption {
     font-size: 11px; }
-  .fs-13, .h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-btn, input[type="submit"],
+  .h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .posts-navigation .nav-previous,
   .posts-navigation .nav-next, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
     font-size: 11px; }
-  .fs-15, .h3, .entry-content h3, .comment-content h3, .entry-footer h3, body #jp-relatedposts h3.jp-relatedposts-headline {
+  .h3, .entry-content h3, .comment-content h3, .entry-footer h3, body #jp-relatedposts h3.jp-relatedposts-headline {
     font-size: 13px; }
-  .fs-16 {
-    font-size: 14px; }
-  .fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2, .jetpack-social-navigation.jetpack-social-navigation ul a {
+  .h2, .entry-content h2, .comment-content h2, .entry-footer h2, .jetpack-social-navigation.jetpack-social-navigation ul a {
     font-size: 16px; }
-  .fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
+  .h1, .entry-content h1, .comment-content h1, .entry-footer h1 {
     font-size: 20px; }
-  .fs-24 {
-    font-size: 21px; }
-  .fs-25 {
-    font-size: 21px; }
-  .fs-36 {
-    font-size: 29px; }
-  .fs-60, .h0[class] {
-    font-size: 43px; }
-  .fs-90 {
-    font-size: 63px; } }
+  .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
+    font-size: 22px; }
+  .h0[class] {
+    font-size: 43px; } }
 
 @media only screen and (max-width: 400px) {
-  .fs-10, .h7, .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, .c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
-    font-size: 8px; }
-  .fs-11, .h6, .entry-content h6, .comment-content h6, .entry-footer h6, .tagcloud, #content .sd-content ul li a {
-    font-size: 9px; }
-  .fs-12, .h5, .entry-content h5, .comment-content h5, .entry-footer h5, .body.body .content-area label, .c-navbar, .pingback .edit-link,
+  .c-footer__content, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
+    font-size: 10px; }
+  .h5, .entry-content h5, .comment-content h5, .entry-footer h5, .h6, .entry-content h6, .comment-content h6, .entry-footer h6, .h7, .entry-content cite, .comment-content cite, .entry-footer cite, .c-author__links, .body.body .content-area label, .tagcloud, #content .sd-content ul li a {
+    font-size: 10px; }
+  .c-navbar, .pingback .edit-link,
   .trackback .edit-link,
   .comment-links, .logged-in-as, .calendar_wrap table caption {
-    font-size: 10px; }
-  .fs-13, .h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-btn, input[type="submit"],
+    font-size: 11px; }
+  .h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .posts-navigation .nav-previous,
   .posts-navigation .nav-next, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
     font-size: 11px; }
-  .fs-15, .h3, .entry-content h3, .comment-content h3, .entry-footer h3, body #jp-relatedposts h3.jp-relatedposts-headline {
+  .h3, .entry-content h3, .comment-content h3, .entry-footer h3, body #jp-relatedposts h3.jp-relatedposts-headline {
     font-size: 12px; }
-  .fs-16 {
-    font-size: 13px; }
-  .fs-18, .h2, .entry-content h2, .comment-content h2, .entry-footer h2, .jetpack-social-navigation.jetpack-social-navigation ul a {
+  .h2, .entry-content h2, .comment-content h2, .entry-footer h2, .jetpack-social-navigation.jetpack-social-navigation ul a {
     font-size: 15px; }
-  .fs-23, .h1, .entry-content h1, .comment-content h1, .entry-footer h1, .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
+  .h1, .entry-content h1, .comment-content h1, .entry-footer h1 {
     font-size: 19px; }
-  .fs-24 {
-    font-size: 19px; }
-  .fs-25 {
-    font-size: 20px; }
-  .fs-36 {
-    font-size: 27px; }
-  .fs-60, .h0[class] {
-    font-size: 37px; }
-  .fs-90 {
-    font-size: 54px; } }
+  .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
+    font-size: 21px; }
+  .h0[class] {
+    font-size: 37px; } }
 
 .c-gallery--title-overlay .c-card__content {
   padding: 12px; }
@@ -682,7 +646,7 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 .u-blog_sides_spacing {
   padding-right: 90px; }
 
-.h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .body.body .content-area label:after, .nf-field-container.label-right .checkbox-wrap .nf-field-label, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
+.body.body .content-area label:after, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
 .c-navbar--dropdown .children, .c-navbar--dropdown .sub-menu .menu-item,
 .c-navbar--dropdown .children .menu-item,
 .c-navbar--dropdown .children .page_item, .c-author .c-author__label:after, .comment-author .fn:after, .comment-content, .calendar_wrap table caption:after, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title:after,
@@ -694,7 +658,7 @@ body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedpo
 .c-author .c-author__description, .c-footer .c-widget__title:after {
   padding-bottom: 24px; }
 
-.h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .logged-in-as:after, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+.h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, body #jp-relatedposts h3.jp-relatedposts-headline:after {
   padding-bottom: 36px; }
 
 .gallery, .c-footer, .u-content-bottom-spacing {
@@ -703,13 +667,13 @@ body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedpo
 ul.instagram-pics > li {
   padding-left: 12px; }
 
-.wpcf7-custom[class][class][class] > .wpcf7-response-output, .nf-form-layout .half nf-field, .gallery.gallery-columns-8 > *,
+.gallery.gallery-columns-8 > *,
 .gallery.gallery-columns-9 > *, .c-post-navigation__prev span, .nav-previous span, .c-post-navigation__next, .nav-next, .c-navbar--dropdown .sub-menu .menu-item,
 .c-navbar--dropdown .children .menu-item,
 .c-navbar--dropdown .children .page_item {
   padding-left: 24px; }
 
-.wpcf7-custom[class][class] > *, .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ul dl, .comment-content ul dl, .entry-footer ul dl, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol, .entry-content ol dl, .comment-content ol dl, .entry-footer ol dl, .entry-content dl ul, .comment-content dl ul, .entry-footer dl ul, .entry-content dl ol, .comment-content dl ol, .entry-footer dl ol, .entry-content dl dl, .comment-content dl dl, .entry-footer dl dl, .gallery.gallery-columns-6 > *,
+.wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ul dl, .comment-content ul dl, .entry-footer ul dl, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol, .entry-content ol dl, .comment-content ol dl, .entry-footer ol dl, .entry-content dl ul, .comment-content dl ul, .entry-footer dl ul, .entry-content dl ol, .comment-content dl ol, .entry-footer dl ol, .entry-content dl dl, .comment-content dl dl, .entry-footer dl dl, .gallery.gallery-columns-6 > *,
 .gallery.gallery-columns-7 > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
   padding-left: 36px; }
 
@@ -768,13 +732,13 @@ ul.instagram-pics > li {
   margin-top: -90px; }
 
 .wpforms-container[class] .wpforms-field-radio .wpforms-field-label,
-.wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .body[class][class][class] .wpforms-error, .c-page-header .c-page-header__title, ul.instagram-pics > li, .widget_rss li .rsswidget, .widget_rss .rss-date, .gridable--row img {
+.wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .c-page-header .c-page-header__title, ul.instagram-pics > li, .widget_rss li .rsswidget, .widget_rss .rss-date, .gridable--row img {
   margin-bottom: 12px; }
 
 .entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
   margin-bottom: 24px; }
 
-.entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpcf7-form-control-wrap, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, .gridable--row, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post, .slideshow-window[class] {
+.entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, .gridable--row, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post, .slideshow-window[class] {
   margin-bottom: 36px; }
 
 [class*="embed-"],
@@ -804,12 +768,12 @@ ul.instagram-pics > li {
 .comment-links, ul.instagram-pics {
   margin-left: -12px; }
 
-.nf-form-layout .half nf-fields-wrap, .gallery.gallery-columns-8,
+.gallery.gallery-columns-8,
 .gallery.gallery-columns-9, .c-navbar--dropdown .sub-menu,
 .c-navbar--dropdown .children {
   margin-left: -24px; }
 
-.wpcf7-custom, .wpforms-container[class] .wpforms-field-container, .gallery.gallery-columns-6,
+.wpforms-container[class] .wpforms-field-container, .gallery.gallery-columns-6,
 .gallery.gallery-columns-7, .comment-form, body #jp-relatedposts .jp-relatedposts-items {
   margin-left: -36px; }
 
@@ -844,7 +808,7 @@ ul.instagram-pics > li {
 .c-navbar--dropdown .children {
   border-top-width: 24px; }
 
-.wpcf7-custom[class][class][class] > .wpcf7-response-output, .c-navbar--dropdown .sub-menu .sub-menu,
+.c-navbar--dropdown .sub-menu .sub-menu,
 .c-navbar--dropdown .children .children {
   border-left-width: 12px; }
 
@@ -881,7 +845,7 @@ ul.instagram-pics > li {
   .u-container-sides-spacings,
   .u-blog_sides_spacing {
     padding-right: 64px; }
-  .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .body.body .content-area label:after, .nf-field-container.label-right .checkbox-wrap .nf-field-label, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
+  .body.body .content-area label:after, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
   .c-navbar--dropdown .children, .c-navbar--dropdown .sub-menu .menu-item,
   .c-navbar--dropdown .children .menu-item,
   .c-navbar--dropdown .children .page_item, .c-author .c-author__label:after, .comment-author .fn:after, .comment-content, .calendar_wrap table caption:after, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title:after,
@@ -891,18 +855,18 @@ ul.instagram-pics > li {
   .c-gallery--title-above .c-card__content, .c-card__title:after, .c-author .c-author__name:after,
   .c-author .c-author__description, .c-footer .c-widget__title:after {
     padding-bottom: 24px; }
-  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .logged-in-as:after, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, body #jp-relatedposts h3.jp-relatedposts-headline:after {
     padding-bottom: 35px; }
   .gallery, .c-footer, .u-content-bottom-spacing {
     padding-bottom: 64px; }
   ul.instagram-pics > li {
     padding-left: 12px; }
-  .wpcf7-custom[class][class][class] > .wpcf7-response-output, .nf-form-layout .half nf-field, .gallery.gallery-columns-8 > *,
+  .gallery.gallery-columns-8 > *,
   .gallery.gallery-columns-9 > *, .c-post-navigation__prev span, .nav-previous span, .c-post-navigation__next, .nav-next, .c-navbar--dropdown .sub-menu .menu-item,
   .c-navbar--dropdown .children .menu-item,
   .c-navbar--dropdown .children .page_item {
     padding-left: 24px; }
-  .wpcf7-custom[class][class] > *, .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ul dl, .comment-content ul dl, .entry-footer ul dl, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol, .entry-content ol dl, .comment-content ol dl, .entry-footer ol dl, .entry-content dl ul, .comment-content dl ul, .entry-footer dl ul, .entry-content dl ol, .comment-content dl ol, .entry-footer dl ol, .entry-content dl dl, .comment-content dl dl, .entry-footer dl dl, .gallery.gallery-columns-6 > *,
+  .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ul dl, .comment-content ul dl, .entry-footer ul dl, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol, .entry-content ol dl, .comment-content ol dl, .entry-footer ol dl, .entry-content dl ul, .comment-content dl ul, .entry-footer dl ul, .entry-content dl ol, .comment-content dl ol, .entry-footer dl ol, .entry-content dl dl, .comment-content dl dl, .entry-footer dl dl, .gallery.gallery-columns-6 > *,
   .gallery.gallery-columns-7 > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
     padding-left: 35px; }
   .c-gallery--footer .c-gallery__item, .gallery.gallery-columns-4 > *,
@@ -948,11 +912,11 @@ ul.instagram-pics > li {
   .c-gallery, .gallery {
     margin-top: -64px; }
   .wpforms-container[class] .wpforms-field-radio .wpforms-field-label,
-  .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .body[class][class][class] .wpforms-error, .c-page-header .c-page-header__title, ul.instagram-pics > li, .widget_rss li .rsswidget, .widget_rss .rss-date, .gridable--row img {
+  .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .c-page-header .c-page-header__title, ul.instagram-pics > li, .widget_rss li .rsswidget, .widget_rss .rss-date, .gridable--row img {
     margin-bottom: 12px; }
   .entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
     margin-bottom: 24px; }
-  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpcf7-form-control-wrap, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, .gridable--row, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post, .slideshow-window[class] {
+  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, .gridable--row, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post, .slideshow-window[class] {
     margin-bottom: 35px; }
   [class*="embed-"],
   [class^="embed-"], .alignleft,
@@ -975,11 +939,11 @@ ul.instagram-pics > li {
   .trackback .edit-link,
   .comment-links, ul.instagram-pics {
     margin-left: -12px; }
-  .nf-form-layout .half nf-fields-wrap, .gallery.gallery-columns-8,
+  .gallery.gallery-columns-8,
   .gallery.gallery-columns-9, .c-navbar--dropdown .sub-menu,
   .c-navbar--dropdown .children {
     margin-left: -24px; }
-  .wpcf7-custom, .wpforms-container[class] .wpforms-field-container, .gallery.gallery-columns-6,
+  .wpforms-container[class] .wpforms-field-container, .gallery.gallery-columns-6,
   .gallery.gallery-columns-7, .comment-form, body #jp-relatedposts .jp-relatedposts-items {
     margin-left: -35px; }
   .c-gallery--footer.c-gallery, .gallery.gallery-columns-4,
@@ -1004,7 +968,7 @@ ul.instagram-pics > li {
   .c-navbar--dropdown .sub-menu,
   .c-navbar--dropdown .children {
     border-top-width: 24px; }
-  .wpcf7-custom[class][class][class] > .wpcf7-response-output, .c-navbar--dropdown .sub-menu .sub-menu,
+  .c-navbar--dropdown .sub-menu .sub-menu,
   .c-navbar--dropdown .children .children {
     border-left-width: 12px; } }
 
@@ -1041,7 +1005,7 @@ ul.instagram-pics > li {
   .u-container-sides-spacings,
   .u-blog_sides_spacing {
     padding-right: 49px; }
-  .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .body.body .content-area label:after, .nf-field-container.label-right .checkbox-wrap .nf-field-label, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
+  .body.body .content-area label:after, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
   .c-navbar--dropdown .children, .c-navbar--dropdown .sub-menu .menu-item,
   .c-navbar--dropdown .children .menu-item,
   .c-navbar--dropdown .children .page_item, .c-author .c-author__label:after, .comment-author .fn:after, .comment-content, .calendar_wrap table caption:after, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title:after,
@@ -1051,18 +1015,18 @@ ul.instagram-pics > li {
   .c-gallery--title-above .c-card__content, .c-card__title:after, .c-author .c-author__name:after,
   .c-author .c-author__description, .c-footer .c-widget__title:after {
     padding-bottom: 24px; }
-  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .logged-in-as:after, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, body #jp-relatedposts h3.jp-relatedposts-headline:after {
     padding-bottom: 34px; }
   .gallery, .c-footer, .u-content-bottom-spacing {
     padding-bottom: 49px; }
   ul.instagram-pics > li {
     padding-left: 12px; }
-  .wpcf7-custom[class][class][class] > .wpcf7-response-output, .nf-form-layout .half nf-field, .gallery.gallery-columns-8 > *,
+  .gallery.gallery-columns-8 > *,
   .gallery.gallery-columns-9 > *, .c-post-navigation__prev span, .nav-previous span, .c-post-navigation__next, .nav-next, .c-navbar--dropdown .sub-menu .menu-item,
   .c-navbar--dropdown .children .menu-item,
   .c-navbar--dropdown .children .page_item {
     padding-left: 24px; }
-  .wpcf7-custom[class][class] > *, .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ul dl, .comment-content ul dl, .entry-footer ul dl, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol, .entry-content ol dl, .comment-content ol dl, .entry-footer ol dl, .entry-content dl ul, .comment-content dl ul, .entry-footer dl ul, .entry-content dl ol, .comment-content dl ol, .entry-footer dl ol, .entry-content dl dl, .comment-content dl dl, .entry-footer dl dl, .gallery.gallery-columns-6 > *,
+  .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ul dl, .comment-content ul dl, .entry-footer ul dl, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol, .entry-content ol dl, .comment-content ol dl, .entry-footer ol dl, .entry-content dl ul, .comment-content dl ul, .entry-footer dl ul, .entry-content dl ol, .comment-content dl ol, .entry-footer dl ol, .entry-content dl dl, .comment-content dl dl, .entry-footer dl dl, .gallery.gallery-columns-6 > *,
   .gallery.gallery-columns-7 > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
     padding-left: 34px; }
   .c-gallery--footer .c-gallery__item, .gallery.gallery-columns-4 > *,
@@ -1108,11 +1072,11 @@ ul.instagram-pics > li {
   .c-gallery, .gallery {
     margin-top: -49px; }
   .wpforms-container[class] .wpforms-field-radio .wpforms-field-label,
-  .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .body[class][class][class] .wpforms-error, .c-page-header .c-page-header__title, ul.instagram-pics > li, .widget_rss li .rsswidget, .widget_rss .rss-date, .gridable--row img {
+  .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .c-page-header .c-page-header__title, ul.instagram-pics > li, .widget_rss li .rsswidget, .widget_rss .rss-date, .gridable--row img {
     margin-bottom: 12px; }
   .entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
     margin-bottom: 24px; }
-  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpcf7-form-control-wrap, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, .gridable--row, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post, .slideshow-window[class] {
+  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, .gridable--row, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post, .slideshow-window[class] {
     margin-bottom: 34px; }
   [class*="embed-"],
   [class^="embed-"], .alignleft,
@@ -1135,11 +1099,11 @@ ul.instagram-pics > li {
   .trackback .edit-link,
   .comment-links, ul.instagram-pics {
     margin-left: -12px; }
-  .nf-form-layout .half nf-fields-wrap, .gallery.gallery-columns-8,
+  .gallery.gallery-columns-8,
   .gallery.gallery-columns-9, .c-navbar--dropdown .sub-menu,
   .c-navbar--dropdown .children {
     margin-left: -24px; }
-  .wpcf7-custom, .wpforms-container[class] .wpforms-field-container, .gallery.gallery-columns-6,
+  .wpforms-container[class] .wpforms-field-container, .gallery.gallery-columns-6,
   .gallery.gallery-columns-7, .comment-form, body #jp-relatedposts .jp-relatedposts-items {
     margin-left: -34px; }
   .c-gallery--footer.c-gallery, .gallery.gallery-columns-4,
@@ -1164,7 +1128,7 @@ ul.instagram-pics > li {
   .c-navbar--dropdown .sub-menu,
   .c-navbar--dropdown .children {
     border-top-width: 24px; }
-  .wpcf7-custom[class][class][class] > .wpcf7-response-output, .c-navbar--dropdown .sub-menu .sub-menu,
+  .c-navbar--dropdown .sub-menu .sub-menu,
   .c-navbar--dropdown .children .children {
     border-left-width: 12px; } }
 
@@ -1201,7 +1165,7 @@ ul.instagram-pics > li {
   .u-container-sides-spacings,
   .u-blog_sides_spacing {
     padding-right: 40px; }
-  .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .body.body .content-area label:after, .nf-field-container.label-right .checkbox-wrap .nf-field-label, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
+  .body.body .content-area label:after, .c-page-header .c-page-header__title:after, .c-navbar--dropdown .sub-menu,
   .c-navbar--dropdown .children, .c-navbar--dropdown .sub-menu .menu-item,
   .c-navbar--dropdown .children .menu-item,
   .c-navbar--dropdown .children .page_item, .c-author .c-author__label:after, .comment-author .fn:after, .comment-content, .calendar_wrap table caption:after, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title:after,
@@ -1211,18 +1175,18 @@ ul.instagram-pics > li {
   .c-gallery--title-above .c-card__content, .c-card__title:after, .c-author .c-author__name:after,
   .c-author .c-author__description, .c-footer .c-widget__title:after {
     padding-bottom: 23px; }
-  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .logged-in-as:after, body #jp-relatedposts h3.jp-relatedposts-headline:after {
+  .h0:after, .entry-content .h0:after, .comment-content .h0:after, .entry-footer .h0:after, .h1:after, .entry-content h1:after, .comment-content h1:after, .entry-footer h1:after, .h2:after, .entry-content h2:after, .comment-content h2:after, .entry-footer h2:after, .h3:after, .entry-content h3:after, .comment-content h3:after, .entry-footer h3:after, .h4:after, .entry-content h4:after, .comment-content h4:after, .entry-footer h4:after, .h5:after, .entry-content h5:after, .comment-content h5:after, .entry-footer h5:after, .h6:after, .entry-content h6:after, .comment-content h6:after, .entry-footer h6:after, .h7:after, .entry-content cite:after, .comment-content cite:after, .entry-footer cite:after, .c-author__links:after, .logged-in-as:after, body #jp-relatedposts h3.jp-relatedposts-headline:after {
     padding-bottom: 33px; }
   .gallery, .c-footer, .u-content-bottom-spacing {
     padding-bottom: 40px; }
   ul.instagram-pics > li {
     padding-left: 12px; }
-  .wpcf7-custom[class][class][class] > .wpcf7-response-output, .nf-form-layout .half nf-field, .gallery.gallery-columns-8 > *,
+  .gallery.gallery-columns-8 > *,
   .gallery.gallery-columns-9 > *, .c-post-navigation__prev span, .nav-previous span, .c-post-navigation__next, .nav-next, .c-navbar--dropdown .sub-menu .menu-item,
   .c-navbar--dropdown .children .menu-item,
   .c-navbar--dropdown .children .page_item {
     padding-left: 23px; }
-  .wpcf7-custom[class][class] > *, .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ul dl, .comment-content ul dl, .entry-footer ul dl, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol, .entry-content ol dl, .comment-content ol dl, .entry-footer ol dl, .entry-content dl ul, .comment-content dl ul, .entry-footer dl ul, .entry-content dl ol, .comment-content dl ol, .entry-footer dl ol, .entry-content dl dl, .comment-content dl dl, .entry-footer dl dl, .gallery.gallery-columns-6 > *,
+  .wpforms-container[class] .wpforms-field-container .wpforms-field, .entry-content ul ul, .comment-content ul ul, .entry-footer ul ul, .entry-content ul ol, .comment-content ul ol, .entry-footer ul ol, .entry-content ul dl, .comment-content ul dl, .entry-footer ul dl, .entry-content ol ul, .comment-content ol ul, .entry-footer ol ul, .entry-content ol ol, .comment-content ol ol, .entry-footer ol ol, .entry-content ol dl, .comment-content ol dl, .entry-footer ol dl, .entry-content dl ul, .comment-content dl ul, .entry-footer dl ul, .entry-content dl ol, .comment-content dl ol, .entry-footer dl ol, .entry-content dl dl, .comment-content dl dl, .entry-footer dl dl, .gallery.gallery-columns-6 > *,
   .gallery.gallery-columns-7 > *, .c-author__avatar + .c-author__details, .comment-form > *, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
     padding-left: 33px; }
   .c-gallery--footer .c-gallery__item, .gallery.gallery-columns-4 > *,
@@ -1268,11 +1232,11 @@ ul.instagram-pics > li {
   .c-gallery, .gallery {
     margin-top: -40px; }
   .wpforms-container[class] .wpforms-field-radio .wpforms-field-label,
-  .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .body[class][class][class] .wpforms-error, .c-page-header .c-page-header__title, ul.instagram-pics > li, .widget_rss li .rsswidget, .widget_rss .rss-date, .gridable--row img {
+  .wpforms-container[class] .wpforms-field-checkbox .wpforms-field-label, .c-page-header .c-page-header__title, ul.instagram-pics > li, .widget_rss li .rsswidget, .widget_rss .rss-date, .gridable--row img {
     margin-bottom: 12px; }
   .entry-content blockquote p:not(:last-child), .comment-content blockquote p:not(:last-child), .entry-footer blockquote p:not(:last-child), .nf-form-fields-required, .c-post-navigation span:after, .nav-links span:after, .c-author__avatar, .gridable--col figure, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-img {
     margin-bottom: 23px; }
-  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpcf7-form-control-wrap, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, .gridable--row, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post, .slideshow-window[class] {
+  .entry-content blockquote:not(:last-child), .comment-content blockquote:not(:last-child), .entry-footer blockquote:not(:last-child), .entry-content pre, .comment-content pre, .entry-footer pre, .entry-content table, .comment-content table, .entry-footer table, .wpforms-container[class] .wpforms-field, .nf-field, .entry-content p:not(:last-child), .comment-content p:not(:last-child), .entry-footer p:not(:last-child), .entry-content address:not(:last-child), .comment-content address:not(:last-child), .entry-footer address:not(:last-child), .entry-content ul:not(:last-child), .comment-content ul:not(:last-child), .entry-footer ul:not(:last-child), .entry-content ol:not(:last-child), .comment-content ol:not(:last-child), .entry-footer ol:not(:last-child), .entry-content dl:not(:last-child), .comment-content dl:not(:last-child), .entry-footer dl:not(:last-child), .comment-form > *, .gridable--row, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post, .slideshow-window[class] {
     margin-bottom: 33px; }
   [class*="embed-"],
   [class^="embed-"], .alignleft,
@@ -1295,11 +1259,11 @@ ul.instagram-pics > li {
   .trackback .edit-link,
   .comment-links, ul.instagram-pics {
     margin-left: -12px; }
-  .nf-form-layout .half nf-fields-wrap, .gallery.gallery-columns-8,
+  .gallery.gallery-columns-8,
   .gallery.gallery-columns-9, .c-navbar--dropdown .sub-menu,
   .c-navbar--dropdown .children {
     margin-left: -23px; }
-  .wpcf7-custom, .wpforms-container[class] .wpforms-field-container, .gallery.gallery-columns-6,
+  .wpforms-container[class] .wpforms-field-container, .gallery.gallery-columns-6,
   .gallery.gallery-columns-7, .comment-form, body #jp-relatedposts .jp-relatedposts-items {
     margin-left: -33px; }
   .c-gallery--footer.c-gallery, .gallery.gallery-columns-4,
@@ -1324,7 +1288,7 @@ ul.instagram-pics > li {
   .c-navbar--dropdown .sub-menu,
   .c-navbar--dropdown .children {
     border-top-width: 23px; }
-  .wpcf7-custom[class][class][class] > .wpcf7-response-output, .c-navbar--dropdown .sub-menu .sub-menu,
+  .c-navbar--dropdown .sub-menu .sub-menu,
   .c-navbar--dropdown .children .children {
     border-left-width: 12px; } }
 
@@ -1363,7 +1327,7 @@ ul.instagram-pics > li {
 .entry-footer cite,
 .c-author__links {
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .154em; }
   .body.body .content-area label:last-child:after, .c-navbar:last-child:after, .comment-author .fn:last-child:after, .c-footer__content:last-child:after, .widget_rss li .rsswidget:last-child:after, .tagcloud:last-child:after, .calendar_wrap table caption:last-child:after, .calendar_wrap table th:last-child:after, #content .sd-content ul li a:last-child:after, body #jp-relatedposts h3.jp-relatedposts-headline:last-child:after, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title:last-child:after, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:last-child:after,
@@ -1486,16 +1450,16 @@ ul.instagram-pics > li {
     margin-top: -0.21335em; }
 
 .entry-content blockquote, .comment-content blockquote, .entry-footer blockquote {
-  line-height: 1.30435;
+  line-height: 1.15385;
   font-family: "Times", serif;
   font-style: italic; }
   .entry-content blockquote:before, .comment-content blockquote:before, .entry-footer blockquote:before, .entry-content blockquote:after, .comment-content blockquote:after, .entry-footer blockquote:after {
     content: "";
     display: block; }
   .entry-content blockquote:before, .comment-content blockquote:before, .entry-footer blockquote:before {
-    margin-bottom: -0.31217em; }
+    margin-bottom: -0.23692em; }
   .entry-content blockquote:after, .comment-content blockquote:after, .entry-footer blockquote:after {
-    margin-top: -0.31217em; }
+    margin-top: -0.23692em; }
   .entry-content blockquote p, .comment-content blockquote p, .entry-footer blockquote p {
     font: inherit; }
 
@@ -1613,17 +1577,19 @@ button {
 .body.body .content-area select[name] {
   display: block;
   height: auto;
-  padding: .5em .9em;
-  border: 1px solid currentColor;
-  border-radius: 0;
+  padding: 0.5em 0;
+  border: 0;
   font: inherit;
   background: transparent;
+  box-shadow: currentColor 0 1px 0;
+  border-radius: 0;
   color: inherit;
   -webkit-appearance: none;
   -moz-appearance: none; }
   .body.body .content-area input:focus:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="file"]),
   .body.body .content-area textarea:focus,
   .body.body .content-area select:focus {
+    border: 0;
     outline: 0; }
 
 ::-webkit-input-placeholder {
@@ -1700,25 +1666,6 @@ button[type="submit"], form .body.body .wpforms-container[class] .wpforms-submit
 .wpcf7-form-control-wrap span {
   display: block; }
 
-.wpcf7-custom {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .wpcf7-custom[class] > * {
-    margin: 0;
-    padding: 0; }
-  .wpcf7-custom[class][class] > * {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%; }
-  .wpcf7-custom[class][class] > .wpcf7-half {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%; }
-  .wpcf7-custom[class][class] > .wpcf7-response-output {
-    -ms-flex-order: -1;
-        order: -1;
-    border-width: 0; }
-
 .u-content-width > div.wpcf7 {
   margin-left: auto;
   margin-right: auto; }
@@ -1760,8 +1707,6 @@ button[type="submit"], form .body.body .wpforms-container[class] .wpforms-submit
       padding-top: 0;
       padding-bottom: 0;
       padding-right: 0; }
-    .wpforms-container[class] .wpforms-field-container .wpforms-field-label {
-      margin-bottom: 0; }
   .wpforms-container[class] .wpforms-field-radio li,
   .wpforms-container[class] .wpforms-field-checkbox li {
     display: -ms-flexbox;
@@ -1783,17 +1728,13 @@ button[type="submit"], form .body.body .wpforms-container[class] .wpforms-submit
       .wpforms-container[class] .wpforms-field-checkbox li label:after {
         display: none; }
 
-.body[class][class][class] .wpforms-error:before, .body[class][class][class] .wpforms-error:after {
-  content: none;
-  font: inherit; }
+.wpforms-container.half .wpforms-field {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%; }
 
-@media only screen and (min-width: 30em) {
-  .wpforms-container.half .wpforms-field {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%; }
-  .wpforms-container.half .wpforms-field-textarea {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%; } }
+.wpforms-container.half .wpforms-field-textarea {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%; }
 
 .label-above .field-wrap > *,
 .label-below .field-wrap > * {
@@ -1859,18 +1800,20 @@ button[type="submit"], form .body.body .wpforms-container[class] .wpforms-submit
 .nf-field-container.label-right .checkbox-wrap .nf-field-label {
   padding-left: 0; }
 
-@media only screen and (min-width: 30em) {
-  .nf-form-layout .half nf-fields-wrap {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-  .nf-form-layout .half nf-field {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%; }
-    .nf-form-layout .half nf-field:last-child {
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%; } }
+.nf-form-layout .half nf-fields-wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -7.5rem; }
+
+.nf-form-layout .half nf-field {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-left: 7.5rem; }
+  .nf-form-layout .half nf-field:last-child {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; }
 
 .body.body .content-area input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="file"]), .body.body .content-area textarea, .body.body .content-area select,
 .body.body .content-area select[name], body {
@@ -1884,11 +1827,10 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 
 html {
   font-size: 75%;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased; }
+  text-rendering: optimizeLegibility; }
 
 body {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.71429;
   color: #252525;
   overflow-wrap: break-word;
@@ -1903,7 +1845,8 @@ body {
 .entry-content address,
 .comment-content address,
 .entry-footer address {
-  line-height: 1.71429; }
+  line-height: 1.71429;
+  -webkit-font-smoothing: antialiased; }
   .entry-content p:before, .comment-content p:before, .entry-footer p:before, .entry-content p:after, .comment-content p:after, .entry-footer p:after,
   .entry-content address:before,
   .comment-content address:before,
@@ -2384,6 +2327,9 @@ p .alignnone {
 .site-description {
   color: inherit; }
 
+.site-description {
+  letter-spacing: 1px; }
+
 /**
  *   4.2 - Buttons
  */
@@ -2421,7 +2367,6 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
   background-color: #000000;
   text-transform: uppercase;
   padding: 0.9em 2em 0.8em 2.1em;
-  transition: background-color 0.15s ease-in-out;
   border: 1px solid #000000; }
   .c-btn, input[type="submit"],
   input[type="button"],
@@ -2439,17 +2384,6 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     text-decoration: none;
     /* [4] */
     color: #FFFFFF; }
-  .c-btn:hover, input[type="submit"]:hover,
-  input[type="button"]:hover,
-  button[type="submit"]:hover, .body.body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous:hover,
-  .posts-navigation .nav-next:hover, .c-btn:active, input[type="submit"]:active,
-  input[type="button"]:active,
-  button[type="submit"]:active, .body.body .wpforms-container[class] .wpforms-submit:active, .posts-navigation .nav-previous:active,
-  .posts-navigation .nav-next:active, .c-btn:focus, input[type="submit"]:focus,
-  input[type="button"]:focus,
-  button[type="submit"]:focus, .body.body .wpforms-container[class] .wpforms-submit:focus, .posts-navigation .nav-previous:focus,
-  .posts-navigation .nav-next:focus {
-    background-color: #333333; }
 
 .c-btn--inverse {
   color: #000000;
@@ -2504,11 +2438,14 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
     display: none; }
 
 .c-card__frame {
+  background-color: currentColor;
   position: relative;
-  display: block;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: opacity 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
   .c-card__frame img {
-    display: block; }
+    display: block;
+    transition: opacity 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    will-change: transform, opacity; }
   .c-card.is-visible .c-card__frame {
     opacity: 1; }
 
@@ -2521,6 +2458,9 @@ button[type="submit"], .body.body .wpforms-container[class] .wpforms-submit, .po
 
 .c-card__link:hover .c-card__frame-hover {
   opacity: 1; }
+
+.c-gallery--portfolio .c-card__link:hover .c-card__frame {
+  opacity: 0.7; }
 
 .c-card__badge {
   position: absolute;
@@ -3081,7 +3021,7 @@ h1 + [class*="gallery"][class], h2 + [class*="gallery"][class], h3 + [class*="ga
  */
 .site-title {
   padding: 0;
-  font-weight: normal;
+  font-weight: 700;
   text-transform: uppercase; }
   .site-title:before, .site-title:after {
     display: none !important; }
@@ -3759,7 +3699,8 @@ and the top and bottom ones rotate to form an X
  */
 .c-footer {
   position: relative;
-  z-index: 1000; }
+  z-index: 1000;
+  -webkit-font-smoothing: antialiased; }
   .c-footer .c-widget:first-child:nth-last-child(3), .c-footer .c-widget:first-child:nth-last-child(3) ~ .c-widget {
     -ms-flex-preferred-size: 33.33333%;
         flex-basis: 33.33333%; }
@@ -4230,9 +4171,6 @@ body.search .c-page-header__title span {
 .u-static-header .site-header {
   position: absolute !important;
   margin-top: 0 !important; }
-
-.u-full-width-header .c-navbar__wrapper {
-  max-width: none !important; }
 
 .u-underline-header-links .c-navbar a:hover,
 .u-underline-header-links .c-navbar a:active,

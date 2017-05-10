@@ -96,13 +96,15 @@
 }
 
 .c-card__frame {
+    background-color: currentColor;
     position: relative;
-
-    display: block;
     overflow: hidden;
+    transition: opacity $transition--macro $easeInOutCirc;
 
     img {
         display: block;
+        transition: opacity $transition--macro $easeInOutCirc;
+        will-change: transform, opacity;
     }
 
     .c-card.is-visible & {
@@ -122,6 +124,13 @@
 .c-card__link:hover .c-card__frame-hover {
     opacity: 1;
 }
+
+.c-gallery--portfolio {
+    .c-card__link:hover .c-card__frame {
+        opacity: 0.7;
+    }
+}
+
 
 .c-card__badge {
     @extend %mr-s;

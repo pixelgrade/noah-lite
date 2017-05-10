@@ -8,7 +8,7 @@
 .h6, h6,
 .h7 {
     font-family: unquote(map-get($font-headings, font-family));
-    font-weight: 400;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .154em;
 
@@ -34,57 +34,50 @@
     }
 }
 
-.h4 {
+.h4, .h5, .h6, .h7 {
 
     &:after {
         @extend %pb-m;
     }
 }
 
-.h5, .h6, .h7 {
-
-	&:after {
-		@extend %pb-xs;
-	}
-}
-
 .h0[class] {
-    @extend .fs-60;
+    @extend %fs-60;
     @include baseline(60/50, map-get($font-headings, cap-height));
 }
 
 .h1 {
-    @extend .fs-23;
+    @extend %fs-23;
     @include baseline(27/23, map-get($font-headings, cap-height));
 }
 
 .h2 {
-    @extend .fs-18;
+    @extend %fs-18;
     @include baseline(21/18, map-get($font-headings, cap-height));
 }
 
 .h3 {
-    @extend .fs-15;
+    @extend %fs-15;
     @include baseline(18/15, map-get($font-headings, cap-height));
 }
 
 .h4 {
-    @extend .fs-13;
+    @extend %fs-13;
     @include baseline(15/13, map-get($font-headings, cap-height));
 }
 
 .h5 {
-    @extend .fs-12;
+    @extend %fs-11;
     @include baseline(14/12, map-get($font-headings, cap-height));
 }
 
 .h6 {
-    @extend .fs-11;
+    @extend %fs-11;
     @include baseline(13/11, map-get($font-headings, cap-height));
 }
 
 .h7 {
-    @extend .fs-10;
+    @extend %fs-11;
     @include baseline(1.2, map-get($font-headings, cap-height));
 }
 

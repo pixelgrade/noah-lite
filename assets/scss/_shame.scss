@@ -173,7 +173,7 @@ p:empty {
 
                 a {
                     @extend %heading;
-                    @extend .fs-11;
+                    @extend %fs-11;
                     padding: 0.65em 1.6em 0.5em 1.65em;
                     border: 0;
                     border-radius: 0;
@@ -208,7 +208,7 @@ body #jp-relatedposts {
 
     h3.jp-relatedposts-headline {
         @extend %heading;
-        @extend .fs-15;
+        @extend %fs-15;
         @include baseline();
         color: inherit;
         margin: 0;
@@ -271,7 +271,7 @@ body #jp-relatedposts {
 
             .jp-relatedposts-post-title {
                 @extend %heading;
-                @extend .fs-13;
+                @extend %fs-13;
                 @include baseline();
             }
 
@@ -299,7 +299,7 @@ body #jp-relatedposts {
 
             .jp-relatedposts-post-context {
                 @extend %heading;
-                @extend .fs-10;
+                @extend %fs-10;
                 @include baseline();
                 color: $accent;
             }

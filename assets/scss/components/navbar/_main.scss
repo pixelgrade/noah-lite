@@ -15,7 +15,7 @@
 
 .c-navbar {
     @extend %heading;
-    @extend .fs-12;
+    @extend %fs-12;
 	height: 100px;
 
     // in order for customify border-width property to work properly
@@ -101,7 +101,7 @@
     padding-left: 25px;
 
     ul a {
-        @extend .fs-18;
+        @extend %fs-18;
         padding: rem(6px);
 
         @include below(lap) {

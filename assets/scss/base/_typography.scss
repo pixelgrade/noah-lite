@@ -24,7 +24,7 @@ $content-class:     ".entry-content"    !default;
 html {
     font-size: percentage($baseline-unit/16px);
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
+    // -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -53,6 +53,7 @@ body {
 %p,
 %address{
     @include baseline(24/14, map-get($font-body, cap-height));
+    -webkit-font-smoothing: antialiased;
 
     &:not(:last-child) {
         @extend %mb-m;
