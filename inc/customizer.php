@@ -41,7 +41,7 @@ function noahlite_customize_register( $wp_customize ) {
 					<p>Take it to the next level. See the features below:</p>
 					<ul class="upsell-features">
                             <li>
-                            	<h4>Personalize to Match Your Style</h4>
+                            	<h4>Advanced Customizations</h4>
                             	<div class="description">Having different tastes and preferences might be tricky for users, but not with Noah onboard. It has an intuitive and catchy interface which allows you to change <strong>fonts, colors or layout sizes</strong> in a blink of an eye.</div>
                             </li>
 
@@ -241,5 +241,5 @@ add_action( 'customize_controls_enqueue_scripts', 'noahlite_customizer_assets' )
  * Generate a link to the Noah Lite info page.
  */
 function noahlite_get_pro_link() {
-	return 'https://pixelgrade.com/themes/noah?utm_source=noah-lite-clients&utm_medium=customizer&utm_campaign=noah-lite#go-pro';
+	return 'https://pixelgrade.com/themes/noah-lite?utm_source=noah-lite-clients&utm_medium=customizer&utm_campaign=noah-lite#pro';
 }
