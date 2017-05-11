@@ -105,8 +105,8 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 	    	 'widgets' => array(
 		        'sidebar-1' => array(
 		            'text_about' => array( 'text', array(
-						'title' => _x( 'About Me', 'noah-lite' ),
-						'text' => _x( 'This may be a good place to introduce yourself and your site or include some credits.', 'noah-lite' ),
+						'title' => esc_html__( 'About Me', 'noah-lite' ),
+						'text' => esc_html__( 'This may be a good place to introduce yourself and your site or include some credits.', 'noah-lite' ),
 					) ),
 		        ),
 		    ),
@@ -116,8 +116,8 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 	            'home',
 		        'portfolio' => array(
 			            'post_type' => 'page',
-			            'post_title' => 'Works',
-			            'post_content' => '<p>Welcome to your site! This is your homepage, which is what most visitors will see when they come to your site for the first time.</p>',
+			            'post_title' => esc_html__( 'Works', 'noah-lite' ),
+			            'post_content' => '<p>' . esc_html__( 'Welcome to your site! This is your homepage, which is what most visitors will see when they come to your site for the first time.', 'noah-lite' ) . '</p>',
 			            'template' => 'page-templates/portfolio-page.php',
 		        ),
 	            'about',
@@ -128,20 +128,20 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
                 // Not currently working on Preview until Save & Publish
 				'project_1' => array(
 					'post_type' => 'jetpack-portfolio',
-					'post_title' => 'Sample Project 1',
-					'post_content' => 'Project Content',
+					'post_title' => esc_html__( 'Sample Project 1', 'noah-lite' ),
+					'post_content' => esc_html__( 'Project Content', 'noah-lite' ),
 					'thumbnail' => '{{image-shamim}}',
 				),
 				'project_2' => array(
 					'post_type' => 'jetpack-portfolio',
-					'post_title' => 'Sample Project 2',
-					'post_content' => 'Project Content',
+					'post_title' => esc_html__( 'Sample Project 2', 'noah-lite' ),
+					'post_content' => esc_html__( 'Project Content', 'noah-lite' ),
 					'thumbnail' => '{{image-averie}}',
 				),
 				'project_3' => array(
 					'post_type' => 'jetpack-portfolio',
-					'post_title' => 'Sample Project 3',
-					'post_content' => 'Project Content',
+					'post_title' => esc_html__( 'Sample Project 3', 'noah-lite' ),
+					'post_content' => esc_html__( 'Project Content', 'noah-lite' ),
 					'thumbnail' => '{{image-rowan}}',
 				),
 	        ),
@@ -157,7 +157,7 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 	        // Set Menu Items
     		'nav_menus' => array(
 				'primary-left' => array(
-					'name' => __( 'Left Menu', 'noah-lite' ),
+					'name' => esc_html__( 'Left Menu', 'noah-lite' ),
 					'items' => array(
 						'page_portfolio' => array(
 							'type' => 'post_type',
@@ -168,7 +168,7 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 					),
 				),
 				'primary-right' => array(
-					'name' => __( 'Right Menu', 'noah-lite' ),
+					'name' => esc_html__( 'Right Menu', 'noah-lite' ),
 					'items' => array(
 						'page_blog',
 						'page_contact',
