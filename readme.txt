@@ -92,3 +92,5 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: https://unsplash.com/photos/E8aZ2aIrFrc
 
 Images used throughout the theme demo (not bundled with the theme): [Julia Chernih](https://www.behance.net/JuliaChe), [Georgi Andinov](http://www.andinov.com/), [Diliana Florentin](https://www.behance.net/dilianaflorentin), [Philipp Jelenska](http://philippjelenska.com/).
+
+Theme About Page functionality based on class developed by ThemeIsle.

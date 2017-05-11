@@ -1,6 +1,7 @@
 <?php
 /**
  * ThemeIsle - About page class
+ * Modifications made by Pixelgrade
  *
  * Example of config array with all parameters ( This needs to be defined in the theme's functions.php:
  *
@@ -166,9 +167,8 @@
  *        );
  *        TI_About_Page::init( $config );
  *
- * @package Themeisle
- * @subpackage Admin
- * @since 1.0.0
+ * @package Noah Lite
+ * @since 1.0.4
  */
 if ( ! class_exists( 'TI_About_Page' ) ) {
 	/**
@@ -180,7 +180,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 		 *
 		 * @var string $version The TI_About_Page class version.
 		 */
-		private $version = '1.0.0';
+		private $version = '1.0.1';
 		/**
 		 * Used for loading the texts and setup the actions inside the page.
 		 *
