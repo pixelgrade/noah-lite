@@ -87,6 +87,8 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 			'caption',
 		) );
 
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
 		/**
 		 * Remove themes' post formats support
 		 */
@@ -98,7 +100,7 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 		 */
 		add_editor_style( array( noahlite_ek_mukta_font_url(), noahlite_josefin_sans_font_url(), 'editor-style.css' ) );
 
-	    add_theme_support('starter-content', [
+	    add_theme_support('starter-content', array(
 	    	// Starter content defined here
 	    	 'widgets' => array(
 		        'sidebar-1' => array(
@@ -109,19 +111,8 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 		        ),
 		    ),
 
-	    	// Static front page set to Home, posts page set to Blog
-	        'options' => [
-	            'show_on_front'  => 'page',
-	            'page_on_front'  => '{{portfolio}}',
-	            'page_for_posts' => '{{blog}}',
-	            'blogdescription' => ' ',
-
-	            // Not Currently Working
-	            'jetpack_portfolio' => 1,
-	        ],
-
 	    	// Starter pages to include
-	        'posts' => [
+	        'posts' => array(
 	            'home',
 		        'portfolio' => array(
 			            'post_type' => 'page',
@@ -153,14 +144,22 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 					'post_content' => 'Project Content',
 					'thumbnail' => '{{image-rowan}}',
 				),
-	        ],
+	        ),
+
+		    // Static front page set to Home, posts page set to Blog
+			'options' => array(
+				'show_on_front'  => 'page',
+				'page_on_front'  => '{{portfolio}}',
+				'page_for_posts' => '{{blog}}',
+				'blogdescription' => ' ',
+			),
 
 	        // Set Menu Items
     		'nav_menus' => array(
 				'primary-left' => array(
 					'name' => __( 'Left Menu', 'noah-lite' ),
 					'items' => array(
-						'page_works' => array(
+						'page_portfolio' => array(
 							'type' => 'post_type',
 							'object' => 'page',
 							'object_id' => '{{portfolio}}',
@@ -192,11 +191,30 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 					'file' => 'assets/images/rowan.jpg',
 				),
 			),
-	    ]);
+	    ) );
 
 	}
 } // noahlite_setup
 add_action( 'after_setup_theme', 'noahlite_setup' );
+
+/**
+ * Control the default modules that are activated in Jetpack.
+ * Use the `customify_filter_jetpack_default_modules` to set your's.
+ *
+ * @param array $default The default value to return if the option does not exist
+ *                        in the database.
+ *
+ * @return array
+ */
+function noahlite_default_jetpack_active_modules( $default ) {
+	if ( ! is_array( $default ) ) {
+		$default = array();
+	}
+
+	$default[] = 'custom-content-types';
+
+	return $default;
+}
 
 /**
  * Register widget area.
