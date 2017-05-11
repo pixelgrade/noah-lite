@@ -7,8 +7,11 @@
 	background-color: #fff;
 	background-image: url(../images/logo.png);
 	background-position: center center;
-	background-size: 70%;
+	background-size: 100%;
 	background-repeat: no-repeat;
+
+	padding-top: 100px;
+	    box-shadow: none;
 }
 
 /* proper positioning of the icons */
