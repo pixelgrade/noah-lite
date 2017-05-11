@@ -128,13 +128,7 @@ function noahlite_get_blog_class( $class = '' ) {
 	$classes[] = 'o-grid';
 	$classes[] = 'c-gallery  c-gallery--blog';
 	// layout
-	$grid_layout       = 'masonry';
-	$grid_layout_class = 'c-gallery--' . $grid_layout;
-	$classes[]         = $grid_layout_class;
-
-	if ( $grid_layout != 'regular' ) {
-		$classes[] = 'js-masonry';
-	}
+	$classes[] = 'c-gallery--masonry js-masonry';
 
 	// items per row
 	$columns        = 3;

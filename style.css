@@ -510,8 +510,8 @@ figure {
 .h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-btn, input[type="submit"],
 input[type="button"],
 button[type="submit"], .body .wpforms-container[class] .wpforms-submit,
-.body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous,
-.posts-navigation .nav-next, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
+.body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous a,
+.posts-navigation .nav-next a, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
   font-size: 13px; }
 
 .h3, .entry-content h3, .comment-content h3, .entry-footer h3, body #jp-relatedposts h3.jp-relatedposts-headline {
@@ -541,8 +541,8 @@ button[type="submit"], .body .wpforms-container[class] .wpforms-submit,
   .h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body .wpforms-container[class] .wpforms-submit,
-  .body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous,
-  .posts-navigation .nav-next, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
+  .body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous a,
+  .posts-navigation .nav-next a, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
     font-size: 12px; }
   .h3, .entry-content h3, .comment-content h3, .entry-footer h3, body #jp-relatedposts h3.jp-relatedposts-headline {
     font-size: 14px; }
@@ -567,8 +567,8 @@ button[type="submit"], .body .wpforms-container[class] .wpforms-submit,
   .h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body .wpforms-container[class] .wpforms-submit,
-  .body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous,
-  .posts-navigation .nav-next, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
+  .body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous a,
+  .posts-navigation .nav-next a, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
     font-size: 11px; }
   .h3, .entry-content h3, .comment-content h3, .entry-footer h3, body #jp-relatedposts h3.jp-relatedposts-headline {
     font-size: 13px; }
@@ -593,8 +593,8 @@ button[type="submit"], .body .wpforms-container[class] .wpforms-submit,
   .h4, .entry-content h4, .comment-content h4, .entry-footer h4, .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body .wpforms-container[class] .wpforms-submit,
-  .body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous,
-  .posts-navigation .nav-next, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
+  .body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous a,
+  .posts-navigation .nav-next a, .comment-author .fn, body #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
     font-size: 11px; }
   .h3, .entry-content h3, .comment-content h3, .entry-footer h3, body #jp-relatedposts h3.jp-relatedposts-headline {
     font-size: 12px; }
@@ -1850,8 +1850,8 @@ button[type="submit"], form .body .wpforms-container[class] .wpforms-submit, .bo
 .c-btn, input[type="submit"],
 input[type="button"],
 button[type="submit"], .body .wpforms-container[class] .wpforms-submit,
-.body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous,
-.posts-navigation .nav-next {
+.body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous a,
+.posts-navigation .nav-next a {
   font-family: "Josefin Sans", sans-serif; }
 
 html {
@@ -2381,8 +2381,8 @@ p .alignnone {
 .c-btn, input[type="submit"],
 input[type="button"],
 button[type="submit"], .body .wpforms-container[class] .wpforms-submit,
-.body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous,
-.posts-navigation .nav-next {
+.body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous a,
+.posts-navigation .nav-next a {
   letter-spacing: .154em;
   display: inline-block;
   /* [1] */
@@ -2401,17 +2401,17 @@ button[type="submit"], .body .wpforms-container[class] .wpforms-submit,
   .c-btn, input[type="submit"],
   input[type="button"],
   button[type="submit"], .body .wpforms-container[class] .wpforms-submit,
-  .body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous,
-  .posts-navigation .nav-next, .c-btn:hover, input[type="submit"]:hover,
+  .body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous a,
+  .posts-navigation .nav-next a, .c-btn:hover, input[type="submit"]:hover,
   input[type="button"]:hover,
-  button[type="submit"]:hover, .body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous:hover,
-  .posts-navigation .nav-next:hover, .c-btn:active, input[type="submit"]:active,
+  button[type="submit"]:hover, .body .wpforms-container[class] .wpforms-submit:hover, .posts-navigation .nav-previous a:hover,
+  .posts-navigation .nav-next a:hover, .c-btn:active, input[type="submit"]:active,
   input[type="button"]:active,
-  button[type="submit"]:active, .body .wpforms-container[class] .wpforms-submit:active, .posts-navigation .nav-previous:active,
-  .posts-navigation .nav-next:active, .c-btn:focus, input[type="submit"]:focus,
+  button[type="submit"]:active, .body .wpforms-container[class] .wpforms-submit:active, .posts-navigation .nav-previous a:active,
+  .posts-navigation .nav-next a:active, .c-btn:focus, input[type="submit"]:focus,
   input[type="button"]:focus,
-  button[type="submit"]:focus, .body .wpforms-container[class] .wpforms-submit:focus, .posts-navigation .nav-previous:focus,
-  .posts-navigation .nav-next:focus {
+  button[type="submit"]:focus, .body .wpforms-container[class] .wpforms-submit:focus, .posts-navigation .nav-previous a:focus,
+  .posts-navigation .nav-next a:focus {
     text-decoration: none;
     /* [4] */
     color: #FFFFFF; }
