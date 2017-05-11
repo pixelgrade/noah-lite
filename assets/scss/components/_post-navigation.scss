@@ -104,22 +104,22 @@
 
 .posts-navigation {
 
-    .nav-previous,
-    .nav-next {
+	.nav-previous,
+	.nav-next {
 
 		a {
-        	@extend .c-btn;
+			@extend .c-btn;
 		}
-    }
+	}
 
-    .nav-links {
+	.nav-links {
 
-        > :first-child {
-            margin-right: auto;
-        }
+		> :first-child {
+			margin-right: auto;
+		}
 
-        > :last-child {
-            margin-left: auto;
-        }
-    }
+		> :last-child {
+			margin-left: auto;
+		}
+	}
 }
