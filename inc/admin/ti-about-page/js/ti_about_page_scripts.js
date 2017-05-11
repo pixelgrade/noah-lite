@@ -35,8 +35,10 @@ jQuery(document).ready(function () {
     jQuery('.activate-now').live('DOMNodeInserted', function () {
         var activateButton = jQuery(this);
         if (activateButton.length) {
-            var url = jQuery(activateButton).attr('href');
-            if (typeof url !== 'undefined') {
+            var url = jQuery(activateButton).attr('href'),
+				redirect_url = jQuery(activateButton).data( 'redirect_url' );
+
+            if ( typeof url !== 'undefined' ) {
                 //Request plugin activation.
                 jQuery.ajax({
                     beforeSend: function () {
@@ -46,8 +48,13 @@ jQuery(document).ready(function () {
                     type: 'GET',
                     url: url,
                     success: function (data) {
-                        //Reload the page.
-                        location.reload();
+                    	if ( redirect_url ) {
+                    		// Redirect to the given url
+                    		location.replace( redirect_url );
+						} else {
+							//Reload the page.
+							location.reload();
+						}
                     }
                 });
             }

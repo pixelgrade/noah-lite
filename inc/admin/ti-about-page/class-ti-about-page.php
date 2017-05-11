@@ -702,6 +702,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 							$active = $this->check_if_plugin_active( $action_value['plugin_slug'] );
 							$url    = $this->create_action_link( $active['needs'], $action_value['plugin_slug'] );
 							$label  = '';
+							$redirect_url = '';
 
 							switch ( $active['needs'] ) {
 
@@ -710,11 +711,18 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 									if ( ! empty( $this->config['recommended_actions']['install_label'] ) ) {
 										$label = $this->config['recommended_actions']['install_label'];
 									}
+									if ( ! empty( $action_value['redirect_url'] ) ) {
+										$redirect_url = $action_value['redirect_url'];
+									}
+
 									break;
 								case 'activate':
 									$class = 'activate-now button button-primary';
 									if ( ! empty( $this->config['recommended_actions']['activate_label'] ) ) {
 										$label = $this->config['recommended_actions']['activate_label'];
+									}
+									if ( ! empty( $action_value['redirect_url'] ) ) {
+										$redirect_url = $action_value['redirect_url'];
 									}
 									break;
 								case 'deactivate':
@@ -729,6 +737,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 							<p class="plugin-card-<?php echo esc_attr( $action_value['plugin_slug'] ) ?> action_button <?php echo ( $active['needs'] !== 'install' && $active['status'] ) ? 'active' : '' ?>">
 								<a data-slug="<?php echo esc_attr( $action_value['plugin_slug'] ) ?>"
 								   class="<?php echo esc_attr( $class ); ?>"
+								   data-redirect_url="<?php echo esc_url( $redirect_url ); ?>"
 								   href="<?php echo esc_url( $url ) ?>"> <?php echo esc_html( $label ) ?> </a>
 							</p>
 
