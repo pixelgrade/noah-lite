@@ -388,7 +388,7 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 					echo '<div class="about-text">' . wp_kses_post( $welcome_content ) . '</div>';
 				}
 
-				echo '<a href="https://themeisle.com/" target="_blank" class="wp-badge epsilon-welcome-logo"></a>';
+				echo '<a href="https://pixelgrade.com/" target="_blank" class="wp-badge epsilon-welcome-logo"></a>';
 
 				/* Display tabs */
 				if ( ! empty( $this->tabs ) ) {
