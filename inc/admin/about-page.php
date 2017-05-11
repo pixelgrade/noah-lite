@@ -74,6 +74,7 @@ function noahlite_admin_setup() {
 				'text' => esc_html__( 'We have compiled a list of steps for you, to take make sure the experience you will have using one of our products is very easy to follow.','noah-lite' ),
 				'button_label' => esc_html__( 'Recommended actions','noah-lite' ),
 				'button_link' => esc_url( admin_url( 'themes.php?page=noah-lite-welcome&tab=recommended_actions' ) ),
+				'button_ok_label' => esc_html__( 'You are good to go!','noah-lite' ),
 				'is_button' => false,
 				'recommended_actions' => true,
 				'is_new_tab' => false

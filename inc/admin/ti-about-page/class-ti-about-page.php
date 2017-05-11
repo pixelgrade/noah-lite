@@ -612,19 +612,30 @@ if ( ! class_exists( 'TI_About_Page' ) ) {
 							if ( $getting_started_item['recommended_actions'] && isset( $count ) ) {
 								if ( $count == 0 ) {
 									echo '<span class="dashicons dashicons-yes"></span>';
+									echo '<span class="' . $button_class . '">' . $getting_started_item['button_ok_label'] . '</span>';
+
 								} else {
 									echo '<span class="dashicons dashicons-no-alt"></span>';
+									$button_new_tab = '_self';
+									if ( isset( $getting_started_item['is_new_tab'] ) ) {
+										if ( $getting_started_item['is_new_tab'] ) {
+											$button_new_tab = '_blank';
+										}
+									}
+
+									echo '<a target="' . $button_new_tab . '" href="' . $getting_started_item['button_link'] . '"class="' . $button_class . '">' . $getting_started_item['button_label'] . '</a>';
 								}
+							} else {
+								$button_new_tab = '_self';
+								if ( isset( $getting_started_item['is_new_tab'] ) ) {
+									if ( $getting_started_item['is_new_tab'] ) {
+										$button_new_tab = '_blank';
+									}
+								}
+
+								echo '<a target="' . $button_new_tab . '" href="' . $getting_started_item['button_link'] . '"class="' . $button_class . '">' . $getting_started_item['button_label'] . '</a>';
 							}
 
-                            $button_new_tab = '_self';
-                            if ( isset( $getting_started_item['is_new_tab'] ) ) {
-                                if ( $getting_started_item['is_new_tab'] ) {
-                                    $button_new_tab = '_blank';
-                                }
-                            }
-
-							echo '<a target="' . $button_new_tab . '" href="' . $getting_started_item['button_link'] . '"class="' . $button_class . '">' . $getting_started_item['button_label'] . '</a>';
 							echo '</p>';
 						}
 
