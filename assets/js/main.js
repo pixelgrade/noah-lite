@@ -507,20 +507,24 @@ Noah.handleContent = function( $container ) {
 	Noah.eventHandlers( $container );
 	Noah.adjustLayout();
 
+	var $masonry = $( '.js-masonry' ).masonry();
+
+	$masonry.imagesLoaded().progress( function() {
+		$masonry.masonry( 'layout' );
+	} );
+
 	if ( $container.hasClass( 'infinite-scroll' ) ) {
-		var $masonryContainer = $( '.js-masonry' );
-		$masonryContainer.children().addClass('is--loaded');
+		$masonry.children().addClass('is--loaded');
 
 		// Handle behavior for infinite scroll
 		$( document.body ).on( 'post-load', function () {
-			var $masonryContainer = $( '.js-masonry' );
 
 			// Figure out which are the new loaded posts
-			var $newBlocks = $masonryContainer.children().not( '.is--loaded' ).not( '.infinite-loader' );
+			var $newBlocks = $masonry.children().not( '.is--loaded' ).not( '.infinite-loader' );
 
 			// When images have loaded take care of the layout, prepare hover animations, and animate cards in
 			$newBlocks.imagesLoaded( function () {
-				$masonryContainer.masonry( 'appended', $newBlocks, true ).masonry( 'layout' );
+				$masonry.masonry( 'appended', $newBlocks, true ).masonry( 'layout' );
 				$newBlocks.addClass( 'is--loaded' );
 			});
 		});
