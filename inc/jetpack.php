@@ -44,7 +44,7 @@ function noahlite_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'noahlite_jetpack_setup', 30 );
+add_action( 'after_setup_theme', 'noahlite_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
@@ -80,3 +80,17 @@ add_filter( 'theme_page_templates', 'noahlite_filter_theme_page_templates', 20, 
 
 // Disable Jetpack Carousel for single images
 add_filter( 'jp_carousel_maybe_disable_single_images', '__return_true' );
+
+function noahlite_jetpack_setup_options () {
+	// We want to make sure that the Jetpack Portfolio CPT is active
+	// So we make sure that the custom content types module is active and the jetpack_portfolio option is 1
+	$jetpack_active_modules = get_option( 'jetpack_active_modules' );
+	if ( empty( $jetpack_active_modules ) ) {
+		update_option( 'jetpack_active_modules', array( 'custom-content-types' ) );
+	} else {
+		update_option( 'jetpack_active_modules', array_unique( array_merge( $jetpack_active_modules, array( 'custom-content-types' ) ) ) );
+	}
+
+	update_option( 'jetpack_portfolio', 1 );
+}
+add_action('after_switch_theme', 'noahlite_jetpack_setup_options');
