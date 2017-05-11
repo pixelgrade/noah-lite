@@ -106,7 +106,10 @@
 
     .nav-previous,
     .nav-next {
-        @extend .c-btn;
+
+		a {
+        	@extend .c-btn;
+		}
     }
 
     .nav-links {
