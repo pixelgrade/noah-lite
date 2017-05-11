@@ -209,7 +209,7 @@ function noahlite_admin_setup() {
 			'content'            => array(
 				'jetpack' => array(
 					'title'       => 'Jetpack',
-					'description' => __( 'It is highly recommended that you install Jetpack so you can use the Portfolio post type. Plus, Jetpack provides a whole host of other useful things for you site.', 'noah-lite' ),
+					'description' => __( 'It is highly recommended that you install Jetpack so you can enable the <b>Portfolio</b> content type for adding and managing your projects. Plus, Jetpack provides a whole host of other useful things for you site.', 'noah-lite' ),
 					'check'       => defined( 'JETPACK__VERSION' ),
 					'plugin_slug' => 'jetpack',
 					'id' => 'jetpack',
