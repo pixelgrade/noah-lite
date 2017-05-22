@@ -475,7 +475,7 @@ Noah.adjustLayout = function() {
 			heroHeight = $hero.css( 'minHeight', '' ).css( 'height' );
 
 		$hero.css( 'minHeight', heroHeight );
-	});
+	} );
 
 	// use header height as spacing measure for specific elements
 	var $updatable = $( '.js-header-height-padding-top' ),
@@ -541,12 +541,12 @@ Noah.handleImages = function( $container ) {
 		} );
 	} );
 
-	$container.find('.gallery').each(function( i, obj ) {
+	$container.find( '.gallery' ).each( function( i, obj ) {
 		var $each = $( obj );
 		$each.wrap( '<div class="c-slideshow">' );
 		$each.wrap( '<div class="u-full-width u-container-sides-spacings">' );
 		$each.wrap( '<div class="o-wrapper u-container-width">' );
-	});
+	} );
 
 	$container.find( '.js-taxonomy-dropdown' ).resizeselect();
 
@@ -581,12 +581,14 @@ Noah.eventHandlers = function( $container ) {
 
 Noah.init();
 
-$(document).ready(function() {
+$( document ).ready( function() {
+	Noah.initializeAjax();
 	Noah.handleContent();
 	Noah.adjustLayout();
 	Noah.eventHandlers();
 	Noah.update();
-});
+	Noah.fadeIn();
+} );
 
 })( jQuery, window, document );
 
