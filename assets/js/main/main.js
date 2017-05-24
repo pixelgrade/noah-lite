@@ -149,10 +149,8 @@ Noah.eventHandlers = function( $container ) {
 Noah.init();
 
 $( document ).ready( function() {
-	Noah.initializeAjax();
 	Noah.handleContent();
 	Noah.adjustLayout();
 	Noah.eventHandlers();
 	Noah.update();
-	Noah.fadeIn();
 } );
