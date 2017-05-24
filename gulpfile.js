@@ -72,7 +72,7 @@ gulp.task( 'typeline-config', 'Create SCSS typeline config from json', function(
 	           } ) );
 } );
 
-gulp.task( 'css', 'Compiles main css files (ie. style.css editor-style.css)', function() {
+gulp.task( 'css', 'Compiles main css files (ie. style.css editor-style.css)', ['styles-admin'], function() {
 
 	return gulp.src( 'assets/scss/*.scss' )
 	           .pipe( sourcemaps.init() )
@@ -80,6 +80,13 @@ gulp.task( 'css', 'Compiles main css files (ie. style.css editor-style.css)', fu
 	           .pipe( prefix() )
 	           .pipe( sourcemaps.write() )
 	           .pipe( gulp.dest( '.' ) );
+} );
+
+gulp.task( 'styles-admin', 'Generate rtl.css file based on style.css', function() {
+	return gulp.src( 'assets/scss/admin/*.scss' )
+	           .pipe( sass().on( 'error', logError ) )
+	           .pipe( prefix() )
+	           .pipe( gulp.dest( './assets/css/admin' ) );
 } );
 
 gulp.task( 'styles', 'Generate rtl.css file based on style.css', ['css'], function() {
@@ -112,6 +119,10 @@ gulp.task( 'styles-components', 'Compiles Sass and uses autoprefixer', function(
 	           } ) )
 	           .pipe( gulp.dest( './components' ) );
 } );
+
+gulp.task( 'compile', 'Runs all compilation tasks in sequence', function( cb ) {
+	sequence( 'typeline-config', 'styles-components', 'styles', 'scripts', cb );
+});
 
 // -----------------------------------------------------------------------------
 // Combine JavaScript files
@@ -192,20 +203,9 @@ gulp.task( 'copy-folder', 'Copy theme production files to a build folder', funct
 } );
 
 /**
- * Replace strings in components to match the theme's - like textdomain, styles prefix, etc
- */
-gulp.task( 'string-replace', ['copy-folder'], function() {
-	return gulp.src( '../build/' + theme + '/components/**/*.php' )
-	           .pipe( replace( /['|"]components['|"]/g, '\'' + theme_txtdomain + '\'' ) ) // the text domain
-	           .pipe( replace( /style\( ?'pixelgrade/g, 'style\( \'' + theme ) ) //the style registering and enqueue
-	           .pipe( replace( /script\( ?'pixelgrade/g, 'script\( \'' + theme ) ) //the script registering and enqueue
-	           .pipe( gulp.dest( '../build/' + theme + '/components' ) );
-} );
-
-/**
  * Remove unneeded files and folders from the build folder
  */
-gulp.task( 'build', 'Remove unneeded files and folders from the build folder', ['string-replace'], function() {
+gulp.task( 'build', 'Remove unneeded files and folders from the build folder', ['copy-folder'], function() {
 
     // files that should not be present in build
     files_to_remove = [
