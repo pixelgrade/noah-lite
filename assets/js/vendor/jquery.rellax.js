@@ -1,5 +1,5 @@
 /*!
- * jQuery Rellax Plugin v0.3.6.1
+ * jQuery Rellax Plugin v0.3.6.2
  * Examples and documentation at http://pixelgrade.github.io/rellax/
  * Copyright (c) 2016 PixelGrade http://www.pixelgrade.com
  * Licensed under MIT http://www.opensource.org/licenses/mit-license.php/
@@ -229,7 +229,6 @@
 			$( window ).trigger( 'rellax:restart' );
 		}
 
-		var restart = debounce(badRestart, 300);
 
 		function debounce(func, wait, immediate) {
 			var timeout;
@@ -247,14 +246,13 @@
 		}
 
 		function bindEvents() {
+			var restart = debounce( badRestart, 300, true );
 
-			$window.load(function() {
-				render();
-			});
+			$( document ).ready( render );
 
 			$window.on( 'scroll', function() {
 				if ( frameRendered === true ) {
-					lastScrollY = (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0);
+					lastScrollY = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0);
 				}
 				frameRendered = false;
 			});
