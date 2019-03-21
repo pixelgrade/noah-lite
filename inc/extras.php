@@ -22,7 +22,7 @@ function noahlite_body_classes( $classes ) {
 	$classes[] = 'u-static-header';
 
 	$classes[] = 'u-full-width-header';
-	
+
 	$classes[] = 'u-footer-layout-stacked';
 
 	if ( is_singular( 'jetpack-portfolio' ) ) {
@@ -663,3 +663,24 @@ function noahlite_get_css_class( $class = '', $prefix = '', $suffix = '' ) {
 
 	return array_unique( $classes );
 }
+
+/**
+ * Handle the WUpdates theme identification.
+ *
+ * @param array $ids
+ *
+ * @return array
+ */
+function noah_wupdates_add_id_wporg( $ids = array() ) {
+
+	// First get the theme directory name (unique)
+	$slug = basename( get_template_directory() );
+
+	// Now add the predefined details about this product
+	// Do not tamper with these please!!!
+	$ids[ $slug ] = array( 'name' => 'Noah Lite', 'slug' => 'noah-lite', 'id' => 'JyzqR', 'type' => 'theme_wporg', 'digest' => '0174444c6d01e8f901c95d3e9221d997', );
+
+	return $ids;
+}
+// The 5 priority is intentional to allow for pro to overwrite.
+add_filter( 'wupdates_gather_ids', 'noah_wupdates_add_id_wporg', 5, 1 );
