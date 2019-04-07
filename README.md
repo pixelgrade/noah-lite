@@ -18,9 +18,12 @@ Noah Lite includes support for Infinite Scroll and Portfolio from [Jetpack](http
 
 ## Changelog
 
+= 1.1.0 =
+* Improved the overall onboarding experience with the theme and introduced a dedicated help tool.
+
 ## Copyright
 
-Noah Lite WordPress Theme, (C) 2017-2018 Pixelgrade.com
+Noah Lite WordPress Theme, (C) 2017-2019 Pixelgrade.com
 
 Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 

@@ -1,10 +1,14 @@
-=== NOAH LITE ===
-Contributors: pixelgrade, babbardel, cristianfrumusanu, vladolaru, razvanonofrei
-Requires at least: WordPress 4.7
-Tested up to: WordPress 4.7
-License: GPLv2 or later
+Theme Name: Noah Lite
+Theme URI: https://pixelgrade.com/themes/noah-lite/
+Author: Pixelgrade
+Author URI: https://pixelgrade.com
+Description: A bold entrance in the challenging digital playground. A photography WordPress theme that creates momentum through witty animations that introduce you in your own journey.
+Version: 1.1.0
+License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: portfolio, photography, translation-ready, theme-options, footer-widgets, featured-images, custom-menu, custom-colors, custom-background, grid-layout, two-columns, three-columns, four-columns, blog
+Requires at least: 4.9.9
+Tested up to: 5.1.1
+Tags: portfolio, photography, blog, translation-ready, theme-options, footer-widgets, featured-images, custom-menu, custom-logo, custom-colors, custom-background, grid-layout, two-columns, three-columns, four-columns, editor-style, sticky-post, rtl-language-support
 
 == Description ==
 
@@ -24,12 +28,15 @@ Noah Lite includes support for Infinite Scroll and Portfolio from [Jetpack](http
 
 == Changelog ==
 
-= 1.0 - May 1st 2017 =
+= 1.1.0 =
+* Improved the overall onboarding experience with the theme and introduced a dedicated help tool.
+
+= 1.0.0 =
 * Initial release
 
 == Copyright ==
 
-Noah Lite WordPress Theme, (C) 2017 Pixelgrade.com
+Noah Lite WordPress Theme, (C) 2017-2019 Pixelgrade.com
 
 Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 
@@ -92,5 +99,3 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: https://unsplash.com/photos/E8aZ2aIrFrc
 
 Images used throughout the theme demo (not bundled with the theme): [Julia Chernih](https://www.behance.net/JuliaChe), [Georgi Andinov](http://www.andinov.com/), [Diliana Florentin](https://www.behance.net/dilianaflorentin), [Philipp Jelenska](http://philippjelenska.com/).
-
-Theme About Page functionality based on class developed by [ThemeIsle](https://themeisle.com/).

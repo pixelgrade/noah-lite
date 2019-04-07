@@ -244,7 +244,6 @@ add_action( 'widgets_init', 'noahlite_widgets_init' );
 function noahlite_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'noahlite_content_width', 1280, 0 );
 }
-
 add_action( 'after_setup_theme', 'noahlite_content_width', 0 );
 
 
@@ -271,6 +270,7 @@ function noahlite_load_assets() {
 	$main_style_deps[] = 'noah-lite-fonts-ek-mukta';
 
 	wp_enqueue_style( 'noah-lite-style', get_stylesheet_uri(), $main_style_deps, $theme->get( 'Version' ) );
+	wp_style_add_data( 'noah-lite-style', 'rtl', 'replace' );
 
 	/*
 	 * NOW THE SCRIPTS
@@ -296,6 +296,11 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
+ * Load the required plugins (TGMPA) logic.
+ */
+require get_template_directory() . '/inc/required-plugins.php';
+
+/**
  * Load Jetpack compatibility file.
  * http://jetpack.me/
  */
@@ -307,6 +312,6 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Theme About page.
+ * Admin dashboard logic.
  */
-require get_template_directory() . '/inc/admin/about-page.php';
+require get_template_directory() . '/inc/admin/admin.php';

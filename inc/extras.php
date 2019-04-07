@@ -672,13 +672,12 @@ function noahlite_get_css_class( $class = '', $prefix = '', $suffix = '' ) {
  * @return array
  */
 function noah_wupdates_add_id_wporg( $ids = array() ) {
-
 	// First get the theme directory name (unique)
 	$slug = basename( get_template_directory() );
 
 	// Now add the predefined details about this product
 	// Do not tamper with these please!!!
-	$ids[ $slug ] = array( 'name' => 'Noah Lite', 'slug' => 'noah-lite', 'id' => 'JyzqR', 'type' => 'theme_wporg', 'digest' => '0174444c6d01e8f901c95d3e9221d997', );
+	$ids[ $slug ] = array( 'name' => 'Noah', 'slug' => 'noah', 'id' => 'JyzqR', 'type' => 'theme_wporg', 'digest' => '51770ae31d616ce89ce3212be4bdcd5e', );
 
 	return $ids;
 }
