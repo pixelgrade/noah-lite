@@ -32,7 +32,7 @@ function noahlite_customize_register( $wp_customize ) {
 
 
 	// View PRO Version
-	$wp_customize->add_section( 'noahlite_style_view_pro', array(
+	$wp_customize->add_section( 'pro__section', array(
 		'title'       => '' . esc_html__( 'View PRO Version', 'noah-lite' ),
 		'priority'    => 2,
 		'description' => sprintf(
@@ -75,7 +75,7 @@ function noahlite_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'noahlite_sanitize_checkbox',
 	) );
 	$wp_customize->add_control( 'noahlite_style_view_pro_desc', array(
-		'section' => 'noahlite_style_view_pro',
+		'section' => 'pro__section',
 		'type'    => 'hidden',
 	) );
 
@@ -219,13 +219,7 @@ function noahlite_customize_partial_blogdescription() {
 }
 
 function noahlite_customize_preview_js() {
-	/**
-	 * Get theme details inside `$theme` object and later use it for cache busting
-	 * with `$theme->get( 'Version' )` method
-	 */
-	$theme = wp_get_theme();
-
-	wp_enqueue_script( 'noah-lite-customize-preview', get_template_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), $theme->get( 'Version' ), true );
+	wp_enqueue_script( 'noah-lite-customize-preview', get_template_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), '1.1.1', true );
 }
 add_action( 'customize_preview_init', 'noahlite_customize_preview_js' );
 
@@ -233,7 +227,7 @@ add_action( 'customize_preview_init', 'noahlite_customize_preview_js' );
  * Assets that will be loaded for the customizer sidebar
  */
 function noahlite_customizer_assets() {
-	wp_enqueue_style( 'noahlite_customizer_style', get_template_directory_uri() . '/assets/css/admin/customizer.css', null, '1.0.4', false );
+	wp_enqueue_style( 'noahlite_customizer_style', get_template_directory_uri() . '/inc/admin/css/customizer.css', array(), '1.1.1', false );
 }
 add_action( 'customize_controls_enqueue_scripts', 'noahlite_customizer_assets' );
 
@@ -243,3 +237,12 @@ add_action( 'customize_controls_enqueue_scripts', 'noahlite_customizer_assets' )
 function noahlite_get_pro_link() {
 	return 'https://pixelgrade.com/themes/noah-lite?utm_source=noah-lite-clients&utm_medium=customizer&utm_campaign=noah-lite#pro';
 }
+
+function noahlite_add_customify_options( $config ) {
+
+	$config['sections'] = array();
+	$config['panels']   = array();
+
+	return $config;
+}
+add_filter( 'customify_filter_fields', 'noahlite_add_customify_options' );

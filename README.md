@@ -18,6 +18,9 @@ Noah Lite includes support for Infinite Scroll and Portfolio from [Jetpack](http
 
 ## Changelog
 
+= 1.1.1 =
+* Minor styling and logic fixes in the Customizer.
+
 = 1.1.0 =
 * Improved the overall onboarding experience with the theme and introduced a dedicated help tool.
 
