@@ -27,6 +27,7 @@ if ( post_password_required() ) {
 	<div id="comments" class="comments-area">
 		<?php
 		$req 			= get_option( 'require_name_email' );
+		/* translators: %s: The required asterix. */
 		$required_text 	= sprintf( ' ' . esc_html__('Required fields are marked %s', 'noah-lite' ), '<span class="required">*</span>' );
 		$aria_req 		= ( $req ? " aria-required='true'" : '' );
 		$html_req 		= ( $req ? " required='required'" : '' );
@@ -44,8 +45,9 @@ if ( post_password_required() ) {
 			<h2 class="comments-title">
 				<span class="c-btn fs-18 _display-block">
 				<?php
-				printf( esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'noah-lite' ) ),
-					esc_html( number_format_i18n( get_comments_number() ) ), get_the_title() );
+				/* translators: %1$s: The post title, %2$s: The number of comments.  */
+				printf( esc_html( _nx( 'One thought on &ldquo;%1$s&rdquo;', '%2$s thoughts on &ldquo;%1$s&rdquo;', get_comments_number(), 'comments title', 'noah-lite' ) ),
+					get_the_title(), esc_html( number_format_i18n( get_comments_number() ) ) );
 				?>
 				</span>
 			</h2>

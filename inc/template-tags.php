@@ -454,6 +454,7 @@ function noahlite_get_the_author_info_box() {
 	$author_details .= '<span class="c-author__name h2">' . get_the_author() . '</span>' . PHP_EOL;
 	$author_details .= '<p class="c-author__description" itemprop="description">' . get_the_author_meta( 'description' ) . '</p>' . PHP_EOL;
 	$author_details .= '<div class="o-inline o-inline-xs h7">' .PHP_EOL;
+	/* translators: %s: The author name. */
 	$author_details .= '<a class="_color-inherit" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author" title="' . esc_attr( sprintf( __( 'View all posts by %s', 'noah-lite' ), get_the_author() ) ) . '">' . esc_html__( 'All posts', 'noah-lite' ) . '</a>' . PHP_EOL;
 	$author_details .= noahlite_get_author_bio_links();
 

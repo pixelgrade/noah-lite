@@ -70,13 +70,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 				$comments_number = get_comments_number(); // get_comments_number returns only a numeric value
 				if ( comments_open() ) {
 					if ( $comments_number == 0 ) {
-						$comments = esc_html__( 'No Comments', 'noah-lite' );
+						$comments_string = esc_html__( 'No Comments', 'noah-lite' );
 					} elseif ( $comments_number > 1 ) {
-						$comments = $comments_number . ' ' . esc_html__( 'Comments', 'noah-lite' );
+						$comments_string = $comments_number . ' ' . esc_html__( 'Comments', 'noah-lite' );
 					} else {
-						$comments = esc_html__( '1 Comment', 'noah-lite' );
+						$comments_string = esc_html__( '1 Comment', 'noah-lite' );
 					}
-					$meta['comments'] = '<a href="' . esc_url( get_comments_link() ) . '">' . $comments . '</a>';
+					$meta['comments'] = '<a href="' . esc_url( get_comments_link() ) . '">' . $comments_string . '</a>';
 				} else {
 					$meta['comments'] = '';
 				}

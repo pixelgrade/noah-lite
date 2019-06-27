@@ -19,7 +19,9 @@ get_header(); ?>
 
 			<div class="c-page-header">
 				<h1 class="c-page-header__title h1">
-					<?php printf( esc_html__( 'Search results for: %s', 'noah-lite' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?>
+					<?php
+					/* translators: %s: The search query. */
+					printf( esc_html__( 'Search results for: %s', 'noah-lite' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?>
 				</h1>
 			</div>
 

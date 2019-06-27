@@ -62,15 +62,15 @@ get_header(); ?>
 
 	                    // in case this is a static front page
 	                    if ( get_query_var('page') ) {
-		                    $paged = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
+		                    $current_page = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
 	                    } else {
-		                    $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+		                    $current_page = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 	                    }
 
 	                    $projects = new WP_Query( array(
 		                    'post_type' => 'jetpack-portfolio',
 		                    'posts_per_page' => get_option( Jetpack_Portfolio::OPTION_READING_SETTING, '10' ),
-		                    'paged' => $paged,
+		                    'paged' => $current_page,
 	                    ) );
 
 	                    if ( $projects->have_posts() ) : ?>

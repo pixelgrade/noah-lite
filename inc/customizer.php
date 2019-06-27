@@ -36,6 +36,7 @@ function noahlite_customize_register( $wp_customize ) {
 		'title'       => '' . esc_html__( 'View PRO Version', 'noah-lite' ),
 		'priority'    => 2,
 		'description' => sprintf(
+			/* translators: %s: The view pro link. */
 			__( '<div class="upsell-container">
 					<h2>Need More? Go PRO</h2>
 					<p>Take it to the next level. See the features below:</p>
