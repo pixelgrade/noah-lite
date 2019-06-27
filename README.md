@@ -2,7 +2,7 @@
 
 ## Description
 
-A bold entrance in the challenging digital playground. A photography WordPress theme that creates momentum through witty animations that introduce you in your own journey.
+A bold entrance in the challenging digital playground. A photography WordPress theme that creates momentum through witty animations that introduce you in your own journey. Noah Like is based on a experience that is beautifully crafted with subtle effects and unique transitions aimed at engaging the viewer in a unique way. Noah Lite is an experiment that goes beyond what'a ordinary and familiar.
 
 ## Installation
 
