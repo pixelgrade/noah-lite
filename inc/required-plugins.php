@@ -31,7 +31,7 @@ function noah_lite_register_required_plugins() {
 		'is_automatic'     => false, // Automatically activate plugins after installation or not
 		'message'          => '', // Message to output right before the plugins table
 		'strings'          => array(
-			'page_title'                      => esc_html__( 'Install Required Plugins', '__theme_txtd' ),
+			'page_title'                      => esc_html__( 'Install Recommended Plugins', '__theme_txtd' ),
 			'menu_title'                      => esc_html__( 'Install Plugins', '__theme_txtd' ),
 			/* translators: %1$s: plugin name */
 			'installing'                      => esc_html__( 'Installing Plugin: %s', '__theme_txtd' ),
@@ -54,7 +54,7 @@ function noah_lite_register_required_plugins() {
 			'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', '__theme_txtd' ),
 			'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins', '__theme_txtd' ),
 			'activate_link'                   => _n_noop( 'Activate installed plugin', 'Activate installed plugins', '__theme_txtd' ),
-			'return'                          => esc_html__( 'Return to Required Plugins Installer', '__theme_txtd' ),
+			'return'                          => esc_html__( 'Return to Recommened Plugins Installer', '__theme_txtd' ),
 			'plugin_activated'                => esc_html__( 'Plugin activated successfully.', '__theme_txtd' ),
 			/* translators: %1$s: dashboard link */
 			'complete'                        => esc_html__( 'All plugins installed and activated successfully. %s', '__theme_txtd' )
