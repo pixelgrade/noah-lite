@@ -5,6 +5,11 @@
  * @package Noah Lite
  * @since   Noah Lite 1.0.0
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class() ?>>

@@ -8,6 +8,10 @@
  * @since   Noah Lite 1.0.0
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 get_header(); ?>
 
 	<div id="primary" class="content-area  u-blog_sides_spacing">
@@ -15,7 +19,7 @@ get_header(); ?>
 
 			<div class="c-page-header">
 				<h1 class="c-page-header__title h1">
-					<?php printf( __( 'Search results for: %s', 'noah-lite' ), '<span>' . get_search_query() . '</span>' ); ?>
+					<?php printf( esc_html__( 'Search results for: %s', 'noah-lite' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?>
 				</h1>
 			</div>
 

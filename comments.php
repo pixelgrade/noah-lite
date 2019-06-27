@@ -10,6 +10,10 @@
  * @since   Noah 1.0
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 /*
  * If the current post is protected by a password and
  * the visitor has not yet entered the password we will
@@ -40,8 +44,8 @@ if ( post_password_required() ) {
 			<h2 class="comments-title">
 				<span class="c-btn fs-18 _display-block">
 				<?php
-				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'noah-lite' ),
-					number_format_i18n( get_comments_number() ), get_the_title() );
+				printf( esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'noah-lite' ) ),
+					esc_html( number_format_i18n( get_comments_number() ) ), get_the_title() );
 				?>
 				</span>
 			</h2>
@@ -63,7 +67,7 @@ if ( post_password_required() ) {
 		<?php
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-			<div class="c-btn fs-18 _display-block"><?php _e( 'Comments are closed', 'noah-lite' ); ?></div>
+			<div class="c-btn fs-18 _display-block"><?php esc_html_e( 'Comments are closed', 'noah-lite' ); ?></div>
 		<?php endif; ?>
 
 		<?php
@@ -82,7 +86,7 @@ if ( post_password_required() ) {
 			'title_reply_before'   	=> '<h3 class="h4 comment-reply-title" id="reply-title">',
 			'title_reply_after'    	=> '</h3>',
 			'title_reply'          	=> esc_html__( 'Leave a Comment', 'noah-lite' ),
-			'comment_field'        	=> '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun', 'noah-lite' ) . '</label> <textarea placeholder="' . esc_attr__( 'Your message', 'noah-lite' ) . '" id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p>',
+			'comment_field'        	=> '<p class="comment-form-comment"><label for="comment">' . esc_html_x( 'Comment', 'noun', 'noah-lite' ) . '</label> <textarea placeholder="' . esc_attr__( 'Your message', 'noah-lite' ) . '" id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p>',
 			'comment_notes_before'  => '',
 			'comment_notes_after'  	=> '<p class="comment-notes"><span id="email-notes">' . esc_html__( 'Your email address will not be published.', 'noah-lite' ) . '</span>'. ( $req ? $required_text : '' ) . '</p>',
 		);

@@ -7,9 +7,13 @@
  * @since 1.1.1
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 ?>
 <div class="site-info">
 	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'noah-lite' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'noah-lite' ), 'WordPress' ); ?></a>
 	<span class="sep"> | </span>
-	<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'noah-lite' ), 'Noah Lite', '<a href="https://pixelgrade.com/" rel="designer">Pixelgrade</a>' ); ?>
+	<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'noah-lite' ), 'Noah Lite', '<a href="https://pixelgrade.com/?utm_source=noah-lite-clients&utm_medium=footer&utm_campaign=noah-lite" title="' . esc_html__( 'The Pixelgrade Website', 'noah-lite' ) . '" rel="nofollow">Pixelgrade</a>' ); ?>
 </div><!-- .site-info -->

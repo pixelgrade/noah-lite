@@ -5,6 +5,11 @@
  * @package Noah Lite
  * @since   Noah Lite 1.0.0
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -65,11 +70,11 @@
 				$comments_number = get_comments_number(); // get_comments_number returns only a numeric value
 				if ( comments_open() ) {
 					if ( $comments_number == 0 ) {
-						$comments = __( 'No Comments', 'noah-lite' );
+						$comments = esc_html__( 'No Comments', 'noah-lite' );
 					} elseif ( $comments_number > 1 ) {
-						$comments = $comments_number . ' ' . __( 'Comments', 'noah-lite' );
+						$comments = $comments_number . ' ' . esc_html__( 'Comments', 'noah-lite' );
 					} else {
-						$comments = __( '1 Comment', 'noah-lite' );
+						$comments = esc_html__( '1 Comment', 'noah-lite' );
 					}
 					$meta['comments'] = '<a href="' . esc_url( get_comments_link() ) . '">' . $comments . '</a>';
 				} else {

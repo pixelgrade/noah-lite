@@ -13,6 +13,10 @@
  * @since   Noah Lite 1.0.0
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 get_header(); ?>
 
 	<div id="primary" class="content-area  u-blog_sides_spacing">
@@ -29,7 +33,7 @@ get_header(); ?>
 						} ?>
 					</h1>
 					<div class="c-page-header__meta h7">
-						<span><?php _e( 'Show', 'noah-lite' ); ?></span>
+						<span><?php esc_html_e( 'Show', 'noah-lite' ); ?></span>
 						<span class="c-page-header__taxonomy  u-color-accent"><?php noahlite_the_taxonomy_dropdown( 'category' ); ?></span>
 					</div>
 					<?php if ( term_description() ) {

@@ -48,7 +48,7 @@ add_filter( 'body_class', 'noahlite_body_classes', 10, 1 );
  */
 function noahlite_portfolio_class( $class = '' ) {
 	// Separates classes with a single space, collates classes
-	echo 'class="' . join( ' ', noahlite_get_portfolio_class( $class ) ) . '"';
+	echo 'class="' . esc_attr( join( ' ', noahlite_get_portfolio_class( $class ) ) ) . '"';
 }
 
 /**
@@ -111,7 +111,7 @@ function noahlite_get_portfolio_class( $class = '' ) {
  */
 function noahlite_blog_class( $class = '' ) {
 	// Separates classes with a single space, collates classes
-	echo 'class="' . join( ' ', noahlite_get_blog_class( $class ) ) . '"';
+	echo 'class="' . esc_attr( join( ' ', noahlite_get_blog_class( $class ) ) ) . '"';
 }
 
 /**
@@ -369,8 +369,8 @@ add_filter( 'get_default_comment_status', 'noahlite_close_comments_for_projects'
  * @return string The full link URL for the given page number.
  */
 function noahlite_paginate_url( $url, $pagenum = 1, $escape = true, $query = null ) {
-	global /** @var WP_Rewrite $wp_rewrite */
-	$wp_rewrite;
+	/** @var WP_Rewrite $wp_rewrite */
+	global $wp_rewrite;
 
 	if ( empty( $query ) ) {
 		global $wp_query;
@@ -449,9 +449,9 @@ add_filter( 'mce_buttons_2', 'noahlite_mce_buttons' );
 function noahlite_mce_before_init( $settings ) {
 
 	$style_formats = array(
-		array( 'title' => __( 'Intro', 'noah-lite' ), 'selector' => 'p', 'classes' => 'intro' ),
-		array( 'title' => __( 'Dropcap', 'noah-lite' ), 'inline' => 'span', 'classes' => 'dropcap' ),
-		array( 'title' => __( 'Display', 'noah-lite' ), 'inline' => 'span', 'classes' => 'h0' )
+		array( 'title' => esc_html__( 'Intro', 'noah-lite' ), 'selector' => 'p', 'classes' => 'intro' ),
+		array( 'title' => esc_html__( 'Dropcap', 'noah-lite' ), 'inline' => 'span', 'classes' => 'dropcap' ),
+		array( 'title' => esc_html__( 'Display', 'noah-lite' ), 'inline' => 'span', 'classes' => 'h0' )
 	);
 
 	$settings['style_formats'] = json_encode( $style_formats );
@@ -593,16 +593,6 @@ function noahlite_custom_archive_title( $title ) {
 add_filter( 'get_the_archive_title', 'noahlite_custom_archive_title', 11 );
 
 /**
- * Add a pingback url auto-discovery header for singularly identifiable articles.
- */
-function noahlite_pingback_header() {
-	if ( is_singular() && pings_open() ) {
-		printf( '<link rel="pingback" href="%s">' . "\n", get_bloginfo( 'pingback_url' ) );
-	}
-}
-add_action( 'wp_head', 'noahlite_pingback_header' );
-
-/**
  * Display the classes for a element.
  *
  * @param string|array $class Optional. One or more classes to add to the class list.
@@ -611,7 +601,7 @@ add_action( 'wp_head', 'noahlite_pingback_header' );
  */
 function noahlite_css_class( $class = '', $prefix = '', $suffix = '' ) {
 	// Separates classes with a single space, collates classes for element
-	echo 'class="' . join( ' ', noahlite_get_css_class( $class ) ) . '"';
+	echo 'class="' . esc_attr( join( ' ', noahlite_get_css_class( $class ) ) ) . '"';
 }
 
 /**
@@ -663,23 +653,3 @@ function noahlite_get_css_class( $class = '', $prefix = '', $suffix = '' ) {
 
 	return array_unique( $classes );
 }
-
-/**
- * Handle the WUpdates theme identification.
- *
- * @param array $ids
- *
- * @return array
- */
-function noah_wupdates_add_id_wporg( $ids = array() ) {
-	// First get the theme directory name (unique)
-	$slug = basename( get_template_directory() );
-
-	// Now add the predefined details about this product
-	// Do not tamper with these please!!!
-	$ids[ $slug ] = array( 'name' => 'Noah', 'slug' => 'noah', 'id' => 'JyzqR', 'type' => 'theme_wporg', 'digest' => '51770ae31d616ce89ce3212be4bdcd5e', );
-
-	return $ids;
-}
-// The 5 priority is intentional to allow for pro to overwrite.
-add_filter( 'wupdates_gather_ids', 'noah_wupdates_add_id_wporg', 5, 1 );

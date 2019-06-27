@@ -8,6 +8,10 @@
  * @since   Noah Lite 1.0.0
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 get_header(); ?>
 
 <div id="primary" class="content-area  u-blog_sides_spacings">

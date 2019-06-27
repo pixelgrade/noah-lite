@@ -72,7 +72,7 @@ function noahlite_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'noahlite_style_view_pro_desc', array(
 		'default'           => '',
-		'sanitize_callback' => 'noahlite_sanitize_checkbox',
+		'sanitize_callback' => '__return_true',
 	) );
 	$wp_customize->add_control( 'noahlite_style_view_pro_desc', array(
 		'section' => 'pro__section',

@@ -4,13 +4,14 @@
  *
  * @see        https://pixelgrade.com
  * @author     Pixelgrade
- * @package    Noah
- * @version    1.0.1
+ * @package    Noah Lite
+ * @version    1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
+
 ?><svg width="19px" height="17px" viewBox="0 0 19 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="group" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
         <rect id="line1" transform="translate(12.703301, 5.303301) scale(-1, 1) rotate(-315.000000) translate(-12.703301, -5.303301) " x="6.70330095" y="3.80330086" width="12" height="3"></rect>

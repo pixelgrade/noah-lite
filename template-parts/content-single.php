@@ -7,6 +7,11 @@
  * @package Noah Lite
  * @since   Noah Lite 1.0.0
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -35,9 +40,10 @@
 	<footer class="entry-footer  u-content-width">
 		<div>
 
-		<?php noahlite_single_entry_footer(); ?>
+		<?php
+		noahlite_single_entry_footer();
 
-		<?php noahlite_the_post_navigation(); ?>
+		noahlite_the_post_navigation(); ?>
 
 		</div>
 	</footer><!-- .entry-footer -->

@@ -8,6 +8,10 @@
  * @since   Noah Lite 1.0.0
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 get_header(); ?>
 
 	<div id="primary" class="content-area  u-blog_sides_spacing">
@@ -18,7 +22,7 @@ get_header(); ?>
 				<header class="c-page-header">
 					<?php the_archive_title( '<h1 class="c-page-header__title h1">', '</h1>' ); ?>
 					<div class="c-page-header__meta h7">
-						<span><?php _e( 'Show', 'noah-lite' ); ?></span>
+						<span><?php esc_html_e( 'Show', 'noah-lite' ); ?></span>
 						<span class="c-page-header__taxonomy  u-color-accent"><?php noahlite_the_taxonomy_dropdown( 'category', get_query_var( 'category_name' ) )?></span>
 					</div>
 					<?php if ( category_description() ) {

@@ -8,6 +8,10 @@
  * @since   Noah Lite 1.0.0
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 get_header(); ?>
 
 <header class="c-page-header content-area">
@@ -25,30 +29,28 @@ get_header(); ?>
 
 </header><!-- .archive-header -->
 
-		<?php if ( have_posts() ) : ?>
+<?php if ( have_posts() ) : ?>
 
-	<div class="u-content-background">
-		<section class="c-archive-loop  u-full-width  u-portfolio_sides_spacing  u-content-bottom-spacing">
-			<div class="o-wrapper u-portfolio_grid_width">
-				<div <?php noahlite_portfolio_class(); ?>>
+<div class="u-content-background">
+	<section class="c-archive-loop  u-full-width  u-portfolio_sides_spacing  u-content-bottom-spacing">
+		<div class="o-wrapper u-portfolio_grid_width">
+			<div <?php noahlite_portfolio_class(); ?>>
 
-					<?php while ( have_posts() ) : the_post();
-						get_template_part( 'template-parts/project/content', 'jetpack-portfolio' );
-					endwhile; ?>
+				<?php while ( have_posts() ) : the_post();
+					get_template_part( 'template-parts/project/content', 'jetpack-portfolio' );
+				endwhile; ?>
 
-						</div>
-					</div><!-- .o-wrapper -->
-				</section><!-- .c-archive-loop -->
-			</div><!-- .u-content-background -->
-
-		<?php else : ?>
-			<div class="u-content-width entry-content">
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 			</div>
-		<?php endif; ?>
+		</div><!-- .o-wrapper -->
+	</section><!-- .c-archive-loop -->
+</div><!-- .u-content-background -->
 
+<?php else : ?>
+	<div class="u-content-width entry-content">
+		<?php get_template_part( 'template-parts/content', 'none' ); ?>
 	</div>
+<?php endif;
 
-<?php the_posts_navigation(); ?>
+the_posts_navigation();
 
-<?php get_footer();
+get_footer();

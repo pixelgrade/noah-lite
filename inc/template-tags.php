@@ -36,7 +36,7 @@ if ( ! function_exists( 'noahlite_date_link' ) ) :
 
 		// Wrap the time string in a link, and preface it with 'Posted on'.
 		return sprintf(
-		/* translators: %s: post date */
+			/* translators: %s: post date */
 			__( '<span class="screen-reader-text">Posted on</span> %s', 'noah-lite' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
@@ -117,9 +117,9 @@ if ( ! function_exists( 'noahlite_the_first_category' ) ) {
 		$class_markup = null;
 
 		if ( '' !== $tag_class ) {
-			$class_markup = 'class="' . $tag_class . '" ';
+			$class_markup = 'class="' . esc_attr( $tag_class ) . '" ';
 		}
-		echo '<a ' . $class_markup . 'href="' . esc_url( get_category_link( $category->term_id ) ) . '" title="' . esc_attr( $category->name ) . '">' . $category->name . '</a>';
+		echo '<a ' . $class_markup . ' href="' . esc_url( get_category_link( $category->term_id ) ) . '" title="' . esc_attr( $category->name ) . '">' . esc_html( $category->name ) . '</a>';
 
 	} #function
 }
@@ -221,14 +221,14 @@ if ( ! function_exists( 'noahlite_the_comments_navigation' ) ) :
 		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 			?>
 			<nav class="navigation comment-navigation" role="navigation">
-				<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'noah-lite' ); ?></h2>
+				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'noah-lite' ); ?></h2>
 				<div class="nav-links">
 					<?php
-					if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'noah-lite' ) ) ) :
+					if ( $prev_link = get_previous_comments_link( esc_html__( 'Older Comments', 'noah-lite' ) ) ) :
 						printf( '<div class="c-btn nav-previous">%s</div>', $prev_link );
 					endif;
 
-					if ( $next_link = get_next_comments_link( __( 'Newer Comments', 'noah-lite' ) ) ) :
+					if ( $next_link = get_next_comments_link( esc_html__( 'Newer Comments', 'noah-lite' ) ) ) :
 						printf( '<div class="c-btn nav-next">%s</div>', $next_link );
 					endif;
 					?>
@@ -246,7 +246,7 @@ endif;
  */
 function noahlite_header_class( $class = '' ) {
 	// Separates classes with a single space, collates classes for header element
-	echo 'class="' . join( ' ', noahlite_get_header_class( $class ) ) . '"';
+	echo 'class="' . esc_attr( join( ' ', noahlite_get_header_class( $class ) ) ) . '"';
 }
 
 /**
@@ -401,13 +401,13 @@ function noahlite_get_the_post_navigation( $args = array() ) {
 		'in_same_term'       => false,
 		'excluded_terms'     => '',
 		'taxonomy'           => 'category',
-		'screen_reader_text' => __( 'Post navigation', 'noah-lite' ),
+		'screen_reader_text' => esc_html__( 'Post navigation', 'noah-lite' ),
 	) );
 
 	$navigation = '';
 
 	$previous = get_previous_post_link(
-		'<div class="nav-previous"><span class="h3 nav-previous-title">%link</span>' . '<span class="h7 u-color-accent">' . __( 'Previous', 'noah-lite' ) . '</span></div>',
+		'<div class="nav-previous"><span class="h3 nav-previous-title">%link</span>' . '<span class="h7 u-color-accent">' . esc_html__( 'Previous', 'noah-lite' ) . '</span></div>',
 		$args['prev_text'],
 		$args['in_same_term'],
 		$args['excluded_terms'],
@@ -415,7 +415,7 @@ function noahlite_get_the_post_navigation( $args = array() ) {
 	);
 
 	$next = get_next_post_link(
-		'<div class="nav-next"><span class="h3 nav-next-title">%link</span>' . '<span class="h7 u-color-accent">' . __( 'Next', 'noah-lite' ) . '</span></div>',
+		'<div class="nav-next"><span class="h3 nav-next-title">%link</span>' . '<span class="h7 u-color-accent">' . esc_html__( 'Next', 'noah-lite' ) . '</span></div>',
 		$args['next_text'],
 		$args['in_same_term'],
 		$args['excluded_terms'],
@@ -469,7 +469,7 @@ if ( ! function_exists( 'noahlite_entry_footer' ) ) :
 	 * Prints HTML with meta information for posts on archives.
 	 */
 	function noahlite_entry_footer( $post_id ) {
-		edit_post_link( __( 'Edit', 'noah-lite' ), '<p><span class="edit-link">', '</span></p>', $post_id );
+		edit_post_link( esc_html__( 'Edit', 'noah-lite' ), '<p><span class="edit-link">', '</span></p>', $post_id );
 	}
 endif;
 
@@ -479,7 +479,7 @@ if ( ! function_exists( 'noahlite_single_entry_footer' ) ) :
 	 * Prints HTML with meta information for the categories, tags, Jetpack likes, shares, related, and comments.
 	 */
 	function noahlite_single_entry_footer() {
-		edit_post_link( __( 'Edit', 'noah-lite' ), '<span class="edit-link">', '</span>' );
+		edit_post_link( esc_html__( 'Edit', 'noah-lite' ), '<span class="edit-link">', '</span>' );
 	} #function
 endif;
 

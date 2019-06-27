@@ -8,9 +8,13 @@
  * @since   Noah Lite 1.0.0
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 get_header(); ?>
 
-<div id="primary" data-section-name="<?php echo get_post_field( 'post_name', get_post() ); ?>" class="content-area  u-container-sides-spacings  u-content_container_padding_top  u-content-bottom-spacing">
+<div id="primary" data-section-name="<?php echo esc_attr( get_post_field( 'post_name', get_post() ) ); ?>" class="content-area  u-container-sides-spacings  u-content_container_padding_top  u-content-bottom-spacing">
     <div class="o-wrapper  u-container-width">
         <main id="main" class="o-wrapper  u-content-width  site-main" role="main">
 

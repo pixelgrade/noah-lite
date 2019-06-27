@@ -5,6 +5,10 @@
  * @package Noah Lite
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 get_header(); ?>
 
     <div id="primary" class="content-area  u-side-padding  u-content-background">

@@ -6,6 +6,10 @@
  * @since 1.1.1
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 ?>
 <div id="site-navigation" role="navigation" class="c-navbar  c-navbar--dropdown main-navigation">
 	<input class="c-navbar__checkbox" id="menu-toggle" type="checkbox" aria-controls="primary-menu" aria-expanded="false">
@@ -86,7 +90,7 @@
 	</div><!-- .c-navbar__content -->
 
 	<?php if ( ( noahlite_is_frontpage() || ( is_home() && is_front_page() ) ) && has_custom_header() ) : ?>
-		<a href="#content" class="menu-scroll-down"><span class="screen-reader-text"><?php _e( 'Scroll down to content', 'noah-lite' ); ?></span></a>
+		<a href="#content" class="menu-scroll-down"><span class="screen-reader-text"><?php esc_html_e( 'Scroll down to content', 'noah-lite' ); ?></span></a>
 	<?php endif; ?>
 
 </div><!-- .c-navbar -->

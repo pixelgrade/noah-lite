@@ -1,5 +1,5 @@
 {
-	"name": "patch-lite",
+	"name": "noah-lite",
 	"devDependencies": {
 		"del": "^4.1.0",
 		"gulp": "^4.0.0",
