@@ -18,6 +18,9 @@ Noah Lite includes support for Infinite Scroll and Portfolio from [Jetpack](http
 
 ## Changelog
 
+= 1.1.2 =
+* Cleanup and security enhancements.
+
 = 1.1.1 =
 * Minor styling and logic fixes in the Customizer.
 
@@ -28,7 +31,7 @@ Noah Lite includes support for Infinite Scroll and Portfolio from [Jetpack](http
 
 Noah Lite WordPress Theme, (C) 2017-2019 Pixelgrade.com
 
-Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+Based on Underscores http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 
 Noah Lite is distributed under the terms of the GNU GPL
 

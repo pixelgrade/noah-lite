@@ -1,18 +1,18 @@
 Theme Name: Noah Lite
-Theme URI: https://pixelgrade.com/themes/noah-lite/
+Theme URI: https://github.com/pixelgrade/noah-lite
 Author: Pixelgrade
 Author URI: https://pixelgrade.com
-Description: A bold entrance in the challenging digital playground. A photography WordPress theme that creates momentum through witty animations that introduce you in your own journey.
-Version: 1.1.1
+Description: A bold entrance in the challenging digital playground. A photography WordPress theme that creates momentum through witty animations that introduce you in your own journey. Noah Like is based on a experience that is beautifully crafted with subtle effects and unique transitions aimed at engaging the viewer in a unique way. Noah Lite is an experiment that goes beyond what'a ordinary and familiar.
+Version: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.9.9
-Tested up to: 5.1.1
+Tested up to: 5.2.2
 Tags: portfolio, photography, blog, translation-ready, theme-options, footer-widgets, featured-images, custom-menu, custom-logo, custom-colors, custom-background, grid-layout, two-columns, three-columns, four-columns, editor-style, sticky-post, rtl-language-support
 
 == Description ==
 
-A bold entrance in the challenging digital playground. A photography WordPress theme that creates momentum through witty animations that introduce you in your own journey.
+A bold entrance in the challenging digital playground. A photography WordPress theme that creates momentum through witty animations that introduce you in your own journey. Noah Like is based on a experience that is beautifully crafted with subtle effects and unique transitions aimed at engaging the viewer in a unique way. Noah Lite is an experiment that goes beyond what'a ordinary and familiar.
 
 == Installation ==
 
@@ -28,6 +28,9 @@ Noah Lite includes support for Infinite Scroll and Portfolio from [Jetpack](http
 
 == Changelog ==
 
+= 1.1.2 =
+* Cleanup and security enhancements.
+
 = 1.1.1 =
 * Minor styling and logic fixes in the Customizer.
 
@@ -41,7 +44,7 @@ Noah Lite includes support for Infinite Scroll and Portfolio from [Jetpack](http
 
 Noah Lite WordPress Theme, (C) 2017-2019 Pixelgrade.com
 
-Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+Based on Underscores http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 
 Noah Lite is distributed under the terms of the GNU GPL
 
