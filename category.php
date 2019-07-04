@@ -25,8 +25,8 @@ get_header(); ?>
 						<span><?php esc_html_e( 'Show', 'noah-lite' ); ?></span>
 						<span class="c-page-header__taxonomy  u-color-accent"><?php noahlite_the_taxonomy_dropdown( 'category', get_query_var( 'category_name' ) )?></span>
 					</div>
-					<?php if ( category_description() ) {
-						echo category_description();
+					<?php if ( get_the_archive_description() ) {
+						the_archive_description();
 					} ?>
 				</header><!-- .archive-header -->
 
