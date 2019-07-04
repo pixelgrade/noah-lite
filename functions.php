@@ -89,6 +89,8 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		add_theme_support( 'custom-background' );
+
 		/**
 		 * Remove themes' post formats support
 		 */
