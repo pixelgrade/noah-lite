@@ -45,9 +45,23 @@ if ( post_password_required() ) {
 			<h2 class="comments-title">
 				<span class="c-btn fs-18 _display-block">
 				<?php
-				/* translators: %1$s: The post title, %2$s: The number of comments.  */
-				printf( esc_html( _nx( 'One thought on &ldquo;%1$s&rdquo;', '%2$s thoughts on &ldquo;%1$s&rdquo;', get_comments_number(), 'comments title', 'noah-lite' ) ),
-					get_the_title(), esc_html( number_format_i18n( get_comments_number() ) ) );
+				if ( '1' == get_comments_number() ) {
+					/* translators: %s: post title */
+					printf( esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'noah-lite' ), get_the_title() );
+				} else {
+					printf(
+					    /* translators: 1: number of comments, 2: post title */
+						esc_html( _nx(
+							'%1$s thought on &ldquo;%2$s&rdquo;',
+							'%1$s thoughts on &ldquo;%2$s&rdquo;',
+							get_comments_number(),
+							'comments title',
+							'noah-lite'
+						) ),
+						esc_html( number_format_i18n( get_comments_number() ) ),
+						get_the_title()
+					);
+				}
 				?>
 				</span>
 			</h2>
