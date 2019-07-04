@@ -49,21 +49,12 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 
 The Noah Lite theme bundles the following third-party resources:
 
-Barba.js, Copyright (c) 2016 Luigi De Rosa
+jquery.rellax.js, Copyright (c) 2016 Pixelgrade
 License: [MIT](http://opensource.org/licenses/MIT)
-Source: http://barbajs.org/
+Source: http://pixelgrade.github.io/rellax/
 
-jQuery Rellax, Copyright (c) 2016 Pixelgrade
+jquery.resizeselect.js, Copyright (c) 2016 Pixelgrade
 License: [MIT](http://opensource.org/licenses/MIT)
-Source: https://pixelgrade.com
-
-jQuery Easing, Copyright (c) 2008 George McGinley Smith
-License: [BSD](https://raw.github.com/gdsmith/jquery-easing/master/LICENSE)
-Source: http://gsgd.co.uk/sandbox/jquery/easing/
-
-Slick.js, Copyright (c) 2013-2016 Ken Wheeler
-License: [MIT](http://opensource.org/licenses/MIT)
-Source: http://kenwheeler.github.io/slick
 
 normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: [MIT](http://opensource.org/licenses/MIT)

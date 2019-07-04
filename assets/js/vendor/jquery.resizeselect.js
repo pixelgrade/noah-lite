@@ -1,3 +1,8 @@
+/*!
+ * jQuery Resize Select plugin v0.0.1
+ * Copyright (c) 2016 Pixelgrade https://pixelgrade.com
+ * Licensed under MIT http://www.opensource.org/licenses/mit-license.php/
+ */
 (function($) {
 
 	$.fn.getStyleObject = function(){
