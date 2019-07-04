@@ -3,7 +3,7 @@ Theme URI: https://github.com/pixelgrade/noah-lite
 Author: Pixelgrade
 Author URI: https://pixelgrade.com
 Description: A bold entrance in the challenging digital playground. A photography WordPress theme that creates momentum through witty animations that introduce you in your own journey. Noah Like is based on a experience that is beautifully crafted with subtle effects and unique transitions aimed at engaging the viewer in a unique way. Noah Lite is an experiment that goes beyond what'a ordinary and familiar.
-Version: 1.1.2
+Version: 1.1.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.9.9
@@ -27,6 +27,9 @@ A bold entrance in the challenging digital playground. A photography WordPress t
 Noah Lite includes support for Infinite Scroll and Portfolio from [Jetpack](https://refer.wordpress.com/r/280/jetpack/).
 
 == Changelog ==
+
+= 1.1.3 =
+* Small code fixes.
 
 = 1.1.2 =
 * Cleanup and security enhancements.
@@ -65,6 +68,11 @@ Source: http://kenwheeler.github.io/slick
 normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: [MIT](http://opensource.org/licenses/MIT)
 Source: https://necolas.github.io/normalize.css/
+
+TGM Plugin Activation, Copyright (c) 2011 Thomas Griffin
+License:[GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+Source: http://tgmpluginactivation.com/
+
 
 * Images: images by Rowan Chestnut — 
 [Source](https://commons.wikimedia.org/wiki/File:Woman_in_a_flower_garden.jpg), Averie Woodard — [Source](https://photy.org/en/free-photos/Woman-floating-on-water/51194.html), Shamim Nakhai — [Source](https://pxhere.com/en/photo/37340), Sylvain Reygaerts — [Source](https://pxhere.com/en/photo/1178169), Vitaly — [Source](https://www.kisscc0.com/photo/street-photography-nemo-house-marketing-blog-peopl-39yhxb/), Tom Sodoge — [Source](https://pxhere.com/en/photo/45430), licensed under CC0 Public Domain.
