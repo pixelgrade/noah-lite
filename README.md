@@ -67,29 +67,8 @@ normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: [MIT](http://opensource.org/licenses/MIT)
 Source: https://necolas.github.io/normalize.css/
 
-Bundled screenshot image, Copyright Rowan Chestnut
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/m663zRzRe40
-
-Bundled screenshot image, Copyright Averie Woodard
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/xGy_DKmPYEk
-
-Bundled screenshot image, Copyright Shamim Nakhai
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/9mEyjPkeKx4
-
-Bundled screenshot image, Copyright Sylvain Reygaerts
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/2zbW6zNU6cI
-
-Bundled screenshot image, Copyright Vitaly
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/fW2jv1L7yeA
-
-Bundled screenshot image, Copyright Tom Sodoge
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/E8aZ2aIrFrc
+* Images: images by Rowan Chestnut — 
+[Source](https://commons.wikimedia.org/wiki/File:Woman_in_a_flower_garden_(Unsplash).jpg), Averie Woodard — [Source](https://photy.org/en/free-photos/Woman-floating-on-water/51194.html), Shamim Nakhai — [Source](https://pxhere.com/en/photo/37340), Sylvain Reygaerts — [Source](https://pxhere.com/en/photo/1178169), Vitaly — [Source](https://www.kisscc0.com/photo/street-photography-nemo-house-marketing-blog-peopl-39yhxb/), Tom Sodoge — [Source](https://pxhere.com/en/photo/45430), licensed under CC0 Public Domain.
 
 Images used throughout the theme demo (not bundled with the theme): [Julia Chernih](https://www.behance.net/JuliaChe), [Georgi Andinov](http://www.andinov.com/), [Diliana Florentin](https://www.behance.net/dilianaflorentin), [Philipp Jelenska](http://philippjelenska.com/).
 
