@@ -21,8 +21,8 @@ get_header(); ?>
 
 			<header class="c-page-header">
 				<?php the_archive_title( '<h1 class="c-page-header__title h1">', '</h1>' ); ?>
-				<?php if ( tag_description() ) : // Show an optional tag description ?>
-				<div class="c-page-header__meta h7"><?php echo tag_description(); ?></div>
+				<?php if ( get_the_archive_description() ) : // Show an optional tag description ?>
+				<div class="c-page-header__meta h7"><?php the_archive_description(); ?></div>
 				<?php endif; ?>
 
 				</header><!-- .archive-header -->
