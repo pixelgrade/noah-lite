@@ -67,4 +67,4 @@ License: [MIT](http://opensource.org/licenses/MIT)
 Source: https://necolas.github.io/normalize.css/
 
 * Images: images by Rowan Chestnut — 
-[Source](https://commons.wikimedia.org/wiki/File:Woman_in_a_flower_garden_(Unsplash).jpg), Averie Woodard — [Source](https://photy.org/en/free-photos/Woman-floating-on-water/51194.html), Shamim Nakhai — [Source](https://pxhere.com/en/photo/37340), Sylvain Reygaerts — [Source](https://pxhere.com/en/photo/1178169), Vitaly — [Source](https://www.kisscc0.com/photo/street-photography-nemo-house-marketing-blog-peopl-39yhxb/), Tom Sodoge — [Source](https://pxhere.com/en/photo/45430), licensed under CC0 Public Domain.
+[Source](https://commons.wikimedia.org/wiki/File:Woman_in_a_flower_garden.jpg), Averie Woodard — [Source](https://photy.org/en/free-photos/Woman-floating-on-water/51194.html), Shamim Nakhai — [Source](https://pxhere.com/en/photo/37340), Sylvain Reygaerts — [Source](https://pxhere.com/en/photo/1178169), Vitaly — [Source](https://www.kisscc0.com/photo/street-photography-nemo-house-marketing-blog-peopl-39yhxb/), Tom Sodoge — [Source](https://pxhere.com/en/photo/45430), licensed under CC0 Public Domain.
