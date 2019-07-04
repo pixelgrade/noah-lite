@@ -40,25 +40,11 @@ Noah Lite includes support for Infinite Scroll and Portfolio from [Jetpack](http
 = 1.0.0 =
 * Initial release
 
-== Copyright ==
+== Credits ==
 
-Noah Lite WordPress Theme, (C) 2017-2019 Pixelgrade.com
+Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License.
 
-Based on Underscores http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-
-Noah Lite is distributed under the terms of the GNU GPL
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-Noah Lite bundles the following third-party resources:
+The Noah Lite theme bundles the following third-party resources:
 
 Barba.js, Copyright (c) 2016 Luigi De Rosa
 License: [MIT](http://opensource.org/licenses/MIT)
@@ -80,28 +66,5 @@ normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: [MIT](http://opensource.org/licenses/MIT)
 Source: https://necolas.github.io/normalize.css/
 
-Bundled screenshot image, Copyright Rowan Chestnut
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/m663zRzRe40
-
-Bundled screenshot image, Copyright Averie Woodard
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/xGy_DKmPYEk
-
-Bundled screenshot image, Copyright Shamim Nakhai
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/9mEyjPkeKx4
-
-Bundled screenshot image, Copyright Sylvain Reygaerts
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/2zbW6zNU6cI
-
-Bundled screenshot image, Copyright Vitaly
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/fW2jv1L7yeA
-
-Bundled screenshot image, Copyright Tom Sodoge
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/E8aZ2aIrFrc
-
-Images used throughout the theme demo (not bundled with the theme): [Julia Chernih](https://www.behance.net/JuliaChe), [Georgi Andinov](http://www.andinov.com/), [Diliana Florentin](https://www.behance.net/dilianaflorentin), [Philipp Jelenska](http://philippjelenska.com/).
+* Images: images by Rowan Chestnut — 
+[Source](https://commons.wikimedia.org/wiki/File:Woman_in_a_flower_garden_(Unsplash).jpg), Averie Woodard — [Source](https://photy.org/en/free-photos/Woman-floating-on-water/51194.html), Shamim Nakhai — [Source](https://pxhere.com/en/photo/37340), Sylvain Reygaerts — [Source](https://pxhere.com/en/photo/1178169), Vitaly — [Source](https://www.kisscc0.com/photo/street-photography-nemo-house-marketing-blog-peopl-39yhxb/), Tom Sodoge — [Source](https://pxhere.com/en/photo/45430), licensed under CC0 Public Domain.
