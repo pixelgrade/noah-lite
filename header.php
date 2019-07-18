@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */?>
 <body <?php body_class(); ?>>
 <div id="barba-wrapper" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'noah-lite' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'noah-lite' ); ?></a>
 	<div id="content" class="site-content barba-container js-header-height-padding-top">
 		<header id="masthead" <?php noahlite_header_class(); ?> role="banner">
 			<div class="u-header_sides_spacing">
