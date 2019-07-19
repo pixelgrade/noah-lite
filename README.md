@@ -1,7 +1,7 @@
 # Noah Lite: A Free WordPress Photography Theme
 ### A bold entrance in the challenging digital playground. A photography WordPress theme that creates momentum through witty animations that introduce you in your own journey. Noah Lite is based on a experience that is beautifully crafted with subtle effects and unique transitions aimed at engaging the viewer in a unique way. Noah Lite is an experiment that goes beyond what is ordinary and familiar.
 
-[Download for Free](https://downloads.wordpress.org/theme/noah-lite.latest-stable.zip) &nbsp;·&nbsp; [Demo Preview](https://demos.pixelgrade.com/noah-lite/) &nbsp;·&nbsp; [ Noah Pro](https://pixelgrade.com/themes/noah-pro/)
+[View Demo](https://demos.pixelgrade.com/noah-lite/) &nbsp;·&nbsp; [Documentation](https://pixelgrade.com/noah-lite-documentation/) &nbsp;·&nbsp; [Download for Free](https://downloads.wordpress.org/theme/noah-lite.latest-stable.zip) &nbsp;·&nbsp; [View Pro Version](https://pixelgrade.com/themes/noah-pro/)
 
 [![](https://img.shields.io/github/issues-closed/pixelgrade/noah-lite.svg?color=6cc644&label=Issues)](https://github.com/pixelgrade/noah-lite/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+) [![](https://img.shields.io/github/issues/pixelgrade/noah-lite.svg?color=4078c0&label=%20)](https://github.com/pixelgrade/noah-lite/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen)
 
