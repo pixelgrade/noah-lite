@@ -24,7 +24,7 @@ A manually curated list that include all the valuable people that have contribut
 [![](https://github.com/razwan.png?size=64)](https://github.com/razwan) [![](https://github.com/vladolaru.png?size=64)](https://github.com/vladolaru) [![](https://github.com/georgeolaru.png?size=64)](https://github.com/georgeolaru) [![](https://github.com/alinclamba.png?size=64)](https://github.com/alinclamba) [![](https://github.com/oanafilip.png?size=64)](https://github.com/oanafilip)  [![](https://github.com/andreilupu.png?size=64)](https://github.com/andreilupu)  [![](https://github.com/cristian-frumusanu.png?size=64)](https://github.com/cristian-frumusanu) [![](https://github.com/BurloiuCosmin.png?size=64)](https://github.com/BurloiuCosmin) [![](https://github.com/ilincaroman.png?size=64)](https://github.com/ilincaroman) [![](https://github.com/alexandra-budeanu.png?size=64)](https://github.com/alexandra-budeanu)
 
 ## License
-Noah Lite source code is released under the [GNU GPL v3 license](https://www.gnu.org/licenses/gpl-3.0.html).
+Noah Lite source code is released under the [GNU GPL v2 license](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
 
 2019 © Pixelgrade.
 
