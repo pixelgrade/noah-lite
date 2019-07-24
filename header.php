@@ -27,6 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * The `body_class()` function is required. WordPress core and our theme should add or remove classes through this hook
  */?>
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 <div id="barba-wrapper" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'noah-lite' ); ?></a>
 	<div id="content" class="site-content barba-container js-header-height-padding-top">

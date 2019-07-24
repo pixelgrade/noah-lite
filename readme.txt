@@ -28,6 +28,9 @@ Noah Lite includes support for Infinite Scroll and Portfolio from [Jetpack](http
 
 == Changelog ==
 
+= 1.1.6 =
+* * Added new wp_body_open hook.
+
 = 1.1.5 =
 * Fixed skip link focus.
 
