@@ -295,11 +295,6 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
- * Load the required plugins (TGMPA) logic.
- */
-require get_template_directory() . '/inc/required-plugins.php';
-
-/**
  * Load Jetpack compatibility file.
  * http://jetpack.me/
  */
@@ -309,3 +304,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Admin dashboard related logic.
+ */
+require_once trailingslashit( get_template_directory() ) . 'inc/admin.php';
