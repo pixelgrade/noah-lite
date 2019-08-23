@@ -193,6 +193,11 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 			),
 	    ) );
 
+		/**
+		 * Enable support for the Style Manager Customizer section (via Customify).
+		 */
+		add_theme_support( 'customizer_style_manager' );
+
 	}
 } // noahlite_setup
 add_action( 'after_setup_theme', 'noahlite_setup' );
@@ -309,3 +314,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Admin dashboard related logic.
  */
 require_once trailingslashit( get_template_directory() ) . 'inc/admin.php';
+
+/**
+ * Various plugins integrations.
+ */
+require get_template_directory() . '/inc/integrations.php';
