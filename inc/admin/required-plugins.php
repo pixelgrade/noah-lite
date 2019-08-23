@@ -21,6 +21,12 @@ function noahlite_register_required_plugins() {
 			'slug'               => 'jetpack',
 			'required'           => false,
 		),
+		array(
+			'name'               => 'Customify',
+			'slug'               => 'customify',
+			'is_callable'        => 'PixCustomifyPlugin',
+			'required'           => false,
+		),
 	);
 
 	$config = array(

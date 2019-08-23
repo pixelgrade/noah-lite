@@ -3,7 +3,7 @@ Theme URI: https://github.com/pixelgrade/noah-lite
 Author: Pixelgrade
 Author URI: https://pixelgrade.com
 Description: A bold entrance in the challenging digital playground. A photography WordPress theme that creates momentum through witty animations that introduce you in your own journey. Noah Like is based on a experience that is beautifully crafted with subtle effects and unique transitions aimed at engaging the viewer in a unique way. Noah Lite is an experiment that goes beyond what'a ordinary and familiar.
-Version: 1.1.6
+Version: 1.1.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.9.9
@@ -27,6 +27,10 @@ A bold entrance in the challenging digital playground. A photography WordPress t
 Noah Lite includes support for Infinite Scroll and Portfolio from [Jetpack](https://refer.wordpress.com/r/280/jetpack/).
 
 == Changelog ==
+
+= 1.1.7 =
+* Added Style Manager.
+* Added Customify recommended plugin.
 
 = 1.1.6 =
 * Added new wp_body_open hook.
