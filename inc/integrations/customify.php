@@ -143,7 +143,7 @@ function noah_lite_fill_customify_options( $options ) {
 			'type'  => 'hidden',
 			'options'   => array(
 				'main_content_border_color'                 => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Site Border Color', 'noah' ),
 					'live'    => true,
 					'default' => THEME_LIGHT_PRIMARY,
@@ -155,7 +155,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'main_content_page_title_color'             => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Page Title Color', 'noah' ),
 					'live'    => true,
 					'default' => THEME_DARK_PRIMARY,
@@ -167,7 +167,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'main_content_body_text_color'              => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Body Text Color', 'noah' ),
 					'live'    => true,
 					'default' => THEME_DARK_PRIMARY,
@@ -205,7 +205,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'main_content_body_link_color'              => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Body Link Color', 'noah' ),
 					'live'    => true,
 					'default' => THEME_COLOR_PRIMARY,
@@ -217,7 +217,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'main_content_heading_1_color'              => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Heading 1', 'noah' ),
 					'live'    => true,
 					'default' => THEME_DARK_PRIMARY,
@@ -229,7 +229,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'main_content_heading_2_color'              => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Heading 2', 'noah' ),
 					'live'    => true,
 					'default' => THEME_DARK_PRIMARY,
@@ -241,7 +241,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'main_content_heading_3_color'              => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Heading 3', 'noah' ),
 					'live'    => true,
 					'default' => THEME_COLOR_PRIMARY,
@@ -257,7 +257,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'main_content_heading_4_color'              => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Heading 4', 'noah' ),
 					'live'    => true,
 					'default' => THEME_DARK_PRIMARY,
@@ -269,7 +269,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'main_content_heading_5_color'              => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Heading 5', 'noah' ),
 					'live'    => true,
 					'default' => THEME_DARK_PRIMARY,
@@ -281,7 +281,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'main_content_heading_6_color'              => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Heading 6', 'noah' ),
 					'live'    => true,
 					'default' => THEME_DARK_PRIMARY,
@@ -293,7 +293,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'main_content_content_background_color'     => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Content Background Color', 'noah' ),
 					'live'    => true,
 					'default' => THEME_LIGHT_PRIMARY,
@@ -324,7 +324,7 @@ function noah_lite_fill_customify_options( $options ) {
 			'type'  => 'hidden',
 			'options'   => array(
 				'portfolio_item_title_color'                   => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Item Title Color', 'noah' ),
 					'live'    => true,
 					'default' => THEME_DARK_PRIMARY,
@@ -336,7 +336,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'portfolio_item_meta_primary_color'            => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Meta Primary', 'noah' ),
 					'live'    => true,
 					'default' => THEME_COLOR_PRIMARY,
@@ -348,7 +348,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'portfolio_item_meta_secondary_color'          => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Meta Secondary', 'noah' ),
 					'live'    => true,
 					'default' => THEME_DARK_SECONDARY,
@@ -360,7 +360,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'portfolio_item_thumbnail_background'          => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Thumbnail Background', 'noah' ),
 					'live'    => true,
 					'default' => THEME_LIGHT_PRIMARY,
@@ -378,7 +378,7 @@ function noah_lite_fill_customify_options( $options ) {
 			'type'  => 'hidden',
 			'options'   => array(
 				'blog_item_title_color'                   => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Item Title Color', 'noah' ),
 					'live'    => true,
 					'default' => THEME_DARK_PRIMARY,
@@ -390,7 +390,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'blog_item_meta_primary_color'            => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Meta Primary', 'noah' ),
 					'live'    => true,
 					'default' => THEME_COLOR_PRIMARY,
@@ -402,7 +402,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'blog_item_meta_secondary_color'          => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Meta Secondary', 'noah' ),
 					'live'    => true,
 					'default' => THEME_DARK_SECONDARY,
@@ -414,7 +414,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'blog_item_thumbnail_background'          => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Thumbnail Background', 'noah' ),
 					'live'    => true,
 					'default' => THEME_LIGHT_PRIMARY,
@@ -432,7 +432,7 @@ function noah_lite_fill_customify_options( $options ) {
 			'type'  => 'hidden',
 			'options'   => array(
 				'header_navigation_links_color' => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Navigation Links Color', 'components' ),
 					'live'    => true,
 					'default' => THEME_DARK_PRIMARY,
@@ -444,7 +444,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'header_links_active_color'     => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Links Active Color', 'components' ),
 					'live'    => true,
 					'default' => THEME_COLOR_PRIMARY,
@@ -462,7 +462,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'header_background'             => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Header Background', 'components' ),
 					'live'    => true,
 					'default' => THEME_LIGHT_PRIMARY,
@@ -480,7 +480,7 @@ function noah_lite_fill_customify_options( $options ) {
 			'type'  => 'hidden',
 			'options'   => array(
 				'footer_body_text_color'       => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Body Text Color', 'components' ),
 					'live'    => true,
 					'default' => THEME_DARK_SECONDARY,
@@ -492,7 +492,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'footer_links_color'           => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Links Color', 'components' ),
 					'live'    => true,
 					'default' => THEME_DARK_PRIMARY,
@@ -504,7 +504,7 @@ function noah_lite_fill_customify_options( $options ) {
 					),
 				),
 				'footer_background'            => array(
-					'type'    => 'color',
+					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Footer Background', 'components' ),
 					'live'    => true,
 					'default' => THEME_LIGHT_PRIMARY,
