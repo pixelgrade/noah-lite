@@ -203,25 +203,6 @@ if ( ! function_exists( 'noahlite_setup' ) ) {
 add_action( 'after_setup_theme', 'noahlite_setup' );
 
 /**
- * Control the default modules that are activated in Jetpack.
- * Use the `customify_filter_jetpack_default_modules` to set your's.
- *
- * @param array $default The default value to return if the option does not exist
- *                        in the database.
- *
- * @return array
- */
-function noahlite_default_jetpack_active_modules( $default ) {
-	if ( ! is_array( $default ) ) {
-		$default = array();
-	}
-
-	$default[] = 'custom-content-types';
-
-	return $default;
-}
-
-/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
@@ -292,23 +273,23 @@ add_action( 'wp_enqueue_scripts', 'noahlite_load_assets' );
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+require_once trailingslashit( get_template_directory() ) . 'inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/inc/extras.php';
+require_once trailingslashit( get_template_directory() ) . 'inc/extras.php';
 
 /**
  * Load Jetpack compatibility file.
  * http://jetpack.me/
  */
-require get_template_directory() . '/inc/jetpack.php';
+require_once trailingslashit( get_template_directory() ) . 'inc/jetpack.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require_once trailingslashit( get_template_directory() ) . 'inc/customizer.php';
 
 /**
  * Admin dashboard related logic.
@@ -318,4 +299,4 @@ require_once trailingslashit( get_template_directory() ) . 'inc/admin.php';
 /**
  * Various plugins integrations.
  */
-require get_template_directory() . '/inc/integrations.php';
+require_once trailingslashit( get_template_directory() ) . 'inc/integrations.php';

@@ -3,7 +3,7 @@
  * Noah Customizer Options Config
  *
  * @package Noah Lite
- * @since Noah 1.1.7
+ * @since Noah 1.2.0
  */
 
 /**
@@ -18,18 +18,15 @@
  *
  */
 
-
 add_filter( 'customify_filter_fields', 'noah_lite_add_customify_options', 11, 1 );
 add_filter( 'customify_filter_fields', 'noah_lite_add_customify_style_manager_section', 12, 1 );
 
 add_filter( 'customify_filter_fields', 'noah_lite_fill_customify_options', 20 );
 
-define( 'THEME_COLOR_PRIMARY', '#BF493D' );
-
-define( 'THEME_DARK_PRIMARY', '#252525' );
-define( 'THEME_DARK_SECONDARY', '#757575' );
-
-define( 'THEME_LIGHT_PRIMARY', '#FFFFFF' );
+define( 'NOAHLITE_SM_COLOR_PRIMARY', '#BF493D' );
+define( 'NOAHLITE_SM_DARK_PRIMARY', '#252525' );
+define( 'NOAHLITE_SM_DARK_SECONDARY', '#757575' );
+define( 'NOAHLITE_SM_LIGHT_PRIMARY', '#FFFFFF' );
 
 
 
@@ -63,7 +60,7 @@ function noah_lite_add_customify_style_manager_section( $options ) {
 	$new_config = array(
 		'options' => array(
 			'sm_color_primary'   => array(
-				'default'          => THEME_COLOR_PRIMARY,
+				'default'          => NOAHLITE_SM_COLOR_PRIMARY,
 				'connected_fields' => array(
 					'main_content_body_link_color',
 					'main_content_heading_3_color',
@@ -73,15 +70,15 @@ function noah_lite_add_customify_style_manager_section( $options ) {
 				),
 			),
 			'sm_color_secondary' => array(
-				'default'          => THEME_COLOR_PRIMARY,
+				'default'          => NOAHLITE_SM_COLOR_PRIMARY,
 				'connected_fields' => array(),
 			),
 			'sm_color_tertiary'  => array(
-				'default'          => THEME_COLOR_PRIMARY,
+				'default'          => NOAHLITE_SM_COLOR_PRIMARY,
 				'connected_fields' => array(),
 			),
 			'sm_dark_primary'    => array(
-				'default'          => THEME_DARK_PRIMARY,
+				'default'          => NOAHLITE_SM_DARK_PRIMARY,
 				'connected_fields' => array(
 					'main_content_page_title_color',
 					'main_content_body_text_color',
@@ -97,7 +94,7 @@ function noah_lite_add_customify_style_manager_section( $options ) {
 				),
 			),
 			'sm_dark_secondary'  => array(
-				'default'          => THEME_DARK_SECONDARY,
+				'default'          => NOAHLITE_SM_DARK_SECONDARY,
 				'connected_fields' => array(
 					'main_content_micro_elements',
 					'portfolio_item_meta_secondary_color',
@@ -106,11 +103,11 @@ function noah_lite_add_customify_style_manager_section( $options ) {
 				),
 			),
 			'sm_dark_tertiary'   => array(
-				'default'          => THEME_DARK_SECONDARY,
+				'default'          => NOAHLITE_SM_DARK_SECONDARY,
 				'connected_fields' => array(),
 			),
 			'sm_light_primary'   => array(
-				'default'          => THEME_LIGHT_PRIMARY,
+				'default'          => NOAHLITE_SM_LIGHT_PRIMARY,
 				'connected_fields' => array(
 					'main_content_border_color',
 					'main_content_content_background_color',
@@ -121,17 +118,22 @@ function noah_lite_add_customify_style_manager_section( $options ) {
 				),
 			),
 			'sm_light_secondary' => array(
-				'default'          => THEME_LIGHT_PRIMARY,
+				'default'          => NOAHLITE_SM_LIGHT_PRIMARY,
 				'connected_fields' => array(),
 			),
 			'sm_light_tertiary'  => array(
-				'default'          => THEME_LIGHT_PRIMARY,
+				'default'          => NOAHLITE_SM_LIGHT_PRIMARY,
 				'connected_fields' => array(),
 			),
 		),
 	);
 
-	$options['sections']['style_manager_section'] = Customify_Array::array_merge_recursive_distinct( $options['sections']['style_manager_section'], $new_config );
+	// The section might be already defined, thus we merge, not replace the entire section config.
+	if ( class_exists( 'Customify_Array' ) && method_exists( 'Customify_Array', 'array_merge_recursive_distinct' ) ) {
+		$options['sections']['style_manager_section'] = Customify_Array::array_merge_recursive_distinct( $options['sections']['style_manager_section'], $new_config );
+	} else {
+		$options['sections']['style_manager_section'] = array_merge_recursive( $options['sections']['style_manager_section'], $new_config );
+	}
 
 	return $options;
 }
@@ -146,7 +148,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Site Border Color', 'noah' ),
 					'live'    => true,
-					'default' => THEME_LIGHT_PRIMARY,
+					'default' => NOAHLITE_SM_LIGHT_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'border-color',
@@ -158,7 +160,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Page Title Color', 'noah' ),
 					'live'    => true,
-					'default' => THEME_DARK_PRIMARY,
+					'default' => NOAHLITE_SM_DARK_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -170,7 +172,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Body Text Color', 'noah' ),
 					'live'    => true,
-					'default' => THEME_DARK_PRIMARY,
+					'default' => NOAHLITE_SM_DARK_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -208,7 +210,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Body Link Color', 'noah' ),
 					'live'    => true,
-					'default' => THEME_COLOR_PRIMARY,
+					'default' => NOAHLITE_SM_COLOR_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -220,7 +222,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Heading 1', 'noah' ),
 					'live'    => true,
-					'default' => THEME_DARK_PRIMARY,
+					'default' => NOAHLITE_SM_DARK_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -232,7 +234,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Heading 2', 'noah' ),
 					'live'    => true,
-					'default' => THEME_DARK_PRIMARY,
+					'default' => NOAHLITE_SM_DARK_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -244,7 +246,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Heading 3', 'noah' ),
 					'live'    => true,
-					'default' => THEME_COLOR_PRIMARY,
+					'default' => NOAHLITE_SM_COLOR_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -260,7 +262,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Heading 4', 'noah' ),
 					'live'    => true,
-					'default' => THEME_DARK_PRIMARY,
+					'default' => NOAHLITE_SM_DARK_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -272,7 +274,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Heading 5', 'noah' ),
 					'live'    => true,
-					'default' => THEME_DARK_PRIMARY,
+					'default' => NOAHLITE_SM_DARK_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -284,7 +286,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Heading 6', 'noah' ),
 					'live'    => true,
-					'default' => THEME_DARK_PRIMARY,
+					'default' => NOAHLITE_SM_DARK_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -296,7 +298,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Content Background Color', 'noah' ),
 					'live'    => true,
-					'default' => THEME_LIGHT_PRIMARY,
+					'default' => NOAHLITE_SM_LIGHT_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'background-color',
@@ -327,7 +329,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Item Title Color', 'noah' ),
 					'live'    => true,
-					'default' => THEME_DARK_PRIMARY,
+					'default' => NOAHLITE_SM_DARK_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -339,7 +341,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Meta Primary', 'noah' ),
 					'live'    => true,
-					'default' => THEME_COLOR_PRIMARY,
+					'default' => NOAHLITE_SM_COLOR_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -351,7 +353,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Meta Secondary', 'noah' ),
 					'live'    => true,
-					'default' => THEME_DARK_SECONDARY,
+					'default' => NOAHLITE_SM_DARK_SECONDARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -363,7 +365,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Thumbnail Background', 'noah' ),
 					'live'    => true,
-					'default' => THEME_LIGHT_PRIMARY,
+					'default' => NOAHLITE_SM_LIGHT_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'background-color',
@@ -381,7 +383,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Item Title Color', 'noah' ),
 					'live'    => true,
-					'default' => THEME_DARK_PRIMARY,
+					'default' => NOAHLITE_SM_DARK_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -393,7 +395,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Meta Primary', 'noah' ),
 					'live'    => true,
-					'default' => THEME_COLOR_PRIMARY,
+					'default' => NOAHLITE_SM_COLOR_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -405,7 +407,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Meta Secondary', 'noah' ),
 					'live'    => true,
-					'default' => THEME_DARK_SECONDARY,
+					'default' => NOAHLITE_SM_DARK_SECONDARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -417,7 +419,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Thumbnail Background', 'noah' ),
 					'live'    => true,
-					'default' => THEME_LIGHT_PRIMARY,
+					'default' => NOAHLITE_SM_LIGHT_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'background-color',
@@ -435,7 +437,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Navigation Links Color', 'components' ),
 					'live'    => true,
-					'default' => THEME_DARK_PRIMARY,
+					'default' => NOAHLITE_SM_DARK_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -447,7 +449,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Links Active Color', 'components' ),
 					'live'    => true,
-					'default' => THEME_COLOR_PRIMARY,
+					'default' => NOAHLITE_SM_COLOR_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -465,7 +467,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Header Background', 'components' ),
 					'live'    => true,
-					'default' => THEME_LIGHT_PRIMARY,
+					'default' => NOAHLITE_SM_LIGHT_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'background-color',
@@ -483,7 +485,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Body Text Color', 'components' ),
 					'live'    => true,
-					'default' => THEME_DARK_SECONDARY,
+					'default' => NOAHLITE_SM_DARK_SECONDARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -495,7 +497,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Links Color', 'components' ),
 					'live'    => true,
-					'default' => THEME_DARK_PRIMARY,
+					'default' => NOAHLITE_SM_DARK_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'color',
@@ -507,7 +509,7 @@ function noah_lite_fill_customify_options( $options ) {
 					'type'    => 'hidden_control',
 					'label'   => esc_html__( 'Footer Background', 'components' ),
 					'live'    => true,
-					'default' => THEME_LIGHT_PRIMARY,
+					'default' => NOAHLITE_SM_LIGHT_PRIMARY,
 					'css'     => array(
 						array(
 							'property' => 'background',
@@ -519,216 +521,16 @@ function noah_lite_fill_customify_options( $options ) {
 		)
 	);
 
-	$options['sections'] = Customify_Array::array_merge_recursive_distinct( $options['sections'], $new_config );
+	if ( class_exists( 'Customify_Array' ) && method_exists( 'Customify_Array', 'array_merge_recursive_distinct' ) ) {
+		$options['sections'] = Customify_Array::array_merge_recursive_distinct( $options['sections'], $new_config );
+	} else {
+		$options['sections'] = array_merge_recursive( $options['sections'], $new_config );
+	}
 
 	return $options;
 }
 
-/* ====================================
- * PORTFOLIO GRID CONTROLS CONDITIONALS
- * ==================================== */
-
-/**
- * Decides when to show the project nearby alignment control.
- *
- * @return bool
- */
-function noah_portfolio_items_title_alignment_nearby_control_show() {
-	$position = pixelgrade_option( 'portfolio_items_title_position' );
-	// We hide it when displaying as overlay
-	if ( 'overlay' == $position ) {
-		return false;
-	}
-
-	return true;
-}
-
-/**
- * Decides when to show the project overlay alignment control.
- *
- * @return bool
- */
-function noah_portfolio_items_title_alignment_overlay_control_show() {
-	$position = pixelgrade_option( 'portfolio_items_title_position' );
-	// We hide it when not displaying as overlay
-	if ( 'overlay' != $position ) {
-		return false;
-	}
-
-	return true;
-}
-
-/**
- * Decides when to show the portfolio show excerpt control.
- *
- * @return bool
- */
-function noah_portfolio_items_excerpt_visibility_control_show() {
-	$layout   = pixelgrade_option( 'portfolio_grid_layout' );
-	$position = pixelgrade_option( 'portfolio_items_title_position' );
-
-	// We hide it if the layout is packed or the position is overlay
-	if ( 'packed' == $layout || 'overlay' == $position ) {
-		return false;
-	}
-
-	return true;
-}
-
-/**
- * Decides when to show the portfolio primary meta control.
- *
- * @return bool
- */
-function noah_portfolio_items_primary_meta_control_show() {
-	$layout   = pixelgrade_option( 'portfolio_grid_layout' );
-	$position = pixelgrade_option( 'portfolio_items_title_position' );
-
-	// We hide the primary meta when the layout is packed and we display above or below
-	if ( 'packed' == $layout && 'overlay' != $position ) {
-		return false;
-	}
-
-	return true;
-}
-
-/**
- * Decides when to show the portfolio secondary meta control.
- *
- * @return bool
- */
-function noah_portfolio_items_secondary_meta_control_show() {
-	$layout   = pixelgrade_option( 'portfolio_grid_layout' );
-	$position = pixelgrade_option( 'portfolio_items_title_position' );
-
-	// We hide the primary meta when the layout is packed and we display above or below
-	if ( 'packed' == $layout && 'overlay' != $position ) {
-		return false;
-	}
-
-	return true;
-}
-
-/**
- * Decides when to show the portfolio item meta section title.
- *
- * @return bool
- */
-function noah_portfolio_items_meta_control_show() {
-	$layout   = pixelgrade_option( 'portfolio_grid_layout' );
-	$position = pixelgrade_option( 'portfolio_items_title_position' );
-
-	// We hide the item meta when the layout is packed and we display above or below
-	if ( 'packed' == $layout && 'overlay' != $position ) {
-		return false;
-	}
-
-	return true;
-}
-
-/* ===============================
- * BLOG GRID CONTROLS CONDITIONALS
- * =============================== */
-
-/**
- * Decides when to show the blog nearby alignment control.
- *
- * @return bool
- */
-function noah_blog_items_title_alignment_nearby_control_show() {
-	$position = pixelgrade_option( 'blog_items_title_position' );
-	// We hide it when displaying as overlay
-	if ( 'overlay' == $position ) {
-		return false;
-	}
-
-	return true;
-}
-
-/**
- * Decides when to show the blog overlay alignment control.
- *
- * @return bool
- */
-function noah_blog_items_title_alignment_overlay_control_show() {
-	$position = pixelgrade_option( 'blog_items_title_position' );
-	// We hide it when not displaying as overlay
-	if ( 'overlay' != $position ) {
-		return false;
-	}
-
-	return true;
-}
-
-/**
- * Decides when to show the blog show excerpt control.
- *
- * @return bool
- */
-function noah_blog_items_excerpt_visibility_control_show() {
-	$layout   = pixelgrade_option( 'blog_grid_layout' );
-	$position = pixelgrade_option( 'blog_items_title_position' );
-
-	// We hide it if the layout is packed or the position is overlay
-	if ( 'packed' == $layout || 'overlay' == $position ) {
-		return false;
-	}
-
-	return true;
-}
-
-/**
- * Decides when to show the blog primary meta control.
- *
- * @return bool
- */
-function noah_blog_items_primary_meta_control_show() {
-	$layout   = pixelgrade_option( 'blog_grid_layout' );
-	$position = pixelgrade_option( 'blog_items_title_position' );
-
-	// We hide the primary meta when the layout is packed and we display above or below
-	if ( 'packed' == $layout && 'overlay' != $position ) {
-		return false;
-	}
-
-	return true;
-}
-
-/**
- * Decides when to show the blog secondary meta control.
- *
- * @return bool
- */
-function noah_blog_items_secondary_meta_control_show() {
-	$layout   = pixelgrade_option( 'blog_grid_layout' );
-	$position = pixelgrade_option( 'blog_items_title_position' );
-
-	// We hide the primary meta when the layout is packed and we display above or below
-	if ( 'packed' == $layout && 'overlay' != $position ) {
-		return false;
-	}
-
-	return true;
-}
-
-/**
- * Decides when to show the blog items meta section title.
- *
- * @return bool
- */
-function noah_blog_items_meta_control_show() {
-	$layout   = pixelgrade_option( 'blog_grid_layout' );
-	$position = pixelgrade_option( 'blog_items_title_position' );
-
-	// We hide the item meta when the layout is packed and we display above or below
-	if ( 'packed' == $layout && 'overlay' != $position ) {
-		return false;
-	}
-
-	return true;
-}
-
-function noah_add_default_color_palette( $color_palettes ) {
+function noah_lite_add_default_color_palette( $color_palettes ) {
 
 	$color_palettes = array_merge( array(
 		'default' => array(
@@ -737,15 +539,15 @@ function noah_add_default_color_palette( $color_palettes ) {
 				'background_image_url' => 'https://cloud.pixelgrade.com/wp-content/uploads/2018/07/noah-palette.jpg',
 			),
 			'options' => array(
-				'sm_color_primary'   => THEME_COLOR_PRIMARY,
-				'sm_color_secondary' => THEME_COLOR_PRIMARY,
-				'sm_color_tertiary'  => THEME_COLOR_PRIMARY,
-				'sm_dark_primary'    => THEME_DARK_PRIMARY,
-				'sm_dark_secondary'  => THEME_DARK_SECONDARY,
-				'sm_dark_tertiary'   => THEME_DARK_SECONDARY,
-				'sm_light_primary'   => THEME_LIGHT_PRIMARY,
-				'sm_light_secondary' => THEME_LIGHT_PRIMARY,
-				'sm_light_tertiary'  => THEME_LIGHT_PRIMARY,
+				'sm_color_primary'   => NOAHLITE_SM_COLOR_PRIMARY,
+				'sm_color_secondary' => NOAHLITE_SM_COLOR_PRIMARY,
+				'sm_color_tertiary'  => NOAHLITE_SM_COLOR_PRIMARY,
+				'sm_dark_primary'    => NOAHLITE_SM_DARK_PRIMARY,
+				'sm_dark_secondary'  => NOAHLITE_SM_DARK_SECONDARY,
+				'sm_dark_tertiary'   => NOAHLITE_SM_DARK_SECONDARY,
+				'sm_light_primary'   => NOAHLITE_SM_LIGHT_PRIMARY,
+				'sm_light_secondary' => NOAHLITE_SM_LIGHT_PRIMARY,
+				'sm_light_tertiary'  => NOAHLITE_SM_LIGHT_PRIMARY,
 			),
 		),
 	), $color_palettes );
@@ -753,4 +555,4 @@ function noah_add_default_color_palette( $color_palettes ) {
 	return $color_palettes;
 }
 
-add_filter( 'customify_get_color_palettes', 'noah_add_default_color_palette' );
+add_filter( 'customify_get_color_palettes', 'noah_lite_add_default_color_palette' );
