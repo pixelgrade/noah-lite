@@ -76,6 +76,7 @@ Navbar.prototype.init = function() {
 	this.$share = $( '.c-meta__share-link:not(.c-meta__share-link--desktop)' );
 	this.$clone = this.$logo.clone().css( 'overflow', 'hidden' ).addClass( 'mobile-logo-clone' );
 	this.$clone.find( 'img' ).addClass( 'is-loaded' );
+	this.$menuItemChildren = $('.menu-item-has-children');
 
 	if ( ! $( '.c-navbar__zone' ).filter( function() {
 		var $obj = $( this );
@@ -90,6 +91,14 @@ Navbar.prototype.init = function() {
         this.$target = this.$clone.wrapInner( "<div class='c-navbar__slide'></div>" ).children();
         this.$share.clone().addClass( 'js-share-clone' ).appendTo( this.$target );
     }
+
+	this.$menuItemChildren.on('focusin', function(){
+		$(this).addClass('is-focused');
+	});
+
+	this.$menuItemChildren.on('focusout', function(){
+		$(this).removeClass('is-focused');
+	});
 
 	this.$share.clone().addClass( 'js-share-clone h5' ).appendTo( '.js-share-target' );
 

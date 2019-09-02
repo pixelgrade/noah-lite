@@ -302,19 +302,25 @@ function noah_lite_fill_customify_options( $options ) {
 					'css'     => array(
 						array(
 							'property' => 'background-color',
-							'selector' => '.u-content-background, .c-mask',
+							'selector' => '.u-content-background, 
+										   .c-mask, 
+										   .c-navbar__content',
 						),
 						array(
 							'property' => 'color',
 							'selector' => '
-								.c-btn, 
+								.c-btn,
+								.c-btn:hover, 
 								input[type="submit"], 
+								input:hover[type="submit"],
 								input[type="button"], 
 								button[type="submit"], 
 								.body .wpforms-container[class] .wpforms-submit, 
 								.body .wpforms-container[class] .wpforms-submit:hover, 
 								.posts-navigation .nav-previous a, 
 								.posts-navigation .nav-next a,
+								.posts-navigation .nav-previous a:hover, 
+								.posts-navigation .nav-next a:hover,
 								#content .sd-content ul li',
 						),
 					),

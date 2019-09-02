@@ -113,5 +113,11 @@
 .c-navbar__checkbox:checked ~ .c-navbar__label {
 	justify-content: flex-start;
 	width: calc(100% - 100px);
-	background: linear-gradient(to bottom, rgba(251,251,251,1) 0%,rgba(254,254,254,1) 79%,rgba(255,255,255,0) 100%);
+}
+
+.c-navbar .menu-item-has-children.is-focused {
+    > .sub-menu {
+        opacity: 1;
+        pointer-events: auto;
+    }
 }

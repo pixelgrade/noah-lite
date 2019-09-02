@@ -3794,9 +3794,11 @@ and the top and bottom ones rotate to form an X
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: calc(100% - 100px);
-  background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), color-stop(79%, #fefefe), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to bottom, #fbfbfb 0%, #fefefe 79%, rgba(255, 255, 255, 0) 100%); }
+  width: calc(100% - 100px); }
+
+.c-navbar .menu-item-has-children.is-focused > .sub-menu {
+  opacity: 1;
+  pointer-events: auto; }
 
 /**
  *   4.14 - Author Box

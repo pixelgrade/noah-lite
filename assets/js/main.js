@@ -111,6 +111,7 @@
         this.$share = $('.c-meta__share-link:not(.c-meta__share-link--desktop)');
         this.$clone = this.$logo.clone().css('overflow', 'hidden').addClass('mobile-logo-clone');
         this.$clone.find('img').addClass('is-loaded');
+        this.$menuItemChildren = $('.menu-item-has-children');
 
         if (!$('.c-navbar__zone').filter(function() {
                 var $obj = $(this);
@@ -125,6 +126,14 @@
             this.$target = this.$clone.wrapInner("<div class='c-navbar__slide'></div>").children();
             this.$share.clone().addClass('js-share-clone').appendTo(this.$target);
         }
+
+        this.$menuItemChildren.on('focusin', function() {
+            $(this).addClass('is-focused');
+        });
+
+        this.$menuItemChildren.on('focusout', function() {
+            $(this).removeClass('is-focused');
+        });
 
         this.$share.clone().addClass('js-share-clone h5').appendTo('.js-share-target');
 
@@ -197,7 +206,7 @@
 
     /*!
      * pixelgradeTheme v1.0.3
-     * Copyright (c) 2017 PixelGrade http://www.pixelgrade.com
+     * Copyright (c) 2017 Pixelgrade https://pixelgrade.com
      * Licensed under MIT http://www.opensource.org/licenses/mit-license.php/
      */
     var pixelgradeTheme = function() {
@@ -594,7 +603,7 @@
 /*!
  * jQuery Rellax Plugin v0.3.6.2
  * Examples and documentation at http://pixelgrade.github.io/rellax/
- * Copyright (c) 2016 PixelGrade http://www.pixelgrade.com
+ * Copyright (c) 2016 Pixelgrade https://pixelgrade.com
  * Licensed under MIT http://www.opensource.org/licenses/mit-license.php/
  */
 ;
@@ -860,6 +869,11 @@
     }
 )(jQuery, window, document);
 
+/*!
+ * jQuery Resize Select plugin v0.0.1
+ * Copyright (c) 2016 Pixelgrade https://pixelgrade.com
+ * Licensed under MIT http://www.opensource.org/licenses/mit-license.php/
+ */
 (function($) {
 
     $.fn.getStyleObject = function() {
