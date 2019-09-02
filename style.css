@@ -3476,7 +3476,8 @@ and the top and bottom ones rotate to form an X
       border-top: 5px solid currentColor;
       color: inherit; }
     .c-navbar--dropdown [class*="children"]:hover > .sub-menu,
-    .c-navbar--dropdown [class*="children"]:hover > .children {
+    .c-navbar--dropdown [class*="children"]:hover > .children, .c-navbar--dropdown [class*="children"]:focus-within > .sub-menu,
+    .c-navbar--dropdown [class*="children"]:focus-within > .children {
       opacity: 1;
       pointer-events: auto; }
   .c-navbar--dropdown .sub-menu,

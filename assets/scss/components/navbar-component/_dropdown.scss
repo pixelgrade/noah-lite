@@ -24,10 +24,13 @@ $dropdown-width:        15em        !default;
             color: inherit;
         }
 
-        &:hover > .sub-menu,
-        &:hover > .children {
-            opacity: 1;
-            pointer-events: auto;
+        &:hover,
+        &:focus-within {
+            > .sub-menu,
+            > .children {
+                opacity: 1;
+                pointer-events: auto;
+            }
         }
     }
 
